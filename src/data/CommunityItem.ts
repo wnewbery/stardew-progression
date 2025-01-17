@@ -1,3 +1,4 @@
+import { mdToHtml } from "../util/Markdown";
 import CommunityBundle from "./CommunityBundle";
 
 export default class CommunityItem {
@@ -12,5 +13,10 @@ export default class CommunityItem {
     public description: string|null
   ) {
 
+  }
+  public get labelHtml() { return mdToHtml(this.label); }
+  public get descriptionHtml() {
+    if (this.description) return mdToHtml(this.description);
+    else return '';
   }
 }

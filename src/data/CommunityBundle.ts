@@ -1,5 +1,7 @@
+import Showdown from "showdown";
 import CommunityItem from "./CommunityItem";
 import Reward from "./Reward";
+import {mdToHtml} from "../util/Markdown";
 
 export default class CommunityBundle {
   constructor(
@@ -10,4 +12,5 @@ export default class CommunityBundle {
   ) {
 
   }
+  public get labelHtml() { return mdToHtml(this.label); }
 }

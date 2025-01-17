@@ -1,3 +1,4 @@
+import { mdToHtml } from "../util/Markdown";
 import CommunityBundle from "./CommunityBundle";
 import Reward from "./Reward";
 
@@ -10,4 +11,6 @@ export default class CommunityRoom {
   ) {
 
   }
+
+  public get labelHtml() { return mdToHtml(this.label); }
 }

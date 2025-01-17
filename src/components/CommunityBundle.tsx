@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
 import CommunityBundle from "../data/CommunityBundle";
+import Markdown from "./Markdown";
 
 type CommunityBundleProps = {
   bundle: CommunityBundle
@@ -9,14 +9,14 @@ export default ({ bundle }: CommunityBundleProps) => {
   return (
     <div className="bundle">
       <h2>{bundle.label}</h2>
-      <p>{bundle.reward.label}</p>
-      <p>{bundle.reward.description}</p>
+      <p><Markdown html={bundle.reward.labelHtml} /></p>
+      <p><Markdown html={bundle.reward.descriptionHtml} /></p>
       <table className='items'>
         <tbody>
           {bundle.items.map(item => (
             <tr>
-              <td>{item.label}</td>
-              <td>{item.description}</td>
+              <td><Markdown html={item.labelHtml} /></td>
+              <td><Markdown html={item.descriptionHtml} /></td>
             </tr>
           ))}
         </tbody>
