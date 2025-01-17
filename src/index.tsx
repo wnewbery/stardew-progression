@@ -6,7 +6,6 @@ import CommunityBundle from "./components/CommunityBundle";
 const container = document.getElementById("app")!;
 const root = createRoot(container);
 
-
 let bundle = CommunityData.getBundle('spring_foraging_bundle');
 const App = () => {
   return (

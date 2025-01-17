@@ -2,6 +2,7 @@ import { mdToHtml } from "../util/Markdown";
 
 export default class Reward {
   constructor(
+    public itemId: string,
     public label: string,
     public description: string|null,
   ) {

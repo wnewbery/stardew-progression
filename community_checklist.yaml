@@ -1,6 +1,7 @@
 - id: crafts_room
   label: Crafts Room
   reward:
+    item_id: Bridge Repair
     label: |
       [Bridge Repair](https://stardewvalleywiki.com/Quarry)
     description: Repair the bridge to the east of the mines that leads to the quarry.
@@ -8,6 +9,7 @@
     - id: spring_foraging_bundle
       label: Spring Foraging Bundle
       reward:
+        item_id: Spring_Seeds
         label: |
           [Spring Seeds](https://stardewvalleywiki.com/Spring_Seeds) (30)
       items:
