@@ -1,0 +1,13 @@
+root = true
+[*]
+# Just easier if use LF on both Linux and Windows
+end_of_line =  lf
+indent_size = 4
+indent_style = space
+trim_trailing_whitespace = true
+
+[*.html]
+indent_size = 2
+
+[*.{js,jsx,ts,tsx}]
+indent_size = 2
