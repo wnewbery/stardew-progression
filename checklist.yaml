@@ -1,0 +1,29 @@
+sections:
+  - id: spring
+    name: Spring
+    items:
+      - id: community_quality_parsnips
+        label: 5 gold quality community quality crops bundle
+        description: |
+          The hard part here will be getting the 5 gold quality parsnips, as you must do this in spring and your farming skill is starting out low.
+
+          Be sure to plant a good number of parsnips, say 15 right from the first day.
+
+          When you harvest keep replanting at least until you have 5 quality ones, but also consider keep planting more as they are fast growing and harvesting them will help you level up your farming skill.
+      - id: community_spring_crops
+        label: Community Center Spring Crops Bundle
+        description: |
+          You will probably get the parsnip while trying for the 5 gold ones, but you will need to plant the other 3 crops as well in time to harvest in spring.
+
+          It is worth planting green beans as early as possible as they can give multiple harvests, for maximum harvests plant before the 3rd day.
+
+          You will get 20 speed-gro as a reward, which if used in summer for Blueberries will give an extra harvest.
+        items:
+          id: community_spring_crops_parsnip
+          label: Parsnip
+          id: community_spring_crops_green_bean
+          label: Green Bean
+          id: community_spring_crops_cauliflower
+          label: Cauliflower
+          id: community_spring_crops_potato
+          label: Potato
