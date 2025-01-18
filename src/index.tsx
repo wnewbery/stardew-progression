@@ -1,10 +1,13 @@
 import React, { PropsWithChildren, useState } from "react";
 import { HashRouter, Route, Routes, Link, Navigate } from "react-router";
+import { Provider } from "react-redux";
 import { createRoot } from "react-dom/client";
+// Our stuff
 import GameData from "./data/GameData";
-import CommunityBundle from "./components/CommunityBundle";
-
 import './app.css';
+import { store } from "./redux/Store";
+// Pages
+import CommunityBundle from "./components/CommunityBundle";
 import Year1Spring from "./components/Year1Spring";
 
 const container = document.getElementById("app")!;
@@ -77,6 +80,8 @@ const App = () => {
 
 root.render(
   <React.StrictMode>
-    <HashRouter><App /></HashRouter>
+    <Provider store={store}>
+      <HashRouter><App /></HashRouter>
+    </Provider>
   </React.StrictMode>
 );

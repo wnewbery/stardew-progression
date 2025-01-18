@@ -1,5 +1,6 @@
 import { PropsWithChildren, useState } from "react";
-import ChecklistCompletion from "../data/ChecklistCompletion";
+import { useAppDispatch, useAppSelector } from "../redux/Store";
+import { setCompleted } from "../redux/ChecklistSlice";
 
 type ChecklistItemProps = {
   className?: string;
@@ -7,18 +8,19 @@ type ChecklistItemProps = {
 }
 
 export default ({ id, className, children }: PropsWithChildren<ChecklistItemProps>) => {
-  const [isCompleted, setCompletedX] = useState(ChecklistCompletion.isCompleted(id));
-  function setCompleted(v: boolean) {
-    ChecklistCompletion.setCompleted(id, v);
-    setCompletedX(v);
+  const isCompleted = useAppSelector(state => state.checklist.items[id]);
+  const dispatch = useAppDispatch();
+
+  function set(v: boolean) {
+    dispatch(setCompleted({ id, completed: v }));
   }
   function onCompleted(evt: React.ChangeEvent<HTMLInputElement>) {
-    setCompleted(evt.currentTarget.checked);
+    set(evt.currentTarget.checked);
   }
   const toggle = (evt: React.MouseEvent<HTMLElement>) => {
     const e = evt.target as HTMLElement;
     if (!e.closest('a')) { // If click hit some link, don't toggle
-      setCompleted(!isCompleted);
+      set(!isCompleted);
     }
   }
 

@@ -1,7 +1,8 @@
 import CommunityBundle from "../data/CommunityBundle";
 import Markdown from "./Markdown";
 import ItemStackText from "./ItemStackText";
-import { useState } from "react";
+import { useAppDispatch, useAppSelector } from "../redux/Store";
+import { setCompleted } from "../redux/ChecklistSlice";
 import GameData from "../data/GameData";
 
 type CommunityBundleProps = {
@@ -11,23 +12,17 @@ export default ({ bundle }: CommunityBundleProps) => {
   if (typeof bundle === "string") {
     bundle = GameData.bundle(bundle);
   }
+  const isBundleCompleted = useAppSelector(state => state.checklist.items[bundle.id]);
+  const dispatch = useAppDispatch();
 
-  const [isCompleted, setCompleted] = useState(bundle.isCompleted);
   const onBundleCompleted = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    setCompleted(evt.currentTarget.checked);
-    bundle.isCompleted = evt.currentTarget.checked;
+    dispatch(setCompleted({ id: bundle.id, completed: evt.currentTarget.checked }));
   }
   const toggleBundle = (evt: React.MouseEvent<HTMLElement>) => {
     const e = evt.target as HTMLElement;
     if (!e.closest('a')) {
       // If click hit some link, don't toggle
-      setCompleted(!isCompleted);
-      bundle.isCompleted = !isCompleted;
-    }
-  }
-  const checkBundleCompleted = () => {
-    if (isCompleted !== bundle.isCompleted) {
-      setCompleted(bundle.isCompleted);
+      dispatch(setCompleted({ id: bundle.id, completed: !isBundleCompleted }));
     }
   }
 
@@ -38,7 +33,7 @@ export default ({ bundle }: CommunityBundleProps) => {
         {bundle.label}
       </h3>
       <div onClick={toggleBundle}>
-        <input type="checkbox" checked={isCompleted} onChange={onBundleCompleted} className="ml-4 mr-8" />
+        <input type="checkbox" checked={isBundleCompleted} onChange={onBundleCompleted} className="ml-4 mr-8" />
         <span className="font-bold mr-2">Reward:</span>
         <ItemStackText stack={bundle.reward} />
       </div>
@@ -46,20 +41,17 @@ export default ({ bundle }: CommunityBundleProps) => {
       <table>
         <tbody>
           {bundle.items.map(item => {
-            const [isItemCompleted, setItemCompleted] = useState(item.isCompleted);
             const countStr = item.count > 1 ? `(${item.count})` : '';
+            const isItemCompleted = useAppSelector(state => state.checklist.items[item.checklistId]);
+            const itemDispatch = useAppDispatch();
             const onItemCompleted = (evt: React.ChangeEvent<HTMLInputElement>) => {
-              setItemCompleted(evt.currentTarget.checked);
-              item.isCompleted = evt.currentTarget.checked;
-              checkBundleCompleted();
+              itemDispatch(setCompleted({ id: item.checklistId, completed: evt.currentTarget.checked }));
             }
             const toggleItem = (evt: React.MouseEvent<HTMLElement>) => {
               const e = evt.target as HTMLElement;
               if (!e.closest('a')) {
                 // If click hit some link, don't toggle
-                setItemCompleted(!isItemCompleted);
-                item.isCompleted = !isItemCompleted;
-                checkBundleCompleted();
+                itemDispatch(setCompleted({ id: item.id, completed: !isItemCompleted }));
               }
             }
             return (

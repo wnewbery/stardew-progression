@@ -1,8 +1,8 @@
 import CommunityItem from "./CommunityItem";
 import Reward from "./Reward";
-import {mdToHtml} from "../util/Markdown";
+import { mdToHtml } from "../util/Markdown";
 import GameIcons from "./GameIcons";
-import ChecklistCompletion from "./ChecklistCompletion";
+import { registerBundle } from "../redux/ChecklistSlice";
 
 export default class CommunityBundle {
   public id: string;
@@ -15,13 +15,6 @@ export default class CommunityBundle {
 
   public get allNeeded() { return this.needed >= this.items.length; }
 
-  public get isCompleted() {
-    return ChecklistCompletion.isCompleted(this.id);
-  }
-  public set isCompleted(v: boolean) {
-    ChecklistCompletion.setCompleted(this.id, v);
-  }
-
   constructor(yaml: any) {
     this.id = yaml.id;
     this.label = yaml.label;
@@ -33,6 +26,12 @@ export default class CommunityBundle {
     this.needed = yaml.needed ?? this.items.length;
 
     this.icon = GameIcons(yaml.icon);
+
+    registerBundle({
+      bundle: this.id,
+      needed: this.needed,
+      items: this.items.map(item => item.checklistId)
+    });
   }
   public get labelHtml() { return mdToHtml(this.label); }
 }

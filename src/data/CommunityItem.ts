@@ -2,7 +2,6 @@ import { mdToHtml } from "../util/Markdown";
 import GameItem from "./GameItem";
 import GameData from "./GameData";
 import ItemQuality from "./ItemQuality";
-import ChecklistCompletion from "./ChecklistCompletion";
 import type CommunityBundle from "./CommunityBundle";
 
 export default class CommunityItem {
@@ -11,23 +10,12 @@ export default class CommunityItem {
   public quality: ItemQuality;
   public count: number;
 
-  public get globalId() {
+  // Multiple bundles use the same item, so combine to get a unique id
+  public get checklistId() {
     return `${this.bundle.id}-${this.id}`;
   }
   public get label() {
     return this.item.label;
-  }
-  public get isCompleted() {
-    return ChecklistCompletion.isCompleted(this.globalId);
-  }
-  public set isCompleted(v: boolean) {
-    ChecklistCompletion.setCompleted(this.globalId, v);
-    if (v) {
-      let count = this.bundle.items.filter(item => item.isCompleted).length;
-      if (count >= this.bundle.needed) {
-        this.bundle.isCompleted = true;
-      }
-    }
   }
 
   constructor(

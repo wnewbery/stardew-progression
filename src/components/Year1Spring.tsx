@@ -29,6 +29,7 @@ export default () => {
         <p><ItemStackText item="field_snack" /> is a good item to gain extra energy, you can get the seeds while cutting down trees, or by <i>shaking</i> a tree which <i>does not use energy</i>.</p>
         <p><ItemStackText item="spring_onion" /> have a chance to spawn in the south by the sewer <i>every day</i> and while not worth much to sell, they are a cheap source of energy.</p>
         <p>You can give each character 2 gifts a week.</p>
+        <p>When deciding when to upgrade the watering can, check the weather forecast as if it is raining the next day, and you can collect it the day after, then no crops will be missed.</p>
       </section>
       <section className="space-y-4">
         <h3 className="text-xl font-bold">Community Centre Objectives</h3>
@@ -111,6 +112,50 @@ export default () => {
           Catch 1 <ItemStackText item="bream" /> from the ocean after 6pm, all seasons.
         </ChecklistItem>
       </section>
+      <section className="space-y-4">
+        <h3 className="text-xl font-bold">Birthdays</h3>
+        <ChecklistItem id="birthday_kent">
+          Spring 4 is <a target="_blank" href="https://stardewvalleywiki.com/Kent">Kent's</a> birthday.{' '}
+          The best gift is likely to be a <ItemStackText item="daffodil" />.{' '}
+          He will be at or around his house until 10pm.
+        </ChecklistItem>
+        <ChecklistItem id="birthday_lewis">
+          Spring 7 is <a target="_blank" href="https://stardewvalleywiki.com/Lewis">Lewis'</a> birthday.{' '}
+          The best gift you are likely to have is a <ItemStackText item="parsnip" /> planted at the start.{' '}
+          He is likely to be by around his house or the town square.
+        </ChecklistItem>
+        <ChecklistItem id="birthday_vincent">
+          Spring 10 is <a target="_blank" href="https://stardewvalleywiki.com/Vincent">Vincent's</a> birthday.{' '}
+          The best gift you are likely to have is a <ItemStackText item="daffodil" />.{' '}
+          He is likely to go to the Museum then around town.
+        </ChecklistItem>
+        <ChecklistItem id="birthday_haley">
+          Spring 14 is <a target="_blank" href="https://stardewvalleywiki.com/Haley">Haley's</a> birthday.{' '}
+          The best gift you are likely to have is a <ItemStackText item="daffodil" />.{' '}
+          She is likely to go to the fountain around 12pm then heading home 4:30pm.
+        </ChecklistItem>
+        <ChecklistItem id="birthday_pam">
+          Spring 18 is <a target="_blank" href="https://stardewvalleywiki.com/Pam">Pam's</a> birthday.{' '}
+          The best gift you are likely to have is a <ItemStackText item="parsnip" />, otherwise a <ItemStackText item="salmonberry" />.{' '}
+          She is likely to go to JojaMart at 12pm then the saloon at 4pm.
+        </ChecklistItem>
+        <ChecklistItem id="birthday_shane">
+          Spring 20 is <a target="_blank" href="https://stardewvalleywiki.com/Shane">Shane's</a> birthday.{' '}
+          The best gift you are likely to have is a <ItemStackText item="salmonberry" />.{' '}
+          He is likely to be at Marnie's, then go to the General Store at 12pm then the saloon at 5pm.
+        </ChecklistItem>
+        <ChecklistItem id="birthday_pierre">
+          Spring 26 is <a target="_blank" href="https://stardewvalleywiki.com/Pierre">Pierre's</a> birthday.{' '}
+          The best gift you are likely to have is a <ItemStackText item="parsnip" />, <ItemStackText item="daffodil" /> or <ItemStackText item="dandelion" />.{' '}
+          He is likely to be at the General Store until 5pm then the saloon.
+        </ChecklistItem>
+        <ChecklistItem id="birthday_emily">
+          Spring 27 is <a target="_blank" href="https://stardewvalleywiki.com/Emily">Emily's</a> birthday.{' '}
+          If you are lucky you may have a loved gift any gem except Diamond or Cloth.{' '}
+          Otherwise a <ItemStackText item="daffodil" /> or <ItemStackText item="quartz" />.{' '}
+          She is likely to be at home until 3:30pm then the saloon.
+        </ChecklistItem>
+      </section>
       <section>
         <h3 className="text-xl font-bold">Day Guide</h3>
         <section>
@@ -159,6 +204,16 @@ export default () => {
           <ChecklistItem id="spring1_planting">
             Be sure to plant and water all the seeds you got before the end of the day.
           </ChecklistItem>
+        </section>
+        <section>
+          <h4 className="text-lg font-bold">Day 2</h4>
+          <ChecklistItem id="spring2_crops">Make sure get in the habit of making sure every crop is watered every day.</ChecklistItem>
+          <ChecklistItem id="spring_fishing_pole">Visit Willy by the ocean before 5pm to get the fishing pole.</ChecklistItem>
+          <p>Nothing else critical today, can clear farm space, gather wood, plant any mixed seeds find, or carry on fishing.</p>
+          <p>Main thing is to just ensure use up all your energy, and don't sleep late unless you got a skill level up.</p>
+        </section>
+        <section>
+          <h4 className="text-lg font-bold">Day 3</h4>
         </section>
       </section>
     </div>
