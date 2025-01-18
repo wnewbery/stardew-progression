@@ -1,29 +1,32 @@
 import CommunityBundle from "../data/CommunityBundle";
 import Markdown from "./Markdown";
-import gameIcons from "../data/GameIcons";
+import CommunityItem from "../data/CommunityItem";
+import ItemStackText from "./ItemStackText";
 
 type CommunityBundleProps = {
   bundle: CommunityBundle
 };
+type ItemProps = {
+  item: CommunityItem
+};
+const CommunityItemRow = ({ item }: ItemProps) => {
+  var countStr = item.count > 1 ? `(${item.count})` : '';
+  return (
+    <tr>
+      <td><ItemStackText stack={item}/></td>
+      <td><Markdown html={item.descriptionHtml} /></td>
+    </tr>
+  )
+}
 
 export default ({ bundle }: CommunityBundleProps) => {
   return (
     <div className="bundle">
       <h2>{bundle.label}</h2>
-      <div>
-        <img src={gameIcons(bundle.reward.itemId)} />
-        <Markdown html={bundle.reward.labelHtml} />
-      </div>
-      <Markdown html={bundle.reward.descriptionHtml} />
+      <ItemStackText stack={bundle.reward} />
       <table className='items'>
         <tbody>
-          {bundle.items.map(item => (
-            <tr key={item.id}>
-              <td><img src={gameIcons(item.id)}/></td>
-              <td><a target="_blank" href={item.item.wiki}>{item.label}</a></td>
-              <td><Markdown html={item.descriptionHtml} /></td>
-            </tr>
-          ))}
+          {bundle.items.map(item => <CommunityItemRow key={item.id} item={item}/>)}
         </tbody>
       </table>
     </div>

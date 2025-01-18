@@ -2,12 +2,14 @@ import { mdToHtml } from "../util/Markdown";
 import CommunityBundle from "./CommunityBundle";
 import GameItem from "./GameItem";
 import GameItems from "./GameItems";
+import ItemQuality from "./ItemQuality";
 
 export default class CommunityItem {
   public id: string;
   public item: GameItem;
-  public description: string|null;
+  public quality: ItemQuality;
   public count: number;
+  public description: string|null;
 
   public get globalId() {
     return `${this.bundleId}-${this.id}`;
@@ -22,6 +24,7 @@ export default class CommunityItem {
   ) {
     this.id = yaml.id;
     this.item = GameItems.get(this.id);
+    this.quality = ItemQuality.parse(yaml.quality ?? "regular");
     this.description = yaml.description;
     this.count = yaml.count ?? 1;
   }

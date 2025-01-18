@@ -6,13 +6,12 @@ import Reward from "./Reward";
 
 let rooms = data.map((yroom: any) => {
   let bundles = yroom.bundles.map((ybundle: any) => {
+    let reward = new Reward(ybundle.reward);
     let items  = ybundle.items.map((yitem: any) =>
       new CommunityItem(ybundle.id, yitem));
-    let reward = new Reward(ybundle.reward.item_id, ybundle.reward.label, ybundle.reward.description);
     return new CommunityBundle(ybundle.id, ybundle.label, reward, items);
   });
-  let reward = new Reward(yroom.reward.item_id, yroom.reward.label, yroom.reward.description);
-  return new CommunityRoom(yroom.id, yroom.label, reward, bundles);
+  return new CommunityRoom(yroom.id, yroom.label, bundles);
 });
 
 class CommunityData {

@@ -6,7 +6,7 @@ let map = new Map(items.map(x => [x.id, x]));
 
 export default {
   get: (id: string) => {
-    var x = map.get(id);
+    var x = map.get(id.toLocaleLowerCase());
     if (x) return x;
     else throw new Error(`Unknown item ${id}.`);
   }

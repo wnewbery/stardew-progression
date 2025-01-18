@@ -1,18 +1,15 @@
 import { mdToHtml } from "../util/Markdown";
+import GameItem from "./GameItem";
+import GameItems from "./GameItems";
 
 export default class Reward {
-  constructor(
-    public itemId: string,
-    public label: string,
-    public description: string|null,
+  public id: string;
+  public item: GameItem;
+  public count: number;
+  constructor(yaml: any,
   ) {
-
-  }
-
-
-  public get labelHtml() { return mdToHtml(this.label); }
-  public get descriptionHtml() {
-    if (this.description) return mdToHtml(this.description);
-    else return '';
+    this.id = yaml.id;
+    this.item = GameItems.get(this.id);
+    this.count = yaml.count ?? 1;
   }
 }

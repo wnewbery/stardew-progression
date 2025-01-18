@@ -9,9 +9,8 @@
     - id: spring_foraging_bundle
       label: Spring Foraging Bundle
       reward:
-        item_id: Spring_Seeds
-        label: |
-          [Spring Seeds](https://stardewvalleywiki.com/Spring_Seeds) (30)
+        id: Spring_Seeds
+        count: 30
       items:
         - id: wild_horseradish
           description: |
@@ -34,9 +33,8 @@
     - id: spring_crops_bundle
       label: Spring Crops Bundle
       reward:
-        item_id: Speed-Gro
-        label: |
-          [Speed-Gro](.) (20)
+        id: Speed-Gro
+        count: 20
       items:
         - id: parsnip
           description: Summer crops
@@ -46,3 +44,24 @@
           description: Summer crops
         - id: potato
           description: Summer crops
+    - id: quality_crops_bundle
+      label: Quality Crops Bundle
+      reward:
+        id: Preserves_Jar
+      items:
+        - id: parsnip
+          quality: gold
+          count: 5
+          description: Spring crops
+        - id: green_bean
+          quality: gold
+          count: 5
+          description: Summer crops
+        - id: pumpkin
+          quality: gold
+          count: 5
+          description: Fall crops
+        - id: corn
+          quality: gold
+          count: 5
+          description: Summer or Fall crops
