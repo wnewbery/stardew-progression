@@ -12,7 +12,7 @@ export default class GameItem {
     this.wiki = yaml.wiki;
 
     if (!this.id) {
-      this.id = this.label.toLocaleLowerCase().replaceAll(' ', '_').replaceAll('\'', '');
+      this.id = this.label.toLocaleLowerCase().replaceAll(' ', '_').replaceAll(/[\':]/g, '');
     }
     this.icon = GameIcons(this.id);
     if (!this.wiki) {

@@ -8,6 +8,7 @@
   bundles:
     - id: spring_foraging_bundle
       label: Spring Foraging Bundle
+      icon: 32px-Bundle_Green
       reward:
         id: Spring_Seeds
         count: 30
@@ -32,6 +33,7 @@
   bundles:
     - id: spring_crops_bundle
       label: Spring Crops Bundle
+      icon: 32px-Bundle_Green
       reward:
         id: Speed-Gro
         count: 20
@@ -65,3 +67,110 @@
           quality: gold
           count: 5
           description: Summer or Fall crops
+- label: Fish Tank
+  reward:
+    item_id: Greenhouse
+    label: Greenhouse
+  bundles:
+    - label: River Fish Bundle
+      icon: 32px-Bundle_Teal
+      description: "All River Fish can be found in the Riverlands Farm, Hill-Top Farm, or Forest Farm."
+      reward:
+        id: deluxe_bait
+        count: 30
+      items:
+        - id: sunfish
+          description: "Found in Rivers, 6am – 7pm, Spring and Summer during sunny weather."
+        - id: catfish
+          description: |
+            Found in Rivers and Secret Woods, 6am – midnight, Spring and Fall. Only when raining.
+
+            Can be found in Summer during rain in the Secret Woods and Witch's Swamp, Winter with a Rain Totem.
+        - id: shad
+          description: "Found in Rivers, 9am – 2am, Spring, Summer, and Fall. Only when raining."
+        - id: tiger_trout
+          description: "Found in Rivers, 6am – 7pm, Fall and Winter. Can be found in any weather."
+    - label: Lake Fish Bundle
+      icon: 32px-Bundle-Green
+      description: All Mountain Lake Fish can be found in any weather, and in the Wilderness Farm.
+      reward:
+        id: dressed_spinner
+      items:
+        - id: largemouth_bass
+          description: Found in the Mountain Lake, 6am – 7pm, All Seasons.
+        - id: carp
+          description: |
+            Found in the Mountain Lake, Anytime, during Spring, Summer, or Fall.
+
+            Found in Secret Woods or Sewer, Anytime, All Seasons.
+        - id: bullhead
+          description: Found in the Mountain Lake, Anytime, All Seasons.
+        - id: sturgeon
+          description: Found in the Mountain Lake, 6am – 7pm, Summer and Winter.
+    - label: Ocean Fish Bundle
+      icon: 32px-Bundle_Blue
+      reward:
+        id: warp_totem_beach
+        count: 5
+      items:
+        - id: sardine
+          description: Found in the Ocean, 6am – 7pm, Spring, Fall, and Winter.
+        - id: tuna
+          description: Found in the Ocean, 6am – 7pm, Summer and Winter.
+        - id: red_snapper
+          description: Found in the Ocean, 6am – 7pm, Summer and Fall. Only when raining.
+        - id: tilapia
+          description: Found in the Ocean, 6am – 2pm, Summer and Fall.
+    - label: Night Fishing Bundle
+      icon: 32px-Bundle_Purple
+      reward:
+        id: glow_ring
+      items:
+        - id: walleye
+          description: Found in Rivers, the Mountain Lake, and Cindersap Forest Pond, 12pm – 2am, Fall (Winter with Rain Totem.) Only when raining.
+        - id: bream
+          description: Found in Rivers, 6pm – 2am, All Seasons.
+        - id: eel
+          description: Found in the Ocean, 4pm – 2am, Spring or Fall. Only when raining.
+    - label: Crab Pot Bundle
+      description: Of the required 5 items, 4 are found with beach foraging and another in the mines.
+      icon: 32px-Bundle_Purple
+      needed: 5
+      reward:
+        id: crab_pot
+        count: 3
+      items:
+        - id: lobster
+          description: Caught in Crab Pots (ocean)
+        - id: crayfish
+          description: Caught in Crab Pots (freshwater)
+        - id: crab
+          description: Caught in Crab Pots (ocean), drops from Rock Crabs or Lava Crabs in The Mines
+        - id: cockle
+          description: Caught in Crab Pots (ocean), Beach Foraging
+        - id: mussel
+          description: Caught in Crab Pots (ocean), Beach Foraging
+        - id: shrimp
+          description: Caught in Crab Pots (ocean)
+        - id: snail
+          description: Caught in Crab Pots (freshwater)
+        - id: periwinkle
+          description: Caught in Crab Pots (freshwater)
+        - id: oyster
+          description: Caught in Crab Pots (ocean), Beach Foraging
+        - id: clam
+          description: Caught in Crab Pots (ocean), Beach Foraging
+    - label: Specialty Fishing Bundle
+      icon: 32px-Bundle_Red
+      reward:
+        id: dish_o_the_sea
+        count: 5
+      items:
+        - id: pufferfish
+          description: Found in the Ocean, 12pm – 4pm, Summer during sunny weather.
+        - id: ghostfish
+          description: Found in ponds in The Mines floors 20 and 60, Anytime, All Seasons. May also be dropped by Ghosts.
+        - id: sandfish
+          description: Found in the pond in The Desert, 6am – 8pm, All Seasons.
+        - id: woodskip
+          description: Found in the Secret Woods and the Forest Farm, Anytime, All Seasons.
