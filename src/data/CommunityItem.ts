@@ -1,8 +1,8 @@
 import { mdToHtml } from "../util/Markdown";
-import CommunityBundle from "./CommunityBundle";
 import GameItem from "./GameItem";
 import GameItems from "./GameItems";
 import ItemQuality from "./ItemQuality";
+import ChecklistCompletion from "./ChecklistCompletion";
 
 export default class CommunityItem {
   public id: string;
@@ -16,6 +16,12 @@ export default class CommunityItem {
   }
   public get label() {
     return this.item.label;
+  }
+  public get isCompleted() {
+    return ChecklistCompletion.isCompleted(this.globalId);
+  }
+  public set isCompleted(v: boolean) {
+    ChecklistCompletion.setCompleted(this.globalId, v);
   }
 
   constructor (
