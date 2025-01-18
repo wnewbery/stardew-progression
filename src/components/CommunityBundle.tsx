@@ -20,7 +20,7 @@ export default ({ bundle }: CommunityBundleProps) => {
           {bundle.items.map(item => (
             <tr key={item.id}>
               <td><img src={gameIcons(item.id)}/></td>
-              <td><Markdown html={item.labelHtml} /></td>
+              <td><a target="_blank" href={item.item.wiki}>{item.label}</a></td>
               <td><Markdown html={item.descriptionHtml} /></td>
             </tr>
           ))}

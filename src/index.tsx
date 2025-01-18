@@ -7,11 +7,11 @@ const container = document.getElementById("app")!;
 const root = createRoot(container);
 
 let bundle = CommunityData.getBundle('spring_foraging_bundle');
+let bundles = CommunityData.bundles;
 const App = () => {
   return (
     <div>
-      <h1>Hello, World!</h1>
-      <CommunityBundle bundle={bundle} />
+      {bundles.map(bundle => <CommunityBundle key={bundle.id} bundle={bundle} />)}
     </div>
   );
 };

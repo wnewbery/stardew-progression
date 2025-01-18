@@ -14,22 +14,35 @@
           [Spring Seeds](https://stardewvalleywiki.com/Spring_Seeds) (30)
       items:
         - id: wild_horseradish
-          label: |
-            [Wild Horseradish](https://stardewvalleywiki.com/Wild_Horseradish)
           description: |
             [Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)
         - id: daffodil
-          label: |
-            [Daffodil](https://stardewvalleywiki.com/Daffodil)
           description: |
             [Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)
         - id: leek
-          label: |
-            [Leek](https://stardewvalleywiki.com/Leek)
           description: |
             [Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)
         - id: dandelion
-          label: |
-            [Dandelion](https://stardewvalleywiki.com/Dandelion)
           description: |
             [Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)
+- id: pantry
+  label: Pantry
+  reward:
+    item_id: Greenhouse
+    label: Greenhouse
+  bundles:
+    - id: spring_crops_bundle
+      label: Spring Crops Bundle
+      reward:
+        item_id: Speed-Gro
+        label: |
+          [Speed-Gro](.) (20)
+      items:
+        - id: parsnip
+          description: Summer crops
+        - id: green_bean
+          description: Summer crops
+        - id: cauliflower
+          description: Summer crops
+        - id: potato
+          description: Summer crops

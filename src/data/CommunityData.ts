@@ -7,7 +7,7 @@ import Reward from "./Reward";
 let rooms = data.map((yroom: any) => {
   let bundles = yroom.bundles.map((ybundle: any) => {
     let items  = ybundle.items.map((yitem: any) =>
-      new CommunityItem(ybundle.id, yitem.id, yitem.label, yitem.description));
+      new CommunityItem(ybundle.id, yitem));
     let reward = new Reward(ybundle.reward.item_id, ybundle.reward.label, ybundle.reward.description);
     return new CommunityBundle(ybundle.id, ybundle.label, reward, items);
   });
@@ -16,6 +16,10 @@ let rooms = data.map((yroom: any) => {
 });
 
 class CommunityData {
+  public get bundles() {
+    return this.rooms.flatMap(room => room.bundles);
+  }
+
   public constructor(
     public rooms: CommunityRoom[]
   ) {
