@@ -33,7 +33,7 @@ const App = () => {
   const [activeTab, setActiveTab] = useState("bundles");
   return (
     <div className="flex flex-row h-screen v-screen">
-      <div className="p-8 flex-initial flex flex-col gap-4 overflow-y-auto border-r-2 border-r-solid border-blue-300">
+      <div className="p-8 max-w-md flex-initial flex flex-col gap-4 overflow-y-auto border-r-2 border-r-solid border-blue-300">
         <h1 className="text-2xl font-bold">Stardew Valley Progression Guide &amp; Tracker</h1>
         <nav>
           <section>

@@ -32,7 +32,7 @@ export default ({ bundle }: CommunityBundleProps) => {
   }
 
   return (
-    <div className="max-w-[750px]">
+    <div className="max-w-[750px] break-inside-avoid-column">
       <h3 className="text-xl font-bold">
         <img src={bundle.icon} className="inline-block align-middle mr-5" />
         {bundle.label}

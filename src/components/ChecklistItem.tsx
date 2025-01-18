@@ -23,7 +23,7 @@ export default ({ id, className, children }: PropsWithChildren<ChecklistItemProp
   }
 
   return (
-    <div onClick={toggle} className={`${className} flex flex-row items-baseline`}>
+    <div onClick={toggle} className={`${className} flex flex-row items-baseline break-inside-avoid-column`}>
       <input type="checkbox" checked={isCompleted} onChange={onCompleted} className="mr-2 flex-none" />
       <div className="flex-auto space-y-4">{children}</div>
     </div>

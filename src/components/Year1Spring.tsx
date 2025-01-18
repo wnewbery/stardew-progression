@@ -6,7 +6,7 @@ import ArtifactImage from "../assets/Artifact_tile.gif";
 
 export default () => {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 columns-xl">
       <h2 className="text-2xl font-bold">First Year Spring</h2>
       <section className="space-y-4">
         <h3 className="text-xl font-bold">Advice</h3>
@@ -28,6 +28,7 @@ export default () => {
         <p>Be sure to plant your crops with enough time, they will die if they are not completed before the end of the season. </p>
         <p><ItemStackText item="field_snack" /> is a good item to gain extra energy, you can get the seeds while cutting down trees, or by <i>shaking</i> a tree which <i>does not use energy</i>.</p>
         <p><ItemStackText item="spring_onion" /> have a chance to spawn in the south by the sewer <i>every day</i> and while not worth much to sell, they are a cheap source of energy.</p>
+        <p>You can give each character 2 gifts a week.</p>
       </section>
       <section className="space-y-4">
         <h3 className="text-xl font-bold">Community Centre Objectives</h3>
@@ -70,6 +71,20 @@ export default () => {
           This will give you two <ItemStackText item="salmonberry" /> rather than one, and will be needing the wood.
         </ChecklistItem>
         <ChecklistItem id="introductions">Chat to all the villagers.</ChecklistItem>
+        <ChecklistItem id="spring_friend_caroline">
+          <p>
+            Befriend <a target="_blank" href="https://stardewvalleywiki.com/Caroline">Caroline</a> to 2 hearts by Spring 22.{' '}
+            <ItemStackText item="daffodil" label="Daffodils" /> are a good gift as they are readily available and sell for less than Horseradish.
+          </p>
+          <p>Getting 2 hearts with Caroline allows access to the Sunroom where you can harvest Tea Leaves each day for the last week of the season.</p>
+        </ChecklistItem>
+        <ChecklistItem id="spring_friend_marnie">
+          <p>
+            Befriend <a target="_blank" href="https://stardewvalleywiki.com/Marnie">Marnie</a> to 2 hearts by the summer.{' '}
+            <ItemStackText item="quartz" /> is a good gift that can be commonly found in the mines.
+          </p>
+          <p>Getting 2 hearts will allow access to her bedroom which is needed for a quest in the summer.</p>
+        </ChecklistItem>
       </section>
       <section className="space-y-4">
         <h3 className="text-xl font-bold">Optional Community Centre Objectives</h3>
