@@ -11,7 +11,6 @@ export default class CommunityBundle {
     public items: CommunityItem[]
   ) {
     if (!this.id) this.id = this.label.toLocaleLowerCase().replaceAll(' ', '_');
-    console.log('bundle', this.id, this);
   }
   public get labelHtml() { return mdToHtml(this.label); }
 }

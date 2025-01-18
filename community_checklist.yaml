@@ -14,17 +14,72 @@
         count: 30
       items:
         - id: wild_horseradish
-          description: |
-            [Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)
         - id: daffodil
-          description: |
-            [Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)
         - id: leek
-          description: |
-            [Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)
         - id: dandelion
-          description: |
-            [Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)
+    - label: Summer Foraging Bundle
+      icon: 32px-Bundle_Yellow
+      reward:
+        id: summer_seeds
+        count: 30
+      items:
+        - id: grape
+        - id: spice_berry
+        - id: sweet_pea
+    - label: Fall Foraging Bundle
+      icon: 32px-Bundle_Orange
+      reward:
+        id: fall_seeds
+        count: 30
+      items:
+        - id: common_mushroom
+        - id: wild_plum
+        - id: hazelnut
+        - id: blackberry
+    - label: Winter Foraging Bundle
+      icon: 32px-Bundle_Cyan
+      reward:
+        id: winter_seeds
+        count: 30
+      items:
+        - id: winter_root
+        - id: crystal_fruit
+        - id: snow_yam
+        - id: crocus
+    - label: Construction Bundle
+      icon: 32px-Bundle_Red
+      reward:
+        id: charcoal_kiln
+      items:
+        - id: wood
+          count: 99
+        - id: wood2
+          item_id: wood
+          count: 99
+        - id: stone
+          count: 99
+        - id: hardwood
+
+          count: 10
+    - label: Exotic Foraging Bundle
+      icon: 32px-Bundle_Purple
+      description: |
+        Possible to do in the first couple of seasons if get the mushroom cave and the tree taps. Cave carrots are also fairly common in the mines.
+      reward:
+        id: autumns_bounty
+        count: 5
+      item_count: 5
+      items:
+        - id: coconut
+        - id: cactus_fruit
+        - id: cave_carrot
+        - id: red_mushroom
+        - id: purple_mushroom
+        - id: maple_syrup
+        - id: oak_resin
+        - id: pine_tar
+        - id: morel
+
 - id: pantry
   label: Pantry
   reward:
@@ -39,34 +94,76 @@
         count: 20
       items:
         - id: parsnip
-          description: Summer crops
         - id: green_bean
-          description: Summer crops
         - id: cauliflower
-          description: Summer crops
         - id: potato
-          description: Summer crops
     - id: quality_crops_bundle
       label: Quality Crops Bundle
+      needed: 3
+      description: |
+        Only 3 of the crops are needed, so if one season is missed this is still possible.
       reward:
         id: Preserves_Jar
       items:
         - id: parsnip
           quality: gold
           count: 5
-          description: Spring crops
         - id: green_bean
           quality: gold
           count: 5
-          description: Summer crops
         - id: pumpkin
           quality: gold
           count: 5
-          description: Fall crops
         - id: corn
           quality: gold
           count: 5
-          description: Summer or Fall crops
+    - label: Summer Crops Bundle
+      icon: 32px-Bundle_Yellow
+      reward:
+        id: quality_sprinkler
+      items:
+        - id: tomato
+        - id: hot_pepper
+        - id: blueberry
+        - id: melon
+    - label: Fall Crops Bundle
+      icon: 32px-Bundle_Orange
+      reward:
+        id: bee_house
+      items:
+        - id: corn
+        - id: eggplant
+        - id: pumpkin
+        - id: yam
+    - label: Animal Bundle
+      icon: 32px-Bundle_Red
+      needed: 5
+      reward:
+        id: cheese_press
+      items:
+        - id: large_milk
+        - id: large_egg_brown
+        - id: large_egg
+        - id: large_goat_milk
+        - id: wool
+        - id: duck_egg
+    - label: Artisan Bundle
+      icon: 32px-Bundle_Purple
+      reward:
+        id: keg
+      items:
+        - id: truffle_oil
+        - id: cloth
+        - id: goat_cheese
+        - id: cheese
+        - id: honey
+        - id: jelly
+        - id: apple
+        - id: apricot
+        - id: orange
+        - id: peach
+        - id: pomegranate
+        - id: cherry
 - label: Fish Tank
   reward:
     item_id: Greenhouse
@@ -80,16 +177,9 @@
         count: 30
       items:
         - id: sunfish
-          description: "Found in Rivers, 6am – 7pm, Spring and Summer during sunny weather."
         - id: catfish
-          description: |
-            Found in Rivers and Secret Woods, 6am – midnight, Spring and Fall. Only when raining.
-
-            Can be found in Summer during rain in the Secret Woods and Witch's Swamp, Winter with a Rain Totem.
         - id: shad
-          description: "Found in Rivers, 9am – 2am, Spring, Summer, and Fall. Only when raining."
         - id: tiger_trout
-          description: "Found in Rivers, 6am – 7pm, Fall and Winter. Can be found in any weather."
     - label: Lake Fish Bundle
       icon: 32px-Bundle-Green
       description: All Mountain Lake Fish can be found in any weather, and in the Wilderness Farm.
@@ -97,16 +187,9 @@
         id: dressed_spinner
       items:
         - id: largemouth_bass
-          description: Found in the Mountain Lake, 6am – 7pm, All Seasons.
         - id: carp
-          description: |
-            Found in the Mountain Lake, Anytime, during Spring, Summer, or Fall.
-
-            Found in Secret Woods or Sewer, Anytime, All Seasons.
         - id: bullhead
-          description: Found in the Mountain Lake, Anytime, All Seasons.
         - id: sturgeon
-          description: Found in the Mountain Lake, 6am – 7pm, Summer and Winter.
     - label: Ocean Fish Bundle
       icon: 32px-Bundle_Blue
       reward:
@@ -114,24 +197,17 @@
         count: 5
       items:
         - id: sardine
-          description: Found in the Ocean, 6am – 7pm, Spring, Fall, and Winter.
         - id: tuna
-          description: Found in the Ocean, 6am – 7pm, Summer and Winter.
         - id: red_snapper
-          description: Found in the Ocean, 6am – 7pm, Summer and Fall. Only when raining.
         - id: tilapia
-          description: Found in the Ocean, 6am – 2pm, Summer and Fall.
     - label: Night Fishing Bundle
       icon: 32px-Bundle_Purple
       reward:
         id: glow_ring
       items:
         - id: walleye
-          description: Found in Rivers, the Mountain Lake, and Cindersap Forest Pond, 12pm – 2am, Fall (Winter with Rain Totem.) Only when raining.
         - id: bream
-          description: Found in Rivers, 6pm – 2am, All Seasons.
         - id: eel
-          description: Found in the Ocean, 4pm – 2am, Spring or Fall. Only when raining.
     - label: Crab Pot Bundle
       description: Of the required 5 items, 4 are found with beach foraging and another in the mines.
       icon: 32px-Bundle_Purple
@@ -141,25 +217,15 @@
         count: 3
       items:
         - id: lobster
-          description: Caught in Crab Pots (ocean)
         - id: crayfish
-          description: Caught in Crab Pots (freshwater)
         - id: crab
-          description: Caught in Crab Pots (ocean), drops from Rock Crabs or Lava Crabs in The Mines
         - id: cockle
-          description: Caught in Crab Pots (ocean), Beach Foraging
         - id: mussel
-          description: Caught in Crab Pots (ocean), Beach Foraging
         - id: shrimp
-          description: Caught in Crab Pots (ocean)
         - id: snail
-          description: Caught in Crab Pots (freshwater)
         - id: periwinkle
-          description: Caught in Crab Pots (freshwater)
         - id: oyster
-          description: Caught in Crab Pots (ocean), Beach Foraging
         - id: clam
-          description: Caught in Crab Pots (ocean), Beach Foraging
     - label: Specialty Fishing Bundle
       icon: 32px-Bundle_Red
       reward:
@@ -167,10 +233,103 @@
         count: 5
       items:
         - id: pufferfish
-          description: Found in the Ocean, 12pm – 4pm, Summer during sunny weather.
         - id: ghostfish
-          description: Found in ponds in The Mines floors 20 and 60, Anytime, All Seasons. May also be dropped by Ghosts.
         - id: sandfish
-          description: Found in the pond in The Desert, 6am – 8pm, All Seasons.
         - id: woodskip
-          description: Found in the Secret Woods and the Forest Farm, Anytime, All Seasons.
+
+- label: Boiler Room
+  reward:
+    item_id: Greenhouse
+    label: Greenhouse
+  bundles:
+    - label: "Blacksmith's Bundle"
+      icon: 32px-Bundle_Orange
+      reward:
+        id: furnace
+      items:
+        - id: copper_bar
+        - id: iron_bar
+        - id: gold_bar
+    - label: "Geologist's Bundle"
+      icon: 32px-Bundle_Purple
+      reward:
+        id: omni_geode
+        count: 5
+      items:
+        - id: quartz
+        - id: earth_crystal
+        - id: frozen_tear
+        - id: fire_quartz
+    - label: "Adventurer's Bundle"
+      icon: 32px-Bundle_Purple
+      needed: 2
+      description: |
+        Only 2 are needed 10 bat wings and 1 solar essence is not much and easy to get.
+      reward:
+        id: small_magnet_ring
+      items:
+        - id: slime
+          count: 99
+        - id: bat_wing
+          count: 10
+        - id: solar_essence
+        - id: void_essence
+
+- label: Bulletin Board
+  reward:
+    item_id: Greenhouse
+    label: Greenhouse
+  bundles:
+    - label: "Chef's Bundle"
+      icon: 32px-Bundle_Red
+      reward:
+        id: pink_cake
+        count: 3
+      items:
+        - id: maple_syrup
+        - id: fiddlehead_fern
+        - id: truffle
+        - id: poppy
+        - id: maki_roll
+        - id: fried_egg
+    - label: Dye Bundle
+      icon: 32px-Bundle_Cyan
+      reward:
+        id: seed_maker
+      items:
+        - id: red_mushroom
+        - id: sea_urchin
+        - id: sunflower
+        - id: duck_feather
+        - id: aquamarine
+        - id: red_cabbage
+    - label: Field Research Bundle
+      icon: 32px-Bundle_Blue
+      reward:
+        id: recycling_machine
+      items:
+        - id: purple_mushroom
+        - id: nautilus_shell
+        - id: chub
+        - id: frozen_geode
+    - label: Fodder Bundle
+      icon: 32px-Bundle_Yellow
+      reward:
+        id: heater
+      items:
+        - id: wheat
+          count: 10
+        - id: hay
+          count: 10
+        - id: apple
+          count: 3
+    - label: "Enchanter's Bundle"
+      icon: 32px-Bundle_Purple
+      reward:
+        id: gold_bar
+        count: 3
+      items:
+        - id: oak_resin
+        - id: wine
+        - id: rabbits_foot
+        - id: pomegranate

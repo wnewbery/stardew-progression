@@ -33,7 +33,7 @@ export default ({ bundle }: CommunityBundleProps) => {
               <tr key={item.id} onClick={toggle}>
                 <td><input type="checkbox" checked={isCompleted} onChange={onCompleted}/></td>
                 <td><ItemStackText stack={item}/></td>
-                <td><Markdown html={item.descriptionHtml} /></td>
+                <td><Markdown md={item.item.sourceHint} /></td>
               </tr>
             );
           })}

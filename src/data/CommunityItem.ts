@@ -9,7 +9,6 @@ export default class CommunityItem {
   public item: GameItem;
   public quality: ItemQuality;
   public count: number;
-  public description: string|null;
 
   public get globalId() {
     return `${this.bundleId}-${this.id}`;
@@ -29,14 +28,9 @@ export default class CommunityItem {
     public yaml: any
   ) {
     this.id = yaml.id;
-    this.item = GameItems.get(this.id);
+    this.item = GameItems.get(yaml.item_id ??this.id); // Construction bundle has 2 wood items
     this.quality = ItemQuality.parse(yaml.quality ?? "regular");
-    this.description = yaml.description;
     this.count = yaml.count ?? 1;
   }
   public get labelHtml() { return mdToHtml(this.label); }
-  public get descriptionHtml() {
-    if (this.description) return mdToHtml(this.description);
-    else return '';
-  }
 }
