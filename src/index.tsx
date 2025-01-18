@@ -59,7 +59,7 @@ const App = () => {
 
         <div>
           <p>Website by William Newbery &copy; 2025</p>
-          <p>Get the code and file issues on <a href="https://github.com/williamnewbery/stardew-progression-guide">GitHub</a></p>
+          <p>Get the code and file issues on <a href="https://github.com/wnewbery/stardew-progression">GitHub</a></p>
           <p>Content available under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" className="whitespace-nowrap">Creative Commons Attribution-NonCommercial-ShareAlike</a></p>
           <p>Icons and general game information from <a href="https://stardewvalleywiki.com/">Stardew Valley Wiki</a></p>
         </div>
