@@ -37,7 +37,7 @@
         - id: hazelnut
         - id: blackberry
     - label: Winter Foraging Bundle
-      icon: 32px-Bundle_Cyan
+      icon: 32px-Bundle_Teal
       reward:
         id: winter_seeds
         count: 30
@@ -99,6 +99,7 @@
         - id: potato
     - id: quality_crops_bundle
       label: Quality Crops Bundle
+      icon: 32px-Bundle_Teal
       needed: 3
       description: |
         Only 3 of the crops are needed, so if one season is missed this is still possible.
@@ -181,7 +182,7 @@
         - id: shad
         - id: tiger_trout
     - label: Lake Fish Bundle
-      icon: 32px-Bundle-Green
+      icon: 32px-Bundle_Green
       description: All Mountain Lake Fish can be found in any weather, and in the Wilderness Farm.
       reward:
         id: dressed_spinner
@@ -293,7 +294,7 @@
         - id: maki_roll
         - id: fried_egg
     - label: Dye Bundle
-      icon: 32px-Bundle_Cyan
+      icon: 32px-Bundle_Teal
       reward:
         id: seed_maker
       items:

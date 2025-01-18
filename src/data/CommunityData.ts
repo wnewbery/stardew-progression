@@ -1,16 +1,9 @@
 import data from "../../community_checklist.yaml";
 import CommunityBundle from "./CommunityBundle";
-import CommunityItem from "./CommunityItem";
 import CommunityRoom from "./CommunityRoom";
-import Reward from "./Reward";
 
 let rooms = data.map((yroom: any) => {
-  let bundles = yroom.bundles.map((ybundle: any) => {
-    let reward = new Reward(ybundle.reward);
-    let items  = ybundle.items.map((yitem: any) =>
-      new CommunityItem(ybundle.id, yitem));
-    return new CommunityBundle(ybundle.id, ybundle.label, reward, items);
-  });
+  let bundles = yroom.bundles.map((ybundle: any) => new CommunityBundle(ybundle));
   return new CommunityRoom(yroom.id, yroom.label, bundles);
 });
 

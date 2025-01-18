@@ -1,19 +1,20 @@
 // Load saved data on start
 function load() {
   const jsonStr = window.localStorage.getItem("completedItems") ?? "[]";
-  return JSON.parse(jsonStr) as string[];
+  const json = JSON.parse(jsonStr) as string[];
+  return new Set(json);
 }
 let completed = load();
+console.log("Completed:", completed);
 export default {
-  isCompleted: (id: string) => completed.indexOf(id.toLocaleLowerCase()) >= 0,
+  isCompleted: (id: string) => completed.has(id.toLocaleLowerCase()),
   setCompleted: (id: string, value: boolean) => {
     completed = load(); // some limited "don't trash the data with multiple tabs"
     const id2 = id.toLocaleLowerCase();
-    const idx = completed.indexOf(id2);
     if (value) {
-      if (idx <= 0) completed.push(id2);
+      completed.add(id2);
     } else {
-      if (idx > 0) completed.splice(idx, 1);
+      completed.delete(id2);
     }
     var jsonStr = JSON.stringify(Array.from(completed));
     window.localStorage.setItem("completedItems", jsonStr);

@@ -12,19 +12,19 @@ type ItemIconProps = {
 
 export default ({ stack }: ItemIconProps) => {
   let overlayIcon = stack.quality?.overlayIcon ?
-    <img src={stack.quality.overlayIcon} style={{position: "absolute", left: 0}}/>
+    <img src={stack.quality.overlayIcon} className="absolute left-0 top-0" />
     : '';
   let countStr = stack.count && stack.count > 1 ? ` (${stack.count})` : '';
 
   return (
-    <div>
-      <div style={{position: "relative", display: "inline-block", verticalAlign: "middle", width: "24px", height: "24px"}}>
+    <span className="whitespace-nowrap">
+      <span className="inline-block relative align-middle">
         <img src={stack.item.icon} width="24" height="24" />
         {overlayIcon}
-      </div>
+      </span>
       {' '}
       <a target="_blank" href={stack.item.wiki}>{stack.item.label}</a>
       {countStr}
-    </div>
+    </span>
   );
 }

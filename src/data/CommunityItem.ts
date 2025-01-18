@@ -3,6 +3,7 @@ import GameItem from "./GameItem";
 import GameItems from "./GameItems";
 import ItemQuality from "./ItemQuality";
 import ChecklistCompletion from "./ChecklistCompletion";
+import CommunityBundle from "./CommunityBundle";
 
 export default class CommunityItem {
   public id: string;
@@ -11,7 +12,7 @@ export default class CommunityItem {
   public count: number;
 
   public get globalId() {
-    return `${this.bundleId}-${this.id}`;
+    return `${this.bundle.id}-${this.id}`;
   }
   public get label() {
     return this.item.label;
@@ -21,10 +22,16 @@ export default class CommunityItem {
   }
   public set isCompleted(v: boolean) {
     ChecklistCompletion.setCompleted(this.globalId, v);
+    if (v) {
+      let count = this.bundle.items.filter(item => item.isCompleted).length;
+      if (count >= this.bundle.needed) {
+        this.bundle.isCompleted = true;
+      }
+    }
   }
 
   constructor (
-    public bundleId: string,
+    public bundle: CommunityBundle,
     public yaml: any
   ) {
     this.id = yaml.id;
