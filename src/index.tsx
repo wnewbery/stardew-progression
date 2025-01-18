@@ -5,6 +5,7 @@ import GameData from "./data/GameData";
 import CommunityBundle from "./components/CommunityBundle";
 
 import './app.css';
+import Year1Spring from "./components/Year1Spring";
 
 const container = document.getElementById("app")!;
 const root = createRoot(container);
@@ -24,7 +25,7 @@ function LazyTab({ name, active, children }: PropsWithChildren<LazyTabProps>) {
 function TabCommunityBundles() {
   return (
     <>
-      <h2 className="text-xl font-bold">Community Bundles</h2>
+      <h2 className="text-2xl font-bold">Community Bundles</h2>
       {bundles.map(bundle => <CommunityBundle key={bundle.id} bundle={bundle} />)}
     </>);
 }
@@ -46,10 +47,10 @@ const App = () => {
           <section>
             <h2 className="text-xl font-bold">1 Year Completion Guide</h2>
             <ol>
-              <li><Link to="/spring">Spring</Link></li>
-              <li><Link to="/summer">Summer</Link></li>
-              <li><Link to="/fall">Fall</Link></li>
-              <li><Link to="/winter">Winter</Link></li>
+              <li><Link to="/year1-spring">Spring</Link></li>
+              <li><Link to="/year1-summer">Summer</Link></li>
+              <li><Link to="/year1-fall">Fall</Link></li>
+              <li><Link to="/year1-winter">Winter</Link></li>
             </ol>
           </section>
         </nav>
@@ -67,6 +68,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Navigate to="/bundles" />} />
           <Route path="/bundles" element={<TabCommunityBundles />} />
+          <Route path="/year1-spring" element={<Year1Spring />} />
         </Routes>
       </div>
     </div>

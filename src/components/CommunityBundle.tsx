@@ -1,13 +1,17 @@
 import CommunityBundle from "../data/CommunityBundle";
 import Markdown from "./Markdown";
-import CommunityItem from "../data/CommunityItem";
 import ItemStackText from "./ItemStackText";
 import { useState } from "react";
+import GameData from "../data/GameData";
 
 type CommunityBundleProps = {
-  bundle: CommunityBundle
+  bundle: CommunityBundle | string
 };
 export default ({ bundle }: CommunityBundleProps) => {
+  if (typeof bundle === "string") {
+    bundle = GameData.bundle(bundle);
+  }
+
   const [isCompleted, setCompleted] = useState(bundle.isCompleted);
   const onBundleCompleted = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setCompleted(evt.currentTarget.checked);

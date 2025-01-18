@@ -81,13 +81,13 @@
 - label: Autumn's Bounty
 
 - label: Parsnip
-  source_hint: "Summer crops"
+  source_hint: "Spring crops"
 - label: Green Bean
-  source_hint: "Summer crops"
+  source_hint: "Spring crops"
 - label: Cauliflower
-  source_hint: "Summer crops"
+  source_hint: "Spring crops"
 - label: Potato
-  source_hint: "Summer crops"
+  source_hint: "Spring crops"
 - label: Speed-Gro
 
 - label: Tomato
@@ -320,3 +320,10 @@
 - label: Quality Fertilizer
 - label: Lightning Rod
 - label: Crystalarium
+
+- label: Coral
+- label: Salmonberry
+- label: Field Snack
+- label: Spring Onion
+- label: Red Cabbage Seeds
+- label: Chest
