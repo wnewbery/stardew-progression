@@ -29,12 +29,12 @@ export default ({ bundle }: CommunityBundleProps) => {
 
   return (
     <div className="max-w-[750px]">
-      <h2 className="text-xl font-bold">
+      <h3 className="text-xl font-bold">
         <img src={bundle.icon} className="inline-block align-middle mr-5" />
         {bundle.label}
-      </h2>
+      </h3>
       <div onClick={toggleBundle}>
-        <input type="checkbox" checked={isCompleted} onChange={onBundleCompleted} className="ml-4 mr-8"/>
+        <input type="checkbox" checked={isCompleted} onChange={onBundleCompleted} className="ml-4 mr-8" />
         <span className="font-bold mr-2">Reward:</span>
         <ItemStackText stack={bundle.reward} />
       </div>
@@ -60,8 +60,8 @@ export default ({ bundle }: CommunityBundleProps) => {
             }
             return (
               <tr key={item.id} onClick={toggleItem}>
-                <td className="p-4"><input type="checkbox" checked={isItemCompleted} onChange={onItemCompleted}/></td>
-                <td className="p-4"><ItemStackText stack={item}/></td>
+                <td className="p-4"><input type="checkbox" checked={isItemCompleted} onChange={onItemCompleted} /></td>
+                <td className="p-4"><ItemStackText stack={item} /></td>
                 <td className="p-4"><Markdown md={item.item.sourceHint} /></td>
               </tr>
             );

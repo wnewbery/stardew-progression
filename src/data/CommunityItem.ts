@@ -1,9 +1,9 @@
 import { mdToHtml } from "../util/Markdown";
 import GameItem from "./GameItem";
-import GameItems from "./GameItems";
+import GameData from "./GameData";
 import ItemQuality from "./ItemQuality";
 import ChecklistCompletion from "./ChecklistCompletion";
-import CommunityBundle from "./CommunityBundle";
+import type CommunityBundle from "./CommunityBundle";
 
 export default class CommunityItem {
   public id: string;
@@ -30,12 +30,12 @@ export default class CommunityItem {
     }
   }
 
-  constructor (
+  constructor(
     public bundle: CommunityBundle,
     public yaml: any
   ) {
     this.id = yaml.id;
-    this.item = GameItems.get(yaml.item_id ??this.id); // Construction bundle has 2 wood items
+    this.item = GameData.item(yaml.item_id ?? this.id); // Construction bundle has 2 wood items
     this.quality = ItemQuality.parse(yaml.quality ?? "regular");
     this.count = yaml.count ?? 1;
   }

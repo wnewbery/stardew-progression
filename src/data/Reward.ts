@@ -1,6 +1,6 @@
 import { mdToHtml } from "../util/Markdown";
 import GameItem from "./GameItem";
-import GameItems from "./GameItems";
+import GameData from "./GameData";
 
 export default class Reward {
   public id: string;
@@ -9,7 +9,7 @@ export default class Reward {
   constructor(yaml: any,
   ) {
     this.id = yaml.id;
-    this.item = GameItems.get(this.id);
+    this.item = GameData.item(this.id);
     this.count = yaml.count ?? 1;
   }
 }
