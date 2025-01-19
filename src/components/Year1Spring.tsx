@@ -3,6 +3,7 @@ import ChecklistItem from "./ChecklistItem";
 import CommunityBundle from "./CommunityBundle";
 import ItemStackText from "./ItemStackText";
 import ArtifactImage from "../assets/Artifact_tile.gif";
+import Wiki from "./Wiki";
 
 export default () => {
   return (
@@ -14,6 +15,11 @@ export default () => {
           If you want to guarantee completing the first year is possible, you must select this when <i>starting the game</i>.{' '}
           You need to by <ItemStackText item="red_cabbage_seeds" /> from the Travelling Cart, and this setting guarantees it will be stocked at least once between Spring 7 and Winter 16.
         </ChecklistItem>
+        <p>
+          You should generally go to bed by 12pm to restore full energy.{' '}
+          The exception is if you have a level up, which always restores full energy.{' '}
+          Look for &quot;You've got some new ideas to sleep on.&quot; on the
+        </p>
         <p>
           Getting the farming level up early will help get the needed quality crops for the community centre,{' '}
           but also getting better quality crops to gift or sell which will give more friendship or gold.{' '}
@@ -109,7 +115,7 @@ export default () => {
           Catch 1 <ItemStackText item="bullhead" /> from the mountain lake, all seasons.
         </ChecklistItem>
         <ChecklistItem id="night_fishing_bundle-bream">
-          Catch 1 <ItemStackText item="bream" /> from the ocean after 6pm, all seasons.
+          Catch 1 <ItemStackText item="bream" /> from the river after 6pm, all seasons.
         </ChecklistItem>
       </section>
       <section className="space-y-4">
@@ -151,7 +157,7 @@ export default () => {
         </ChecklistItem>
         <ChecklistItem id="birthday_emily">
           Spring 27 is <a target="_blank" href="https://stardewvalleywiki.com/Emily">Emily's</a> birthday.{' '}
-          If you are lucky you may have a loved gift any gem except Diamond or Cloth.{' '}
+          If you are lucky you may have a loved gift; any gem except Diamond, or Cloth.{' '}
           Otherwise a <ItemStackText item="daffodil" /> or <ItemStackText item="quartz" />.{' '}
           She is likely to be at home until 3:30pm then the saloon.
         </ChecklistItem>
@@ -211,9 +217,127 @@ export default () => {
           <ChecklistItem id="spring_fishing_pole">Visit Willy by the ocean before 5pm to get the fishing pole.</ChecklistItem>
           <p>Nothing else critical today, can clear farm space, gather wood, plant any mixed seeds find, or carry on fishing.</p>
           <p>Main thing is to just ensure use up all your energy, and don't sleep late unless you got a skill level up.</p>
+          <p>I sold most of the fish at this stage to rush towards 2,000g for the upgraded backpack.</p>
         </section>
         <section>
-          <h4 className="text-lg font-bold">Day 3</h4>
+          <h4 className="text-lg font-bold">Day 3 and 4</h4>
+          <p>Nothing special about these days, keep working on objectives especially trees and friendships.</p>
+        </section>
+        <section>
+          <h4 className="text-lg font-bold">Day 5</h4>
+          <p>A very busy day, just try to get the main things done first.</p>
+          <ChecklistItem id="spring5_parsnips">
+            The first days parsnips are ready to harvest.{' '}
+          </ChecklistItem>
+          <ChecklistItem id="spring5_journal_getting_started">
+            Harvesting the parsnips should have completed the &quot;Getting Started&quot; journal entry from which you can claim 100g.
+          </ChecklistItem>
+          <ChecklistItem id="spring5_parsnips_keep">
+            Keep gold <ItemStackText item="parsnip" quality="gold" label="Parsnips" /> for the community centre, a silver or regular one for Lewis's birthday and consider one for quests.{' '}
+            You will still grow more for the Spring Crops Bundle.
+          </ChecklistItem>
+          <p>I've had zero gold out of 24 parsnips, so certainly expect to be planting a lot more.</p>
+          <ChecklistItem id="spring5_caroline_gift">
+            As going to the General Store it is an easy opportunity to give Caroline a <ItemStackText item="daffodil" />.
+          </ChecklistItem>
+          <ChecklistItem id="spring5_parsnips_trade">
+            Take the parsnips you are going to sell to the General Store, as you can get the money immediately that way.{' '}
+            Then buy enough seeds to replace those that you harvested as probably still need gold ones, and it is a fast way to level up the farming skill.
+          </ChecklistItem>
+          <ChecklistItem id="spring5_start_saving">Keep in mind you want 1,000g on Spring 7 (just 2 more days!) in case the Travelling Cart has the red cabbage seeds on the first possible visit at the highest possible price.</ChecklistItem>
+          <ChecklistItem id="backpack_upgrade">
+            <p>If after buying seeds you have 2,000g you can get the upgraded backpack, which will make fishing and visiting the mine easier.</p>
+            <p>Getting the seeds is far more important if you can't get it now, just keep saving.</p>
+          </ChecklistItem>
+          <ChecklistItem id="unlock_community_centre">
+            Visit the community centre before 1pm for Lewis to unlock it for you in  a cutscene event.
+          </ChecklistItem>
+          <ChecklistItem id="view_community_centre_tablet">
+            After the cutscene you need to try and view the strange tablet inside the centre in the bottom left room.{' '}
+            You won't be able to read it, but trying will attract the attention of the wizard soon.
+          </ChecklistItem>
+          <ChecklistItem id="spring5_plant_crops">
+            Plant the seeds you just got, and ensure everything is watered.
+          </ChecklistItem>
+          <ChecklistItem id="spring5_mining">
+            Visit the mine and aim for floor 5 and getting at least 20 copper for a furnace.{' '}
+            Floor 10 is possible if get very lucky, but be careful of time and you probably need the upgraded backpack.
+          </ChecklistItem>
+          <section className="space-y-4">
+            <h4 className="text-lg font-bold">Mines Advice</h4>
+            <p>Keep <ItemStackText item="quartz" /> as gifts for Marnie, and consider keep each of the other gems for quests and museum, but if you are short of money they do sell well.</p>
+            <p>Most of the other loot is not valuable to sell, and has other uses.</p>
+            <p>The elevator only unlocks every 5 levels, generally want to aim to complete floors in multiples of 5. Be careful of the time.</p>
+            <p>Any <ItemStackText item="spring_onion" label="Spring Onions" /> will be useful for energy, and you can also make <ItemStackText item="field_snack" />.</p>
+            <p>kill any insects you see as they are easy and 125 of them will give a good weapon from the guild.</p>
+            <p>Smashing boxes can also yield some useful items.</p>
+          </section>
+        </section>
+        <section>
+          <h4 className="text-lg font-bold">Day 6</h4>
+          <ChecklistItem id="spring_scarecrow">
+            <p>You should have gained Farming Level 1, so make a <ItemStackText item="scarecrow" /> to protect your crops.</p>
+            <p>See <a target="_blank" href="https://stardewvalleywiki.com/File:Scarecrow_Range.png">https://stardewvalleywiki.com/File:Scarecrow_Range.png</a> for a good indication of the scarecrow range.</p>
+          </ChecklistItem>
+          <ChecklistItem id="spring_furnace">
+            If you got enough copper, make the <ItemStackText item="furnace" /> to smelt the copper ore into more useful <ItemStackText item="copper_bar" />.{' '}
+            Don't worry if can't yet, keep collecting copper ore and make it when you can.
+          </ChecklistItem>
+          <ChecklistItem id="spring6_foragables">As it is Saturday it is the last day before forageables are cleared and reset, so be sure to collect them.</ChecklistItem>
+          <ChecklistItem id="spring6_marnie_gift">
+            Hopefully got at least one <ItemStackText item="quartz" /> in the mine to gift to <Wiki>Marnie</Wiki>.
+          </ChecklistItem>
+          <ChecklistItem id="spring6_wizard">If you did the Community Centre cutscene, you should have a letter from the wizard and can visit him to unlock the Community Centre bundles.</ChecklistItem>
+          <p>Now the Community Centre is fully unlocked, you can work on the Spring Foraging Bundle.</p>
+          <p>I would save the spring seeds from the bundle to make Tea Saplings later.</p>
+          <ChecklistItem id="spring6_saving">Another reminder that tomorrow the Travelling Cart might have the elusive red cabbage seeds. You need up to 1,000g for them so if you are short consider fishing and selling fish.</ChecklistItem>
+          <ChecklistItem id="spring6_wood">Otherwise keep working on cutting trees for that foraging level and getting 300 wood.</ChecklistItem>
+          <ChecklistItem id="spring6_more_fishing">If you run low on energy early in the day, fishing is a good low energy activity and is good at making money.</ChecklistItem>
+        </section>
+        <section>
+          <h4 className="text-lg font-bold">Day 7</h4>
+          <ChecklistItem id="spring7_cart_red_cabbage_seeds">
+            The Travelling Cart may have red cabbage seeds so be sure to visit it. None of the other items it may sell are important right now.
+          </ChecklistItem>
+          <ChecklistItem id="birthday_lewis">
+            Spring 7 is <a target="_blank" href="https://stardewvalleywiki.com/Lewis">Lewis'</a> birthday.{' '}
+            The best gift you are likely to have is a <ItemStackText item="parsnip" /> planted at the start.{' '}
+            He is likely to be by around his house or the town square.
+          </ChecklistItem>
+          <ChecklistItem id="spring7_gift_reset">
+            The limit of 2 gifts per villager each week resets on Sunday, so you can give {' '}
+            another <ItemStackText item="daffodil" /> to <Wiki>Caroline</Wiki> and {' '}
+            another <ItemStackText item="quartz" /> to <Wiki>Marnie</Wiki>.
+          </ChecklistItem>
+          <ChecklistItem id="spring7_wood">Hopefully are able to get up to 300 wood.</ChecklistItem>
+          <ChecklistItem id="beach_bridge_repair">
+            <p>Take the 300 wood to the south east beach to repair the bridge and access the coral and sea urchin.</p>
+            <p>Keep at least one <ItemStackText item="sea_urchin" /> for the community centre, and <ItemStackText item="coral" /> is useful for crafting.</p>
+          </ChecklistItem>
+          <ChecklistItem id="fiberglass_fishing_pole">
+            If you have the money and as many crops as you can manage you might start considering the <ItemStackText item="fiberglass_rod" /> for fishing.{' '}
+            It costs 1,800g and can use <Wiki>Bait</Wiki> items which in its basic form <ItemStackText item="bait" /> is commonly found or can be made using <ItemStackText item="bug_meat" /> and will make fish bit much faster.
+          </ChecklistItem>
+        </section>
+        <section>
+          <h4 className="text-lg font-bold">Day 8</h4>
+          <p>
+            Nothing special, keep working on trees for foraging level, gifts, quests, mining, fishing etc.{' '}
+            If you feel you can manage maybe plant more parsnips to get extra levels and money before Strawberry (cash crop) season on Spring 13.
+          </p>
+        </section>
+        <section>
+          <h4 className="text-lg font-bold">Day 9</h4>
+          <ChecklistItem id="spring9_parsnips">
+            <p>
+              Spring 9 is the last day want to be planting parsnips,{' '}
+              as they will be ready to harvest on Spring 13 which is the Egg Festival when can buy Strawberry Seeds.
+            </p>
+            <p>
+              Unfortunately you can't sell Parsnips Spring 13 as the store is closed.{' '}
+              However if have still not managed to get the 5 gold ones, will need to keep planting.
+            </p>
+          </ChecklistItem>
         </section>
       </section>
     </div>
