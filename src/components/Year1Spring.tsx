@@ -174,7 +174,7 @@ export default () => {
             Clear space for at least 30 crops.{' '}
             Considering using a layout close to water and compact enough for a scarecrow.
           </ChecklistItem>
-          <p>See <a target="_blank" href="https://stardewvalleywiki.com/File:Scarecrow_Range.png">https://stardewvalleywiki.com/File:Scarecrow_Range.png</a> for a good indication of the scarecrow range.</p>
+          <p>See <a target="_blank" href="https://stardewvalleywiki.com/File:Scarecrow_Range.png" className="break-all">https://stardewvalleywiki.com/File:Scarecrow_Range.png</a> for a good indication of the scarecrow range.</p>
           <ChecklistItem id="spring1_storage">
             Cut down trees to get at least 50 <ItemStackText item="wood" /> to build a <ItemStackText item="chest" />.{' '}
             You only have 12 inventory slots so will very quickly run out of space.
@@ -277,7 +277,7 @@ export default () => {
           <h4 className="text-lg font-bold">Day 6</h4>
           <ChecklistItem id="spring_scarecrow">
             <p>You should have gained Farming Level 1, so make a <ItemStackText item="scarecrow" /> to protect your crops.</p>
-            <p>See <a target="_blank" href="https://stardewvalleywiki.com/File:Scarecrow_Range.png">https://stardewvalleywiki.com/File:Scarecrow_Range.png</a> for a good indication of the scarecrow range.</p>
+            <p>See <a target="_blank" href="https://stardewvalleywiki.com/File:Scarecrow_Range.png" className="break-all">https://stardewvalleywiki.com/File:Scarecrow_Range.png</a> for a good indication of the scarecrow range.</p>
           </ChecklistItem>
           <ChecklistItem id="spring_furnace">
             If you got enough copper, make the <ItemStackText item="furnace" /> to smelt the copper ore into more useful <ItemStackText item="copper_bar" />.{' '}
