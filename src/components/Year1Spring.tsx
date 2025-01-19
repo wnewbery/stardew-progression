@@ -162,9 +162,9 @@ export default () => {
           She is likely to be at home until 3:30pm then the saloon.
         </ChecklistItem>
       </section>
-      <section>
+      <section className="space-y-8">
         <h3 className="text-xl font-bold">Day Guide</h3>
-        <section>
+        <section className="space-y-4">
           <h4 className="text-lg font-bold">Day 1</h4>
           <p>
             The first day is going to be very important to get a good start for the rest of the year.
@@ -211,7 +211,7 @@ export default () => {
             Be sure to plant and water all the seeds you got before the end of the day.
           </ChecklistItem>
         </section>
-        <section>
+        <section className="space-y-4">
           <h4 className="text-lg font-bold">Day 2</h4>
           <ChecklistItem id="spring2_crops">Make sure get in the habit of making sure every crop is watered every day.</ChecklistItem>
           <ChecklistItem id="spring_fishing_pole">Visit Willy by the ocean before 5pm to get the fishing pole.</ChecklistItem>
@@ -219,11 +219,11 @@ export default () => {
           <p>Main thing is to just ensure use up all your energy, and don't sleep late unless you got a skill level up.</p>
           <p>I sold most of the fish at this stage to rush towards 2,000g for the upgraded backpack.</p>
         </section>
-        <section>
+        <section className="space-y-4">
           <h4 className="text-lg font-bold">Day 3 and 4</h4>
           <p>Nothing special about these days, keep working on objectives especially trees and friendships.</p>
         </section>
-        <section>
+        <section className="space-y-4">
           <h4 className="text-lg font-bold">Day 5</h4>
           <p>A very busy day, just try to get the main things done first.</p>
           <ChecklistItem id="spring5_parsnips">
@@ -273,7 +273,7 @@ export default () => {
             <p>Smashing boxes can also yield some useful items.</p>
           </section>
         </section>
-        <section>
+        <section className="space-y-4">
           <h4 className="text-lg font-bold">Day 6</h4>
           <ChecklistItem id="spring_scarecrow">
             <p>You should have gained Farming Level 1, so make a <ItemStackText item="scarecrow" /> to protect your crops.</p>
@@ -294,7 +294,7 @@ export default () => {
           <ChecklistItem id="spring6_wood">Otherwise keep working on cutting trees for that foraging level and getting 300 wood.</ChecklistItem>
           <ChecklistItem id="spring6_more_fishing">If you run low on energy early in the day, fishing is a good low energy activity and is good at making money.</ChecklistItem>
         </section>
-        <section>
+        <section className="space-y-4">
           <h4 className="text-lg font-bold">Day 7</h4>
           <ChecklistItem id="spring7_cart_red_cabbage_seeds">
             The Travelling Cart may have red cabbage seeds so be sure to visit it. None of the other items it may sell are important right now.
@@ -319,14 +319,14 @@ export default () => {
             It costs 1,800g and can use <Wiki>Bait</Wiki> items which in its basic form <ItemStackText item="bait" /> is commonly found or can be made using <ItemStackText item="bug_meat" /> and will make fish bit much faster.
           </ChecklistItem>
         </section>
-        <section>
+        <section className="space-y-4">
           <h4 className="text-lg font-bold">Day 8</h4>
           <p>
             Nothing special, keep working on trees for foraging level, gifts, quests, mining, fishing etc.{' '}
             If you feel you can manage maybe plant more parsnips to get extra levels and money before Strawberry (cash crop) season on Spring 13.
           </p>
         </section>
-        <section>
+        <section className="space-y-4">
           <h4 className="text-lg font-bold">Day 9</h4>
           <ChecklistItem id="spring9_parsnips">
             <p>
