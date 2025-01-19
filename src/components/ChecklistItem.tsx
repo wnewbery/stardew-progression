@@ -8,7 +8,7 @@ type ChecklistItemProps = {
 }
 
 export default ({ id, className, children }: PropsWithChildren<ChecklistItemProps>) => {
-  const isCompleted = useAppSelector(state => state.checklist.items[id]);
+  const isCompleted = useAppSelector(state => state.checklist.items[id]) ?? false;
   const dispatch = useAppDispatch();
 
   function set(v: boolean) {
