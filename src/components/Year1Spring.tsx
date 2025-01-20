@@ -4,6 +4,7 @@ import CommunityBundle from "./CommunityBundle";
 import ItemStackText from "./ItemStackText";
 import ArtifactImage from "../assets/Artifact_tile.gif";
 import Wiki from "./Wiki";
+import Spoiler from "./Spoiler";
 
 export default () => {
   return (
@@ -58,10 +59,26 @@ export default () => {
         </ChecklistItem>
         <ChecklistItem id="ocean_fish_bundle-sardine">
           Catch 1 <ItemStackText item="sardine" /> from the ocean before 7pm in spring, fall or winter.{' '}
-          Not completely essential, but getting the Sardine now allows the Ocean Fish Bundle to be completed in the summer, otherwise you will need to wait until the fall.        </ChecklistItem>
+          Not completely essential, but getting the Sardine now allows the Ocean Fish Bundle to be completed in the summer, otherwise you will need to wait until the fall.
+        </ChecklistItem>
         <ChecklistItem id="night_fishing_bundle-eel">
           Try and catch an <ItemStackText item="eel" /> at the ocean after 4pm on rainy days.
           You will get another chance in the fall if not.
+        </ChecklistItem>
+        <ChecklistItem id="crab-pot-bundle-clam">
+          Find 1 <ItemStackText item="clam" /> on the beach for the community centre.
+        </ChecklistItem>
+        <ChecklistItem id="crab-pot-bundle-cockle">
+          Find 1 <ItemStackText item="cockle" /> on the beach for the community centre.
+        </ChecklistItem>
+        <ChecklistItem id="crab-pot-bundle-mussel">
+          Find 1 <ItemStackText item="mussel" /> on the beach for the community centre.
+        </ChecklistItem>
+        <ChecklistItem id="crab-pot-bundle-oyster">
+          Find 1 <ItemStackText item="oyster" /> on the beach for the community centre.
+        </ChecklistItem>
+        <ChecklistItem id="dye_bundle-sea_urchin">
+          Find 1 <ItemStackText item="sea_urchin" /> on the east beach after repairing the bridge for the community centre.
         </ChecklistItem>
         <p>Two community bundles to be completed fully.</p>
         <CommunityBundle bundle="spring_crops_bundle" />
@@ -314,6 +331,13 @@ export default () => {
             <p>Take the 300 wood to the south east beach to repair the bridge and access the coral and sea urchin.</p>
             <p>Keep at least one <ItemStackText item="sea_urchin" /> for the community centre, and <ItemStackText item="coral" /> is useful for crafting.</p>
           </ChecklistItem>
+          <ChecklistItem id="dye_bundle-sea_urchin">
+            Find 1 <ItemStackText item="sea_urchin" /> for the community centre.
+          </ChecklistItem>
+          <ChecklistItem id="spring13_savings_target">
+            Aim to have at least 2,000g to buy at least 20 <ItemStackText item="strawberry_seeds" /> on Spring 13.{' '}
+            Better yet as many as you can water, maybe 3,000g for 30 or more.
+          </ChecklistItem>
           <ChecklistItem id="fiberglass_fishing_pole">
             If you have the money and as many crops as you can manage you might start considering the <ItemStackText item="fiberglass_rod" /> for fishing.{' '}
             It costs 1,800g and can use <Wiki>Bait</Wiki> items which in its basic form <ItemStackText item="bait" /> is commonly found or can be made using <ItemStackText item="bug_meat" /> and will make fish bit much faster.
@@ -337,6 +361,43 @@ export default () => {
               Unfortunately you can't sell Parsnips Spring 13 as the store is closed.{' '}
               However if have still not managed to get the 5 gold ones, will need to keep planting.
             </p>
+          </ChecklistItem>
+        </section>
+        <section className="space-y-4">
+          <h4 className="text-lg font-bold">Day 10</h4>
+          <ChecklistItem id="birthday_vincent">
+            Spring 10 is <a target="_blank" href="https://stardewvalleywiki.com/Vincent">Vincent's</a> birthday.{' '}
+            The best gift you are likely to have is a <ItemStackText item="daffodil" />.{' '}
+            He is likely to go to the Museum then around town.
+          </ChecklistItem>
+          <ChecklistItem id="spring_tree_tappers">
+            <p>
+              You should get Foraging Level 4 sometime soon. Once you do make at least 3 <ItemStackText item="tapper" />{' '}
+              and place them on trees to get{' '}
+              <ItemStackText item="maple_syrup" />,{' '}
+              <ItemStackText item="oak_resin" /> and {' '}
+              <ItemStackText item="pine_tar" />.
+            </p>
+            <p>
+              While you could use the <ItemStackText item="copper_bar" /> for tool upgrades,{' '}
+              you probably won't have enough spare money at this point,{' '}
+              and you will get plenty more copper after Spring 13 when money is a little more free.
+            </p>
+          </ChecklistItem>
+        </section>
+        <section className="space-y-4">
+          <h4 className="text-lg font-bold">Day 11</h4>
+          <ChecklistItem id="robin_axe">
+            <p>You will get a quest in the mail to find Robin's lost axe.</p>
+            <Spoiler>
+              <p>The axe is in the south east of the forest, just east of where the Spring Onions grow.</p>
+            </Spoiler>
+          </ChecklistItem>
+        </section>
+        <section className="space-y-4">
+          <h4 className="text-lg font-bold">Day 12</h4>
+          <ChecklistItem id="spring12_cart_red_cabbage_seeds">
+            If you don't have the red cabbage seeds yet, be sure to visit the Travelling Cart.
           </ChecklistItem>
         </section>
       </section>
