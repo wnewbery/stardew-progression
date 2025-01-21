@@ -5,8 +5,56 @@ import ItemStackText from "./ItemStackText";
 import ArtifactImage from "../assets/Artifact_tile.gif";
 import Wiki from "./Wiki";
 import Spoiler from "./Spoiler";
+import { ReactNode } from "react";
+
+interface DayProps {
+  day: number;
+  children?: ReactNode;
+}
+function Day({ day, children }: DayProps) {
+  return (
+    <section className="space-y-4">
+      <h4 className="text-lg font-bold">Day {day}</h4>
+      {children}
+    </section>
+  );
+}
 
 export default () => {
+  const birthdayHaley = (
+    <ChecklistItem id="birthday_haley">
+      Spring 14 is <a target="_blank" href="https://stardewvalleywiki.com/Haley">Haley's</a> birthday.{' '}
+      The best gift you are likely to have is a <ItemStackText item="daffodil" />.{' '}
+      She is likely to go to the fountain around 12pm then heading home 4:30pm.
+    </ChecklistItem>);
+  const birthdayPam = (
+    <ChecklistItem id="birthday_pam">
+      Spring 18 is <a target="_blank" href="https://stardewvalleywiki.com/Pam">Pam's</a> birthday.{' '}
+      The best gift you are likely to have is a <ItemStackText item="salmonberry" />.{' '}
+      She is likely to go to JojaMart at 12pm then the saloon at 4pm.
+    </ChecklistItem>
+  );
+  const birthdayShane = (
+    <ChecklistItem id="birthday_shane">
+      Spring 20 is <a target="_blank" href="https://stardewvalleywiki.com/Shane">Shane's</a> birthday.{' '}
+      The best gift you are likely to have is a <ItemStackText item="salmonberry" />.{' '}
+      He is likely to be at Marnie's, then go to the General Store at 12pm then the saloon at 5pm.
+    </ChecklistItem>
+  );
+  const birthdayPierre = (
+    <ChecklistItem id="birthday_pierre">
+      Spring 26 is <a target="_blank" href="https://stardewvalleywiki.com/Pierre">Pierre's</a> birthday.{' '}
+      The best gift you are likely to have is a <ItemStackText item="parsnip" />, <ItemStackText item="daffodil" /> or <ItemStackText item="dandelion" />.{' '}
+      He is likely to be at the General Store until 5pm then the saloon.
+    </ChecklistItem>);
+  const birthdayEmily = (
+    <ChecklistItem id="birthday_emily">
+      Spring 27 is <a target="_blank" href="https://stardewvalleywiki.com/Emily">Emily's</a> birthday.{' '}
+      If you are lucky you may have a loved gift; any gem except Diamond, or Cloth.{' '}
+      Otherwise a <ItemStackText item="daffodil" /> or <ItemStackText item="quartz" />.{' '}
+      She is likely to be at home until 3:30pm then the saloon.
+    </ChecklistItem>
+  );
   return (
     <div className="space-y-8 columns-xl">
       <h2 className="text-2xl font-bold">First Year Spring</h2>
@@ -65,24 +113,30 @@ export default () => {
           Try and catch an <ItemStackText item="eel" /> at the ocean after 4pm on rainy days.
           You will get another chance in the fall if not.
         </ChecklistItem>
-        <ChecklistItem id="crab-pot-bundle-clam">
+        <ChecklistItem id="crab_pot_bundle-clam">
           Find 1 <ItemStackText item="clam" /> on the beach for the community centre.
         </ChecklistItem>
-        <ChecklistItem id="crab-pot-bundle-cockle">
+        <ChecklistItem id="crab_pot_bundle-cockle">
           Find 1 <ItemStackText item="cockle" /> on the beach for the community centre.
         </ChecklistItem>
-        <ChecklistItem id="crab-pot-bundle-mussel">
+        <ChecklistItem id="crab_pot_bundle-mussel">
           Find 1 <ItemStackText item="mussel" /> on the beach for the community centre.
         </ChecklistItem>
-        <ChecklistItem id="crab-pot-bundle-oyster">
+        <ChecklistItem id="crab_pot_bundle-oyster">
           Find 1 <ItemStackText item="oyster" /> on the beach for the community centre.
         </ChecklistItem>
         <ChecklistItem id="dye_bundle-sea_urchin">
           Find 1 <ItemStackText item="sea_urchin" /> on the east beach after repairing the bridge for the community centre.
         </ChecklistItem>
-        <p>Two community bundles to be completed fully.</p>
+        <p>Three community bundles to be completed fully.</p>
         <CommunityBundle bundle="spring_crops_bundle" />
         <CommunityBundle bundle="spring_foraging_bundle" />
+        <p>
+          With some luck in the mines in the Spring you can get{' '}
+          a <ItemStackText item="crab" /> from killing Rock Crabs on mine floors 1-29 and{' '}
+          a <ItemStackText item="clam" />, <ItemStackText item="cockle" />, <ItemStackText item="mussel" />and <ItemStackText item="oyster" /> from the beach.
+        </p>
+        <CommunityBundle bundle="crab_pot_bundle" />
       </section>
       <section className="space-y-4">
         <h3 className="text-xl font-bold">Other Objectives</h3>
@@ -152,32 +206,11 @@ export default () => {
           The best gift you are likely to have is a <ItemStackText item="daffodil" />.{' '}
           He is likely to go to the Museum then around town.
         </ChecklistItem>
-        <ChecklistItem id="birthday_haley">
-          Spring 14 is <a target="_blank" href="https://stardewvalleywiki.com/Haley">Haley's</a> birthday.{' '}
-          The best gift you are likely to have is a <ItemStackText item="daffodil" />.{' '}
-          She is likely to go to the fountain around 12pm then heading home 4:30pm.
-        </ChecklistItem>
-        <ChecklistItem id="birthday_pam">
-          Spring 18 is <a target="_blank" href="https://stardewvalleywiki.com/Pam">Pam's</a> birthday.{' '}
-          The best gift you are likely to have is a <ItemStackText item="parsnip" />, otherwise a <ItemStackText item="salmonberry" />.{' '}
-          She is likely to go to JojaMart at 12pm then the saloon at 4pm.
-        </ChecklistItem>
-        <ChecklistItem id="birthday_shane">
-          Spring 20 is <a target="_blank" href="https://stardewvalleywiki.com/Shane">Shane's</a> birthday.{' '}
-          The best gift you are likely to have is a <ItemStackText item="salmonberry" />.{' '}
-          He is likely to be at Marnie's, then go to the General Store at 12pm then the saloon at 5pm.
-        </ChecklistItem>
-        <ChecklistItem id="birthday_pierre">
-          Spring 26 is <a target="_blank" href="https://stardewvalleywiki.com/Pierre">Pierre's</a> birthday.{' '}
-          The best gift you are likely to have is a <ItemStackText item="parsnip" />, <ItemStackText item="daffodil" /> or <ItemStackText item="dandelion" />.{' '}
-          He is likely to be at the General Store until 5pm then the saloon.
-        </ChecklistItem>
-        <ChecklistItem id="birthday_emily">
-          Spring 27 is <a target="_blank" href="https://stardewvalleywiki.com/Emily">Emily's</a> birthday.{' '}
-          If you are lucky you may have a loved gift; any gem except Diamond, or Cloth.{' '}
-          Otherwise a <ItemStackText item="daffodil" /> or <ItemStackText item="quartz" />.{' '}
-          She is likely to be at home until 3:30pm then the saloon.
-        </ChecklistItem>
+        {birthdayHaley}
+        {birthdayPam}
+        {birthdayShane}
+        {birthdayPierre}
+        {birthdayEmily}
       </section>
       <section className="space-y-8">
         <h3 className="text-xl font-bold">Day Guide</h3>
@@ -399,7 +432,241 @@ export default () => {
           <ChecklistItem id="spring12_cart_red_cabbage_seeds">
             If you don't have the red cabbage seeds yet, be sure to visit the Travelling Cart.
           </ChecklistItem>
+          <ChecklistItem id="spring12_sell">
+            The shop is closed tomorrow so make sure put anything you want to sell in the shipping chest before sleeping.
+          </ChecklistItem>
         </section>
+        <Day day={13}>
+          <p>
+            Spring 13 is the Egg Festival, start is by entering the town between 9am and 2pm.{' '}
+            If you miss it you can quit and reload without saving.
+          </p>
+          <ChecklistItem id="spring13_harvest">
+            Harvest any crops that are ready and water the soil ready to plant the strawberries after the festival.{' '}
+            One seed costs 100g so you can have an idea of how many you can afford.{' '}
+            Note that the shop is closed today so you can't sell anything.
+          </ChecklistItem>
+          <ChecklistItem id="spring13_festival">
+            Once ready head to the festival in town. There is no advantage to being early, but make sure you are there before 2pm.
+          </ChecklistItem>
+          <ChecklistItem id="spring13_festival_chat">
+            At the festival talk to everyone before starting the egg hunt.{' '}
+            This is a good way to complete the Introductions objective if you missed anyone, but also just talking increases your friendship levels slightly.
+          </ChecklistItem>
+          <ChecklistItem id="spring13_buy_strawberries">
+            Buy as many <ItemStackText item="strawberry_seeds" /> as you can afford and are able to water, I would go with at least 20, ideally 30+.
+          </ChecklistItem>
+          <ChecklistItem id="spring13_egg_hunt">
+            Once finished you can start the egg hunt. Do as well as you can but winning the price is not essential.
+            <Spoiler>The prize if you collect at least 9 eggs is a <ItemStackText item="straw_hat" /> cosmetic clothing item.</Spoiler>
+          </ChecklistItem>
+          <ChecklistItem id="spring13_plant_strawberries">
+            After the egg hunt make sure all the strawberries are planted and watered.
+          </ChecklistItem>
+        </Day>
+        <Day day={14}>
+          <ChecklistItem id="spring14_cart_red_cabbage_seeds">
+            If you don't have the red cabbage seeds yet, be sure to visit the Travelling Cart.
+          </ChecklistItem>
+          <p>Some things to be making sure have been working on so far as well as catching up on anything missed previously.</p>
+          <p>The two spring bundles. Keeping the spring seeds to make tea saplings.</p>
+          <CommunityBundle bundle="spring_crops_bundle" />
+          <CommunityBundle bundle="spring_foraging_bundle" />
+          <p>If you managed to get the crab, you can complete the Crab Pot Bundle as well.</p>
+          <CommunityBundle bundle="crab_pot_bundle" />
+          <ChecklistItem id="museum_cauliflower_seeds">Also donating to the museum can get 9 Cauliflower Seeds as a reward.</ChecklistItem>
+          <ChecklistItem id="spring14_parsnips">If you didn't get the 5 gold parsnips needed yet, you need to keep planting them until you do before the end of Spring.</ChecklistItem>
+          <p></p>
+          <p>You probably can not do all of the following now, but start working on them over the rest of the season.</p>
+          <ChecklistItem id="spring_crab_pots">
+            Place <ItemStackText item="crab_pot" /> either in the forest pond or the mountain lake where they are easy to check, and maybe the ocean if you have the crab too.{' '}
+            You can move them between the ponds and ocean occasionally to get different items, but you need to check them every day.
+          </ChecklistItem>
+          <ChecklistItem id="axe_copper">
+            If you have the money spare and come metal after making the tree taps,
+            you might consider upgrading your Axe so that you can remove the large tree stumps for
+            {' '}<ItemStackText item="hardwood" /> at the blacksmith for
+            2,000g and 5 <ItemStackText item="copper_bar" />.
+          </ChecklistItem>
+          <ChecklistItem id="axe_steel">
+            <p>
+              If you get some iron from the mine and lots of money, you can further upgrade to a Steel Axe.
+              This will allow you to remove the large logs, including the one in the North West of the Forest
+              which blocks access to the <Wiki>Secret Woods</Wiki>.
+            </p>
+            <p>
+              This is important as it renews the <ItemStackText item="hardwood" /> stumps everyday which you will
+              be needing soon for farm buildings such as a Stable to greatly increase movement speed.
+            </p>
+            <p>
+              Costs 5,000g and 5 <ItemStackText item="iron_bar" label="Iron Bars" />.
+            </p>
+          </ChecklistItem>
+          <ChecklistItem id="pickaxe_copper">
+            <p>
+              Once you get to level 40 in the mines the starting pickaxe will need 3 hits for each
+              rock which will rapidly use up energy. Consider upgrading to the Copper Pickaxe for
+              2,000g and 5 <ItemStackText item="copper_bar" />.
+            </p>
+            <p>It can also remove the large rocks on the farm.</p>
+          </ChecklistItem>
+          <ChecklistItem id="pickaxe_steel">
+            If you can spare another 5,000g and 5{' '}
+            <ItemStackText item="iron_bar" label="Iron Bars" /> then the Steel Pickaxe can break
+            rocks until floor 80 in 1 hit, saving a lot of energy.
+          </ChecklistItem>
+        </Day>
+        <Day day={15}>
+          <ChecklistItem id="spring_salmonberries">
+            <p>
+              Spring 15 to 18 is <ItemStackText item="salmonberry" /> season which can be harvested
+              by shaking the bushes which does not use energy.
+              Hopefully you also have level 4 foraging so each bush will get 2 berries!
+              Potentially you can get over 100 in the season without spending any energy.
+            </p>
+            <p>
+              Salmonberries sell for very little, only 5g,
+              but using them to make <ItemStackText item="jelly" /> using a{' '}
+              <ItemStackText item="preserves_jar" /> raises this to 60g!
+            </p>
+            <p>
+              They are also useful as gifts for <Wiki>Demetrius</Wiki>, <Wiki>Jodi</Wiki>,{' '}
+              <Wiki>Kent</Wiki>, <Wiki>Leah</Wiki>, <Wiki>Linus</Wiki>, <Wiki>Pam</Wiki>,{' '}
+              <Wiki>Robin</Wiki>, <Wiki>Sandy</Wiki> and <Wiki>Shane</Wiki>.
+              And every character except <Wiki>Sebastian</Wiki> likes <ItemStackText item="jelly" />.
+            </p>
+          </ChecklistItem>
+          <ChecklistItem id="spring_keep_salmonberries">
+            <p>
+              Keep at least 2 Salmonberries to make <ItemStackText item="wine" /> using a
+              <ItemStackText item="keg" /> for the Enchanter's Bundle and when aged to
+              silver quality for The Missing Bundle.
+            </p>
+            <p>Wine is also a <em>loved</em> gift for <Wiki>Harvey</Wiki> and <Wiki>Leah</Wiki>.</p>
+          </ChecklistItem>
+        </Day>
+        <Day day={16}>
+          <ChecklistItem id="spring16_salmonberries">Keep collecting <ItemStackText item="salmonberry" />.</ChecklistItem>
+          <ChecklistItem id="spring16_cauliflower">
+            <p>
+              Spring 16 is the last day you can plant Cauliflower as Spring crops will die at the end of the season.
+              With <ItemStackText item="speed_gro" /> you can plant on Spring 18.
+            </p>
+            <p>
+              If you still don't have a <ItemStackText item="cauliflower" quality="gold" />,
+              you should plant more now, possibly with <ItemStackText item="basic_fertilizer" /> to
+              increase quality chances.
+            </p>
+          </ChecklistItem>
+          <ChecklistItem id="museum_cauliflower_seeds">
+            If you didn't get the 9 Cauliflower Seeds from the museum yet, now would be a good time to take your donations.
+          </ChecklistItem>
+        </Day>
+        <Day day={17}>
+          <ChecklistItem id="spring17_salmonberries">Keep collecting <ItemStackText item="salmonberry" />.</ChecklistItem>
+          <p>Keep working on objectives.</p>
+        </Day>
+        <Day day={18}>
+          {birthdayPam}
+          <ChecklistItem id="spring18_salmonberries">
+            Spring 18 is the last day you can collect <ItemStackText item="salmonberry" />.
+          </ChecklistItem>
+        </Day>
+        <Day day={19}>
+          <ChecklistItem id="spring19_jodi_cauliflower">
+            Jodi will ask for a <ItemStackText item="cauliflower" /> in the mail.
+            This doesn't need to be done today.
+          </ChecklistItem>
+          <ChecklistItem id="spring19_cart_red_cabbage_seeds">
+            If you don't have the red cabbage seeds yet, be sure to visit the Travelling Cart.
+          </ChecklistItem>
+          <ChecklistItem id="spring19_cart_rare_seed">
+            If you have spare money, you might consider buying a <ItemStackText item="rare_seed" /> as the cart won't have many at a time.
+            These costs 1,000g each but after 24 days in the Fall will sell for at least 3,000g so is a long term investment.
+          </ChecklistItem>
+        </Day>
+        <Day day={20}>
+          {birthdayShane}
+        </Day>
+        <Day day={21}>
+          <ChecklistItem id="spring21_cart_red_cabbage_seeds">
+            If you don't have the red cabbage seeds yet, be sure to visit the Travelling Cart.
+          </ChecklistItem>
+          <ChecklistItem id="spring21_blue_jazz">Last day to plant Blue Jazz.</ChecklistItem>
+        </Day>
+        <Day day={22}>
+          <ChecklistItem id="spring22_last_day">
+            Last day to plant Kale, Potatoes, Rice and Tulips.
+          </ChecklistItem>
+          <ChecklistItem id="spring22_tea">
+            Each day of the last week of spring can can harvest <ItemStackText item="tea_leaves" /> from a Tea Bush.
+            If you got to two hearts with Caroline, she has one in her Sunroom in the General Store.
+          </ChecklistItem>
+        </Day>
+        <Day day={23}>
+          <ChecklistItem id="spring23_parsnip_seeds">
+            Last day to buy Parsnip Seeds, last day to plant is Spring 24.
+            If you didn't get the 5 gold ones yet, buy as many as you can and fertilize them.
+          </ChecklistItem>
+          <ChecklistItem id="spring23_tea">
+            Harvest <ItemStackText item="tea_leaves" /> from the sunroom if you are able.
+          </ChecklistItem>
+        </Day>
+        <Day day={24}>
+          <ChecklistItem id="spring24_flower_festival">
+            The Flower Festival is in the forest to the south before 2pm.
+          </ChecklistItem>
+          <ChecklistItem id="spring24_parsnips">
+            Last day to plant Parsnips so plant any seeds you have.
+          </ChecklistItem>
+          <ChecklistItem id="spring24_tea">
+            Harvest <ItemStackText item="tea_leaves" /> from the sunroom if you are able.
+          </ChecklistItem>
+        </Day>
+        <Day day={25}>
+          <ChecklistItem id="spring25_tea">
+            Harvest <ItemStackText item="tea_leaves" /> from the sunroom if you are able.
+          </ChecklistItem>
+        </Day>
+        <Day day={26}>
+          {birthdayPierre}
+          <ChecklistItem id="spring26_tea">
+            Harvest tea from the sunroom if you are able.
+          </ChecklistItem>
+          <ChecklistItem id="spring_silo">
+            If you get Robin to build a Silo today, it will be ready for the summer to start
+            collecting <ItemStackText item="hay" /> for animals.
+            It costs <ItemStackText item="stone" count={10} />,{' '}
+            <ItemStackText item="clay" count={10} /> and{' '}
+            <ItemStackText item="copper_bar" count={5} />.
+          </ChecklistItem>
+          <ChecklistItem id="spring26_stable">
+            Also consider working on hardwood for a stable once you get the upgraded for the extra mobility of a horse.
+            It needs 10,000g,{' '}
+            <ItemStackText item="hardwood" count={100} /> and{' '}
+            <ItemStackText item="iron_bar" count={5} />.
+            But probably don't buy it until you have brought the Summer crop seeds.
+          </ChecklistItem>
+        </Day>
+        <Day day={27}>
+          {birthdayEmily}
+          <ChecklistItem id="spring27_tea">
+            Harvest <ItemStackText item="tea_leaves" /> from the sunroom if you are able.
+          </ChecklistItem>
+          <ChecklistItem id="spring27_watering_can">
+            If you have the money and spare copper, today as with rain is a good day to upgrade your watering can.
+            The reason is that since all the crops will die at the end of the season,
+            you do not need to water them on Spring 28.
+          </ChecklistItem>
+        </Day>
+        <Day day={28}>
+          <ChecklistItem id="spring28_last_day">
+            Final day of spring, so harvest any remaining crops but you do not need to water them, as everything will die anyway.
+          </ChecklistItem>
+          <ChecklistItem id="spring28_tea">
+            Harvest <ItemStackText item="tea_leaves" /> from the sunroom if you are able.
+          </ChecklistItem>
+        </Day>
       </section>
     </div>
   );

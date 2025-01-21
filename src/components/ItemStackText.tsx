@@ -10,13 +10,15 @@ type Stack = {
 type ItemIconProps = {
   stack?: Stack
   item?: GameItem | string,
+  count?: number,
   quality?: ItemQuality | string,
   label?: string
 };
 
-export default ({ stack, item, quality, label }: ItemIconProps) => {
+export default ({ stack, item, quality, label, count }: ItemIconProps) => {
   item ??= stack?.item;
   quality ??= stack?.quality;
+  count ??= stack?.count;
   if (!item) throw new Error("ItemStackText: item or stack.item is required");
   if (typeof item === "string") item = GameData.item(item);
   if (typeof quality === "string") quality = ItemQuality.parse(quality);
@@ -25,7 +27,7 @@ export default ({ stack, item, quality, label }: ItemIconProps) => {
   let overlayIcon = quality?.overlayIcon ?
     <img src={quality.overlayIcon} className="absolute left-0 top-0" />
     : '';
-  let countStr = stack?.count && stack.count > 1 ? ` (${stack.count})` : '';
+  let countStr = count && count > 1 ? ` (${count})` : '';
 
   return (
     <span className="whitespace-nowrap">
