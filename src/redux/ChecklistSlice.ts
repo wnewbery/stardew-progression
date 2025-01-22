@@ -1,19 +1,41 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, Dispatch, PayloadAction } from "@reduxjs/toolkit";
 
 interface BoolStore {
   [key: string]: boolean;
 }
-function load() {
-  const jsonStr = window.localStorage.getItem("completedItems") ?? "[]";
-  const json = JSON.parse(jsonStr) as string[];
+interface Store {
+  items: BoolStore;
+  uiElementsHidden: BoolStore;
+};
+interface StoredData {
+  items: string[];
+  uiElementsHidden: string[];
+}
+function stringsToBoolMap(items?: string[]) {
+  if (!items) return {};
+
   const obj: BoolStore = {};
-  for (const item of json) {
+  for (const item of items) {
     obj[item] = true;
   }
   return obj;
 }
-function save(items: BoolStore) {
-  const json = Object.keys(items).filter(k => items[k]);
+function load(): Store {
+  const jsonStr = window.localStorage.getItem("completedItems") ?? "[]";
+  const json = JSON.parse(jsonStr) as StoredData;
+  return {
+    items: stringsToBoolMap(json.items),
+    uiElementsHidden: stringsToBoolMap(json.uiElementsHidden)
+  }
+}
+function boolMapToStrings(items: BoolStore) {
+  return Object.keys(items).filter(k => items[k]);
+}
+function save(data: Store) {
+  const json = {
+    items: boolMapToStrings(data.items),
+    uiElementsHidden: boolMapToStrings(data.uiElementsHidden)
+  };
   const jsonStr = JSON.stringify(json);
   window.localStorage.setItem("completedItems", jsonStr);
 }
@@ -37,14 +59,13 @@ interface SetPayload {
   id: string;
   completed: boolean;
 }
-
-const initItems = load();
+interface SetUiElementExpandedPayload {
+  id: string;
+  hidden: boolean;
+}
 export const checklistSlice = createSlice({
   name: 'checklist',
-  initialState: {
-    items: initItems,
-    itemsInit: initItems
-  },
+  initialState: load(),
   reducers: {
     setCompleted: (state, action: PayloadAction<SetPayload>) => {
       if (state.items[action.payload.id] !== action.payload.completed) {
@@ -57,12 +78,33 @@ export const checklistSlice = createSlice({
             state.items[bundle.bundle] = true;
           }
         }
-        save(state.items);
+        save(state);
       }
+    },
+    setUiElementHidden: (state, action: PayloadAction<SetUiElementExpandedPayload>) => {
+      if (state.uiElementsHidden[action.payload.id] !== action.payload.hidden) {
+        state.uiElementsHidden[action.payload.id] = action.payload.hidden;
+        save(state);
+      }
+    },
+    setAll: (state, action: PayloadAction<Store>) => {
+      state.items = action.payload.items;
+      state.uiElementsHidden = action.payload.uiElementsHidden;
     }
   }
 })
 
-export const { setCompleted } = checklistSlice.actions;
+export const { setCompleted, setUiElementHidden, setAll } = checklistSlice.actions;
 export default checklistSlice.reducer;
+
+
+export function monitorStorage(dispatch: Dispatch) {
+  // Reload the data on local storage change
+  window.addEventListener('storage', (event) => {
+    if (event.key === 'completedItems') {
+      const newData = load();
+      dispatch(setAll(newData));
+    }
+  });
+}
 

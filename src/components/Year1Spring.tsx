@@ -1,4 +1,3 @@
-import GameData from "../data/GameData";
 import ChecklistItem from "./ChecklistItem";
 import CommunityBundle from "./CommunityBundle";
 import ItemStackText from "./ItemStackText";
@@ -6,17 +5,18 @@ import ArtifactImage from "../assets/Artifact_tile.gif";
 import Wiki from "./Wiki";
 import Spoiler from "./Spoiler";
 import { ReactNode } from "react";
+import GuideSectionContainer from "./GuideSectionContainer";
 
-interface DayProps {
+export interface DayProps {
   day: number;
-  children?: ReactNode;
+  children: ReactNode;
 }
 function Day({ day, children }: DayProps) {
   return (
-    <section className="space-y-4" id={`/year1-spring/${day}`}>
-      <h4 className="text-lg font-bold">Day {day}</h4>
+    <GuideSectionContainer className="space-y-4" href={`/year1-spring/${day}`}>
+      <summary className="text-lg font-bold">Day {day}</summary>
       {children}
-    </section>
+    </GuideSectionContainer>
   );
 }
 
@@ -73,7 +73,8 @@ export default () => {
   return (
     <div className="space-y-8 columns-xl">
       <h2 className="text-2xl font-bold">First Year Spring</h2>
-      <section className="space-y-4">
+      <GuideSectionContainer className="space-y-4" href="/spring1/contents">
+        <summary className="text-xl font-bold">Contents</summary>
         <ul>
           <li>
             <ul>
@@ -83,9 +84,9 @@ export default () => {
             </ul>
           </li>
         </ul>
-      </section>
-      <section className="space-y-4">
-        <h3 className="text-xl font-bold">Advice</h3>
+      </GuideSectionContainer>
+      <GuideSectionContainer className="space-y-4" href="/spring1/advice">
+        <summary className="text-xl font-bold">Advice</summary>
         <ChecklistItem id="first_year_completable">
           If you want to guarantee completing the first year is possible, you must select this when <i>starting the game</i>.{' '}
           You need to by <ItemStackText item="red_cabbage_seeds" /> from the Travelling Cart, and this setting guarantees it will be stocked at least once between Spring 7 and Winter 16.
@@ -111,9 +112,9 @@ export default () => {
         <p><ItemStackText item="spring_onion" /> have a chance to spawn in the south by the sewer <i>every day</i> and while not worth much to sell, they are a cheap source of energy.</p>
         <p>You can give each character 2 gifts a week.</p>
         <p>When deciding when to upgrade the watering can, check the weather forecast as if it is raining the next day, and you can collect it the day after, then no crops will be missed.</p>
-      </section>
-      <section className="space-y-4">
-        <h3 className="text-xl font-bold">Community Centre Objectives</h3>
+      </GuideSectionContainer>
+      <GuideSectionContainer className="space-y-4" href="/spring1/community_centre">
+        <summary className="text-xl font-bold">Community Centre Objectives</summary>
         <ChecklistItem id="red_cabbage_seed">
           Check the Travelling Cart in the forest every Friday and Sunday after Spring 7 until Winter 16 for a <ItemStackText item="red_cabbage_seeds" />.
           You can't buy this seed from town until year 2, and you need it for the Dye Bundle in the community centre.
@@ -163,9 +164,9 @@ export default () => {
           a <ItemStackText item="clam" />, <ItemStackText item="cockle" />, <ItemStackText item="mussel" />and <ItemStackText item="oyster" /> from the beach.
         </p>
         <CommunityBundle bundle="crab_pot_bundle" />
-      </section>
-      <section className="space-y-4">
-        <h3 className="text-xl font-bold">Other Objectives</h3>
+      </GuideSectionContainer>
+      <GuideSectionContainer className="space-y-4" href="/spring1/other_objectives">
+        <summary className="text-xl font-bold">Other Objectives</summary>
         <ChecklistItem id="spring_fix_beach_bridge">
           Gather 300 <ItemStackText item="wood" /> to fix the bridge in the south east beach to access
           {' '}<ItemStackText item="coral" /> and <ItemStackText item="sea_urchin" />.
@@ -189,9 +190,9 @@ export default () => {
           </p>
           <p>Getting 2 hearts will allow access to her bedroom which is needed for a quest in the summer.</p>
         </ChecklistItem>
-      </section>
-      <section className="space-y-4">
-        <h3 className="text-xl font-bold">Optional Community Centre Objectives</h3>
+      </GuideSectionContainer>
+      <GuideSectionContainer className="space-y-4" href="/spring1/optional_community_centre_objectives">
+        <summary className="text-xl font-bold">Optional Community Centre Objectives</summary>
         <p>There are several bundles you can start but not complete, and you can still get the fish later. </p>
         <ChecklistItem id="river_fish_bundle-sunfish">
           Catch 1 <ItemStackText item="sunfish" /> from the river before 7pm, possible in the summer as well.
@@ -214,9 +215,9 @@ export default () => {
         <ChecklistItem id="night_fishing_bundle-bream">
           Catch 1 <ItemStackText item="bream" /> from the river after 6pm, all seasons.
         </ChecklistItem>
-      </section>
-      <section className="space-y-4">
-        <h3 className="text-xl font-bold">Birthdays</h3>
+      </GuideSectionContainer>
+      <GuideSectionContainer className="space-y-4" href="/spring1/birthdays">
+        <summary className="text-xl font-bold">Birthdays</summary>
         {birthdayKent}
         {birthdayLewis}
         {birthdayVincent}
@@ -225,7 +226,7 @@ export default () => {
         {birthdayShane}
         {birthdayPierre}
         {birthdayEmily}
-      </section>
+      </GuideSectionContainer>
       <section className="space-y-8">
         <h3 className="text-xl font-bold">Day Guide</h3>
         <Day day={1}>
@@ -628,7 +629,7 @@ export default () => {
         <Day day={26}>
           {birthdayPierre}
           <ChecklistItem id="spring26_tea">
-            Harvest tea from the sunroom if you are able.
+            Harvest <ItemStackText item="tea_leaves" /> from the sunroom if you are able.
           </ChecklistItem>
           <ChecklistItem id="spring_silo">
             If you get Robin to build a Silo today, it will be ready for the summer to start

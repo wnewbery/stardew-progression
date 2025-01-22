@@ -2,17 +2,18 @@ import { PropsWithChildren, ReactNode } from "react";
 import ChecklistItem from "./ChecklistItem";
 import CommunityBundle from "./CommunityBundle";
 import ItemStackText from "./ItemStackText";
+import GuideSectionContainer from "./GuideSectionContainer";
 
 interface DayProps {
   day: number;
-  children?: ReactNode;
+  children: ReactNode;
 }
 function Day({ day, children }: DayProps) {
   return (
-    <section className="space-y-4" id={`/year1-spring/${day}`}>
-      <h4 className="text-lg font-bold">Day {day}</h4>
+    <GuideSectionContainer className="space-y-4" href={`/year1-summer/${day}`}>
+      <summary className="text-lg font-bold">Day {day}</summary>
       {children}
-    </section>
+    </GuideSectionContainer>
   );
 }
 
@@ -22,10 +23,10 @@ interface GuideSectionProps {
 function GuideSection({ title, children }: PropsWithChildren<GuideSectionProps>) {
   let id = '/year1-summer/' + title.toLowerCase().replace(/ /g, '_');
   return (
-    <section className="space-y-4" id={id}>
-      <h3 className="text-lg font-bold" >{title}</h3>
+    <GuideSectionContainer className="space-y-4" href={id}>
+      <summary className="text-lg font-bold">{title}</summary>
       {children}
-    </section>
+    </GuideSectionContainer>
   );
 }
 
