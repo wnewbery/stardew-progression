@@ -13,7 +13,7 @@ interface DayProps {
 }
 function Day({ day, children }: DayProps) {
   return (
-    <section className="space-y-4">
+    <section className="space-y-4" id={`/year1-spring/${day}`}>
       <h4 className="text-lg font-bold">Day {day}</h4>
       {children}
     </section>
@@ -21,6 +21,24 @@ function Day({ day, children }: DayProps) {
 }
 
 export default () => {
+  const birthdayKent = (
+    <ChecklistItem id="birthday_kent">
+      Spring 4 is <a target="_blank" href="https://stardewvalleywiki.com/Kent">Kent's</a> birthday.{' '}
+      The best gift is likely to be a <ItemStackText item="daffodil" />.{' '}
+      He will be at or around his house until 10pm.
+    </ChecklistItem>);
+  const birthdayLewis = (
+    <ChecklistItem id="birthday_lewis">
+      Spring 7 is <a target="_blank" href="https://stardewvalleywiki.com/Lewis">Lewis'</a> birthday.{' '}
+      The best gift you are likely to have is a <ItemStackText item="parsnip" /> planted at the start.{' '}
+      He is likely to be by around his house or the town square.
+    </ChecklistItem>);
+  const birthdayVincent = (
+    <ChecklistItem id="birthday_vincent">
+      Spring 10 is <a target="_blank" href="https://stardewvalleywiki.com/Vincent">Vincent's</a> birthday.{' '}
+      The best gift you are likely to have is a <ItemStackText item="daffodil" />.{' '}
+      He is likely to go to the Museum then around town.
+    </ChecklistItem>);
   const birthdayHaley = (
     <ChecklistItem id="birthday_haley">
       Spring 14 is <a target="_blank" href="https://stardewvalleywiki.com/Haley">Haley's</a> birthday.{' '}
@@ -32,15 +50,13 @@ export default () => {
       Spring 18 is <a target="_blank" href="https://stardewvalleywiki.com/Pam">Pam's</a> birthday.{' '}
       The best gift you are likely to have is a <ItemStackText item="salmonberry" />.{' '}
       She is likely to go to JojaMart at 12pm then the saloon at 4pm.
-    </ChecklistItem>
-  );
+    </ChecklistItem>);
   const birthdayShane = (
     <ChecklistItem id="birthday_shane">
       Spring 20 is <a target="_blank" href="https://stardewvalleywiki.com/Shane">Shane's</a> birthday.{' '}
       The best gift you are likely to have is a <ItemStackText item="salmonberry" />.{' '}
       He is likely to be at Marnie's, then go to the General Store at 12pm then the saloon at 5pm.
-    </ChecklistItem>
-  );
+    </ChecklistItem>);
   const birthdayPierre = (
     <ChecklistItem id="birthday_pierre">
       Spring 26 is <a target="_blank" href="https://stardewvalleywiki.com/Pierre">Pierre's</a> birthday.{' '}
@@ -53,11 +69,21 @@ export default () => {
       If you are lucky you may have a loved gift; any gem except Diamond, or Cloth.{' '}
       Otherwise a <ItemStackText item="daffodil" /> or <ItemStackText item="quartz" />.{' '}
       She is likely to be at home until 3:30pm then the saloon.
-    </ChecklistItem>
-  );
+    </ChecklistItem>);
   return (
     <div className="space-y-8 columns-xl">
       <h2 className="text-2xl font-bold">First Year Spring</h2>
+      <section className="space-y-4">
+        <ul>
+          <li>
+            <ul>
+              {Array.from({ length: 27 }, (_, i) => (
+                <li key={i}><a href={`#/year1-spring/${i + 1}`}>Day {i + 1}</a></li>
+              ))}
+            </ul>
+          </li>
+        </ul>
+      </section>
       <section className="space-y-4">
         <h3 className="text-xl font-bold">Advice</h3>
         <ChecklistItem id="first_year_completable">
@@ -191,21 +217,9 @@ export default () => {
       </section>
       <section className="space-y-4">
         <h3 className="text-xl font-bold">Birthdays</h3>
-        <ChecklistItem id="birthday_kent">
-          Spring 4 is <a target="_blank" href="https://stardewvalleywiki.com/Kent">Kent's</a> birthday.{' '}
-          The best gift is likely to be a <ItemStackText item="daffodil" />.{' '}
-          He will be at or around his house until 10pm.
-        </ChecklistItem>
-        <ChecklistItem id="birthday_lewis">
-          Spring 7 is <a target="_blank" href="https://stardewvalleywiki.com/Lewis">Lewis'</a> birthday.{' '}
-          The best gift you are likely to have is a <ItemStackText item="parsnip" /> planted at the start.{' '}
-          He is likely to be by around his house or the town square.
-        </ChecklistItem>
-        <ChecklistItem id="birthday_vincent">
-          Spring 10 is <a target="_blank" href="https://stardewvalleywiki.com/Vincent">Vincent's</a> birthday.{' '}
-          The best gift you are likely to have is a <ItemStackText item="daffodil" />.{' '}
-          He is likely to go to the Museum then around town.
-        </ChecklistItem>
+        {birthdayKent}
+        {birthdayLewis}
+        {birthdayVincent}
         {birthdayHaley}
         {birthdayPam}
         {birthdayShane}
@@ -214,8 +228,7 @@ export default () => {
       </section>
       <section className="space-y-8">
         <h3 className="text-xl font-bold">Day Guide</h3>
-        <section className="space-y-4">
-          <h4 className="text-lg font-bold">Day 1</h4>
+        <Day day={1}>
           <p>
             The first day is going to be very important to get a good start for the rest of the year.
             The main goal is to get the first crops planted.
@@ -260,21 +273,21 @@ export default () => {
           <ChecklistItem id="spring1_planting">
             Be sure to plant and water all the seeds you got before the end of the day.
           </ChecklistItem>
-        </section>
-        <section className="space-y-4">
-          <h4 className="text-lg font-bold">Day 2</h4>
+        </Day>
+        <Day day={2}>
           <ChecklistItem id="spring2_crops">Make sure get in the habit of making sure every crop is watered every day.</ChecklistItem>
           <ChecklistItem id="spring_fishing_pole">Visit Willy by the ocean before 5pm to get the fishing pole.</ChecklistItem>
           <p>Nothing else critical today, can clear farm space, gather wood, plant any mixed seeds find, or carry on fishing.</p>
           <p>Main thing is to just ensure use up all your energy, and don't sleep late unless you got a skill level up.</p>
           <p>I sold most of the fish at this stage to rush towards 2,000g for the upgraded backpack.</p>
-        </section>
-        <section className="space-y-4">
-          <h4 className="text-lg font-bold">Day 3 and 4</h4>
-          <p>Nothing special about these days, keep working on objectives especially trees and friendships.</p>
-        </section>
-        <section className="space-y-4">
-          <h4 className="text-lg font-bold">Day 5</h4>
+        </Day>
+        <Day day={3}>
+          <p>Nothing special about today, keep working on objectives especially trees and friendships.</p>
+        </Day>
+        <Day day={4}>
+          {birthdayKent}
+        </Day>
+        <Day day={5}>
           <p>A very busy day, just try to get the main things done first.</p>
           <ChecklistItem id="spring5_parsnips">
             The first days parsnips are ready to harvest.{' '}
@@ -322,9 +335,8 @@ export default () => {
             <p>kill any insects you see as they are easy and 125 of them will give a good weapon from the guild.</p>
             <p>Smashing boxes can also yield some useful items.</p>
           </section>
-        </section>
-        <section className="space-y-4">
-          <h4 className="text-lg font-bold">Day 6</h4>
+        </Day>
+        <Day day={6}>
           <ChecklistItem id="spring_scarecrow">
             <p>You should have gained Farming Level 1, so make a <ItemStackText item="scarecrow" /> to protect your crops.</p>
             <p>See <a target="_blank" href="https://stardewvalleywiki.com/File:Scarecrow_Range.png" className="break-all">https://stardewvalleywiki.com/File:Scarecrow_Range.png</a> for a good indication of the scarecrow range.</p>
@@ -343,17 +355,12 @@ export default () => {
           <ChecklistItem id="spring6_saving">Another reminder that tomorrow the Travelling Cart might have the elusive red cabbage seeds. You need up to 1,000g for them so if you are short consider fishing and selling fish.</ChecklistItem>
           <ChecklistItem id="spring6_wood">Otherwise keep working on cutting trees for that foraging level and getting 300 wood.</ChecklistItem>
           <ChecklistItem id="spring6_more_fishing">If you run low on energy early in the day, fishing is a good low energy activity and is good at making money.</ChecklistItem>
-        </section>
-        <section className="space-y-4">
-          <h4 className="text-lg font-bold">Day 7</h4>
+        </Day>
+        <Day day={7}>
           <ChecklistItem id="spring7_cart_red_cabbage_seeds">
             The Travelling Cart may have red cabbage seeds so be sure to visit it. None of the other items it may sell are important right now.
           </ChecklistItem>
-          <ChecklistItem id="birthday_lewis">
-            Spring 7 is <a target="_blank" href="https://stardewvalleywiki.com/Lewis">Lewis'</a> birthday.{' '}
-            The best gift you are likely to have is a <ItemStackText item="parsnip" /> planted at the start.{' '}
-            He is likely to be by around his house or the town square.
-          </ChecklistItem>
+          {birthdayLewis}
           <ChecklistItem id="spring7_gift_reset">
             The limit of 2 gifts per villager each week resets on Sunday, so you can give {' '}
             another <ItemStackText item="daffodil" /> to <Wiki>Caroline</Wiki> and {' '}
@@ -375,16 +382,14 @@ export default () => {
             If you have the money and as many crops as you can manage you might start considering the <ItemStackText item="fiberglass_rod" /> for fishing.{' '}
             It costs 1,800g and can use <Wiki>Bait</Wiki> items which in its basic form <ItemStackText item="bait" /> is commonly found or can be made using <ItemStackText item="bug_meat" /> and will make fish bit much faster.
           </ChecklistItem>
-        </section>
-        <section className="space-y-4">
-          <h4 className="text-lg font-bold">Day 8</h4>
+        </Day>
+        <Day day={8}>
           <p>
             Nothing special, keep working on trees for foraging level, gifts, quests, mining, fishing etc.{' '}
             If you feel you can manage maybe plant more parsnips to get extra levels and money before Strawberry (cash crop) season on Spring 13.
           </p>
-        </section>
-        <section className="space-y-4">
-          <h4 className="text-lg font-bold">Day 9</h4>
+        </Day>
+        <Day day={9}>
           <ChecklistItem id="spring9_parsnips">
             <p>
               Spring 9 is the last day want to be planting parsnips,{' '}
@@ -395,14 +400,9 @@ export default () => {
               However if have still not managed to get the 5 gold ones, will need to keep planting.
             </p>
           </ChecklistItem>
-        </section>
-        <section className="space-y-4">
-          <h4 className="text-lg font-bold">Day 10</h4>
-          <ChecklistItem id="birthday_vincent">
-            Spring 10 is <a target="_blank" href="https://stardewvalleywiki.com/Vincent">Vincent's</a> birthday.{' '}
-            The best gift you are likely to have is a <ItemStackText item="daffodil" />.{' '}
-            He is likely to go to the Museum then around town.
-          </ChecklistItem>
+        </Day>
+        <Day day={10}>
+          {birthdayVincent}
           <ChecklistItem id="spring_tree_tappers">
             <p>
               You should get Foraging Level 4 sometime soon. Once you do make at least 3 <ItemStackText item="tapper" />{' '}
@@ -417,25 +417,23 @@ export default () => {
               and you will get plenty more copper after Spring 13 when money is a little more free.
             </p>
           </ChecklistItem>
-        </section>
-        <section className="space-y-4">
-          <h4 className="text-lg font-bold">Day 11</h4>
+        </Day>
+        <Day day={11}>
           <ChecklistItem id="robin_axe">
             <p>You will get a quest in the mail to find Robin's lost axe.</p>
             <Spoiler>
               <p>The axe is in the south east of the forest, just east of where the Spring Onions grow.</p>
             </Spoiler>
           </ChecklistItem>
-        </section>
-        <section className="space-y-4">
-          <h4 className="text-lg font-bold">Day 12</h4>
+        </Day>
+        <Day day={12}>
           <ChecklistItem id="spring12_cart_red_cabbage_seeds">
             If you don't have the red cabbage seeds yet, be sure to visit the Travelling Cart.
           </ChecklistItem>
           <ChecklistItem id="spring12_sell">
             The shop is closed tomorrow so make sure put anything you want to sell in the shipping chest before sleeping.
           </ChecklistItem>
-        </section>
+        </Day>
         <Day day={13}>
           <p>
             Spring 13 is the Egg Festival, start is by entering the town between 9am and 2pm.{' '}
@@ -468,6 +466,7 @@ export default () => {
           <ChecklistItem id="spring14_cart_red_cabbage_seeds">
             If you don't have the red cabbage seeds yet, be sure to visit the Travelling Cart.
           </ChecklistItem>
+          {birthdayHaley}
           <p>Some things to be making sure have been working on so far as well as catching up on anything missed previously.</p>
           <p>The two spring bundles. Keeping the spring seeds to make tea saplings.</p>
           <CommunityBundle bundle="spring_crops_bundle" />
@@ -613,14 +612,12 @@ export default () => {
           </ChecklistItem>
         </Day>
         <Day day={24}>
+          <p>You won't be able to harvest Tea Leaves today as the shop is locked.</p>
           <ChecklistItem id="spring24_flower_festival">
             The Flower Festival is in the forest to the south before 2pm.
           </ChecklistItem>
           <ChecklistItem id="spring24_parsnips">
             Last day to plant Parsnips so plant any seeds you have.
-          </ChecklistItem>
-          <ChecklistItem id="spring24_tea">
-            Harvest <ItemStackText item="tea_leaves" /> from the sunroom if you are able.
           </ChecklistItem>
         </Day>
         <Day day={25}>
@@ -636,7 +633,7 @@ export default () => {
           <ChecklistItem id="spring_silo">
             If you get Robin to build a Silo today, it will be ready for the summer to start
             collecting <ItemStackText item="hay" /> for animals.
-            It costs <ItemStackText item="stone" count={10} />,{' '}
+            It costs <ItemStackText item="stone" count={100} />,{' '}
             <ItemStackText item="clay" count={10} /> and{' '}
             <ItemStackText item="copper_bar" count={5} />.
           </ChecklistItem>

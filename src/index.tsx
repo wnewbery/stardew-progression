@@ -9,6 +9,7 @@ import { store } from "./redux/Store";
 // Pages
 import CommunityBundle from "./components/CommunityBundle";
 import Year1Spring from "./components/Year1Spring";
+import Year1Summer from "./components/Year1Summer";
 
 const container = document.getElementById("app")!;
 const root = createRoot(container);
@@ -62,7 +63,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Navigate to="/bundles" />} />
           <Route path="/bundles" element={<TabCommunityBundles />} />
-          <Route path="/year1-spring" element={<Year1Spring />} />
+          <Route path="/year1-spring/*" element={<Year1Spring />} />
+          <Route path="/year1-summer/*" element={<Year1Summer />} />
         </Routes>
       </div>
     </div>

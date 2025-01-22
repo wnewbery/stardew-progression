@@ -37,10 +37,13 @@ interface SetPayload {
   id: string;
   completed: boolean;
 }
+
+const initItems = load();
 export const checklistSlice = createSlice({
   name: 'checklist',
   initialState: {
-    items: load()
+    items: initItems,
+    itemsInit: initItems
   },
   reducers: {
     setCompleted: (state, action: PayloadAction<SetPayload>) => {

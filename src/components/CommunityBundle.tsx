@@ -13,6 +13,7 @@ export default ({ bundle }: CommunityBundleProps) => {
     bundle = GameData.bundle(bundle);
   }
   const isBundleCompleted = useAppSelector(state => state.checklist.items[bundle.id]);
+  const isBundleCompletedOnStart = useAppSelector(state => state.checklist.itemsInit[bundle.id]);
   const dispatch = useAppDispatch();
 
   const onBundleCompleted = (evt: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,18 +28,18 @@ export default ({ bundle }: CommunityBundleProps) => {
   }
 
   return (
-    <div className="max-w-[750px] break-inside-avoid-column">
-      <h3 className="text-xl font-bold">
-        <img src={bundle.icon} className="inline-block align-middle mr-5" />
-        {bundle.label}
-      </h3>
-      <div onClick={toggleBundle}>
-        <input type="checkbox" checked={isBundleCompleted} onChange={onBundleCompleted} className="ml-4 mr-8" />
+    <details className="max-w-[750px] break-inside-avoid-column border rounded-xl bg-slate-200" open={!isBundleCompletedOnStart}>
+      <summary className="text-xl font-bold space-x-4 ml-4">
+        <img src={bundle.icon} className="inline-block align-middle" />
+        <input type="checkbox" checked={isBundleCompleted} onChange={onBundleCompleted} className="w-6 h-6 align-middle" />
+        <span className="align-middle">{bundle.label}</span>
+      </summary>
+      <div className="m-4">
         <span className="font-bold mr-2">Reward:</span>
         <ItemStackText stack={bundle.reward} />
       </div>
       {!bundle.allNeeded && <div>{bundle.needed} items needed</div>}
-      <table>
+      <table className="border-t border-slate-400 w-full">
         <tbody>
           {bundle.items.map(item => {
             const countStr = item.count > 1 ? `(${item.count})` : '';
@@ -64,6 +65,6 @@ export default ({ bundle }: CommunityBundleProps) => {
           })}
         </tbody>
       </table>
-    </div>
+    </details>
   );
 };

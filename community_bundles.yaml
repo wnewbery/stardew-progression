@@ -227,7 +227,7 @@
         - id: periwinkle
         - id: oyster
         - id: clam
-    - label: Specialty Fishing Bundle
+    - label: Specialty Fish Bundle
       icon: 32px-Bundle_Red
       reward:
         id: dish_o_the_sea
