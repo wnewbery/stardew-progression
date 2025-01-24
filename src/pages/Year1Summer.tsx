@@ -1,9 +1,10 @@
 import { PropsWithChildren, ReactNode } from "react";
-import ChecklistItem from "./ChecklistItem";
-import CommunityBundle from "./CommunityBundle";
-import ItemStackText from "./ItemStackText";
-import GuideSectionContainer from "./GuideSectionContainer";
-import Spoiler from "./Spoiler";
+import ChecklistItem from "../components/ChecklistItem";
+import CommunityBundle from "../components/CommunityBundle";
+import ItemStackText from "../components/ItemStackText";
+import GuideSectionContainer from "../components/GuideSectionContainer";
+import Spoiler from "../components/Spoiler";
+import Building from "../components/Building";
 
 interface DayProps {
   day: number;
@@ -104,6 +105,12 @@ export default () => {
           You can also collect battery packs from them after a storm.
           You need to get to Level 6 Foraging to unlock the recipe.
         </p>
+      </GuideSection>
+      <GuideSection title="Other Objectives">
+        <p>There is a few buildings you should look to complete.</p>
+        <Building id="silo" />
+        <Building id="stable" />
+        <Building id="coop" />
       </GuideSection>
       <section className="space-y-8">
         <h3 className="text-xl font-bold">Day Guide</h3>

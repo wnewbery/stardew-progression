@@ -8,6 +8,7 @@ type Stack = {
   quality?: ItemQuality
 };
 type ItemIconProps = {
+  className?: string,
   stack?: Stack
   item?: GameItem | string,
   count?: number,
@@ -15,7 +16,7 @@ type ItemIconProps = {
   label?: string
 };
 
-export default ({ stack, item, quality, label, count }: ItemIconProps) => {
+export default ({ className, stack, item, quality, label, count }: ItemIconProps) => {
   item ??= stack?.item;
   quality ??= stack?.quality;
   count ??= stack?.count;
@@ -30,7 +31,7 @@ export default ({ stack, item, quality, label, count }: ItemIconProps) => {
   let countStr = count && count > 1 ? ` (${count})` : '';
 
   return (
-    <span className="whitespace-nowrap">
+    <span className={`whitespace-nowrap ${className}`}>
       <span className="inline-block relative align-middle">
         <img src={item.icon} width="24" height="24" />
         {overlayIcon}

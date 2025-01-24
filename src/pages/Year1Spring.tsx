@@ -1,11 +1,11 @@
-import ChecklistItem from "./ChecklistItem";
-import CommunityBundle from "./CommunityBundle";
-import ItemStackText from "./ItemStackText";
+import ChecklistItem from "../components/ChecklistItem";
+import CommunityBundle from "../components/CommunityBundle";
+import ItemStackText from "../components/ItemStackText";
 import ArtifactImage from "../assets/Artifact_tile.gif";
-import Wiki from "./Wiki";
-import Spoiler from "./Spoiler";
+import Wiki from "../components/Wiki";
+import Spoiler from "../components/Spoiler";
 import { ReactNode } from "react";
-import GuideSectionContainer from "./GuideSectionContainer";
+import GuideSectionContainer from "../components/GuideSectionContainer";
 
 export interface DayProps {
   day: number;

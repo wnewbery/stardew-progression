@@ -42,7 +42,7 @@ export default ({ bundle }: CommunityBundleProps) => {
         <span className="font-bold mr-2">Reward:</span>
         <ItemStackText stack={bundle.reward} />
       </div>
-      {!bundle.allNeeded && <div>{bundle.needed} items needed</div>}
+      {!bundle.allNeeded && <div className="ml-4">{bundle.needed} items needed</div>}
       <table className="border-t border-slate-400 w-full">
         <tbody>
           {bundle.items.map(item => {

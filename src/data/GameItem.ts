@@ -1,4 +1,3 @@
-import { mdToHtml } from "../util/Markdown";
 import GameIcons from "./GameIcons";
 
 export default class GameItem {

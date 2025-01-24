@@ -8,8 +8,9 @@ import './app.css';
 import { store } from "./redux/Store";
 // Pages
 import CommunityBundle from "./components/CommunityBundle";
-import Year1Spring from "./components/Year1Spring";
-import Year1Summer from "./components/Year1Summer";
+import Year1Spring from "./pages/Year1Spring";
+import Year1Summer from "./pages/Year1Summer";
+import Buildings from "./pages/Buildings";
 
 const container = document.getElementById("app")!;
 const root = createRoot(container);
@@ -62,6 +63,7 @@ const App = () => {
       <div className="p-8 flex-auto overflow-y-auto flex flex-col gap-4">
         <Routes>
           <Route path="/" element={<Navigate to="/bundles" />} />
+          <Route path="/buildings" element={<Buildings />} />
           <Route path="/bundles" element={<TabCommunityBundles />} />
           <Route path="/year1-spring/*" element={<Year1Spring />} />
           <Route path="/year1-summer/*" element={<Year1Summer />} />

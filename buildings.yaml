@@ -1,0 +1,132 @@
+- label: Barn
+  wiki: https://stardewvalleywiki.com/Barn
+  cost: 6000
+  materials:
+    - id: stone
+      count: 150
+    - id: wood
+      count: 350
+  size: {w: 7, h: 4}
+- label: Big Barn
+  wiki: https://stardewvalleywiki.com/Barn
+  cost: 12000
+  materials:
+    - id: stone
+      count: 200
+    - id: wood
+      count: 450
+  size: {w: 7, h: 4}
+- label: Deluxe Barn
+  wiki: https://stardewvalleywiki.com/Barn
+  cost: 25000
+  materials:
+    - id: stone
+      count: 300
+    - id: wood
+      count: 550
+  size: {w: 7, h: 4}
+- label: Coop
+  wiki: https://stardewvalleywiki.com/Coop
+  cost: 4000
+  materials:
+    - id: stone
+      count: 100
+    - id: wood
+      count: 300
+  size: {w: 6, h: 3}
+- label: Big Coop
+  wiki: https://stardewvalleywiki.com/Coop
+  cost: 10000
+  materials:
+    - id: stone
+      count: 150
+    - id: wood
+      count: 400
+  size: {w: 6, h: 3}
+- label: Deluxe Coop
+  wiki: https://stardewvalleywiki.com/Coop
+  cost: 20000
+  materials:
+    - id: stone
+      count: 200
+    - id: wood
+      count: 500
+  size: {w: 6, h: 3}
+- label: Fish Pond
+  wiki: https://stardewvalleywiki.com/Fish_Pond
+  cost: 5000
+  materials:
+    - id: stone
+      count: 200
+    - id: seaweed
+      count: 5
+    - id: green_algae
+      count: 5
+  size: {w: 5, h: 5}
+- label: Mill
+  wiki: https://stardewvalleywiki.com/Mill
+  cost: 2500
+  materials:
+    - id: stone
+      count: 50
+    - id: wood
+      count: 150
+    - id: cloth
+      count: 4
+  size: {w: 4, h: 2}
+- label: Shed
+  wiki: https://stardewvalleywiki.com/Shed
+  cost: 15000
+  materials:
+    - id: wood
+      count: 300
+  size: {w: 7, h: 3}
+- label: Big Shed
+  wiki: https://stardewvalleywiki.com/Shed
+  cost: 20000
+  materials:
+    - id: wood
+      count: 550
+    - id: stone
+      count: 300
+  size: {w: 7, h: 3}
+- label: Silo
+  wiki: https://stardewvalleywiki.com/Silo
+  cost: 100
+  materials:
+    - id: stone
+      count: 100
+    - id: clay
+      count: 10
+    - id: copper_bar
+      count: 5
+  size: {w: 3, h: 3}
+- label: Slime Hutch
+  wiki: https://stardewvalleywiki.com/Slime_Hutch
+  cost: 10000
+  materials:
+    - id: stone
+      count: 500
+    - id: refined_quartz
+      count: 10
+    - id: iridium_bar
+      count: 1
+  size: {w: 11, h: 6}
+- label: Stable
+  wiki: https://stardewvalleywiki.com/Stable
+  cost: 10000
+  materials:
+    - id: hardwood
+      count: 100
+    - id: iron_bar
+      count: 5
+  size: {w: 4, h: 2}
+- label: Well
+  wiki: https://stardewvalleywiki.com/Well
+  cost: 1000
+  materials:
+    - id: stone
+      count: 75
+  size: {w: 3, h: 3}
+
+
