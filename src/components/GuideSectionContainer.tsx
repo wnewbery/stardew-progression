@@ -18,7 +18,7 @@ export default ({ href, storeId, children, className }: GuideSectionProps) => {
     dispatch(setUiElementHidden({ id: storeId, hidden: !open }));
   }
   return (
-    <details id={href} open={!hidden} onToggle={setDetailsOpen} className={className}>
+    <details id={href} open={!hidden} onToggle={setDetailsOpen} className={`break-inside-avoid-column ${className}`}>
       {children}
     </details>
   );

@@ -68,7 +68,7 @@
       reward:
         id: autumns_bounty
         count: 5
-      item_count: 5
+      needed: 5
       items:
         - id: coconut
         - id: cactus_fruit

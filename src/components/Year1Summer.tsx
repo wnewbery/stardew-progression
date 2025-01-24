@@ -3,6 +3,7 @@ import ChecklistItem from "./ChecklistItem";
 import CommunityBundle from "./CommunityBundle";
 import ItemStackText from "./ItemStackText";
 import GuideSectionContainer from "./GuideSectionContainer";
+import Spoiler from "./Spoiler";
 
 interface DayProps {
   day: number;
@@ -90,6 +91,117 @@ export default () => {
         <CommunityBundle bundle="geologists_bundle" />
         <CommunityBundle bundle="adventurers_bundle" />
       </GuideSection>
+      <GuideSection title="Summer Advice">
+        <p>
+          You have the option to get basic or Quality sprinklers.
+          If you are planning on getting them you should plan your crop layout accordingly before planting.
+          Personally I don't think they are worth it over just upgrading the watering can,
+          and you probably won't be able to make Iridium Sprinklers in useful quantities yet.
+        </p>
+        <p>
+          Summer lightning storms can kill your crops, so placing some Lightning Rods will help mitigate that.
+          Their location doesn't matter, as long as they are on the farm.
+          You can also collect battery packs from them after a storm.
+          You need to get to Level 6 Foraging to unlock the recipe.
+        </p>
+      </GuideSection>
+      <section className="space-y-8">
+        <h3 className="text-xl font-bold">Day Guide</h3>
+        <Day day={1}>
+          <ChecklistItem id="summer1_melons">
+            The big challenge in Summer is getting the
+            5 <ItemStackText item="melon" quality="gold" label="Melons" /> for the Quality Crops Bundle,
+            as with the <ItemStackText item="parsnip" quality="gold" /> in the Spring.
+            Just keep planting them until you get enough, maybe start with 30.
+            You should be able to afford to make <ItemStackText item="basic_fertilizer" /> for all of them.
+          </ChecklistItem>
+          <ChecklistItem id="summer1_corn">
+            <ItemStackText item="corn" /> is both a Summer and Fall crop and once grown can be repeated
+            harvested every 4 days. You need 5 <ItemStackText item="corn" quality="gold" /> for the
+            Quality Crops Bundle so you should start on them now.
+
+            At least 5 with <ItemStackText item="basic_fertilizer" /> would be a good start.
+          </ChecklistItem>
+          <ChecklistItem id="summer1_crops">
+            <p>
+              The other notable crops to plant are <ItemStackText item="hot_pepper" /> and
+              <ItemStackText item="tomato" /> for the Summer Crops Bundle.
+              And some <ItemStackText item="hops" />, <ItemStackText item="radish" /> and
+              <ItemStackText item="wheat" />.
+              At least 5 of each would be good.
+            </p>
+            <p>
+              And at least one <ItemStackText item="sunflower" />.
+            </p>
+          </ChecklistItem>
+          <ChecklistItem id="summer1_blueberry">
+            <p>
+              Blueberries will be the summer cash crop. Each harvest gives 3 blueberries selling for at least
+              150g total and they will keep growing all season.
+              Ideally aim for at least 20 or 30, more if you can keep up with watering them.
+            </p>
+            <p>
+              Ideally plant each one with a <ItemStackText item="speed_gro" /> as doing so on the first day
+              gives an extra harvest.
+              You might have some already, but even if you buy it for each seed for 100g each you still make
+              back at least an extra 50g without extra watering, and if you get extra silver or gold ones
+              you will make even more.
+            </p>
+            <p>
+              That is much less than an entire extra plant though, so if you have run out of money
+              the Speed-Gro is less important than the seeds.
+            </p>
+          </ChecklistItem>
+          <ChecklistItem id="summer1_free_seeds">
+            You might have also found some free seeds such as for <ItemStackText item="summer_squash" />{' '}
+            or <ItemStackText item="starfruit" />, plant those as well.
+          </ChecklistItem>
+          <p>
+            Summer has new forage items which as before use no energy to harvest.
+            As you move about and if you have some spare time you should collect them.
+          </p>
+          <p>
+            Each of the maps is actually limited to 6 normal forage items per week,
+            and resets on Sunday morning. So if you are short on time trying to check each area
+            at least once around Saturday is a good strategy.
+          </p>
+          <p>
+            Summer also comes with new fish you will want to catch before the season is done,
+            see the objectives.
+          </p>
+        </Day>
+        <Day day={2}>
+          <p>Nothing special, keep working on objectives.</p>
+        </Day>
+        <Day day={3}>
+          <ChecklistItem id="summer3_earthquake">
+            <p>
+              Over night after day 2 there is an earthquake event.
+              Notably this opens up the northern area with the railway and the Spa.
+            </p>
+            <p>
+              When in the pool at the Spa you regenerate 10 energy per second.
+              Unfortunately as the Spa is pretty far out of your way and it takes a lot of time
+              to enter and leave, most of the time this is not worth it.
+            </p>
+            <p>
+              In most cases it is probably better to just eat some food, or to do low energy tasks
+              like fishing.
+              Once you have a horse if you are out of energy and nearby it might be worth it
+              occasionally.
+            </p>
+          </ChecklistItem>
+          <ChecklistItem id="summer3_lewis_quest">
+            <p>
+              You will get a letter in the mail from Lewis asking you to find his shorts.
+              This rewards 750g so is worth doing.
+            </p>
+            <Spoiler>
+              Check Marnie's bedroom, this is why you needed to get her friendship to 2 hearts.
+            </Spoiler>
+          </ChecklistItem>
+        </Day>
+      </section>
     </div>
   );
 }

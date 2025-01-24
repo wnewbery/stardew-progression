@@ -68,7 +68,7 @@ export default () => {
       Spring 27 is <a target="_blank" href="https://stardewvalleywiki.com/Emily">Emily's</a> birthday.{' '}
       If you are lucky you may have a loved gift; any gem except Diamond, or Cloth.{' '}
       Otherwise a <ItemStackText item="daffodil" /> or <ItemStackText item="quartz" />.{' '}
-      She is likely to be at home until 3:30pm then the saloon.
+      She is likely to be in her room until 12p, then around the house until 3:30pm when she goes to work at the saloon.
     </ChecklistItem>);
   return (
     <div className="space-y-8 columns-xl">
@@ -155,7 +155,7 @@ export default () => {
         <ChecklistItem id="dye_bundle-sea_urchin">
           Find 1 <ItemStackText item="sea_urchin" /> on the east beach after repairing the bridge for the community centre.
         </ChecklistItem>
-        <p>Three community bundles to be completed fully.</p>
+        <p>At least 3 or 4 community bundles to be completed fully.</p>
         <CommunityBundle bundle="spring_crops_bundle" />
         <CommunityBundle bundle="spring_foraging_bundle" />
         <p>
@@ -164,6 +164,15 @@ export default () => {
           a <ItemStackText item="clam" />, <ItemStackText item="cockle" />, <ItemStackText item="mussel" />and <ItemStackText item="oyster" /> from the beach.
         </p>
         <CommunityBundle bundle="crab_pot_bundle" />
+        <p>
+          Probably the easiest is if you get some mushrooms (probably from the mushroom cave),
+          tap trees and a cave carrot from the mines.
+        </p>
+        <CommunityBundle bundle="exotic_foraging_bundle" />
+        <p>If you do really well in the mines, all the Boiler Room bundles may be possible as well.</p>
+        <CommunityBundle bundle="blacksmiths_bundle" />
+        <CommunityBundle bundle="geologists_bundle" />
+        <CommunityBundle bundle="adventurers_bundle" />
       </GuideSectionContainer>
       <GuideSectionContainer className="space-y-4" href="/spring1/other_objectives">
         <summary className="text-xl font-bold">Other Objectives</summary>
@@ -506,7 +515,7 @@ export default () => {
             <p>
               Once you get to level 40 in the mines the starting pickaxe will need 3 hits for each
               rock which will rapidly use up energy. Consider upgrading to the Copper Pickaxe for
-              2,000g and 5 <ItemStackText item="copper_bar" />.
+              2,000g and 5 <ItemStackText item="copper_bar" /> which can break them in 2 hits.
             </p>
             <p>It can also remove the large rocks on the farm.</p>
           </ChecklistItem>
@@ -602,6 +611,14 @@ export default () => {
             Each day of the last week of spring can can harvest <ItemStackText item="tea_leaves" /> from a Tea Bush.
             If you got to two hearts with Caroline, she has one in her Sunroom in the General Store.
           </ChecklistItem>
+          <ChecklistItem id="spring22_caroline_tea_sapling">
+            If you go to Caroline's sunroom between 9 and 5 on a day that is not raining there
+            will be a cutscene event.
+            The next day she will send you the recipe to turn your{' '}
+            <ItemStackText item="spring_seeds" /> into Tea Saplings so you can grow your own
+            tea for Summer.
+            Note that Tea Saplings do not need tilled ground or to be watered.
+          </ChecklistItem>
         </Day>
         <Day day={23}>
           <ChecklistItem id="spring23_parsnip_seeds">
@@ -625,8 +642,16 @@ export default () => {
           <ChecklistItem id="spring25_tea">
             Harvest <ItemStackText item="tea_leaves" /> from the sunroom if you are able.
           </ChecklistItem>
+          <ChecklistItem id="spring25_regrow">
+            At the end of the season all Spring crops will die, so as your Strawberries and other plants
+            with multiple harvests complete, you can stop watering them to save some time and
+            energy.
+          </ChecklistItem>
         </Day>
         <Day day={26}>
+          <ChecklistItem id="spring26_cart_red_cabbage_seeds">
+            If you don't have the red cabbage seeds yet, be sure to visit the Travelling Cart.
+          </ChecklistItem>
           {birthdayPierre}
           <ChecklistItem id="spring26_tea">
             Harvest <ItemStackText item="tea_leaves" /> from the sunroom if you are able.
@@ -660,6 +685,9 @@ export default () => {
         <Day day={28}>
           <ChecklistItem id="spring28_last_day">
             Final day of spring, so harvest any remaining crops but you do not need to water them, as everything will die anyway.
+          </ChecklistItem>
+          <ChecklistItem id="spring28_cart_red_cabbage_seeds">
+            If you don't have the red cabbage seeds yet, be sure to visit the Travelling Cart.
           </ChecklistItem>
           <ChecklistItem id="spring28_tea">
             Harvest <ItemStackText item="tea_leaves" /> from the sunroom if you are able.
