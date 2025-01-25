@@ -25,11 +25,19 @@ function TabCommunityBundles() {
       {bundles.map(bundle => <CommunityBundle key={bundle.id} bundle={bundle} />)}
     </>);
 }
+const footer = (
+  <>
+    <p>Website by William Newbery &copy; 2025</p>
+    <p>Get the code and file issues on <a href="https://github.com/wnewbery/stardew-progression">GitHub</a></p>
+    <p>Content available under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative&nbsp;Commons Attribution-NonCommercial-ShareAlike</a></p>
+    <p>Icons and general game information from <a href="https://stardewvalleywiki.com/">Stardew Valley Wiki</a></p>
+  </>
+);
 const App = () => {
   const [activeTab, setActiveTab] = useState("bundles");
   return (
     <div className="h-screen v-screen xl:flex flex-row ">
-      <div className="p-8 max-w-md flex-initial flex flex-col gap-4 overflow-y-auto xl:border-r-2 border-r-solid border-blue-300">
+      <div className="p-8 xl:max-w-md flex-initial flex flex-col gap-4 overflow-y-auto xl:border-r-2 border-r-solid border-blue-300">
         <h1 className="text-2xl font-bold">Stardew Valley Progression Guide &amp; Tracker</h1>
         <nav>
           <section>
@@ -51,14 +59,14 @@ const App = () => {
           </section>
         </nav>
 
+        {/*TOC on sidebar only*/}
+        <div className="hidden xl:block">
+
+        </div>
+
         <div className="flex-1"></div> {/*Use up space*/}
 
-        <div>
-          <p>Website by William Newbery &copy; 2025</p>
-          <p>Get the code and file issues on <a href="https://github.com/wnewbery/stardew-progression">GitHub</a></p>
-          <p>Content available under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative&nbsp;Commons Attribution-NonCommercial-ShareAlike</a></p>
-          <p>Icons and general game information from <a href="https://stardewvalleywiki.com/">Stardew Valley Wiki</a></p>
-        </div>
+        <div className="hidden xl:block">{footer}</div>
       </div>
       <div className="p-8 flex-auto overflow-y-auto flex flex-col gap-4">
         <Routes>
@@ -69,6 +77,7 @@ const App = () => {
           <Route path="/year1-summer/*" element={<Year1Summer />} />
         </Routes>
       </div>
+      <div className="xl:hidden p-8">{footer}</div>
     </div>
   );
 };

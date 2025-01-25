@@ -71,7 +71,7 @@ export default () => {
       She is likely to be in her room until 12p, then around the house until 3:30pm when she goes to work at the saloon.
     </ChecklistItem>);
   return (
-    <div className="space-y-8 columns-xl">
+    <div className="space-y-8 max-w-4xl">
       <h2 className="text-2xl font-bold">First Year Spring</h2>
       <GuideSectionContainer className="space-y-4" href="/spring1/contents">
         <summary className="text-xl font-bold">Contents</summary>

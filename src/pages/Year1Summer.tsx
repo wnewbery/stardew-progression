@@ -5,16 +5,157 @@ import ItemStackText from "../components/ItemStackText";
 import GuideSectionContainer from "../components/GuideSectionContainer";
 import Spoiler from "../components/Spoiler";
 import Building from "../components/Building";
+import Wiki from "../components/Wiki";
+import normaliseId from "../NormaliseId";
+import GameIcons from "../data/GameIcons";
 
+interface BirthdayInfo {
+  day: number;
+  name: string;
+  content: ReactNode;
+  hide?: boolean;
+}
+const birthdays: BirthdayInfo[] = [
+  {
+    day: 4,
+    name: "Jas",
+    content: <>
+      If you are lucky you might have found a <ItemStackText item="ancient_doll" /> loved gift,
+      otherwise a <ItemStackText item="daffodil" />.
+      She is likely to leave Marnie's Ranch at 11am until 3pm to go to the tree
+      west of the house in the forest.
+    </>
+  },
+  {
+    day: 8,
+    name: "Gus",
+    content: <>
+      If you are lucky you might have found a <ItemStackText item="diamond" /> loved gift,
+      otherwise a <ItemStackText item="daffodil" />.
+      He is likely to go to the store until 11am then in his Saloon.
+    </>
+  },
+  {
+    day: 10,
+    name: "Maru",
+    content: <>
+      She has a lot of loved gifts, so use the one of the highest quality you have spare.
+      <ItemStackText item="cauliflower" />,{' '}
+      <ItemStackText item="strawberry" />,{' '}
+      <ItemStackText item="battery_pack" />,{' '}
+      <ItemStackText item="diamond" /> or{' '}
+      <ItemStackText item="gold_bar" />.
+      She is likely to be at her house or nearby to the east.
+    </>
+  },
+  {
+    day: 13,
+    name: "Alex",
+    content: <>
+      The best gift you are likely to have is one of the <Wiki>Universal Likes</Wiki>,
+      such as a <ItemStackText item="sweet_pea" />.
+      He is likely to be at the beach until 12pm then at the ice cream stand until 5pm.
+    </>
+  },
+  {
+    day: 17,
+    name: "Sam",
+    content: <>
+      The best gift you are likely to have is one of the <Wiki>Universal Likes</Wiki>,
+      such as a <ItemStackText item="sweet_pea" />.
+      He is likely to leave his house at 10am then go to JojaMart until 4pm.
+    </>
+  },
+  {
+    day: 19,
+    name: "Demetrius",
+    content: <>
+      The best gift you are likely to have is a <ItemStackText item="strawberry" /> loved gift,
+      otherwise one of the <Wiki>Universal Likes</Wiki>.
+      He is likely to go to the saloon at 4pm.
+    </>
+  },
+  {
+    day: 22,
+    name: "Dwarf",
+    hide: true,
+    content: <>
+      He loves a range of gems from the mines which you should have available
+      and is always int he mines to the east of the main entrance.{' '}
+      <em>However</em> you need a Steel Pickaxe to get in and you need to have learned Dwarvish
+      which is unlikely at this point.
+    </>
+  },
+  {
+    day: 24,
+    name: "Willy",
+    content: <>
+      He has a lot of loved gifts, so use the one of the highest quality you have spare.
+      <ItemStackText item="catfish" />,{' '}
+      <ItemStackText item="sturgeon" />,{' '}
+      <ItemStackText item="octopus" />,{' '}
+      <ItemStackText item="mead" /> or{' '}
+      <ItemStackText item="diamond" /> or{' '}
+      <ItemStackText item="gold_bar" />.
+      He is likely to be at his shop or by the beach fishing.
+    </>
+  },
+  {
+    day: 26,
+    name: "Leo",
+    hide: true,
+    content: <>
+      You are unlikely to have made it to Ginger Island at this point.
+    </>
+  }
+]
+
+interface BirthdayProps {
+  birthday: BirthdayInfo;
+}
+function Birthday({ birthday }: BirthdayProps) {
+  return (
+    <ChecklistItem id={`birthday_${normaliseId(birthday.name)}`}>
+      Summer {birthday.day} is {' '}
+      <img src={GameIcons(birthday.name + '_icon')} className="inline" />
+      {' '}
+      <a target="_blank" href={`https://stardewvalleywiki.com/${birthday.name}`}>{birthday.name}'s</a>{' '}
+      birthday.{' '}
+      {birthday.content}
+    </ChecklistItem>
+  );
+}
+
+const weekDays = [
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+  'Sunday'
+]
 interface DayProps {
   day: number;
-  children: ReactNode;
+  children?: ReactNode;
 }
 function Day({ day, children }: DayProps) {
+  let birthday = birthdays.find(b => b.day === day);
+  let isCartDay = day % 7 === 5 || day % 7 === 0; // Friday or Sunday
   return (
     <GuideSectionContainer className="space-y-4" href={`/year1-summer/${day}`}>
-      <summary className="text-lg font-bold">Day {day}</summary>
+      <summary className="text-lg font-bold">Day {day} ({weekDays[(day - 1) % 7]})</summary>
+      {birthday && <Birthday birthday={birthday} />}
+      {isCartDay && (
+        <ChecklistItem id={`summer${day}_cart_red_cabbage_seeds`}>
+          If you don't have the red cabbage seeds yet, be sure to visit the Travelling Cart.
+        </ChecklistItem>
+      )}
       {children}
+
+      {!birthday && !isCartDay && !children && (
+        <p>Nothing special, just keep working on objectives.</p>
+      )}
     </GuideSectionContainer>
   );
 }
@@ -32,9 +173,10 @@ function GuideSection({ title, children }: PropsWithChildren<GuideSectionProps>)
   );
 }
 
+
 export default () => {
   return (
-    <div className="space-y-8 columns-xl min-h-full">
+    <div className="space-y-8 max-w-4xl">
       <h2 className="text-2xl font-bold">First Year Summer</h2>
       <GuideSection title="Spring Catchup">
         <p>
@@ -111,6 +253,9 @@ export default () => {
         <Building id="silo" />
         <Building id="stable" />
         <Building id="coop" />
+      </GuideSection>
+      <GuideSection title="Birthdays">
+        {birthdays.map(b => <Birthday key={b.day} birthday={b} />)}
       </GuideSection>
       <section className="space-y-8">
         <h3 className="text-xl font-bold">Day Guide</h3>
@@ -207,6 +352,20 @@ export default () => {
               Check Marnie's bedroom, this is why you needed to get her friendship to 2 hearts.
             </Spoiler>
           </ChecklistItem>
+        </Day>
+        <Day day={4}>
+        </Day>
+        <Day day={5}>
+        </Day>
+        <Day day={6}>
+        </Day>
+        <Day day={7}>
+        </Day>
+        <Day day={8}>
+        </Day>
+        <Day day={9}>
+        </Day>
+        <Day day={10}>
         </Day>
       </section>
     </div>
