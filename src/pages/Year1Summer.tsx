@@ -6,16 +6,11 @@ import GuideSectionContainer from "../components/GuideSectionContainer";
 import Spoiler from "../components/Spoiler";
 import Building from "../components/Building";
 import Wiki from "../components/Wiki";
-import normaliseId from "../NormaliseId";
-import GameIcons from "../data/GameIcons";
+import { GuideBirthdayInfo } from "../components/GuideBirthday";
+import GuideDay from "../components/GuideDay";
+import GuideBirthdays from "../components/GuideBirthdays";
 
-interface BirthdayInfo {
-  day: number;
-  name: string;
-  content: ReactNode;
-  hide?: boolean;
-}
-const birthdays: BirthdayInfo[] = [
+export const birthdays: GuideBirthdayInfo[] = [
   {
     day: 4,
     name: "Jas",
@@ -110,60 +105,13 @@ const birthdays: BirthdayInfo[] = [
   }
 ]
 
-interface BirthdayProps {
-  birthday: BirthdayInfo;
-}
-function Birthday({ birthday }: BirthdayProps) {
-  return (
-    <ChecklistItem id={`birthday_${normaliseId(birthday.name)}`}>
-      Summer {birthday.day} is {' '}
-      <img src={GameIcons(birthday.name + '_icon')} className="inline" />
-      {' '}
-      <a target="_blank" href={`https://stardewvalleywiki.com/${birthday.name}`}>{birthday.name}'s</a>{' '}
-      birthday.{' '}
-      {birthday.content}
-    </ChecklistItem>
-  );
-}
-
-const weekDays = [
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-  'Sunday'
-]
 interface DayProps {
   day: number;
   title?: string;
   children?: ReactNode;
 }
 function Day({ day, title, children }: DayProps) {
-  let birthday = birthdays.find(b => b.day === day);
-  let isCartDay = day % 7 === 5 || day % 7 === 0; // Friday or Sunday
-  title ??= `Day ${day} (${weekDays[(day - 1) % 7]})`;
-  return (
-    <GuideSectionContainer className="space-y-4" href={`/year1-summer/${day}`}>
-      <summary className="text-lg font-bold">{title}</summary>
-      {birthday && <Birthday birthday={birthday} />}
-      {isCartDay && (
-        <ChecklistItem id={`summer${day}_cart_red_cabbage_seeds`}>
-          <p>If you don't have the red cabbage seeds yet, be sure to visit the Travelling Cart.</p>
-          <p>
-            If you have spare gold also consider <Item>Rare Seed</Item> which when grown in the Fall
-            yields a <Item>Sweet Gem Berry</Item> and is by far the highest Gold/Day crop.
-          </p>
-        </ChecklistItem>
-      )}
-      {children}
-
-      {!birthday && !isCartDay && !children && (
-        <p>Nothing special, just keep working on objectives.</p>
-      )}
-    </GuideSectionContainer>
-  );
+  return <GuideDay season="Summer" birthdays={birthdays} day={day} title={title} children={children} />;
 }
 
 interface GuideSectionProps {
@@ -457,9 +405,7 @@ export default () => {
         <Building id="stable" />
         <Building id="coop" />
       </GuideSection>
-      <GuideSection title="Birthdays">
-        {birthdays.map(b => <Birthday key={b.day} birthday={b} />)}
-      </GuideSection>
+      <GuideBirthdays season="Summer" birthdays={birthdays} />
       <section className="space-y-8">
         <h3 className="text-xl font-bold">Day Guide</h3>
         <Day day={1}>
