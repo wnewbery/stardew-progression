@@ -23,6 +23,7 @@ interface GuideDayProps {
   children?: ReactNode;
 }
 export default ({ season, birthdays, day, title, children }: GuideDayProps) => {
+  let seasonId = `year1-${season.toLowerCase()}`;
   let birthday = birthdays.find(b => b.day === day);
   let afterFirstCabbageDay = season !== 'Spring' || day >= 7; // Spring 7 first day
   let afterLastCabbageDay = season === 'Winter' && day > 16; // Winter 16 last day
@@ -32,7 +33,7 @@ export default ({ season, birthdays, day, title, children }: GuideDayProps) => {
 
   title ??= `Day ${day} (${weekDays[(day - 1) % 7]})`;
   return (
-    <GuideSectionContainer className="space-y-4" href={`/year1-summer/${day}`}>
+    <GuideSectionContainer className="space-y-4" href={`${seasonId}/${day}`}>
       <summary className="text-lg font-bold">{title}</summary>
       {birthday && <GuideBirthday season={season} birthday={birthday} />}
       {redCabbageDay && (

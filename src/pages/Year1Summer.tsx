@@ -10,7 +10,7 @@ import { GuideBirthdayInfo } from "../components/GuideBirthday";
 import GuideDay from "../components/GuideDay";
 import GuideBirthdays from "../components/GuideBirthdays";
 
-export const birthdays: GuideBirthdayInfo[] = [
+const birthdays: GuideBirthdayInfo[] = [
   {
     day: 4,
     name: "Jas",
@@ -821,6 +821,16 @@ export default () => {
         <Day day={28}>
           <ChecklistItem id="summer28_tea">
             Harvest any <Items>tea_leaves</Items>.
+          </ChecklistItem>
+          <ChecklistItem id="summer_dance_of_the_moonlight_jellies">
+            <p>
+              Between 10pm and 12am on the beach there is the <Wiki>Dance of the Moonlight Jellies</Wiki> event.
+              You won't be able to enter the beach before as they are setting up.
+            </p>
+            <p>
+              The only thing useful to do here is talk to everyone for friendship points,
+              so is not important to attend.
+            </p>
           </ChecklistItem>
         </Day>
       </section>

@@ -11,6 +11,7 @@ import CommunityBundle from "./components/CommunityBundle";
 import Year1Spring from "./pages/Year1Spring";
 import Year1Summer from "./pages/Year1Summer";
 import Buildings from "./pages/Buildings";
+import Year1Fall from "./pages/Year1Fall";
 
 const container = document.getElementById("app")!;
 const root = createRoot(container);
@@ -75,6 +76,7 @@ const App = () => {
           <Route path="/bundles" element={<TabCommunityBundles />} />
           <Route path="/year1-spring/*" element={<Year1Spring />} />
           <Route path="/year1-summer/*" element={<Year1Summer />} />
+          <Route path="/year1-fall/*" element={<Year1Fall />} />
         </Routes>
       </div>
       <div className="xl:hidden p-8">{footer}</div>
