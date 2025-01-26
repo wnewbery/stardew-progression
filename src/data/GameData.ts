@@ -6,6 +6,7 @@ import CommunityBundle from "./CommunityBundle";
 import CommunityRoom from "./CommunityRoom";
 import GameItem from "./GameItem";
 import Building from "./Building";
+import normaliseId from "../NormaliseId";
 
 let items: GameItem[] = [];
 let itemsMap: Map<string, GameItem>;
@@ -26,7 +27,7 @@ function load() {
 export default {
   load,
   item: (id: string) => {
-    var x = itemsMap.get(id.toLocaleLowerCase());
+    var x = itemsMap.get(normaliseId(id));
     if (x) return x;
     else throw new Error(`Unknown item ${id}.`);
   },

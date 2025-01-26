@@ -13,10 +13,11 @@ type ItemIconProps = {
   item?: GameItem | string,
   count?: number,
   quality?: ItemQuality | string,
-  label?: string
+  label?: string,
+  plural?: boolean
 };
 
-export default ({ className, stack, item, quality, label, count }: ItemIconProps) => {
+export default function ItemStackText({ className, stack, item, quality, label, count, plural }: ItemIconProps) {
   item ??= stack?.item;
   quality ??= stack?.quality;
   count ??= stack?.count;
@@ -24,6 +25,13 @@ export default ({ className, stack, item, quality, label, count }: ItemIconProps
   if (typeof item === "string") item = GameData.item(item);
   if (typeof quality === "string") quality = ItemQuality.parse(quality);
 
+  if (!label) {
+    label = item.label;
+    if (plural) {
+      if (label.endsWith('berry')) label = label.replace(/berry$/, 'berries');
+      else if (!label.endsWith('s')) label += 's'; // TODO: Not right for every word, or for localisations
+    }
+  }
 
   let overlayIcon = quality?.overlayIcon ?
     <img src={quality.overlayIcon} className="absolute left-0 top-0" />
@@ -37,8 +45,22 @@ export default ({ className, stack, item, quality, label, count }: ItemIconProps
         {overlayIcon}
       </span>
       {' '}
-      <a target="_blank" href={item.wiki}>{label ?? item.label}</a>
+      <a target="_blank" href={item.wiki}>{label}</a>
       {countStr}
     </span>
   );
 }
+
+export function Item({ children }: { children: string }) {
+  return <ItemStackText item={children} />
+}
+export function GoldItem({ children }: { children: string }) {
+  return <ItemStackText item={children} quality="gold" />
+}
+export function Items({ children }: { children: string }) {
+  return <ItemStackText item={children} plural={true} />
+}
+export function GoldItems({ children }: { children: string }) {
+  return <ItemStackText item={children} quality="gold" plural={true} />
+}
+
