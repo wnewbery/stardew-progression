@@ -3,11 +3,12 @@ import { GuideBirthdayInfo } from "../components/GuideBirthday";
 import GuideDay from "../components/GuideDay";
 import GuideSectionContainer from "../components/GuideSectionContainer";
 import ChecklistItem from "../components/ChecklistItem";
-import ItemStackText, { GoldItem, GoldItems, Item } from "../components/ItemStackText";
+import ItemStackText, { GoldItem, GoldItems, Item, Items } from "../components/ItemStackText";
 import CommunityBundle from "../components/CommunityBundle";
 import Building from "../components/Building";
 import Wiki from "../components/Wiki";
 import GuideBirthdays from "../components/GuideBirthdays";
+import Spoiler from "../components/Spoiler";
 
 const birthdays: GuideBirthdayInfo[] = [
   {
@@ -16,7 +17,7 @@ const birthdays: GuideBirthdayInfo[] = [
     content: <>
       If you have a spare <GoldItem>melon</GoldItem> or <GoldItem>poppy</GoldItem>{' '}
       they are the best you are likely to have.
-      Otherwise a <GoldItem>diamond</GoldItem> or <GoldItem>emerald</GoldItem> or any Book.
+      Otherwise a <Item>diamond</Item> or <Item>emerald</Item> or any Book.
       She is likely to head to the Library until 2pm, then be around town until 6:30pm
       before returning to her trailer.
     </>
@@ -25,7 +26,8 @@ const birthdays: GuideBirthdayInfo[] = [
     day: 5,
     name: "Elliott",
     content: <>
-      If you have a <Item>duck feather</Item> already then that is a loved gift.
+      If you have a <Item>duck feather</Item> already, or you got a <Item>Lobster</Item> in an
+      ocean Crab Pot then those are loved gifts.
       Otherwise one of the <Wiki>Universal Likes</Wiki>.
       He is likely to leave his cabin to stand on the beach between
       12pm and 1:30pm, and 3pm and 6pm.
@@ -114,6 +116,7 @@ export default () => {
   return (
     <div className="space-y-8 max-w-4xl">
       <h2 className="text-2xl font-bold">First Year Fall</h2>
+
       <GuideSection title="Previous Progress">
         <p>
           You really want to have the following completed already, if not you will need to look
@@ -241,6 +244,10 @@ export default () => {
       <GuideSection title="Fishing">
         <p>
           Fishing can continue to be a good money maker, and you can now complete some more bundles.
+          Keep making <Item>Deluxe Bait</Item> from <Item>Moss</Item>.
+          If you run out of <Item>Bait</Item> and <Item>Bug Meat</Item> its still much cheaper to buy
+          the basic bait for 5g from the fishing shop.
+          Harvest any mossy trees you see while travelling around.
         </p>
         <p>
           If you didn't finish the Lake Fish Bundle already, make sure you save
@@ -261,20 +268,194 @@ export default () => {
       <GuideBirthdays season="Fall" birthdays={birthdays} />
       <section className="space-y-8">
         <h3 className="text-xl font-bold">Day Guide</h3>
-        <Day day={1}></Day>
-        <Day day={2}></Day>
-        <Day day={3}></Day>
-        <Day day={4}></Day>
+        <Day day={1}>
+          <p>As always the start of the season will be extremely busy with planting new crops.</p>
+          <ChecklistItem id="fall1_rare_seeds">
+            <p>
+              Any <Items>rare_seed</Items> you got from the cart should be planted as the{' '}
+              <Items>Sweet Gem Berry</Items> they grow into is by far the highest return.
+              If you have or can make any <Item>Quality Fertilizer</Item> then that is best for these,
+              but definitely use at least <Item>Basic Fertilizer</Item>.
+            </p>
+            <p>
+              Since these take 24 days to grow, I used some <Items>Quality Sprinkler</Items> I got
+              for free so can plant them a bit out of the way with a Scarecrow and just leave them
+              alone for the season.
+            </p>
+          </ChecklistItem>
+          <ChecklistItem id="fall1_beets">
+            For the quest you might have started already you need 10 <Items>beet</Items>, but you
+            need to reach the Desert to get the seeds.
+          </ChecklistItem>
+          <ChecklistItem id="fall1_corn">
+            You need 5 <GoldItems>corn</GoldItems> for the the Quality Crops Bundle, and you want
+            1 for the Fall Crops Bundle. If you are on target from Spring then you might not need
+            any extras.
+          </ChecklistItem>
+          <ChecklistItem id="fall1_pumpkin">
+            <p>
+              If you managed to get 5 each of <GoldItems>parsnip</GoldItems>,{' '}
+              <GoldItems>melon</GoldItems> and <GoldItems>corn</GoldItems> then you won't need
+              <GoldItems>pumpkin</GoldItems> for the Quality Crops Bundle.
+              Otherwise this is your chance to recover that, and will need to plant a large amount,
+              be sure to use fertilizer to maximize the chance of gold crops.
+            </p>
+            <p>
+              Pumpkins take 13 days to grow, so there will be a chance for a 2nd harvest if needed.
+            </p>
+            <p>
+              Otherwise you need one for the Fall Crops Bundle some extra for gifts and quests,
+              and they are one of the most profitable crops in Fall just behind Cranberries.
+            </p>
+          </ChecklistItem>
+          <ChecklistItem id="fall1_wheat">
+            Carry on growing <Item>Wheat</Item>.
+          </ChecklistItem>
+          <ChecklistItem id="fall1_fairy_rose">
+            Plant some <Item>Fairy Rose</Item> near the bees.
+          </ChecklistItem>
+          <ChecklistItem id="fall1_other_crops">
+            The other single-harvest crops for Fall to grow a small amount of are{' '}
+            <Item>amaranth</Item>, <Item>yam</Item> and <Item>bok choy</Item>.
+            You can use <Item>Basic Fertilizer</Item> for these, but if you have any <Item>Quality Fertilizer</Item>
+            then that is better.
+          </ChecklistItem>
+          <ChecklistItem id="fall1_other_crops_multi">
+            And a small amount of the mult-harvest Fall crops <Items>eggplant</Items> and <Items>grape</Items>.
+            <Item>Speed-Gro</Item> will get 1 extra harvest for grapes.
+            Grapes are notable that you can use a Keg to make <Item>Wine</Item> to sell for a lot more,
+            but consider how many Kegs you have and how much extra Wine could realistically make.
+          </ChecklistItem>
+          <ChecklistItem id="fall1_broccoli">
+            Seeds for <Item>broccoli</Item> are not sold, but you might have got some free ones so plant those.
+          </ChecklistItem>
+          <ChecklistItem id="fall1_cranberries">
+            If you plant <Items>cranberries</Items> on the first day then Speed-Gro won't get any
+            extra harvests, so just use <Item>Basic Fertilizer</Item> to boost quality.
+            This is the best cash crop for the season that can buy more seeds for,
+            so plant as many as you can.
+          </ChecklistItem>
+        </Day>
+
+        <Day day={2}>
+          <ChecklistItem id="fall2_livestock">
+            Now all the crops are planted for the season, I would start focusing on the Livestock section.
+            You will need a lot of wood, carrying on with mining when luck is good is a good way to get the stone.
+          </ChecklistItem>
+          <ChecklistItem id="fall2_special_orders">
+            <p>
+              The first time you enter the town there is a cutscene showing Lewis and Robin installing
+              a new <Wiki>Special Orders</Wiki> board for bigger quests than the one at the store.
+              Unhelpfully also further away from the farm...
+            </p>
+            <p>
+              These orders reset each Monday and count down regardless if accepted or not, so there is
+              no benefit in waiting to accept.
+            </p>
+            <p>
+              If you start an order but run out of time, you can recover any items already provided from
+              the Lost &amp; Found.
+              Although not made clear, for most quests you must obtain the items <em>after</em> starting
+              the quest, you can not just provide items you already had stored.
+            </p>
+            <p>
+              You can also have multiple active quests at once, but you can only accept <em>one of the options</em> each week.
+            </p>
+            <p>
+              From now on check the orders board every Monday. They are worth doing as provide gold and
+              friendship rewards, as well as some special items.
+            </p>
+          </ChecklistItem>
+          <ChecklistItem id="fall2_robins_project">
+            I'm going to mention Robin's Project quest as I believe it will always be one of the initial
+            ones, which means Fall 2 at the earliest and 6 days at most to complete.
+
+            If this is the case, then only bother with it if you have an additional source of{' '}
+            <Item>hardwood</Item> to the Secret Woods, as going every day you can only get 72 (6x12).
+            For example you planted a <Wiki>Mahogany Tree</Wiki>.
+            Otherwise you are probably better off with the other quest option.
+
+            The quest will be repeated again sometime in the future.
+          </ChecklistItem>
+        </Day>
+        <Day day={3}>
+          <ChecklistItem id="fall3_marnie_cows">
+            Marnie wants some <Item>amaranth</Item> for her cows.
+            If you planted some on the first day they should be ready on Monday Fall 8th,
+            so she will just have to wait for now.
+          </ChecklistItem>
+        </Day>
+        <Day day={4}>
+          <ChecklistItem id="fall4_wheat">
+            First harvest of <Item>Wheat</Item> (plus some <Item>Hay</Item>),
+            which can be made into <Item>Beer</Item> for more income.
+          </ChecklistItem>
+          <ChecklistItem id="fall4_bok_choy">
+            Also first harvest of <Item>Bok Choy</Item>, keep some for quests and
+            sell any extras.
+          </ChecklistItem>
+          <ChecklistItem id="fall4_replant">
+            Then replant both.
+          </ChecklistItem>
+        </Day>
         <Day day={5}></Day>
-        <Day day={6}></Day>
+        <Day day={6}>
+          <ChecklistItem id="fall6_eggplants">
+            First harvest of <Items>eggplant</Items>, save one for the crops bundle.
+          </ChecklistItem>
+        </Day>
         <Day day={7}></Day>
-        <Day day={8}></Day>
+        <Day day={8}>
+          <ChecklistItem id="fall8_blackberries">
+            Fall 8 to 11 is <Item>Blackberry</Item> season, so you can collect a lot from the bushes each day.
+            You should keep some for the bundle and any quests.
+            They don't sell for much so might as well keep them as a gift or for energy, or make
+            them into <Item>Jelly</Item>.
+          </ChecklistItem>
+          <ChecklistItem id="fall8_livestock">
+            Going into the second week hopefully have the Big Coop and working on the Big Barn for goats
+            as really want to get the Greenhouse for winter.
+          </ChecklistItem>
+          <ChecklistItem id="fall8_amaranth">
+            First harvest of <Item>Amaranth</Item>, save some for quests and use one for Marnie's cows quest.
+          </ChecklistItem>
+          <ChecklistItem id="fall8_marnie">
+            Give Marnie her <Item>amaranth</Item>.
+          </ChecklistItem>
+          <ChecklistItem id="fall8_cranberries">
+            First harvest of <Items>cranberries</Items>, save some for quests and sell the rest for an influx of money.
+            That should help with the buildings and buying the animals.
+          </ChecklistItem>
+          <ChecklistItem id="fall8_linus_basket">
+            <p>
+              You will get a quest in the Mail from Linus to find his basket.
+              There is no cash reward but might as well still do it while out and about.
+            </p>
+            <Spoiler>
+              Look west of the bus stop near the tunnel.
+            </Spoiler>
+          </ChecklistItem>
+        </Day>
         <Day day={9}></Day>
         <Day day={10}></Day>
-        <Day day={11}></Day>
+        <Day day={11}>
+          <ChecklistItem id="fall11_yams">
+            First harvest of <Items>yam</Items>, save one for the crops bundle.
+          </ChecklistItem>
+        </Day>
         <Day day={12}></Day>
         <Day day={13}></Day>
-        <Day day={14}></Day>
+        <ChecklistItem id="fall13_cranberries">
+          Second harvest of <Items>cranberries</Items> so another big influx of money.
+          Hopefully at this point already got enough money for all the animals,
+          and going forward will be saving for the Vault Bundles to reach the Desert.
+        </ChecklistItem>
+        <Day day={14}>
+          <ChecklistItem id="fall14_pumpkins">
+            First harvest of <Items>pumpkin</Items>, save one for the crops bundle which should complete it.
+          </ChecklistItem>
+          <CommunityBundle bundle="fall_crops_bundle" />
+        </Day>
         <Day day={15}></Day>
         <Day day={16}></Day>
         <Day day={17}></Day>
