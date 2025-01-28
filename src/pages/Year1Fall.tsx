@@ -59,9 +59,12 @@ const birthdays: GuideBirthdayInfo[] = [
     content: <>
       You need to have reached the Desert to meet Sandy.
       A <Item>Daffodil</Item> or <Item>Sweet Pea</Item> are easy loved gifts.
-      She will be at home until 3pm, by the pond until 5pm,
+      She will be at home at her shop until 3pm, by the pond until 5pm,
       the sand dragon until 6pm, the bus until 7pm,
       and then the trader until 7pm before heading home again.
+      Note that if you never visited yet, it seems you must do so before she leaves the shop so
+      that you get the introduction cutscene. If you come in the evening you can talk to her
+      with Emily but she will not accept gifts.
     </>
   },
   {
@@ -237,8 +240,23 @@ export default () => {
         <ChecklistItem id="fall_pig">
           Buy at least 1 <Wiki>Pig</Wiki> for 16,000g.
         </ChecklistItem>
+        <ChecklistItem id="fall_sheep">
+          Buy at least 1 <Wiki>Sheep</Wiki> for 8,000g.
+        </ChecklistItem>
+        <ChecklistItem id="fall_sheers">
+          You will need <Wiki>Sheers</Wiki> by the time the sheep are grown in order to collect wool,
+          which should take 5 days.
+          You can also use Wool for the Animal Bundle if you didn't complete it already.
+        </ChecklistItem>
+        <ChecklistItem id="fall_loom">
+          You will need a <Wiki>Loom</Wiki> to turn the <Item>Wool</Item> into <Item>Cloth</Item>.
+          You can use that for the Artisan Bundle if you didn't complete it already.
+        </ChecklistItem>
         <ChecklistItem id="chefs_bundle-truffle">
           Save a <Item>Truffle</Item> for the Chef's Bundle.
+        </ChecklistItem>
+        <ChecklistItem id="fall_oil_maker">
+          You can use an <Wiki>Oil Maker</Wiki> to make <Item>Truffle Oil</Item> from <Items>Truffle</Items>.
         </ChecklistItem>
       </GuideSection>
       <GuideSection title="Fishing">
@@ -457,7 +475,28 @@ export default () => {
           <CommunityBundle bundle="fall_crops_bundle" />
         </Day>
         <Day day={15}></Day>
-        <Day day={16}></Day>
+        <Day day={16}>
+          <ChecklistItem id="fall16_shop_closed">
+            Note that with the fair the shop will be closed today, and then will be closed on
+            Wednesday as normal as well. So best buy any seeds you need already.
+          </ChecklistItem>
+          <ChecklistItem id="fall16_stardew_valley_fair">
+            The <Wiki>Stardew Valley Fair</Wiki> is happening today in the town between 9am and 3pm.
+            There is a number of useful items you can buy using "Star Tokens", but them most useful of
+            them is the <Item>Stardrop</Item> which will <em>permanently</em> increase your max energy.
+          </ChecklistItem>
+          <ChecklistItem id="fall16_fish_minigame">
+            The fishing minigame is in my opinion the easiest way to get Star Tokens,
+            it costs 50g a time to play, you can repeat it as many times as you want and it gives easily
+            500+ tokens a time.
+            You can also play the other games as desired.
+          </ChecklistItem>
+          <ChecklistItem id="fall16_showcase">
+            You will be invited to showcase you best items, with the potential to win up to 1,000 tokens.
+            The scoring is pretty complicated, so check the wiki if you really want to put together a
+            display for 1st place.
+          </ChecklistItem>
+        </Day>
         <Day day={17}></Day>
         <Day day={18}></Day>
         <Day day={19}></Day>
