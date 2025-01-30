@@ -1,0 +1,245 @@
+# From stardewvalleywiki.com under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+name: Elliott
+birthday: Fall 5
+schedule:
+  green_rain:
+    - time: "All day"
+      location: "In the Saloon."
+  spring:
+    - day: 15
+      bus_service_restored: true
+      schedule:
+        - time: "11:00 AM"
+          location: "Boards the bus to Calico Desert to attend the Desert Festival."
+        - time: "11:40 AM"
+          location: "Stands at the cliffside south of the racing line."
+        - time: "1:40 AM"
+          location: "Boards bus back to the Valley."
+    - desert_vendor: true
+      schedule:
+        - time: "11:10 AM"
+          location: "Boards the bus to Calico Desert."
+        - time: "11:30 AM"
+          location: "Arrives at his booth."
+        - time: "12:00 AM"
+          location: "Leaves booth and boards bus back to the Valley."
+    - rain: true
+      schedule:
+        - time: "All day"
+          location: "Inside his house."
+    - weekday: thursday
+      schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "11:30 AM"
+          location: "Leaves home and heads to Pierre's General Store."
+        - time: "5:30 PM"
+          location: "Leaves Pierre's and heads home for the night."
+    - weekday: friday
+      hearts:
+        elliott: ">= 6"
+      schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "11:30 AM"
+          location: "Leaves home and heads to Pierre's General Store."
+        - time: "5:30 PM"
+          location: "Leaves Pierre's and heads home for the night."
+    - weekday: [friday, sunday]
+      hearts:
+        leah: "< 6"
+      schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "11:00 AM"
+          location: "Leaves his cabin to stand on the docks next to Willy's house."
+        - time: "5:00 PM"
+          location: "Leaves the docks to visit The Stardrop Saloon."
+        - time: "11:40 PM"
+          location: "Leaves the saloon to return home for the night."
+    - schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "12:00 PM"
+          location: "Leaves his cabin to stand on the beach south of his house."
+        - time: "1:30 PM"
+          location: "Leaves the beach and returns to his cabin."
+        - time: "3:00 PM"
+          location: "Leaves his cabin to stand on the bridge just north of the beach."
+        - time: "6:00 PM"
+          location: "Leaves the bridge to return home for the night."
+  summer:
+    - day: 9
+      schedule:
+        - time: "10:30 AM"
+          location: "Leaves his house and goes to the Clinic."
+        - time: "1:30 PM"
+          location: "Moves from waiting room to examination room inside Clinic."
+        - time: "4:00 PM"
+          location: "Leaves the clinic and returns home for the night."
+    - rain: true
+      schedule:
+        - time: "All day"
+          location: "Inside his house."
+    - weekday: thursday
+      schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "11:30 AM"
+          location: "Leaves home and heads to Pierre's General Store."
+        - time: "5:30 PM"
+          location: "Leaves Pierre's and heads home for the night."
+    - weekday: [friday, sunday]
+      hearts:
+        leah: "< 6"
+      schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "11:00 AM"
+          location: "Leaves his cabin to stand on the docks next to Willy's house."
+        - time: "5:00 PM"
+          location: "Leaves the docks to visit The Stardrop Saloon."
+        - time: "11:40 PM"
+          location: "Leaves the saloon to return home for the night."
+    - weekday: [friday, sunday]
+      schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "12:00 PM"
+          location: "Leaves his cabin to stand on the beach south of his house."
+        - time: "1:30 PM"
+          location: "Leaves the beach and returns to his cabin."
+        - time: "3:00 PM"
+          location: "Leaves his cabin to stand on the bridge just north of the beach."
+        - time: "6:00 PM"
+          location: "Leaves the bridge to return home for the night."
+    - schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "11:30 AM"
+          location: "Leaves home, heads to the forest south of Leah's Cottage."
+        - time: "6:00 PM"
+          location: "Leaves the forest to return home for the night."
+        - time: "7:40 PM"
+          location: "Arrives home and goes to bed."
+  fall:
+    - rain: true
+      schedule:
+        - time: "All day"
+          location: "Inside his house."
+    - weekday: thursday
+      schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "11:30 AM"
+          location: "Leaves home and heads to Pierre's General Store."
+        - time: "5:30 PM"
+          location: "Leaves Pierre's and heads home for the night."
+    - weekday: friday
+      hearts:
+        elliott: ">= 6"
+      schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "11:30 AM"
+          location: "Leaves home and heads to Pierre's General Store."
+        - time: "5:30 PM"
+          location: "Leaves Pierre's and heads home for the night."
+    - weekday: [friday, sunday]
+      hearts:
+        leah: "< 6"
+      schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "11:00 AM"
+          location: "Leaves his cabin to stand on the docks next to Willy's house."
+        - time: "5:00 PM"
+          location: "Leaves the docks to visit The Stardrop Saloon."
+        - time: "11:40 PM"
+          location: "Leaves the saloon to return home for the night."
+    - weekday: [friday, sunday]
+      schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "12:00 PM"
+          location: "Leaves his cabin to stand on the beach south of his house."
+        - time: "1:30 PM"
+          location: "Leaves the beach and returns to his cabin."
+        - time: "3:00 PM"
+          location: "Leaves his cabin to stand on the bridge just north of the beach."
+        - time: "6:00 PM"
+          location: "Leaves the bridge to return home for the night."
+    - schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "11:30 AM"
+          location: "Leaves home, heads to the Library."
+        - time: "5:30 PM"
+          location: "Leaves the library to return home for the night."
+        - time: "6:40 PM"
+          location: "Returns home and stands by his bonsai tree."
+        - time: "9:00 PM"
+          location: "Leaves his bonsai tree and walks over to his writing desk."
+  winter:
+    - rain: true
+      schedule:
+        - time: "All day"
+          location: "Inside his house."
+    - day: 17
+      schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "11:30 AM"
+          location: "Leaves home, heads to the Museum."
+        - time: "4:50 PM"
+          location: "Leaves the library to attend the Night Market."
+        - time: "1:00 AM"
+          location: "Leaves the Night Market and returns to his cabin."
+    - days: [12, 13]
+      schedule:
+        - time: "8:00 AM"
+          location: "Leaves his cabin to stand on the docks next to Willy's house."
+        - time: "5:00 PM"
+          location: "Leaves the docks to visit The Stardrop Saloon."
+        - time: "12:00 AM"
+          location: "Leaves the saloon to return home for the night."
+    - weekday: thursday
+      schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "11:30 AM"
+          location: "Leaves home and heads to Pierre's General Store."
+        - time: "5:30 PM"
+          location: "Leaves Pierre's and heads home for the night."
+    - weekday: [friday, sunday]
+      hearts:
+        leah: "< 6"
+      schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "11:00 AM"
+          location: "Leaves his cabin to stand on the docks next to Willy's house."
+        - time: "5:00 PM"
+          location: "Leaves the docks to visit The Stardrop Saloon."
+        - time: "11:40 PM"
+          location: "Leaves the saloon to return home for the night."
+    - weekday: [friday, sunday]
+      schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "12:00 PM"
+          location: "Leaves his cabin to stand on the beach south of his house."
+        - time: "1:30 PM"
+          location: "Leaves the beach and returns to his cabin."
+        - time: "3:00 PM"
+          location: "Leaves his cabin to stand on the bridge just north of the beach."
+        - time: "6:00 PM"
+          location: "Leaves the bridge to return home for the night."
+    - schedule:
+        - time: "8:00 AM"
+          location: "At home."
+        - time: "11:30 AM"
+          location: "Leaves home, heads to the Library."
+        - time: "5:30 PM"
+          location: "Leaves the library to return home for the night."
+

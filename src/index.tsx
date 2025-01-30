@@ -12,6 +12,7 @@ import Year1Spring from "./pages/Year1Spring";
 import Year1Summer from "./pages/Year1Summer";
 import Buildings from "./pages/Buildings";
 import Year1Fall from "./pages/Year1Fall";
+import Villagers from "./pages/Villagers";
 
 const container = document.getElementById("app")!;
 const root = createRoot(container);
@@ -43,10 +44,10 @@ const App = () => {
         <nav>
           <section>
             <ol>
-              <li><Link to="/bundles">Community Bundles</Link></li>
-              <li><Link to="/friends">Friends</Link></li>
-              <li><Link to="/buildings">Buildings</Link></li>
               <li><Link to="/achievements">Achievements</Link></li>
+              <li><Link to="/bundles">Community Bundles</Link></li>
+              <li><Link to="/buildings">Buildings</Link></li>
+              <li><Link to="/villagers">Villagers</Link></li>
             </ol>
           </section>
           <section>
@@ -74,6 +75,8 @@ const App = () => {
           <Route path="/" element={<Navigate to="/bundles" />} />
           <Route path="/buildings" element={<Buildings />} />
           <Route path="/bundles" element={<TabCommunityBundles />} />
+          <Route path="/villagers" element={<Villagers />} />
+
           <Route path="/year1-spring/*" element={<Year1Spring />} />
           <Route path="/year1-summer/*" element={<Year1Summer />} />
           <Route path="/year1-fall/*" element={<Year1Fall />} />

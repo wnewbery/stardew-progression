@@ -1,0 +1,291 @@
+# From stardewvalleywiki.com under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+name: Alex
+birthday: Summer 13
+schedule:
+  spring:
+    - rain: true
+      schedule:
+        - time: "8:00 AM"
+          location: "Leaves his room and stands in the entryway."
+        - time: "1:00 PM"
+          location: "Goes to his room to lift weights."
+        - time: "4:00 PM"
+          location: "Leaves his room to stand outside by the dog pen."
+        - time: "6:30 PM"
+          location: "Returns to his house and stands in the entryway."
+        - time: "8:00 PM"
+          location: "Goes to his room and stands by his dresser."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - weekday: wednesday
+      hearts:
+        alex: "< 6"
+        haley: "< 6"
+      schedule:
+        - time: "8:00 AM"
+          location: "Leaves his room to go outside and stand beneath nearby tree."
+        - time: "12:00 PM"
+          location: "Goes to Haley and Emily's house."
+        - time: "4:30 PM"
+          location: "Leaves Haley and Emily's house to go stand by the dog pen."
+        - time: "6:40 PM"
+          location: "Goes back into his house and stands in the entryway."
+        - time: "8:00 PM"
+          location: "Goes to his room and stands by his dresser."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - weekday: sunday
+      heart_event_seen: 14
+      schedule:
+        - time: "8:00 AM"
+          location: "Leaves his room to go outside and stand beneath nearby tree."
+        - time: "11:00 AM"
+          location: "Goes to the back room of the Stardrop Saloon."
+        - time: "3:00 PM"
+          location: "Leaves to stand by the dog kennel."
+        - time: "6:30 PM"
+          location: "Goes inside of his house and stands in the entryway."
+        - time: "8:00 PM"
+          location: "Goes to stand inside of his room."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - schedule:
+        - time: "8:00 AM"
+          location: "Leaves his room to go outside and stand beneath nearby tree."
+        - time: "1:00 PM"
+          location: "Leaves the tree to go back to his room to lift weights."
+        - time: "4:00 PM"
+          location: "Leaves his room to go stand outside by the dog pen."
+        - time: "6:30 PM"
+          location: "Goes back into his house and stands in the entryway."
+        - time: "8:00 PM"
+          location: "Goes to his room and stands by his dresser."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+  summer:
+    - green_rain_year_1: true
+      schedule:
+        - time: "All day"
+          location: "In the kitchen."
+    - day: 16
+      schedule:
+        - time: "8:00 AM"
+          location: "Leaves his room to go outside and stand beneath nearby tree."
+        - time: "10:30 AM"
+          location: "Goes to clinic."
+        - time: "11:00 AM"
+          location: "In clinic waiting room."
+        - time: "1:40 PM"
+          location: "Clinic examination room."
+        - time: "4:00 PM"
+          location: "Returns home for the night."
+    - rain: true
+      schedule:
+        - time: "8:00 AM"
+          location: "Leaves his room and stands in the entryway."
+        - time: "1:00 PM"
+          location: "Goes to his room to lift weights."
+        - time: "4:00 PM"
+          location: "Leaves his house to go stand by the dog pen."
+        - time: "6:30 PM"
+          location: "Goes back into his house and stands in the entryway."
+        - time: "8:00 PM"
+          location: "Goes to his room and stands by his dresser."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - weekday: wednesday
+      hearts:
+        alex: "< 6"
+        haley: "< 6"
+      schedule:
+        - time: "8:00 AM"
+          location: "Leaves his room to go outside and stand beneath nearby tree."
+        - time: "12:00 PM"
+          location: "Goes to Haley and Emily's house."
+        - time: "4:30 PM"
+          location: "Leaves Haley and Emily's house to go stand by the dog pen."
+        - time: "6:40 PM"
+          location: "Goes back into his house and stands in the entryway."
+        - time: "8:00 PM"
+          location: "Goes to his room and stands by his dresser."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - weekday: sunday
+      heart_event_seen: 14
+      schedule:
+        - time: "8:00 AM"
+          location: "Leaves his room to go outside and stand beneath nearby tree."
+        - time: "11:00 AM"
+          location: "Goes to the back room of the Stardrop Saloon."
+        - time: "3:00 PM"
+          location: "Leaves to stand by the dog kennel."
+        - time: "6:30 PM"
+          location: "Goes inside of his house and stands in the entryway."
+        - time: "8:00 PM"
+          location: "Goes to stand inside of his room."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - schedule:
+        - time: "7:50 AM"
+          location: "Leaves home to go to beach."
+        - time: "12:00 PM"
+          location: "Leaves beach to go work at ice cream stand."
+        - time: "5:00 PM"
+          location: "Heads home to lift weights in his room."
+        - time: "7:00 PM"
+          location: "Stands in front entryway of house."
+        - time: "8:00 PM"
+          location: "Goes to his room to stand by his dresser."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+  fall:
+    - rain: true
+      schedule:
+        - time: "8:00 AM"
+          location: "Leaves his room and stands in the entryway."
+        - time: "1:00 PM"
+          location: "Goes to his room to lift weights."
+        - time: "4:00 PM"
+          location: "Leaves his house to go stand by the dog pen."
+        - time: "6:30 PM"
+          location: "Goes back into his house and stands in the entryway."
+        - time: "8:00 PM"
+          location: "Goes to his room and stands by his dresser."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - weekday: wednesday
+      hearts:
+        alex: "< 6"
+        haley: "< 6"
+      schedule:
+        - time: "8:00 AM"
+          location: "Leaves his room to go outside and stand beneath nearby tree."
+        - time: "12:00 PM"
+          location: "Goes to Haley and Emily's house."
+        - time: "4:30 PM"
+          location: "Leaves Haley and Emily's house to go stand by the dog pen."
+        - time: "6:40 PM"
+          location: "Goes back into his house and stands in the entryway."
+        - time: "8:00 PM"
+          location: "Goes to his room and stands by his dresser."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - weekday: sunday
+      heart_event_seen: 14
+      schedule:
+        - time: "8:00 AM"
+          location: "Leaves his room to go outside and stand beneath nearby tree."
+        - time: "11:00 AM"
+          location: "Goes to the back room of the Stardrop Saloon."
+        - time: "3:00 PM"
+          location: "Leaves to stand by the dog kennel."
+        - time: "6:30 PM"
+          location: "Goes inside of his house and stands in the entryway."
+        - time: "8:00 PM"
+          location: "Goes to stand inside of his room."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - schedule:
+        - time: "8:00 AM"
+          location: "Leaves his room to go outside and stand beneath nearby tree."
+        - time: "1:00 PM"
+          location: "Leaves the tree to go back to his room to lift weights."
+        - time: "4:00 PM"
+          location: "Leaves his room to go stand outside by the dog pen."
+        - time: "6:30 PM"
+          location: "Goes back into his house and stands in the entryway."
+        - time: "8:00 PM"
+          location: "Goes to his room and stands by his dresser."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+  winter:
+    - day: 17
+      schedule:
+        - time: "9:00 AM"
+          location: "Leaves his house to go to the Spa."
+        - time: "3:00 PM"
+          location: "Leaves the gym section of the Spa, heads to the beach to attend the Night Market."
+        - time: "12:00 AM"
+          location: "Leaves the Night Market and returns home."
+    - weekday: wednesday
+      hearts:
+        alex: "< 6"
+        haley: "< 6"
+      schedule:
+        - time: "8:00 AM"
+          location: "Leaves his room to go outside and stand beneath nearby tree."
+        - time: "12:00 PM"
+          location: "Goes to Haley and Emily's house."
+        - time: "4:30 PM"
+          location: "Leaves Haley and Emily's house to go stand by the dog pen."
+        - time: "6:40 PM"
+          location: "Goes back into his house and stands in the entryway."
+        - time: "8:00 PM"
+          location: "Goes to his room and stands by his dresser."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - weekday: sunday
+      heart_event_seen: 14
+      schedule:
+        - time: "8:00 AM"
+          location: "Leaves his room to go outside and stand beneath nearby tree."
+        - time: "11:00 AM"
+          location: "Goes to the back room of the Stardrop Saloon."
+        - time: "3:00 PM"
+          location: "Leaves to stand by the dog kennel."
+        - time: "6:30 PM"
+          location: "Goes inside of his house and stands in the entryway."
+        - time: "8:00 PM"
+          location: "Goes to stand inside of his room."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - schedule:
+        - time: "8:00 AM"
+          location: "In his bedroom."
+        - time: "9:00 AM"
+          location: "Leaves his house to go to the Spa."
+        - time: "3:00 PM"
+          location: "Leaves the gym section of the Spa, heads home to his room."
+        - time: "6:00 PM"
+          location: "Leaves his house to stand by the dog kennel."
+        - time: "7:30 PM"
+          location: "Goes back inside his house and stands in the entryway."
+        - time: "9:00 PM"
+          location: "Goes back to his bedroom and stands by his dresser."
+        - time: "10:40 PM"
+          location: "Goes to bed."
+  marriage:
+    - season: spring
+      day: 15
+      schedule:
+        - time: "8:00 AM"
+          location: "Leaves farm to attend the Desert Festival and stand by the chef stand."
+        - time: "12:40 AM"
+          location: "Heads back to farm."
+    - green_rain_year_1: true
+      schedule:
+        - time: "6:10 AM"
+          location: "Leaves home to walk to his grandparents' house and stand in the kitchen."
+    - weekday: monday
+      schedule:
+        - time: "8:30 AM"
+          location: "Leaves farm to visit his grandparents."
+        - time: "6:00 PM"
+          location: "Heads back to farm."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - weekday: sunday
+      heart_event_seen: 14
+      schedule:
+        - time: "8:30 AM"
+          location: "Leaves farm to go stand beneath a tree by his grandparent's house."
+        - time: "11:00 AM"
+          location: "Goes to the back room of the Stardrop Saloon."
+        - time: "3:00 PM"
+          location: "Leaves to stand by the dog kennel."
+        - time: "6:30 PM"
+          location: "Goes inside of his grandparent's house and stands in the entryway."
+        - time: "8:00 PM"
+          location: "Goes to stand inside of his room."
+        - time: "10:00 PM"
+          location: "Leaves for the Farmhouse."
