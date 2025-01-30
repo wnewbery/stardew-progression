@@ -1,6 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-page-bg: #1a202c;
+  --color-text: #a0aec0;
+
+  --color-primary: #2d3748;
+  --color-secondary: #4a5568;
+  --color-accent: #718096;
+}
 
 a {
   @apply underline text-blue-600 hover:text-blue-800
