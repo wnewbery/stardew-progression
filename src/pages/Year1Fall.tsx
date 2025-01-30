@@ -72,7 +72,7 @@ const birthdays: GuideBirthdayInfo[] = [
     name: "Marnie",
     content: <>
       A <Item>Diamond</Item> is a loved gift, otherwise one of the <Wiki>Universal Likes</Wiki>.
-      She will be at home all day.
+      She also visits the clinic today at 12:30 until 4.
     </>
   },
   {
@@ -233,7 +233,7 @@ export default () => {
           Save some <Item>Cheese</Item>, <Item>Goat Cheese</Item> and <Item>Honey</Item> for the Artisan Bundle.
         </ChecklistItem>
         <p>
-          Finally need a <Wiki>Pig</Wiki> to get a <Item>Truffle</Item> for the Chef's Bundle and
+          Also need a <Wiki>Pig</Wiki> to get a <Item>Truffle</Item> for the Chef's Bundle and
           that means getting a Deluxe Barn.
         </p>
         <Building id="deluxe_barn" />
@@ -257,6 +257,16 @@ export default () => {
         </ChecklistItem>
         <ChecklistItem id="fall_oil_maker">
           You can use an <Wiki>Oil Maker</Wiki> to make <Item>Truffle Oil</Item> from <Items>Truffle</Items>.
+        </ChecklistItem>
+        <p>
+          Anf finally a <Wiki>Rabit</Wiki> to get a <Item>Rabbit's Foot</Item> for the Enchanter's Bundle.
+        </p>
+        <Building id="deluxe_coop" />
+        <ChecklistItem id="fall_rabbit">
+          Buy at least 1 <Wiki>Rabit</Wiki> for 8,000g.
+        </ChecklistItem>
+        <ChecklistItem id="enchanters_bundle-rabits_foot">
+          Save a <Item>Rabbit's Foot</Item> for the Enchanter's Bundle.
         </ChecklistItem>
       </GuideSection>
       <GuideSection title="Fishing">
@@ -498,11 +508,23 @@ export default () => {
           </ChecklistItem>
         </Day>
         <Day day={17}></Day>
-        <Day day={18}></Day>
+        <Day day={18}>
+          <ChecklistItem id="fall18_cranberries">
+            Another big <Item>Cranberries</Item> harvest. You should also by now have a good daily
+            income of <Item>Cheese</Item> and <Item>Mayonnaise</Item> from your animals.
+            Keep saving up for the animals and vault as needed.
+          </ChecklistItem>
+        </Day>
         <Day day={19}></Day>
         <Day day={20}></Day>
         <Day day={21}></Day>
-        <Day day={22}></Day>
+        <Day day={22}>
+          <ChecklistItem id="fall22_lastweek">
+            Going into the last week hopefully you have the Fall bundles completed and just wrapping up some last bits.
+            Make sure you prioritise any crops or fish that must be done in Fall.
+            The animals can be finished in Winter if
+          </ChecklistItem>
+        </Day>
         <Day day={23}></Day>
         <Day day={24}></Day>
         <Day day={25}></Day>
