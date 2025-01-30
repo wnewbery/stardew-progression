@@ -2,6 +2,7 @@
 
 @theme {
   --color-page-bg: #1a202c;
+  --color-emphasize: #e0e6ef;
   --color-text: #a0aec0;
 
   --color-primary: #2d3748;
@@ -9,30 +10,47 @@
   --color-accent: #718096;
 }
 
-a {
-  @apply underline text-blue-600 hover:text-blue-800
+@layer base {
+  a {
+    @apply underline text-blue-600 hover:text-blue-800
+  }
+
+  h1 {
+    @apply text-4xl font-extrabold text-emphasize mb-4;
+  }
+
+  h2 {
+    @apply text-3xl font-bold text-emphasize mb-3;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold text-emphasize mb-2;
+  }
+
+  h4 {
+    @apply text-xl font-medium text-text mb-2;
+  }
+
+  h5 {
+    @apply text-lg font-medium text-text mb-1;
+  }
+
+  h6 {
+    @apply text-base font-medium text-text mb-1;
+  }
+}
+@layer components {
+  /*Any "normal" usage of table for displaying data, rather than layout hacks*/
+  .simple-table {
+    @apply border-separate;
+    border-spacing: 0.5rem;
+    margin: -0.5rem;
+    th {
+      @apply text-left text-lg font-bold text-emphasize;
+    }
+    th, td {
+      @apply bg-primary px-2 py-1;
+    }
+  }
 }
 
-h1 {
-  @apply text-4xl font-extrabold text-primary mb-4;
-}
-
-h2 {
-  @apply text-3xl font-bold text-primary mb-3;
-}
-
-h3 {
-  @apply text-2xl font-semibold text-primary mb-2;
-}
-
-h4 {
-  @apply text-xl font-medium text-secondary mb-2;
-}
-
-h5 {
-  @apply text-lg font-medium text-secondary mb-1;
-}
-
-h6 {
-  @apply text-base font-medium text-secondary mb-1;
-}

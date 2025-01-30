@@ -21,11 +21,11 @@ const ScheduleDay = ({ title, schedule }: ScheduleDayProps) => {
   return (
     <div>
       <h3 className="text-lg font-bold">{title}</h3>
-      <table>
+      <table className="simple-table">
         <thead>
           <tr>
-            <th className="text-left">Time</th>
-            <th className="text-left">Location</th>
+            <th>Time</th>
+            <th>Location</th>
           </tr>
         </thead>
         <tbody>
@@ -82,10 +82,10 @@ export default () => {
         <div><a target="_blank" href={villager.wiki}>Wiki</a></div>
         <div>Birthday: {villager.birthday}</div>
 
-        {schedule.spring && <Schedule name={villager.name} season="Spring" desertVendor={schedule.desertVendor} greenRain={schedule.greenRain} schedule={schedule.spring} />}
-        {schedule.summer && <Schedule name={villager.name} season="Summer" desertVendor={schedule.desertVendor} greenRain={schedule.greenRain} schedule={schedule.summer} />}
-        {schedule.fall && <Schedule name={villager.name} season="Fall" desertVendor={schedule.desertVendor} greenRain={schedule.greenRain} schedule={schedule.fall} />}
-        {schedule.winter && <Schedule name={villager.name} season="Winter" desertVendor={schedule.desertVendor} greenRain={schedule.greenRain} schedule={schedule.winter} />}
+        {schedule.spring && <Schedule name={villager.name} season="Spring" desertVendor={schedule.desertVendor} schedule={schedule.spring} />}
+        {schedule.summer && <Schedule name={villager.name} season="Summer" greenRain={schedule.greenRain} schedule={schedule.summer} />}
+        {schedule.fall && <Schedule name={villager.name} season="Fall" schedule={schedule.fall} />}
+        {schedule.winter && <Schedule name={villager.name} season="Winter" schedule={schedule.winter} />}
       </div>
     </div>
   );

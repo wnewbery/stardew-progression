@@ -2,6 +2,9 @@
 name: Alex
 birthday: Summer 13
 schedule:
+  green_rain:
+    - time: "All day"
+      location: "In the kitchen."
   spring:
     - rain: true
       schedule:
@@ -63,10 +66,6 @@ schedule:
         - time: "10:00 PM"
           location: "Goes to bed."
   summer:
-    - green_rain_year_1: true
-      schedule:
-        - time: "All day"
-          location: "In the kitchen."
     - day: 16
       schedule:
         - time: "8:00 AM"
