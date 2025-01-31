@@ -36,7 +36,10 @@ export default ({ bundle }: CommunityBundleProps) => {
       <summary className="text-xl font-bold space-x-4 ml-4">
         <img src={bundle.icon} className="inline-block align-middle" />
         <input type="checkbox" checked={isBundleCompleted} onChange={onBundleCompleted} className="w-6 h-6 align-middle" />
-        <span className="align-middle">{bundle.label}</span>
+        <span className="align-middle nowrap">
+          {bundle.label}
+          <span className="hidden xs:inline"> Bundle</span>
+        </span>
       </summary>
       <div className="m-4">
         <span className="font-bold mr-2">Reward:</span>

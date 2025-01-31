@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
+  --breakpoint-xs: 32rem;
+
   --color-page-bg: #1a202c;
   --color-emphasize: #e0e6ef;
   --color-text: #a0aec0;

@@ -6,8 +6,7 @@
       [Bridge Repair](https://stardewvalleywiki.com/Quarry)
     description: Repair the bridge to the east of the mines that leads to the quarry.
   bundles:
-    - id: spring_foraging_bundle
-      label: Spring Foraging Bundle
+    - label: Spring Foraging
       icon: 32px-Bundle_Green
       reward:
         id: Spring_Seeds
@@ -17,7 +16,7 @@
         - id: daffodil
         - id: leek
         - id: dandelion
-    - label: Summer Foraging Bundle
+    - label: Summer Foraging
       icon: 32px-Bundle_Yellow
       reward:
         id: summer_seeds
@@ -26,7 +25,7 @@
         - id: grape
         - id: spice_berry
         - id: sweet_pea
-    - label: Fall Foraging Bundle
+    - label: Fall Foraging
       icon: 32px-Bundle_Orange
       reward:
         id: fall_seeds
@@ -36,7 +35,7 @@
         - id: wild_plum
         - id: hazelnut
         - id: blackberry
-    - label: Winter Foraging Bundle
+    - label: Winter Foraging
       icon: 32px-Bundle_Teal
       reward:
         id: winter_seeds
@@ -46,7 +45,7 @@
         - id: crystal_fruit
         - id: snow_yam
         - id: crocus
-    - label: Construction Bundle
+    - label: Construction
       icon: 32px-Bundle_Red
       reward:
         id: charcoal_kiln
@@ -61,7 +60,7 @@
         - id: hardwood
 
           count: 10
-    - label: Exotic Foraging Bundle
+    - label: Exotic Foraging
       icon: 32px-Bundle_Purple
       description: |
         Possible to do in the first couple of seasons if get the mushroom cave and the tree taps. Cave carrots are also fairly common in the mines.
@@ -86,8 +85,7 @@
     item_id: Greenhouse
     label: Greenhouse
   bundles:
-    - id: spring_crops_bundle
-      label: Spring Crops Bundle
+    - label: Spring Crops
       icon: 32px-Bundle_Green
       reward:
         id: Speed-Gro
@@ -97,8 +95,7 @@
         - id: green_bean
         - id: cauliflower
         - id: potato
-    - id: quality_crops_bundle
-      label: Quality Crops Bundle
+    - label: Quality Crops
       icon: 32px-Bundle_Teal
       needed: 3
       description: |
@@ -118,7 +115,7 @@
         - id: corn
           quality: gold
           count: 5
-    - label: Summer Crops Bundle
+    - label: Summer Crops
       icon: 32px-Bundle_Yellow
       reward:
         id: quality_sprinkler
@@ -127,7 +124,7 @@
         - id: hot_pepper
         - id: blueberry
         - id: melon
-    - label: Fall Crops Bundle
+    - label: Fall Crops
       icon: 32px-Bundle_Orange
       reward:
         id: bee_house
@@ -136,7 +133,7 @@
         - id: eggplant
         - id: pumpkin
         - id: yam
-    - label: Animal Bundle
+    - label: Animal
       icon: 32px-Bundle_Red
       needed: 5
       reward:
@@ -148,7 +145,7 @@
         - id: large_goat_milk
         - id: wool
         - id: duck_egg
-    - label: Artisan Bundle
+    - label: Artisan
       icon: 32px-Bundle_Purple
       reward:
         id: keg
@@ -170,7 +167,7 @@
     item_id: Greenhouse
     label: Greenhouse
   bundles:
-    - label: River Fish Bundle
+    - label: River Fish
       icon: 32px-Bundle_Teal
       description: "All River Fish can be found in the Riverlands Farm, Hill-Top Farm, or Forest Farm."
       reward:
@@ -181,7 +178,7 @@
         - id: catfish
         - id: shad
         - id: tiger_trout
-    - label: Lake Fish Bundle
+    - label: Lake Fish
       icon: 32px-Bundle_Green
       description: All Mountain Lake Fish can be found in any weather, and in the Wilderness Farm.
       reward:
@@ -191,7 +188,7 @@
         - id: carp
         - id: bullhead
         - id: sturgeon
-    - label: Ocean Fish Bundle
+    - label: Ocean Fish
       icon: 32px-Bundle_Blue
       reward:
         id: warp_totem_beach
@@ -201,7 +198,7 @@
         - id: tuna
         - id: red_snapper
         - id: tilapia
-    - label: Night Fishing Bundle
+    - label: Night Fishing
       icon: 32px-Bundle_Purple
       reward:
         id: glow_ring
@@ -209,7 +206,7 @@
         - id: walleye
         - id: bream
         - id: eel
-    - label: Crab Pot Bundle
+    - label: Crab Pot
       description: Of the required 5 items, 4 are found with beach foraging and another in the mines.
       icon: 32px-Bundle_Purple
       needed: 5
@@ -227,7 +224,7 @@
         - id: periwinkle
         - id: oyster
         - id: clam
-    - label: Specialty Fish Bundle
+    - label: Specialty Fish
       icon: 32px-Bundle_Red
       reward:
         id: dish_o_the_sea
@@ -243,7 +240,7 @@
     item_id: Greenhouse
     label: Greenhouse
   bundles:
-    - label: "Blacksmith's Bundle"
+    - label: "Blacksmith's"
       icon: 32px-Bundle_Orange
       reward:
         id: furnace
@@ -251,7 +248,7 @@
         - id: copper_bar
         - id: iron_bar
         - id: gold_bar
-    - label: "Geologist's Bundle"
+    - label: "Geologist's"
       icon: 32px-Bundle_Purple
       reward:
         id: omni_geode
@@ -261,7 +258,7 @@
         - id: earth_crystal
         - id: frozen_tear
         - id: fire_quartz
-    - label: "Adventurer's Bundle"
+    - label: "Adventurer's"
       icon: 32px-Bundle_Purple
       needed: 2
       description: |
@@ -281,7 +278,7 @@
     item_id: Greenhouse
     label: Greenhouse
   bundles:
-    - label: "Chef's Bundle"
+    - label: "Chef's"
       icon: 32px-Bundle_Red
       reward:
         id: pink_cake
@@ -293,7 +290,7 @@
         - id: poppy
         - id: maki_roll
         - id: fried_egg
-    - label: Dye Bundle
+    - label: Dye
       icon: 32px-Bundle_Teal
       reward:
         id: seed_maker
@@ -304,7 +301,7 @@
         - id: duck_feather
         - id: aquamarine
         - id: red_cabbage
-    - label: Field Research Bundle
+    - label: Field Research
       icon: 32px-Bundle_Blue
       reward:
         id: recycling_machine
@@ -313,7 +310,7 @@
         - id: nautilus_shell
         - id: chub
         - id: frozen_geode
-    - label: Fodder Bundle
+    - label: Fodder
       icon: 32px-Bundle_Yellow
       reward:
         id: heater
@@ -324,7 +321,7 @@
           count: 10
         - id: apple
           count: 3
-    - label: "Enchanter's Bundle"
+    - label: "Enchanter's"
       icon: 32px-Bundle_Purple
       reward:
         id: gold_bar

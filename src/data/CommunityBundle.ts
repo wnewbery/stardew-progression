@@ -18,7 +18,13 @@ export default class CommunityBundle {
   constructor(yaml: any) {
     this.id = yaml.id;
     this.label = yaml.label;
-    if (!this.id) this.id = this.label.toLocaleLowerCase().replaceAll(' ', '_').replaceAll('\'', '');
+    if (!this.id) {
+      this.id = this.label.
+        toLocaleLowerCase().
+        replaceAll(' ', '_').
+        replaceAll('\'', '')
+        + '_bundle';
+    }
     this.description = yaml.description;
 
     this.reward = new Reward(yaml.reward);
