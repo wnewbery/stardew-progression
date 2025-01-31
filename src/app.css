@@ -11,8 +11,18 @@
 }
 
 @layer base {
+  ::-webkit-scrollbar-track {
+    @apply bg-page-bg;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent border-2;
+  }
+  * {
+    scrollbar-color: var(--color-accent) var(--color-page-bg);
+  }
+
   a {
-    @apply underline text-blue-600 hover:text-blue-800
+    @apply underline text-blue-500 hover:text-blue-200
   }
 
   h1 {
@@ -42,14 +52,19 @@
 @layer components {
   /*Any "normal" usage of table for displaying data, rather than layout hacks*/
   .simple-table {
-    @apply border-separate;
-    border-spacing: 0.5rem;
-    margin: -0.5rem;
     th {
       @apply text-left text-lg font-bold text-emphasize;
     }
     th, td {
       @apply bg-primary px-2 py-1;
+      vertical-align: top;
+
+      &:not(:first-child) {
+        @apply border-l-2 border-page-bg;
+      }
+    }
+    tr:not(:first-child), tbody > tr {
+      @apply border-t-2 border-page-bg;
     }
   }
 }

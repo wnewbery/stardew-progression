@@ -32,7 +32,7 @@ export default ({ bundle }: CommunityBundleProps) => {
   }
 
   return (
-    <details className="max-w-[750px] break-inside-avoid-column border rounded-xl bg-slate-200" open={bundleExpanded} onToggle={setBundleOpen}>
+    <details className="max-w-[750px] break-inside-avoid-column bg-primary border border-secondary rounded-xl" open={bundleExpanded} onToggle={setBundleOpen}>
       <summary className="text-xl font-bold space-x-4 ml-4">
         <img src={bundle.icon} className="inline-block align-middle" />
         <input type="checkbox" checked={isBundleCompleted} onChange={onBundleCompleted} className="w-6 h-6 align-middle" />
@@ -43,7 +43,7 @@ export default ({ bundle }: CommunityBundleProps) => {
         <ItemStackText stack={bundle.reward} />
       </div>
       {!bundle.allNeeded && <div className="ml-4">{bundle.needed} items needed</div>}
-      <table className="border-t border-slate-400 w-full">
+      <table className="border-t border-secondary w-full">
         <tbody>
           {bundle.items.map(item => {
             const countStr = item.count > 1 ? `(${item.count})` : '';

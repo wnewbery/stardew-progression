@@ -19,12 +19,12 @@ interface ScheduleDayProps {
 }
 const ScheduleDay = ({ title, schedule }: ScheduleDayProps) => {
   return (
-    <div>
-      <h3 className="text-lg font-bold">{title}</h3>
-      <table className="simple-table">
+    <div className="w-full">
+      <h4>{title}</h4>
+      <table className="simple-table w-full">
         <thead>
           <tr>
-            <th>Time</th>
+            <th className="w-24">Time</th>
             <th>Location</th>
           </tr>
         </thead>
@@ -51,7 +51,7 @@ interface ScheduleProps {
 const Schedule = ({ name, season, desertVendor, greenRain, schedule }: ScheduleProps) => {
   return (
     <div className="space-y-4">
-      <h2>{season}</h2>
+      <h3>{season}</h3>
       {desertVendor && <ScheduleDay title="Desert Festival Vendor" schedule={desertVendor} />}
       {greenRain && <ScheduleDay title="Green Rain (Year 1 only)" schedule={greenRain} />}
       {schedule.map((day) => {
@@ -76,16 +76,21 @@ export default () => {
   return (
     <div className="space-y-8 min-h-full">
       <h1>Villagers</h1>
-      <div className="space-y-8">
-        <img src={villager.icon} alt={villager.name} width={64} height={64} />
-        <div>{villager.name}</div>
-        <div><a target="_blank" href={villager.wiki}>Wiki</a></div>
-        <div>Birthday: {villager.birthday}</div>
-
-        {schedule.spring && <Schedule name={villager.name} season="Spring" desertVendor={schedule.desertVendor} schedule={schedule.spring} />}
-        {schedule.summer && <Schedule name={villager.name} season="Summer" greenRain={schedule.greenRain} schedule={schedule.summer} />}
-        {schedule.fall && <Schedule name={villager.name} season="Fall" schedule={schedule.fall} />}
-        {schedule.winter && <Schedule name={villager.name} season="Winter" schedule={schedule.winter} />}
+      <div>
+        <div className="flex flex-row gap-4">
+          <img src={villager.portrait} alt={villager.name} width={96} height={96} />
+          <div>
+            <h2>{villager.name}</h2>
+            <div><a target="_blank" href={villager.wiki}>Wiki</a></div>
+            <div><strong>Birthday:</strong> {villager.birthday}</div>
+          </div>
+        </div>
+        <div className="space-y-4 inline-block">
+          {schedule.spring && <Schedule name={villager.name} season="Spring" desertVendor={schedule.desertVendor} schedule={schedule.spring} />}
+          {schedule.summer && <Schedule name={villager.name} season="Summer" greenRain={schedule.greenRain} schedule={schedule.summer} />}
+          {schedule.fall && <Schedule name={villager.name} season="Fall" schedule={schedule.fall} />}
+          {schedule.winter && <Schedule name={villager.name} season="Winter" schedule={schedule.winter} />}
+        </div>
       </div>
     </div>
   );

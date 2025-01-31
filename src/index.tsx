@@ -39,24 +39,24 @@ const App = () => {
   const [activeTab, setActiveTab] = useState("bundles");
   return (
     <div className="h-screen v-screen xl:flex flex-row ">
-      <div className="p-8 xl:max-w-md flex-initial flex flex-col gap-4 overflow-y-auto xl:border-r-2 border-r-solid border-blue-300">
-        <h1 className="text-2xl font-bold">Stardew Valley Progression Guide &amp; Tracker</h1>
+      <div className="p-8 xl:max-w-md flex-initial flex flex-col gap-4 overflow-y-auto xl:border-r-2 border-r-solid border-accent">
+        <h1>Stardew Valley Progression Guide &amp; Tracker</h1>
         <nav>
           <section>
             <ol>
-              <li><Link to="/achievements">Achievements</Link></li>
-              <li><Link to="/bundles">Community Bundles</Link></li>
-              <li><Link to="/buildings">Buildings</Link></li>
-              <li><Link to="/villagers">Villagers</Link></li>
+              <li className="text-lg"><Link to="/achievements">Achievements</Link></li>
+              <li className="text-lg"><Link to="/bundles">Community Bundles</Link></li>
+              <li className="text-lg"><Link to="/buildings">Buildings</Link></li>
+              <li className="text-lg"><Link to="/villagers">Villagers</Link></li>
             </ol>
           </section>
-          <section>
-            <h2 className="text-xl font-bold">1 Year Completion Guide</h2>
+          <section className="mt-4">
+            <h2>1 Year Completion Guide</h2>
             <ol>
-              <li><Link to="/year1-spring">Spring</Link></li>
-              <li><Link to="/year1-summer">Summer</Link></li>
-              <li><Link to="/year1-fall">Fall</Link></li>
-              <li><Link to="/year1-winter">Winter</Link></li>
+              <li className="text-lg"><Link to="/year1-spring">Spring</Link></li>
+              <li className="text-lg"><Link to="/year1-summer">Summer</Link></li>
+              <li className="text-lg"><Link to="/year1-fall">Fall</Link></li>
+              <li className="text-lg"><Link to="/year1-winter">Winter</Link></li>
             </ol>
           </section>
         </nav>
