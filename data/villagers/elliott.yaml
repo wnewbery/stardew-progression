@@ -5,6 +5,13 @@ schedule:
   green_rain:
     - time: "All day"
       location: "In the Saloon."
+  desert_vendor:
+    - time: "11:10 AM"
+      location: "Boards the bus to Calico Desert."
+    - time: "11:30 AM"
+      location: "Arrives at his booth."
+    - time: "12:00 AM"
+      location: "Leaves booth and boards bus back to the Valley."
   spring:
     - day: 15
       bus_service_restored: true
@@ -15,14 +22,6 @@ schedule:
           location: "Stands at the cliffside south of the racing line."
         - time: "1:40 AM"
           location: "Boards bus back to the Valley."
-    - desert_vendor: true
-      schedule:
-        - time: "11:10 AM"
-          location: "Boards the bus to Calico Desert."
-        - time: "11:30 AM"
-          location: "Arrives at his booth."
-        - time: "12:00 AM"
-          location: "Leaves booth and boards bus back to the Valley."
     - rain: true
       schedule:
         - time: "All day"
@@ -45,7 +44,7 @@ schedule:
           location: "Leaves home and heads to Pierre's General Store."
         - time: "5:30 PM"
           location: "Leaves Pierre's and heads home for the night."
-    - weekday: [friday, sunday]
+    - weekdays: [friday, sunday]
       hearts:
         leah: "< 6"
       schedule:
@@ -89,7 +88,7 @@ schedule:
           location: "Leaves home and heads to Pierre's General Store."
         - time: "5:30 PM"
           location: "Leaves Pierre's and heads home for the night."
-    - weekday: [friday, sunday]
+    - weekdays: [friday, sunday]
       hearts:
         leah: "< 6"
       schedule:
@@ -101,7 +100,7 @@ schedule:
           location: "Leaves the docks to visit The Stardrop Saloon."
         - time: "11:40 PM"
           location: "Leaves the saloon to return home for the night."
-    - weekday: [friday, sunday]
+    - weekdays: [friday, sunday]
       schedule:
         - time: "8:00 AM"
           location: "At home."
@@ -145,7 +144,7 @@ schedule:
           location: "Leaves home and heads to Pierre's General Store."
         - time: "5:30 PM"
           location: "Leaves Pierre's and heads home for the night."
-    - weekday: [friday, sunday]
+    - weekdays: [friday, sunday]
       hearts:
         leah: "< 6"
       schedule:
@@ -157,7 +156,7 @@ schedule:
           location: "Leaves the docks to visit The Stardrop Saloon."
         - time: "11:40 PM"
           location: "Leaves the saloon to return home for the night."
-    - weekday: [friday, sunday]
+    - weekdays: [friday, sunday]
       schedule:
         - time: "8:00 AM"
           location: "At home."
@@ -211,7 +210,7 @@ schedule:
           location: "Leaves home and heads to Pierre's General Store."
         - time: "5:30 PM"
           location: "Leaves Pierre's and heads home for the night."
-    - weekday: [friday, sunday]
+    - weekdays: [friday, sunday]
       hearts:
         leah: "< 6"
       schedule:
@@ -223,7 +222,7 @@ schedule:
           location: "Leaves the docks to visit The Stardrop Saloon."
         - time: "11:40 PM"
           location: "Leaves the saloon to return home for the night."
-    - weekday: [friday, sunday]
+    - weekdays: [friday, sunday]
       schedule:
         - time: "8:00 AM"
           location: "At home."
@@ -242,4 +241,3 @@ schedule:
           location: "Leaves home, heads to the Library."
         - time: "5:30 PM"
           location: "Leaves the library to return home for the night."
-

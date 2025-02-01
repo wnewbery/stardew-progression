@@ -5,6 +5,13 @@ schedule:
   green_rain:
     - time: "All day"
       location: "In the kitchen."
+  desert_vendor:
+    - time: "11:10 AM"
+      location: "Boards the bus to Calico Desert."
+    - time: "11:30 AM"
+      location: "Arrives at his booth."
+    - time: "12:00 AM"
+      location: "Leaves booth and boards bus back to the Valley."
   spring:
     - day: 15
       bus_restored: true

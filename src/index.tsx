@@ -14,6 +14,7 @@ import Buildings from "./pages/Buildings";
 import Year1Fall from "./pages/Year1Fall";
 import Villagers from "./pages/Villagers";
 import Villager from "./pages/Villager";
+import VillagerFinder from "./pages/VillagerFinder";
 
 const container = document.getElementById("app")!;
 const root = createRoot(container);
@@ -25,7 +26,9 @@ function TabCommunityBundles() {
   return (
     <>
       <h2 className="text-2xl font-bold">Community Bundles</h2>
-      {bundles.map(bundle => <CommunityBundle key={bundle.id} bundle={bundle} />)}
+      <div className="space-y-4">
+        {bundles.map(bundle => <CommunityBundle key={bundle.id} bundle={bundle} />)}
+      </div>
     </>);
 }
 const footer = (
@@ -49,6 +52,7 @@ const App = () => {
               <li className="text-lg"><Link to="/bundles">Community Bundles</Link></li>
               <li className="text-lg"><Link to="/buildings">Buildings</Link></li>
               <li className="text-lg"><Link to="/villagers">Villagers</Link></li>
+              <li className="text-lg"><Link to="/villager-finder">Villager Finder</Link></li>
             </ol>
           </section>
           <section className="mt-4">
@@ -71,18 +75,21 @@ const App = () => {
 
         <div className="hidden xl:block">{footer}</div>
       </div>
-      <div className="p-8 flex-auto overflow-y-auto flex flex-col gap-4">
+      <div className="pt-8 px-8 flex-auto overflow-y-auto">
         <Routes>
           <Route path="/" element={<Navigate to="/bundles" />} />
           <Route path="/buildings" element={<Buildings />} />
           <Route path="/bundles" element={<TabCommunityBundles />} />
           <Route path="/villagers" element={<Villagers />} />
           <Route path="/villagers/:villager" element={<Villager />} />
+          <Route path="/villager-finder" element={<VillagerFinder />} />
 
           <Route path="/year1-spring/*" element={<Year1Spring />} />
           <Route path="/year1-summer/*" element={<Year1Summer />} />
           <Route path="/year1-fall/*" element={<Year1Fall />} />
         </Routes>
+        {/*Force bottom padding even if scrolling.*/}
+        <div className="h-8"> </div>
       </div>
       <div className="xl:hidden p-8">{footer}</div>
     </div>

@@ -19,7 +19,7 @@ export default class Villager {
     this.id = yaml.id ?? normaliseId(yaml.name);
     this.name = yaml.name;
     this.birthday = yaml.birthday;
-    this.schedule = new VillagerSchedule(yaml.schedule);
+    this.schedule = new VillagerSchedule(this.name, yaml.schedule);
 
     this.portrait = GameIcons(this.name);
     this.icon = GameIcons(this.name + "_icon");
