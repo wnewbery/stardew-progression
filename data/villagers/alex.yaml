@@ -6,6 +6,17 @@ schedule:
     - time: "All day"
       location: "In the kitchen."
   spring:
+    - day: 15
+      bus_restored: true
+      schedule:
+        - time: "7:50 AM"
+          location: "Leaves his house to stand under the tree outside."
+        - time: "10:20 AM"
+          location: "Boards the bus to Calico Desert to attend the Desert Festival."
+        - time: "10:30 AM"
+          location: "Stands by the chef stand."
+        - time: "12:50 AM"
+          location: "Boards bus back to the Valley."
     - rain: true
       schedule:
         - time: "8:00 AM"

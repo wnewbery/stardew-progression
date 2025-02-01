@@ -7,11 +7,16 @@ import CommunityRoom from "./CommunityRoom";
 import GameItem from "./GameItem";
 import Building from "./Building";
 import normaliseId from "../NormaliseId";
+import Villager from "./Villager";
+
+const villagersData = require.context('../../data/villagers', false, /\.yaml$/);
 
 let items: GameItem[] = [];
 let itemsMap: Map<string, GameItem>;
 let rooms: CommunityRoom[];
 let buildings: Building[];
+let villagers: Villager[];
+let villagersMap: Map<string, Villager>;
 
 function load() {
   items = (itemsData as any[]).map(x => new GameItem(x));
@@ -23,6 +28,12 @@ function load() {
   });
 
   buildings = (buildingsData as any[]).map(x => new Building(x));
+
+  villagers = villagersData.keys().map(filename => {
+    let data = villagersData(filename).default as any;
+    return new Villager(data);
+  });
+  villagersMap = new Map(villagers.map(x => [x.id, x]));
 }
 export default {
   load,
@@ -51,5 +62,14 @@ export default {
   },
   get buildings() {
     return buildings;
-  }
+  },
+
+  villager(id: string) {
+    var x = villagersMap.get(normaliseId(id));
+    if (x) return x;
+    else throw new Error(`Unknown villager ${id}.`);
+  },
+  get villagers() {
+    return villagers;
+  },
 }

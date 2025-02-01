@@ -13,6 +13,7 @@ import Year1Summer from "./pages/Year1Summer";
 import Buildings from "./pages/Buildings";
 import Year1Fall from "./pages/Year1Fall";
 import Villagers from "./pages/Villagers";
+import Villager from "./pages/Villager";
 
 const container = document.getElementById("app")!;
 const root = createRoot(container);
@@ -76,6 +77,7 @@ const App = () => {
           <Route path="/buildings" element={<Buildings />} />
           <Route path="/bundles" element={<TabCommunityBundles />} />
           <Route path="/villagers" element={<Villagers />} />
+          <Route path="/villagers/:villager" element={<Villager />} />
 
           <Route path="/year1-spring/*" element={<Year1Spring />} />
           <Route path="/year1-summer/*" element={<Year1Summer />} />

@@ -1,0 +1,294 @@
+name: Harvey
+birthday: Winter 14
+schedule:
+  desert_vendor:
+    - time: "11:10 AM"
+      location: "Boards bus to Calico Desert."
+    - time: "11:30 AM"
+      location: "Arrives at his booth."
+    - time: "12:00 AM"
+      location: "Leaves booth and boards bus back to the Valley."
+  green_rain:
+    - time: All day
+      location: At the Stardrop Saloon.
+  spring:
+    - days: [15, 16, 17]
+      bus_restored: true
+      schedule:
+        - time: "8:20 AM"
+          location: "Boards bus to Calico Desert to attend the Desert Festival."
+        - time: "8:40 AM"
+          location: "Stands at the medical tent."
+    - rain: true
+      schedule:
+        - time: "8:00 AM"
+          location: "In his room."
+        - time: "8:40 AM"
+          location: "Works at the clinic's front desk."
+        - time: "12:00 PM"
+          location: "Goes upstairs to his room, sits in front of radio."
+        - time: "4:00 PM"
+          location: "Moves to bookshelf to read."
+        - time: "5:30 PM"
+          location: "Heads to the Stardrop Saloon."
+        - time: "10:00 PM"
+          location: "Returns home and goes to bed."
+    - weekdays: [tuesday, thursday]
+      schedule:
+        - time: "7:30 AM"
+          location: "In exam room of clinic."
+        - time: "12:50 PM"
+          location: "Moves to waiting room."
+        - time: "1:30 PM"
+          location: "Returns to exam room."
+        - time: "4:30 PM"
+          location: "Works at the clinic's front desk."
+        - time: "6:00 PM"
+          location: "Goes up to his room, stands in front of bookshelf."
+        - time: "11:00 PM"
+          location: "Goes to bed."
+    - weekday: friday
+      schedule:
+        - time: "7:00 AM"
+          location: "Stands in front of refrigerator in his room."
+        - time: "8:30 AM"
+          location: "Works at the clinic's front desk."
+        - time: "12:00 PM"
+          location: "Goes to Pierre's General Store."
+        - time: "3:00 PM"
+          location: "Returns to his room above the clinic."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - weekday: saturday
+      schedule:
+        - time: "8:30 AM"
+          location: "Leaves home to go to the Museum."
+        - time: "3:00 PM"
+          location: "Leaves the Museum to return to his room above the clinic."
+    - schedule:
+        - time: "7:00 AM"
+          location: "Stands in front of refrigerator in his room."
+        - time: "8:30 AM"
+          location: "Works at the clinic's front desk."
+        - time: "12:00 PM"
+          location: "Walks around the park west of the town square."
+        - time: "5:30 PM"
+          location: "Returns to clinic, stands at right side of front desk."
+        - time: "6:40 PM"
+          location: "Goes upstairs to his room, reads in front of bookshelf."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+  summer:
+    - rain: true
+      schedule:
+        - time: "8:00 AM"
+          location: "In his room."
+        - time: "8:40 AM"
+          location: "Works at the clinic's front desk."
+        - time: "12:00 PM"
+          location: "Goes upstairs to his room, sits in front of radio."
+        - time: "4:00 PM"
+          location: "Moves to bookshelf to read."
+        - time: "5:30 PM"
+          location: "Heads to the Stardrop Saloon."
+        - time: "10:00 PM"
+          location: "Returns home and goes to bed."
+    - weekdays: [tuesday, thursday]
+      schedule:
+        - time: "7:30 AM"
+          location: "In exam room of clinic."
+        - time: "12:50 PM"
+          location: "Moves to waiting room."
+        - time: "1:30 PM"
+          location: "Returns to exam room."
+        - time: "4:30 PM"
+          location: "Works at the clinic's front desk."
+        - time: "6:00 PM"
+          location: "Goes upstairs to his room, reads in front of bookshelf."
+        - time: "11:00 PM"
+          location: "Goes to bed."
+    - weekday: friday
+      schedule:
+        - time: "7:00 AM"
+          location: "Stands in front of refrigerator in his room."
+        - time: "8:30 AM"
+          location: "Works at the clinic's front desk."
+        - time: "12:00 PM"
+          location: "Goes to Pierre's General Store."
+        - time: "3:00 PM"
+          location: "Returns to his room above the clinic."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - weekday: saturday
+      schedule:
+        - time: "8:30 AM"
+          location: "Leaves home to go to the Museum."
+        - time: "3:00 PM"
+          location: "Leaves the Museum to return to his room above the clinic."
+    - schedule:
+        - time: "7:00 AM"
+          location: "Stands in front of refrigerator in his room."
+        - time: "8:30 AM"
+          location: "Works at the clinic's front desk."
+        - time: "12:00 PM"
+          location: "Walks south of fountain west of the Community Center."
+        - time: "5:30 PM"
+          location: "Returns to clinic, stands at right side of front desk."
+        - time: "6:40 PM"
+          location: "Goes up to his room, reads in front of bookshelf."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+  fall:
+    - rain: true
+      schedule:
+        - time: "8:00 AM"
+          location: "In his room."
+        - time: "8:40 AM"
+          location: "Works at the clinic's front desk."
+        - time: "12:00 PM"
+          location: "Goes upstairs to his room, sits in front of radio."
+        - time: "4:00 PM"
+          location: "Moves to bookshelf to read."
+        - time: "5:30 PM"
+          location: "Heads to the Stardrop Saloon."
+        - time: "10:00 PM"
+          location: "Returns home and goes to bed."
+    - weekdays: [tuesday, thursday]
+      schedule:
+        - time: "7:30 AM"
+          location: "In exam room of clinic."
+        - time: "12:50 PM"
+          location: "Moves to waiting room."
+        - time: "1:30 PM"
+          location: "Returns to exam room."
+        - time: "4:30 PM"
+          location: "Works at the clinic's front desk."
+        - time: "6:00 PM"
+          location: "Goes upstairs to his room, reads in front of bookshelf."
+        - time: "11:00 PM"
+          location: "Goes to bed."
+    - weekday: friday
+      schedule:
+        - time: "7:00 AM"
+          location: "Stands in front of refrigerator in his room."
+        - time: "8:30 AM"
+          location: "Works at the clinic's front desk."
+        - time: "12:00 PM"
+          location: "Goes to Pierre's General Store."
+        - time: "3:00 PM"
+          location: "Returns to his room above the clinic."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - weekday: saturday
+      schedule:
+        - time: "8:30 AM"
+          location: "Leaves home to go to the Museum."
+        - time: "3:00 PM"
+          location: "Leaves the Museum to return to his room above the clinic."
+    - schedule:
+        - time: "7:00 AM"
+          location: "Stands in front of refrigerator in his room."
+        - time: "8:30 AM"
+          location: "Works at the clinic's front desk."
+        - time: "12:00 PM"
+          location: "Walks into town, stands by tree west of bridge to the Beach."
+        - time: "5:00 PM"
+          location: "Returns to his room, sits in front of radio."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+  winter:
+    - day: 15
+      schedule:
+        - time: "8:00 AM"
+          location: "Stands in front of microwave in his room."
+        - time: "8:40 AM"
+          location: "Works at the clinic's front desk."
+        - time: "12:00 PM"
+          location: "Goes upstairs to his room, sits in front of radio."
+        - time: "4:00 PM"
+          location: "Moves to bookshelf in his room."
+        - time: "5:00 PM"
+          location: "Walks to beach to attend Night Market."
+        - time: "12:00 AM"
+          location: "Returns home and goes to bed."
+    - rain: true
+      schedule:
+        - time: "8:00 AM"
+          location: "In his room."
+        - time: "8:40 AM"
+          location: "Works at the clinic's front desk."
+        - time: "12:00 PM"
+          location: "Goes upstairs to his room, sits in front of radio."
+        - time: "4:00 PM"
+          location: "Moves to bookshelf to read."
+        - time: "5:30 PM"
+          location: "Heads to the Stardrop Saloon."
+        - time: "10:00 PM"
+          location: "Returns home and goes to bed."
+    - weekdays: [tuesday, thursday]
+      schedule:
+        - time: "7:30 AM"
+          location: "In exam room of clinic."
+        - time: "12:50 PM"
+          location: "Moves to waiting room."
+        - time: "1:30 PM"
+          location: "Returns to exam room."
+        - time: "4:30 PM"
+          location: "Works at the clinic's front desk."
+        - time: "6:00 PM"
+          location: "Goes upstairs to his room, reads in front of bookshelf."
+        - time: "11:00 PM"
+          location: "Goes to bed."
+    - weekday: friday
+      schedule:
+        - time: "7:00 AM"
+          location: "Stands in front of refrigerator in his room."
+        - time: "8:30 AM"
+          location: "Works at the clinic's front desk."
+        - time: "12:00 PM"
+          location: "Goes to Pierre's General Store."
+        - time: "3:00 PM"
+          location: "Returns to his room above the clinic."
+        - time: "10:00 PM"
+          location: "Goes to bed."
+    - weekday: saturday
+      schedule:
+        - time: "8:30 AM"
+          location: "Leaves home to go to the Museum."
+        - time: "3:00 PM"
+          location: "Leaves the Museum to return to his room above the clinic."
+    - schedule:
+        - time: "8:00 AM"
+          location: "In his room."
+        - time: "8:40 AM"
+          location: "Works at the clinic's front desk."
+        - time: "12:00 PM"
+          location: "Goes upstairs to his room, sits in front of radio."
+        - time: "4:00 PM"
+          location: "Moves to bookshelf to read."
+        - time: "5:50 PM"
+          location: "Heads to the Stardrop Saloon."
+        - time: "10:00 PM"
+          location: "Returns home and goes to bed."
+  marriage:
+    - days: [15, 16, 17]
+      bus_restored: true
+      schedule:
+        - time: "9:00 AM"
+          location: "Leaves the farmhouse and heads to the Desert Festival."
+        - time: "9:40 AM"
+          location: "Stands at the medical tent."
+    - weekday: monday
+      schedule:
+        - time: "8:30 AM"
+          location: "Leaves the farmhouse and heads to Pierre's General Store."
+        - time: "12:00 PM"
+          location: "Walks to fountain left of Community Center."
+        - time: "5:00 PM"
+          location: "Leaves town and heads home to the farm."
+    - weekdays: [tuesday, thursday]
+      schedule:
+        - time: "6:30 AM"
+          location: "Leaves the farmhouse and heads to the clinic."
+        - time: "6:00 PM"
+          location: "Leaves the clinic to return home to the farm."

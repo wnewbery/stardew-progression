@@ -9,8 +9,16 @@ import ScheduleItem from "./ScheduleItem";
 
 export class VillagerDaySchedule {
   // Note, all of these conditions would need to be true
+  public option?: number;
+
   public rain: boolean;
+  public busRestored: boolean;
+  public railAccessible: boolean;
+  public communityCenterRestored: boolean;
+  public communityCenterNotRestored: boolean;
+
   public weekdays?: string[];
+  public monToFri?: boolean;
   public days?: number[];
   public heartEventSeen?: number;
 
@@ -20,9 +28,17 @@ export class VillagerDaySchedule {
     this.schedule = yaml.schedule.map((x: any) => new ScheduleItem(x));
 
     // conditions
+    this.option = yaml.option;
+
     this.rain = yaml.rain ?? false;
+    this.busRestored = yaml.bus_restored ?? false;
+    this.railAccessible = yaml.rail_accessible ?? false;
+    this.communityCenterRestored = yaml.community_center_restored ?? false;
+    this.communityCenterNotRestored = yaml.community_center_not_restored ?? false;
+
     if (yaml.weekday) this.weekdays = [yaml.weekday];
     else this.weekdays = yaml.weekdays;
+    this.monToFri = yaml.mon_to_fri;
     if (yaml.day) this.days = [yaml.day];
     else this.days = yaml.days;
     if (yaml.heart_event_seen) this.heartEventSeen = yaml.heart_event_seen;

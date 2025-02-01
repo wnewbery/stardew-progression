@@ -259,7 +259,7 @@ export default () => {
           You can use an <Wiki>Oil Maker</Wiki> to make <Item>Truffle Oil</Item> from <Items>Truffle</Items>.
         </ChecklistItem>
         <p>
-          Anf finally a <Wiki>Rabit</Wiki> to get a <Item>Rabbit's Foot</Item> for the Enchanter's Bundle.
+          And finally a <Wiki>Rabit</Wiki> to get a <Item>Rabbit's Foot</Item> for the Enchanter's Bundle.
         </p>
         <Building id="deluxe_coop" />
         <ChecklistItem id="fall_rabbit">
@@ -472,12 +472,13 @@ export default () => {
           </ChecklistItem>
         </Day>
         <Day day={12}></Day>
-        <Day day={13}></Day>
-        <ChecklistItem id="fall13_cranberries">
-          Second harvest of <Items>cranberries</Items> so another big influx of money.
-          Hopefully at this point already got enough money for all the animals,
-          and going forward will be saving for the Vault Bundles to reach the Desert.
-        </ChecklistItem>
+        <Day day={13}>
+          <ChecklistItem id="fall13_cranberries">
+            Second harvest of <Items>cranberries</Items> so another big influx of money.
+            Hopefully at this point already got enough money for all the animals,
+            and going forward will be saving for the Vault Bundles to reach the Desert.
+          </ChecklistItem>
+        </Day>
         <Day day={14}>
           <ChecklistItem id="fall14_pumpkins">
             First harvest of <Items>pumpkin</Items>, save one for the crops bundle which should complete it.
@@ -524,6 +525,11 @@ export default () => {
             Make sure you prioritise any crops or fish that must be done in Fall.
             The animals can be finished in Winter if
           </ChecklistItem>
+          <p>
+            If you have spare money and resources, the first house upgrade is interesting as it
+            gives you a kitchen for cooking many food options.
+          </p>
+          <Building id="farmhouse_upgrade_1" />
         </Day>
         <Day day={23}></Day>
         <Day day={24}></Day>
