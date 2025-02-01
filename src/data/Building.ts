@@ -10,6 +10,9 @@ export default class Building {
   public wiki: string;
   public cost: number;
   public materials: { item: GameItem, count: number }[];
+  public get isFarmhouseUpgrade() {
+    return this.id.startsWith('farmhouse_');
+  }
 
   public constructor(yaml: any) {
     this.id = yaml.id ?? normaliseId(yaml.label);
@@ -20,7 +23,7 @@ export default class Building {
       const item = GameData.item(x.id);
       return { item, count: x.count };
     });
-    this.icon = GameIcons('96px-' + this.id);
+    this.icon = GameIcons(yaml.icon ?? '96px-' + this.id);
     if (!this.label) throw new Error(`No label for building ${this.id}.`);
     if (!this.cost) throw new Error(`No cost for building ${this.id}.`);
   }

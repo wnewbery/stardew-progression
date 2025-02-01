@@ -3,7 +3,7 @@ const images = require.context('../assets/game_icons', false, /\.png$/);
 function normalizeName(name: string) {
   return name
     .toLocaleLowerCase()
-    .replaceAll('\'', '')
+    .replaceAll(/[\'\(\)]/g, '')
     .replaceAll('-', '_');
 }
 

@@ -130,3 +130,22 @@
   size: {w: 3, h: 3}
 
 
+- label: Farmhouse Upgrade 1
+  wiki: https://stardewvalleywiki.com/Farmhouse
+  icon: 96px-house_tier_2
+  cost: 10000
+  materials:
+    - id: wood
+      count: 450
+- label: Farmhouse Upgrade 2
+  wiki: https://stardewvalleywiki.com/Farmhouse
+  icon: 96px-house_tier_3
+  cost: 65000
+  materials:
+    - id: hardwood
+      count: 100
+- label: Farmhouse Upgrade 3
+  wiki: https://stardewvalleywiki.com/Farmhouse
+  icon: 96px-cellar-inside
+  cost: 100000
+  materials: []

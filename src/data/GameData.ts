@@ -1,6 +1,6 @@
 import itemsData from "../../items.yaml";
 import communityData from "../../community_bundles.yaml";
-import buildingsData from "../../buildings.yaml";
+import buildingsData from "../../data/buildings.yaml";
 
 import CommunityBundle from "./CommunityBundle";
 import CommunityRoom from "./CommunityRoom";
