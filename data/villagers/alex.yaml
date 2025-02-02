@@ -39,9 +39,7 @@ schedule:
         - time: "10:00 PM"
           location: "Goes to bed."
     - weekday: wednesday
-      hearts:
-        alex: "< 6"
-        haley: "< 6"
+      special: "No player has 6 hearts with Haley or Alex"
       schedule:
         - time: "8:00 AM"
           location: "Leaves his room to go outside and stand beneath nearby tree."
@@ -111,9 +109,7 @@ schedule:
         - time: "10:00 PM"
           location: "Goes to bed."
     - weekday: wednesday
-      hearts:
-        alex: "< 6"
-        haley: "< 6"
+      special: "No player has 6 hearts with Haley or Alex"
       schedule:
         - time: "8:00 AM"
           location: "Leaves his room to go outside and stand beneath nearby tree."
@@ -171,9 +167,7 @@ schedule:
         - time: "10:00 PM"
           location: "Goes to bed."
     - weekday: wednesday
-      hearts:
-        alex: "< 6"
-        haley: "< 6"
+      special: "No player has 6 hearts with Haley or Alex"
       schedule:
         - time: "8:00 AM"
           location: "Leaves his room to go outside and stand beneath nearby tree."
@@ -225,9 +219,7 @@ schedule:
         - time: "12:00 AM"
           location: "Leaves the Night Market and returns home."
     - weekday: wednesday
-      hearts:
-        alex: "< 6"
-        haley: "< 6"
+      special: "No player has 6 hearts with Haley or Alex"
       schedule:
         - time: "8:00 AM"
           location: "Leaves his room to go outside and stand beneath nearby tree."

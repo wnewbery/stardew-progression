@@ -6,7 +6,7 @@ import ScheduleDay from '../components/ScheduleDay';
 
 interface ScheduleProps {
   name: string;
-  season: string;
+  season?: string;
   desertVendor?: ScheduleItem[];
   greenRain?: ScheduleItem[];
   schedule: VillagerDaySchedule[];
@@ -42,6 +42,15 @@ export default () => {
       </div>
       <details open>
         <summary className="mb-4"><h2 className="inline">Schedule</h2></summary>
+        {schedule.common && (
+          <>
+            {schedule.desertVendor && <ScheduleDay title="Desert Festival Vendor" schedule={schedule.desertVendor} />}
+            {schedule.greenRain && <ScheduleDay title="Green Rain (Year 1 only)" schedule={schedule.greenRain} />}
+            {schedule.common.map((day) => (
+              <ScheduleDay key={day.title} title={day.title} schedule={day.schedule} />
+            ))}
+          </>
+        )}
         {schedule.spring && <Schedule name={villager.name} season="Spring" desertVendor={schedule.desertVendor} schedule={schedule.spring} />}
         {schedule.summer && <Schedule name={villager.name} season="Summer" greenRain={schedule.greenRain} schedule={schedule.summer} />}
         {schedule.fall && <Schedule name={villager.name} season="Fall" schedule={schedule.fall} />}

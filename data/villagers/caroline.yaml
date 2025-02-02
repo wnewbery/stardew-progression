@@ -1,0 +1,141 @@
+# From stardewvalleywiki.com under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+name: "Caroline"
+birthday: "Winter 7"
+schedule:
+  desert_vendor:
+    - time: "11:10 AM"
+      location: "Boards the bus to Calico Desert."
+    - time: "11:30 AM"
+      location: "Arrives at her booth."
+    - time: "12:00 AM"
+      location: "Leaves booth and boards bus back to the Valley."
+  green_rain:
+    - time: "All day"
+      location: "In the living room."
+  common:
+    - season: spring
+      day: 15
+      bus_restored: true
+      schedule:
+        - time: "10:40 AM"
+          location: "Boards the bus to Calico Desert to attend the Desert Festival."
+        - time: "11:00 AM"
+          location: "Stands east of the villager shops."
+        - time: "12:50 AM"
+          location: "Boards bus back to the Valley."
+    - season: fall
+      day: 25
+      schedule:
+        - time: "8:00 AM"
+          location: "In the kitchen of Pierre's General Store."
+        - time: "10:00 AM"
+          location: "Leaves the kitchen, walks to her bedroom."
+        - time: "12:00 PM"
+          location: "Walks to Harvey's Clinic and stands in waiting room."
+        - time: "1:30 PM"
+          location: "Moves to the left examination room in Harvey's Clinic."
+        - time: "4:00 PM"
+          location: "Returns home and stands in her living room."
+        - time: "9:00 PM"
+          location: "Goes to bed."
+    - season: winter
+      day: 16
+      schedule:
+        - time: "8:00 AM"
+          location: "In the kitchen of Pierre's General Store."
+        - time: "12:00 PM"
+          location: "Walks to an aisle of the general store."
+        - time: "1:30 PM"
+          location: "Goes to stand in the town square."
+        - time: "4:00 PM"
+          location: "Leaves the town square to attend the Night Market."
+        - time: "11:30 PM"
+          location: "Leaves the Night Market to return home and sleep."
+    - rain: true
+      schedule:
+        - time: "8:00 AM"
+          location: "In the kitchen of Pierre's General Store."
+        - time: "12:00 PM"
+          location: "Walks to an aisle of the general store."
+        - time: "1:30 PM"
+          location: "Walks to her bedroom and reads next to her bookcase."
+        - time: "4:00 PM"
+          location: "Leaves bedroom to stand in the living room."
+        - time: "9:00 PM"
+          location: "Goes to bed."
+    - weekday: tuesday
+      schedule:
+        - time: "8:00 AM"
+          location: "In her living room, near the uppermost dresser."
+        - time: "10:30 AM"
+          location: "Moves more towards the middle of the living room."
+        - time: "1:00 PM"
+          location: "Caroline exercises with the Aerobics class in her living room."
+        - time: "4:00 PM"
+          location: "Aerobics class ends, she stands in the living room chatting."
+        - time: "6:10 PM"
+          location: "Walks to kitchen and eats some cookies."
+        - time: "9:00 PM"
+          location: "Goes to bed."
+    - weekday: wednesday
+      schedule:
+        - time: "8:00 AM"
+          location: "In the kitchen of Pierre's General Store."
+        - time: "10:00 AM"
+          location: "In her sunroom, near her tea sapling."
+        - time: "12:00 PM"
+          location: "Walks to the fountain to the west of the Community Center."
+        - time: "5:00 PM"
+          location: "Returns home and stands in her living room."
+        - time: "9:00 PM"
+          location: "Goes to bed."
+    - weekday: friday
+      schedule:
+        - time: "8:00 AM"
+          location: "In the kitchen of Pierre's General Store."
+        - time: "10:00 AM"
+          location: "In her sunroom, near her tea sapling."
+        - time: "12:00 PM"
+          location: "Goes to the Museum to read between some bookshelves."
+        - time: "5:00 PM"
+          location: "Returns home and stands in her living room."
+        - time: "9:00 PM"
+          location: "Goes to bed."
+    - weekday: saturday
+      community_center_restored: true
+      schedule:
+        - time: "8:00 AM"
+          location: "In the kitchen of Pierre's General Store."
+        - time: "11:00 AM"
+          location: "Walks to Community Center and stands in the reading area in the main room."
+        - time: "5:00 PM"
+          location: "Returns home and stands in her living room."
+        - time: "9:00 PM"
+          location: "Goes to bed."
+    - weekday: sunday
+      schedule:
+        - time: "9:00 AM"
+          location: "Stands in her bedroom."
+        - time: "10:40 AM"
+          location: "Moves one space over to stand in front of her bookshelf."
+        - time: "1:30 PM"
+          location: "Walks to an aisle of the general store."
+        - time: "2:40 PM"
+          location: "Leaves home to stand below the tree south of the Community Center."
+        - time: "6:30 PM"
+          location: "Returns home to stand in her bedroom."
+        - time: "9:00 PM"
+          location: "Goes to bed."
+    - schedule:
+      - time: "8:00 AM"
+        location: "In the kitchen of Pierre's General Store."
+      - time: "10:00 AM"
+        location: "In her sunroom, near her tea sapling."
+      - time: "12:00 PM"
+        location: "Walks to an aisle of the general store."
+      - time: "1:30 PM"
+        location: "Leaves home to stand in town square with Jodi."
+      - time: "4:00 PM"
+        location: "Returns home and stands in her living room."
+      - time: "9:00 PM"
+        location: "Goes to bed."

@@ -155,10 +155,12 @@ export default () => {
       if (season === 'summer') seasonSchedule = schedule.summer;
       if (season === 'fall') seasonSchedule = schedule.fall;
       if (season === 'winter') seasonSchedule = schedule.winter;
+      seasonSchedule ??= schedule.common;
       if (seasonSchedule) {
         for (let i = 0; i < seasonSchedule.length; i++) {
           let daySchedule = seasonSchedule[i];
           let final = true;
+          if (daySchedule.season && daySchedule.season !== season) continue;
           if (daySchedule.days && !daySchedule.days.includes(day)) continue;
           if (daySchedule.monToFri && !monToFri) continue;
           if (daySchedule.weekdays && !daySchedule.weekdays.includes(weekday)) continue;

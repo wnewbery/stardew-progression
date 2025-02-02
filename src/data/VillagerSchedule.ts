@@ -37,6 +37,7 @@ export class VillagerDaySchedule {
   public weekdays?: string[];
   public monToFri?: boolean;
   public days?: number[];
+  public season?: string;
   public hearts: any;
   public heartEventSeen?: number;
 
@@ -45,8 +46,13 @@ export class VillagerDaySchedule {
 
   public schedule: ScheduleItem[];
 
-  public constructor(villager: string, season: string, yaml: any) {
+  public constructor(villager: string, season: string | null, yaml: any) {
     this.schedule = yaml.schedule.map((x: any) => new ScheduleItem(x));
+    this.season = yaml.season;
+    season ??= yaml.season;
+    if (season) {
+      season = season.charAt(0).toUpperCase() + season.slice(1);
+    }
 
     // conditions
     this.option = yaml.option;
@@ -67,9 +73,14 @@ export class VillagerDaySchedule {
     this.special = yaml.special;
 
     this.title = "Regular Schedule";
+    if (this.season && season) this.title = season;
     if (this.rain) this.title = "Raining";
-    if (this.days) this.title = `${season} ${fmtDays(this.days)}`;
-    if (this.weekdays) this.title = fmtWeekdays(this.weekdays);
+    if (this.days) this.title = `${season ?? "Any Season "} ${fmtDays(this.days)}`;
+    if (this.weekdays) {
+      if (this.season && season) this.title = season + " ";
+      else this.title = "";
+      this.title += fmtWeekdays(this.weekdays);
+    }
     if (this.monToFri) this.title = "Monday to Friday";
     if (this.option != null) this.title += ` (Option ${this.option})`;
     if (this.busRestored) this.title += " (Bus Service Restored)";
@@ -86,6 +97,7 @@ export default class VillagerSchedule {
   /**Special schedule if a vendor at the desert festival.*/
   public desertVendor?: ScheduleItem[];
 
+  public common?: VillagerDaySchedule[];
   public spring?: VillagerDaySchedule[];
   public summer?: VillagerDaySchedule[];
   public fall?: VillagerDaySchedule[];
@@ -96,6 +108,10 @@ export default class VillagerSchedule {
     if (yaml.green_rain) this.greenRain = yaml.green_rain.map((x: any) => new ScheduleItem(x));
     if (yaml.desert_vendor) this.desertVendor = yaml.desert_vendor.map((x: any) => new ScheduleItem(x));
 
+    if (yaml.common) {
+      this.common = yaml.common.map((x: any) =>
+        new VillagerDaySchedule(villager, null, x));
+    }
     if (yaml.spring) {
       this.spring = yaml.spring.map((x: any) =>
         new VillagerDaySchedule(villager, "Spring", x));

@@ -1,3 +1,4 @@
+# From stardewvalleywiki.com under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
 name: Sam
 birthday: Summer 17
 schedule:
@@ -306,7 +307,7 @@ schedule:
         - time: "11:00 AM"
           location: "Moves around inside his home."
         - time: "2:00 PM"
-          location: "Leaves his bedroom and walks to The Stardrop Saloon. 'Nothing like an ice cold Joja Cola on a sopping wet day, huh? Just kidding. Hehehe.'"
+          location: "Leaves his bedroom and walks to The Stardrop Saloon."
         - time: "7:40 PM"
           location: "Leaves The Stardrop Saloon and returns to his bedroom to go to bed."
     - weekdays: [monday, wednesday]
@@ -423,7 +424,7 @@ schedule:
         - time: "11:00 AM"
           location: "Moves around inside his home."
         - time: "2:00 PM"
-          location: "Leaves his bedroom and walks to The Stardrop Saloon. 'Nothing like an ice cold Joja Cola on a sopping wet day, huh? Just kidding. Hehehe.'"
+          location: "Leaves his bedroom and walks to The Stardrop Saloon."
         - time: "7:40 PM"
           location: "Leaves The Stardrop Saloon and returns to his bedroom to go to bed."
     - weekdays: [monday, wednesday]

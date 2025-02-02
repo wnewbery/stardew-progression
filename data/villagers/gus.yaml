@@ -1,0 +1,87 @@
+# From stardewvalleywiki.com under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+name: "Gus"
+birthday: "Summer 8"
+schedule:
+  desert_vendor:
+    - time: "11:10 AM"
+      location: "Boards the bus to Calico Desert."
+    - time: "11:30 AM"
+      location: "Arrives at his booth."
+    - time: "12:00 AM"
+      location: "Leaves booth and boards bus back to the Valley."
+  green_rain:
+    - time: "6:10 AM"
+      location: "Stands in front of the bar in the Stardrop Saloon."
+  common:
+    - season: spring
+      day: 15
+      bus_restored: true
+      schedule:
+        - time: "10:50 AM"
+          location: "Boards the bus to Calico Desert to attend the Desert Festival."
+        - time: "11:10 AM"
+          location: "Stands at the pond near Willy's fishing challenge."
+        - time: "12:50 AM"
+          location: "Boards bus back to the Valley."
+    - season: fall
+      day: 4
+      schedule:
+        - time: "8:00 AM"
+          location: "In his room, sitting on the couch."
+        - time: "10:30 AM"
+          location: "Heads to the Clinic waiting room and looks at a poster."
+        - time: "1:30 PM"
+          location: "Moves to the left examination room in the clinic."
+        - time: "4:00 PM"
+          location: "Leaves the clinic to go tend the bar."
+        - time: "12:00 AM"
+          location: "Goes to his bedroom to sleep."
+    - rain: true
+      schedule:
+        - time: "8:00 AM"
+          location: "In his room, sitting on the couch."
+        - time: "12:00 PM"
+          location: "Cleans glasses behind the bar."
+        - time: "4:30 PM"
+          location: "Quits cleaning glasses and tends the bar."
+        - time: "12:00 AM"
+          location: "Goes to his bedroom to sleep."
+    - weekday: monday
+      schedule:
+        - time: "8:30 AM"
+          location: "Leaves home to go to Pierre's General Store."
+        - time: "11:00 AM"
+          location: "Returns to the Saloon to tend the bar."
+        - time: "12:00 AM"
+          location: "Goes to his bedroom to sleep."
+    - weekday: tuesday
+      community_center_restored: true
+      schedule:
+        - time: "8:00 AM"
+          location: "In his room, sitting on the couch."
+        - time: "8:30 AM"
+          location: "Goes to the kitchen in the Community Center."
+        - time: "12:30 PM"
+          location: "Returns to the Saloon to tend the bar."
+        - time: "12:00 AM"
+          location: "Goes to his bedroom to sleep."
+    - weekday: sunday
+      special: "Alex's 14 heart event seen"
+      schedule:
+        - time: "8:00 AM"
+          location: "In his room, sitting on the couch."
+        - time: "11:40 AM"
+          location: "Goes to the backroom of the Saloon."
+        - time: "3:00 PM"
+          location: "Goes to tend the bar."
+        - time: "12:00 AM"
+          location: "Goes to his bedroom to sleep."
+    - schedule:
+        - time: "8:00 AM"
+          location: "In his room, sitting on the couch."
+        - time: "12:00 PM"
+          location: "Cleans glasses behind the bar."
+        - time: "4:30 PM"
+          location: "Quits cleaning glasses and tends the bar."
+        - time: "12:00 AM"
+          location: "Goes to his bedroom to sleep."

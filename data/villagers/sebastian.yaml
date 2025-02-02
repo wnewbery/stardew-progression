@@ -1,3 +1,4 @@
+# From stardewvalleywiki.com under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
 name: Sebastian
 birthday: Winter 10
 schedule:
@@ -19,8 +20,7 @@ schedule:
         - time: 1:40 AM
           location: Boards the bus back to the Valley.
     - day: 11
-      hearts:
-        sebastian: "< 6"
+      special: "No player has 6 hearts with Sebastian"
       schedule:
         - time: "9:00 AM"
           location: "In his bed."
@@ -39,8 +39,7 @@ schedule:
         - time: "9:30 PM"
           location: "Goes to bed."
     - days: [11, 25]
-      hearts:
-        sebastian: ">= 6"
+      special: "Any player has at least 6 hearts with Sebastian"
       schedule:
         - time: "9:00 AM"
           location: "In his bed."
@@ -169,8 +168,22 @@ schedule:
           location: "Heads home."
         - time: "6:00 PM"
           location: "Arrives at his room and goes to bed."
-    - days: [11, 15]
-      no_hearts: true
+    - day: 11
+      special: "No player has 6 hearts with Sebastian"
+      schedule:
+        - time: "9:00 AM"
+          location: "In his bed."
+        - time: "10:00 AM"
+          location: "Gets out of bed and moves to his computer."
+        - time: "12:00 PM"
+          location: "In his room, standing by couch."
+        - time: "5:30 PM"
+          location: "Leaving his room to go to the kitchen."
+        - time: "6:30 PM"
+          location: "On his computer."
+        - time: "9:30 PM"
+          location: "Goes to bed."
+    - day: 15
       schedule:
         - time: "9:00 AM"
           location: "In his bed."
@@ -185,8 +198,7 @@ schedule:
         - time: "9:30 PM"
           location: "Goes to bed."
     - days: [11, 25]
-      hearts:
-        sebastian: ">= 6"
+      special: "Any player has at least 6 hearts with Sebastian"
       schedule:
         - time: "9:00 AM"
           location: "In his bed."
@@ -302,8 +314,7 @@ schedule:
           location: "Goes back to his house."
   fall:
     - day: 11
-      hearts:
-        sebastian: "< 6"
+      special: "No player has 6 hearts with Sebastian"
       schedule:
         - time: "9:00 AM"
           location: "In his bed."
@@ -336,8 +347,7 @@ schedule:
         - time: "9:30 PM"
           location: "Goes to bed."
     - days: [11, 25]
-      hearts:
-        sebastian: ">= 6"
+      special: "Any player has at least 6 hearts with Sebastian"
       schedule:
         - time: "9:00 AM"
           location: "In his bed."
@@ -469,8 +479,7 @@ schedule:
         - time: "11:30 PM"
           location: "Leaves Night Market to return home."
     - day: 11
-      hearts:
-        sebastian: "< 6"
+      special: "No player has 6 hearts with Sebastian"
       schedule:
         - time: "9:00 AM"
           location: "In his bed."
@@ -499,8 +508,7 @@ schedule:
         - time: "9:30 PM"
           location: "Goes to bed."
     - days: [11, 25]
-      hearts:
-        sebastian: ">= 6"
+      special: "Any player has at least 6 hearts with Sebastian"
       schedule:
         - time: "9:00 AM"
           location: "In his bed."

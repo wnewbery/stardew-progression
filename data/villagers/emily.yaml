@@ -1,0 +1,101 @@
+# From stardewvalleywiki.com under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+name: "Emily"
+birthday: "Spring 27"
+schedule:
+  green_rain:
+    - time: "All day"
+      location: "In the Saloon."
+  desert_vendor:
+    - time: "11:10 AM"
+      location: "Boards bus to Calico Desert."
+    - time: "11:30 AM"
+      location: "Arrives at her booth."
+    - time: "12:00 AM"
+      location: "Leaves booth and boards bus back to the Valley."
+  common:
+    - season: "spring"
+      days: [15, 16, 17]
+      bus_restored: true
+      schedule:
+        - time: "9:30 AM"
+          location: "Boards bus to Calico Desert to attend the Desert Festival."
+        - time: "10:00 AM"
+          location: "Stands at her outfit services."
+        - time: "12:30 AM"
+          location: "Boards bus back to the Valley."
+    - season: "fall"
+      day: 15
+      bus_restored: true
+      schedule:
+        - time: "9:00 AM"
+          location: "In her bedroom."
+        - time: "10:30 AM"
+          location: "Leaves home for Calico Desert to visit Sandy on her birthday."
+        - time: "12:00 AM"
+          location: "Goes home for the night."
+    - season: "winter"
+      day: 11
+      schedule:
+        - time: "9:00 AM"
+          location: "In her bedroom."
+        - time: "10:30 AM"
+          location: "Leaves home for Harvey's Clinic, waits in waiting room."
+        - time: "1:30 PM"
+          location: "Moves to exam room."
+        - time: "4:00 PM"
+          location: "Leaves clinic to work at The Stardrop Saloon."
+        - time: "12:30 AM"
+          location: "Goes home for the night."
+    - season: "winter"
+      day: 15
+      schedule:
+        - time: "9:00 AM"
+          location: "In her bedroom."
+        - time: "12:00 PM"
+          location: "Leaves bedroom to stand in living room."
+        - time: "2:30 PM"
+          location: "Leaves home to attend the Night Market."
+        - time: "12:30 AM"
+          location: "Goes home for the night."
+    - rain: true
+      schedule:
+        - time: "9:00 AM"
+          location: "In her bedroom."
+        - time: "12:00 PM"
+          location: "Leaves bedroom to stand in living room."
+        - time: "3:30 PM"
+          location: "Leaves home to work at The Stardrop Saloon."
+        - time: "12:30 AM"
+          location: "Goes home for the night."
+    - weekday: "Tuesday"
+      schedule:
+        - time: "9:00 AM"
+          location: "In her bedroom."
+        - time: "10:00 AM"
+          location: "Leaves home to attend aerobics class at Pierre's General Store."
+        - time: "1:00 PM"
+          location: "Aerobics class begins."
+        - time: "4:00 PM"
+          location: "Leaves Pierre's to work at The Stardrop Saloon."
+        - time: "12:30 AM"
+          location: "Goes home for the night."
+    - weekday: "Friday"
+      community_center_restored: true
+      schedule:
+        - time: "9:00 AM"
+          location: "In her bedroom."
+        - time: "10:00 AM"
+          location: "Walks to Community Center, stands in Crafts Room."
+        - time: "3:30 PM"
+          location: "Leaves the Community Center to work at The Stardrop Saloon."
+        - time: "12:30 AM"
+          location: "Goes home for the night."
+    - schedule:
+        - time: "9:00 AM"
+          location: "In her bedroom."
+        - time: "12:00 PM"
+          location: "Leaves bedroom to stand in living room."
+        - time: "3:30 PM"
+          location: "Leaves home to work at The Stardrop Saloon."
+        - time: "12:30 AM"
+          location: "Goes home for the night."
