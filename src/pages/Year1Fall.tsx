@@ -3,7 +3,7 @@ import { GuideBirthdayInfo } from "../components/GuideBirthday";
 import GuideDay from "../components/GuideDay";
 import GuideSectionContainer from "../components/GuideSectionContainer";
 import ChecklistItem from "../components/ChecklistItem";
-import ItemStackText, { GoldItem, GoldItems, Item, Items } from "../components/ItemStackText";
+import { GoldItem, GoldItems, Item, Items } from "../components/ItemStackText";
 import CommunityBundle from "../components/CommunityBundle";
 import Building from "../components/Building";
 import Wiki from "../components/Wiki";
@@ -571,6 +571,10 @@ export default () => {
         <Day day={28}>
           <ChecklistItem id="fall28_end">
             Last day of the season, hopefully completed everything that was needed this season and are ready to start the Winter.
+          </ChecklistItem>
+          <ChecklistItem id="fall28_cranberries">
+            Today should also be the last harvest of <Item>Cranberries</Item> bringing in some more
+            money to start Winter with.
           </ChecklistItem>
         </Day>
       </section>

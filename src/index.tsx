@@ -15,6 +15,7 @@ import Year1Fall from "./pages/Year1Fall";
 import Villagers from "./pages/Villagers";
 import Villager from "./pages/Villager";
 import VillagerFinder from "./pages/VillagerFinder";
+import Year1Winter from "./pages/Year1Winter";
 
 const container = document.getElementById("app")!;
 const root = createRoot(container);
@@ -87,6 +88,7 @@ const App = () => {
           <Route path="/year1-spring/*" element={<Year1Spring />} />
           <Route path="/year1-summer/*" element={<Year1Summer />} />
           <Route path="/year1-fall/*" element={<Year1Fall />} />
+          <Route path="/year1-winter/*" element={<Year1Winter />} />
         </Routes>
         {/*Force bottom padding even if scrolling.*/}
         <div className="h-8"> </div>
