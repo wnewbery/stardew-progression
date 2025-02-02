@@ -149,6 +149,7 @@
       icon: 32px-Bundle_Purple
       reward:
         id: keg
+      needed: 6
       items:
         - id: truffle_oil
         - id: cloth

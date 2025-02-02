@@ -217,6 +217,9 @@ export default () => {
           Buy at least 1 <Wiki>Duck</Wiki> for 1,200g and be improving its happiness as feathers only
           drop at high happiness.
         </ChecklistItem>
+        <ChecklistItem id="dye_bundle-duck_feather">
+          Save a <Item>Duck Feather</Item> for the Dye Bundle.
+        </ChecklistItem>
         <p>
           Next will want to get a <Wiki>Goat</Wiki> so can get
           a <Item>Large Goat Milk</Item> for the Animal Bundle, and
@@ -525,18 +528,51 @@ export default () => {
             Make sure you prioritise any crops or fish that must be done in Fall.
             The animals can be finished in Winter if
           </ChecklistItem>
+          <ChecklistItem id="fall_heaters">
+            Going into winter your Coop and Barn will need a <Item>Heater</Item> each to keep the animals happy.
+            You can get one by completing the Fodder Bundle, you will need to buy the other.
+          </ChecklistItem>
+          <CommunityBundle bundle="fodder_bundle" />
           <p>
             If you have spare money and resources, the first house upgrade is interesting as it
             gives you a kitchen for cooking many food options.
           </p>
           <Building id="farmhouse_upgrade_1" />
+          <p>
+            If you were able to get a <Item>Red Cabbage</Item> in Summer it should be possible to complete the Dye Bundle.
+            Otherwise will be growing it next season using the Greenhouse.
+          </p>
+          <CommunityBundle bundle="dye_bundle" />
+          <p>Should be finishing off all the Pantry bundles for the Greenhouse.</p>
+          <CommunityBundle bundle="spring_crops_bundle" />
+          <CommunityBundle bundle="summer_crops_bundle" />
+          <CommunityBundle bundle="fall_crops_bundle" />
+          <CommunityBundle bundle="quality_crops_bundle" />
+          <CommunityBundle bundle="animal_bundle" />
+          <CommunityBundle bundle="artisan_bundle" />
         </Day>
         <Day day={23}></Day>
         <Day day={24}></Day>
-        <Day day={25}></Day>
+        <Day day={25}>
+          <ChecklistItem id="fall25_sweetgem_berry">
+            If you planted <Item>Rare Seeds</Item> on the first day then the{' '}
+            <Item>Sweet Gem Berry</Item> harvest should be ready today!
+            Keep at least one for the Secret Woods quest.
+          </ChecklistItem>
+        </Day>
         <Day day={26}></Day>
-        <Day day={27}></Day>
-        <Day day={28}></Day>
+        <Day day={27}>
+          <ChecklistItem id="fall_spirits_eve">
+            The <Wiki>Spirits Eve</Wiki> is happening today between 10 pm and 11:50pm.
+            The main thing here is a a prize in the maze which can either use as a loved gift or sell.
+            Unfortunately it also blocks access to the town all day, but it would also be too late to plant new fall seeds anyway.
+          </ChecklistItem>
+        </Day>
+        <Day day={28}>
+          <ChecklistItem id="fall28_end">
+            Last day of the season, hopefully completed everything that was needed this season and are ready to start the Winter.
+          </ChecklistItem>
+        </Day>
       </section>
     </div>
   );
