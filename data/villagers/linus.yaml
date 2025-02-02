@@ -1,0 +1,106 @@
+# From stardewvalleywiki.com under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+name: "Linus"
+birthday: "Winter 3"
+schedule:
+  green_rain:
+    - time: "6:00 AM"
+      location: "Stands at the cliff south of his tent."
+    - time: "12:00 PM"
+      location: "Moves to the cliff west of his tent."
+    - time: "5:00 PM"
+      location: "Stands by the campfire."
+    - time: "10:00 PM"
+      location: "Goes inside his tent to sleep."
+  common:
+    - season: spring
+      day: 16
+      bus_restored: true
+      schedule:
+        - time: "9:50 AM"
+          location: "Takes the bus to Calico Desert to attend the Desert Festival."
+        - time: "10:20 AM"
+          location: "Stands by a trash can behind the Calico Egg merchant."
+        - time: "1:40 PM"
+          location: "Heads back to the bus."
+    - rain: true
+      schedule:
+        - time: "6:00 AM"
+          location: "Inside his tent."
+        - time: "9:30 AM"
+          location: "Exits tent, stands behind bush west of his tent."
+        - time: "10:10 AM"
+          location: "Returns to his tent."
+        - time: "3:00 PM"
+          location: "Exits tent, stands under tree west of his tent."
+        - time: "7:00 PM"
+          location: "Returns to his tent."
+        - time: "11:30 PM"
+          location: "Goes to bed."
+    - season: winter
+      day: 15
+      schedule:
+        - time: "6:00 AM"
+          location: "Inside his tent."
+        - time: "11:00 AM"
+          location: "Exits tent, stands west of campfire in front of his tent."
+        - time: "4:00 PM"
+          location: "Walks to beach to attend Night Market."
+        - time: "11:30 PM"
+          location: "Returns to his tent for the night."
+    - season: spring
+      schedule:
+        - time: "6:00 AM"
+          location: "Inside his tent."
+        - time: "6:30 AM"
+          location: "Exits tent, stands behind bush west of his tent."
+        - time: "7:00 AM"
+          location: "Walks to west of campfire in front of his tent."
+        - time: "9:30 AM"
+          location: "Walks to west side of lake."
+        - time: "2:00 PM"
+          location: "Walks to west of campfire in front of his tent."
+        - time: "7:00 PM"
+          location: "Returns to his tent."
+        - time: "11:00 PM"
+          location: "Goes to bed."
+    - season: summer
+      schedule:
+        - time: "6:00 AM"
+          location: "Inside his tent."
+        - time: "6:30 AM"
+          location: "Walks to cliff overlooking lake, east of his tent."
+        - time: "9:40 AM"
+          location: "Walks to south of fence, west of lake."
+        - time: "1:00 PM"
+          location: "Walks further south, west of lake."
+        - time: "4:00 PM"
+          location: "Walks to west of campfire in front of his tent."
+        - time: "8:00 PM"
+          location: "Walks behind bush west of his tent."
+        - time: "8:20 PM"
+          location: "Returns to his tent for the night."
+    - season: fall
+      schedule:
+        - time: "6:00 AM"
+          location: "Inside his tent."
+        - time: "7:00 AM"
+          location: "Exits tent, stands behind bush west of his tent."
+        - time: "7:40 AM"
+          location: "Walks to west of campfire in front of his tent."
+        - time: "9:00 AM"
+          location: "Walks to Spa, stands at east side of building."
+        - time: "2:00 PM"
+          location: "Walks to west side of lake."
+        - time: "6:00 PM"
+          location: "Returns to his tent for the night."
+    - season: winter
+      schedule:
+        - time: "6:00 AM"
+          location: "Inside his tent."
+        - time: "11:00 AM"
+          location: "Exits tent, stands west of campfire in front of his tent."
+        - time: "2:00 PM"
+          location: "Walks to Spa, stands inside entrance."
+        - time: "6:00 PM"
+          location: "Returns to his tent for the night."
+

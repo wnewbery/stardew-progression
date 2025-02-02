@@ -1,0 +1,74 @@
+# From stardewvalleywiki.com under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+name: "Pierre"
+birthday: "Spring 26"
+schedule:
+  desert_vendor:
+    - time: "11:10 AM"
+      location: "Boards the bus to Calico Desert."
+    - time: "11:30 AM"
+      location: "Arrives at his booth."
+    - time: "12:00 AM"
+      location: "Leaves booth and boards bus back to the Valley."
+  green_rain:
+    - time: "All day"
+      location: "In the living room."
+  common:
+    - season: spring
+      day: 15
+      bus_restored: true
+      schedule:
+        - time: "6:00 AM"
+          location: "Stands behind the counter of the general store."
+        - time: "7:00 AM"
+          location: "In the aisles of the general store."
+        - time: "8:30 AM"
+          location: "Goes to stand behind the counter of the general store."
+        - time: "6:00 PM"
+          location: "Boards the bus to Calico Desert to attend the Desert Festival."
+        - time: "6:50 PM"
+          location: "Stands outside the Oasis."
+        - time: "1:40 AM"
+          location: "Boards the bus back to the Valley."
+    - rain: true
+      schedule:
+        - time: "6:00 AM"
+          location: "Stands behind the counter of the general store."
+        - time: "7:00 AM"
+          location: "In the aisles of the general store."
+        - time: "8:30 AM"
+          location: "Goes to stand behind the counter of the general store."
+        - time: "5:00 PM"
+          location: "Leaves the counter and stands in the aisles again."
+        - time: "7:00 PM"
+          location: "Goes to the kitchen in his house."
+        - time: "9:00 PM"
+          location: "Goes to his room and stands in front of the bookcase."
+        - time: "11:00 PM"
+          location: "Goes to sleep."
+    - weekday: friday
+      schedule:
+        - time: "6:00 AM"
+          location: "Stands behind the counter of the general store."
+        - time: "7:00 AM"
+          location: "In the aisles of the general store."
+        - time: "8:30 AM"
+          location: "Goes to stand behind the counter of the general store."
+        - time: "5:00 PM"
+          location: "Goes to the Stardrop Saloon and stands in front of the counter."
+        - time: "10:50 PM"
+          location: "Returns home to sleep."
+    - schedule:
+        - time: "6:00 AM"
+          location: "Stands behind the counter of the general store."
+        - time: "7:00 AM"
+          location: "In the aisles of the general store."
+        - time: "8:30 AM"
+          location: "Goes to stand behind the counter of the general store."
+        - time: "5:00 PM"
+          location: "Leaves the counter and stands in the aisles again."
+        - time: "7:00 PM"
+          location: "Goes to the kitchen in his house."
+        - time: "9:00 PM"
+          location: "Goes to his room and stands in front of the bookcase."
+        - time: "11:00 PM"
+          location: "Goes to sleep."

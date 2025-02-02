@@ -1,0 +1,74 @@
+# From stardewvalleywiki.com under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+name: "Pam"
+birthday: "Spring 18"
+schedule:
+  desert_vendor:
+    - time: "11:10 AM"
+      location: "Boards the bus to Calico Desert."
+    - time: "11:30 AM"
+      location: "Arrives at her booth."
+    - time: "12:00 AM"
+      location: "Leaves booth and takes bus back to the Valley."
+  green_rain:
+    - time: "All day"
+      location: "In The Stardrop Saloon."
+  common:
+    - season: spring
+      day: 16
+      bus_restored: true
+      schedule:
+        - time: "10:30 AM"
+          location: "Boards the bus to Calico Desert to attend the Desert Festival."
+        - time: "10:50 AM"
+          location: "Stands in front of one of the villager shops."
+        - time: "12:40 AM"
+          location: "Boards the bus back to the Valley."
+    - season: spring
+      days: [15, 17]
+      bus_restored: true
+      schedule:
+        - time: "7:20 AM"
+          location: "Leaves her trailer."
+        - time: "8:50 AM"
+          location: "Arrives at the Bus Stop."
+        - time: "12:50 AM"
+          location: "Heads home."
+    - season: spring
+      day: 25
+      schedule:
+        - time: "8:00 AM"
+          location: "Lounges on her couch in the trailer."
+        - time: "11:30 AM"
+          location: "Leaves her trailer and heads to the medical clinic for her annual checkup."
+        - time: "1:30 PM"
+          location: "Continues her checkup at the clinic."
+        - time: "4:00 PM"
+          location: "Leaves the clinic and heads to the saloon."
+        - time: "12:00 AM"
+          location: "Leaves the saloon and heads home for the night."
+    - season: winter
+      days: [12, 13]
+      schedule:
+        - time: "All day"
+          location: "On The Beach, watching the SquidFest."
+    - bus_restored: true
+      schedule:
+        - time: "8:00 AM"
+          location: "Lounges on her couch in the trailer."
+        - time: "8:30 AM"
+          location: "Leaves the trailer to head to the bus stop just east of the farm."
+        - time: "10:00 AM"
+          location: "Arrives at the bus stop for the afternoon."
+        - time: "5:00 PM"
+          location: "Leaves the bus stop and heads to the saloon."
+        - time: "12:00 AM"
+          location: "Leaves the saloon and back home for the night."
+    - schedule:
+        - time: "8:00 AM"
+          location: "Lounges on her couch in the trailer."
+        - time: "12:00 PM"
+          location: "Leaves the trailer and heads to JojaMart."
+        - time: "4:00 PM"
+          location: "Leaves JojaMart and heads to the saloon."
+        - time: "12:00 AM"
+          location: "Leaves the saloon and heads home."

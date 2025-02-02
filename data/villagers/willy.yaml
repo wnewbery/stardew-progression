@@ -1,0 +1,126 @@
+# From stardewvalleywiki.com under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+name: "Willy"
+birthday: "Summer 24"
+schedule:
+  green_rain:
+    - time: "All day"
+      location: "In The Stardrop Saloon."
+  common:
+    - season: spring
+      day: 9
+      schedule:
+        - time: "6:10 AM"
+          location: "Wakes up for the day, goes fishing outside his fish shop."
+        - time: "8:50 AM"
+          location: "Goes back inside fish shop from the beach."
+        - time: "9:00 AM"
+          location: "Starts working at the counter in the fish shop, goods are available for sale."
+          dialogue: "I have a doctor's appointment today, so if you need to buy anything you'd better hurry."
+        - time: "10:10 AM"
+          location: "Leaves the fish shop, walks over to the Harvey's Clinic."
+          dialogue: "Eh, I got a fish hook stuck in my thumb... the Doctor's gonna cut it out."
+        - time: "1:30 PM"
+          location: "Continues checkup at the Harvey's Clinic."
+          dialogue: "Yowch! That hurt, Doc!"
+        - time: "5:00 PM"
+          location: "Leaves the Harvey's Clinic, walks over to the saloon."
+          dialogue: "I need a little warm-me-up to be ready for another cold night on the ocean."
+        - time: "11:20 PM"
+          location: "Leaves the saloon to head home for the night."
+    - season: spring
+      days: [15, 16, 17]
+      schedule:
+        - time: "9:00 AM"
+          location: "Boards the bus to Calico Desert to attend the Desert Festival."
+        - time: "9:10 AM"
+          location: "Stands at his fishing challenge."
+    - season: summer
+      days: [20, 21]
+      schedule:
+        - time: "6:10 AM"
+          location: "Wakes up for the day, goes fishing outside his fish shop."
+        - time: "8:50 AM"
+          location: "Returns to the fish shop."
+        - time: "10:00 AM"
+          location: "Leaves the beach, goes to Cindersap Forest to fish in the Trout Derby in the river to the southwest of Leah's Cottage."
+        - time: "11:20 PM"
+          location: "Leaves Cindersap Forest to head home for the night."
+    - season: winter
+      days: [12, 13]
+      schedule:
+        - time: "6:10 AM"
+          location: "Wakes up for the day, goes fishing outside his fish shop."
+        - time: "8:50 AM"
+          location: "Returns to the fish shop."
+        - time: "12:00 PM"
+          location: "Heads out to the beach to fish in the SquidFest."
+        - time: "11:20 PM"
+          location: "Leaves the beach to head home for the night."
+    - season: winter
+      days: [15, 16, 17]
+      schedule:
+        - time: "4:30 PM"
+          location: "At The Stardrop Saloon."
+        - time: "12:20 AM"
+          location: "Returns to the fish shop."
+    - rain: true
+      schedule:
+        - time: "6:10 AM"
+          location: "Wakes up for the day, goes fishing outside his fish shop."
+        - time: "8:50 AM"
+          location: "Goes back inside fish shop from the beach."
+        - time: "9:00 AM"
+          location: "Starts working at the counter in the fish shop, goods are available for sale."
+        - time: "5:00 PM"
+          location: "Leaves the fish shop, walks over to the saloon."
+          dialogue: "I need a little warm-me-up to be ready for another cold night on the ocean."
+        - time: "11:20 PM"
+          location: "Leaves the saloon to head home for the night."
+    - weekday: friday
+      schedule:
+        - time: "6:10 AM"
+          location: "Wakes up for the day, goes fishing outside his fish shop."
+        - time: "8:50 AM"
+          location: "Goes back inside fish shop from the beach."
+        - time: "9:00 AM"
+          location: "Starts working at the counter in the fish shop, goods are available for sale."
+        - time: "5:00 PM"
+          location: "Leaves the fish shop, walks over to the saloon."
+          dialogue: "Handling salty fish all day makes me real thirsty."
+        - time: "11:20 PM"
+          location: "Leaves the saloon to head home for the night."
+    - weekday: saturday
+      schedule:
+        - time: "6:10 AM"
+          location: "Wakes up for the day, walks through town to go fishing at the river outside Leah's cottage."
+        - time: "2:00 PM"
+          location: "Leaves the river and heads into Pelican Town for more river fishing."
+        - time: "7:00 PM"
+          location: "Walks over to the saloon."
+          dialogue: "Ah... Nothing's better than kicking back with a cold one after a relaxing day fishing."
+        - time: "11:00 PM"
+          location: "Leaves the saloon to head home for the night."
+    - season: winter
+      schedule:
+        - time: "6:10 AM"
+          location: "Wakes up for the day, goes fishing outside his fish shop."
+        - time: "8:50 AM"
+          location: "Goes back inside fish shop from the beach."
+        - time: "9:00 AM"
+          location: "Starts working at the counter in the fish shop, goods are available for sale."
+        - time: "5:00 PM"
+          location: "Leaves the fish shop, walks over to the saloon."
+          dialogue: "I need a little warm-me-up to be ready for another cold night on the ocean."
+        - time: "11:20 PM"
+          location: "Leaves the saloon to head home for the night."
+    - schedule:
+        - time: "6:10 AM"
+          location: "Wakes up for the day, goes fishing outside his fish shop."
+        - time: "8:50 AM"
+          location: "Goes back inside fish shop from the beach."
+        - time: "9:00 AM"
+          location: "Starts working at the counter in the fish shop, goods are available for sale."
+        - time: "5:00 PM"
+          location: "Leaves the fish shop, goes out to fish on the beach."
+        - time: "10:00 PM"
+          location: "Leaves the beach to head home for the night."

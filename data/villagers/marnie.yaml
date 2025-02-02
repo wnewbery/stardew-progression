@@ -1,0 +1,121 @@
+# From stardewvalleywiki.com under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+name: "Marnie"
+birthday: "Fall 18"
+schedule:
+  desert_vendor:
+    - time: "11:10 AM"
+      location: "Boards the bus to Calico Desert."
+    - time: "11:30 AM"
+      location: "Arrives at her booth."
+    - time: "12:00 AM"
+      location: "Leaves booth and takes the bus back to the Valley."
+  green_rain:
+    - time: "All day"
+      location: "In the kitchen."
+  common:
+    - season: spring
+      day: 16
+      bus_restored: true
+      schedule:
+        - time: "10:50 AM"
+          location: "Boards the bus to Calico Desert to attend the Desert Festival."
+        - time: "11:10 AM"
+          location: "Stands at the bus stop next to the Desert Trader."
+        - time: "11:40 PM"
+          location: "Boards the bus back to the Valley."
+    - season: fall
+      day: 18
+      schedule:
+        - time: "6:00 AM"
+          location: "At home in her room."
+        - time: "10:30 AM"
+          location: "Leaves her house and walks to Harvey's Clinic."
+        - time: "12:00 PM"
+          location: "Arrives at Harvey's Clinic, stands in the waiting room."
+        - time: "1:30 PM"
+          location: "Walks into the exam room at Harvey's Clinic."
+        - time: "4:00 PM"
+          location: "Leaves Harvey's Clinic and walks back to her house."
+        - time: "5:30 PM"
+          location: "Arrives home and stands in the kitchen."
+        - time: "9:00 PM"
+          location: "Walks to her room and goes to sleep."
+    - season: winter
+      day: 16
+      schedule:
+        - time: "6:00 AM"
+          location: "At home in her room."
+        - time: "9:00 AM"
+          location: "Stands behind the counter of her shop."
+        - time: "4:00 PM"
+          location: "Attends the Night Market."
+        - time: "11:40 PM"
+          location: "Walks back to her house to go to bed."
+    - season: winter
+      day: 18
+      schedule:
+        - time: "9:00 AM"
+          location: "At home in her room."
+        - time: "11:00 AM"
+          location: "Leaves her house to take Jas to Harvey's Clinic."
+        - time: "12:00 PM"
+          location: "Stands in clinic waiting room."
+        - time: "1:40 PM"
+          location: "Walks into clinic examination room."
+        - time: "4:00 PM"
+          location: "Leaves clinic and walks back to her house."
+        - time: "6:00 PM"
+          location: "Arrives at home and stands in the kitchen."
+        - time: "9:00 PM"
+          location: "Walks to her room and goes to bed."
+    - rain: true
+      schedule:
+        - time: "6:00 AM"
+          location: "At home in her room."
+        - time: "9:00 AM"
+          location: "Stands behind the counter of her shop."
+        - time: "4:00 PM"
+          location: "Closes her shop and walks to the kitchen."
+        - time: "6:00 PM"
+          location: "Leaves the kitchen and walks to her room. Stands in front of her dresser."
+        - time: "9:00 PM"
+          location: "Goes to bed."
+    - weekday: monday
+      schedule:
+        - time: "6:00 AM"
+          location: "At home in her room."
+        - time: "8:10 AM"
+          location: "Leaves her house and walks to Pierre's General Store."
+        - time: "12:00 PM"
+          location: "Leaves Pierre's General Store and walks back to her house."
+        - time: "1:30 PM"
+          location: "Arrives at home and stands in the kitchen."
+        - time: "9:00 PM"
+          location: "Walks to her room and goes to bed."
+    - weekday: tuesday
+      schedule:
+        - time: "6:00 AM"
+          location: "At home in her room."
+        - time: "10:00 AM"
+          location: "Leaves her house and walks to Pierre's General Store."
+        - time: "12:00 PM"
+          location: "Arrives at Pierre's General Store to exercise with Caroline, Jodi, Emily, and Robin."
+        - time: "4:00 PM"
+          location: "Chats with the other ladies after exercise class."
+        - time: "6:10 PM"
+          location: "Leaves Pierre's General Store and walks back to her house."
+        - time: "8:00 PM"
+          location: "Arrives home and stands in the kitchen."
+        - time: "9:00 PM"
+          location: "Walks to her room and goes to bed."
+    - schedule:
+        - time: "6:00 AM"
+          location: "At home in her room."
+        - time: "9:00 AM"
+          location: "Stands behind the counter of her shop."
+        - time: "4:00 PM"
+          location: "Closes her shop and walks to her room."
+        - time: "5:00 PM"
+          location: "Leaves her house and walks to The Stardrop Saloon."
+        - time: "11:00 PM"
+          location: "Leaves the Saloon and walks back to her house to go to bed."

@@ -1,0 +1,46 @@
+# From stardewvalleywiki.com under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+name: "Sandy"
+birthday: "Fall 15"
+schedule:
+  common:
+    - season: spring
+      days: [15, 16, 17]
+      bus_restored: true
+      schedule:
+        - time: "8:30 AM"
+          location: "Exits the Oasis to stand at Emily's outfit services."
+        - time: "12:00 AM"
+          location: "Returns to the Oasis."
+    - season: fall
+      day: 15
+      bus_restored: true
+      schedule:
+        - time: "9:00 AM"
+          location: "Stands behind the counter in the Oasis."
+        - time: "12:00 PM"
+          location: "Chats sideways with Emily behind the counter."
+        - time: "1:00 PM"
+          location: "Leaves the Oasis and stands next to the bench on the left."
+        - time: "3:00 PM"
+          location: "Goes to the pond in the northwest section."
+        - time: "5:00 PM"
+          location: "Leaves and then stands next to the Sand Dragon."
+        - time: "6:00 PM"
+          location: "Goes to the side of the bus."
+        - time: "7:00 PM"
+          location: "Moves to the front of the Desert Trader."
+        - time: "8:00 PM"
+          location: "Returns to the front of the Oasis."
+        - time: "10:50 PM"
+          location: "Leaves the front of the Oasis."
+        - time: "11:30 PM"
+          location: "Arrives by the bench next to the bus."
+        - time: "12:00 AM"
+          location: "Says goodbye to Emily."
+        - time: "12:10 AM"
+          location: "Goes back to the Oasis."
+    - schedule:
+        - time: "6:00 AM"
+          location: "Behind the counter at the Oasis."
+        - time: "12:00 AM"
+          location: "Behind the counter at the Oasis."
