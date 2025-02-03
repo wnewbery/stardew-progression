@@ -9,6 +9,7 @@ import CommunityBundle from "../components/CommunityBundle";
 import GuideBirthdays from "../components/GuideBirthdays";
 import Building from "../components/Building";
 import Wiki from "../components/Wiki";
+import Spoiler from "../components/Spoiler";
 
 const birthdays: GuideBirthdayInfo[] = [
   {
@@ -19,6 +20,10 @@ const birthdays: GuideBirthdayInfo[] = [
       <Wiki>Gunther</Wiki> by donating 60 items to the Museum first, which is pretty
       likely by this point.
       You likely have a <Item>Wild Horseradish</Item>, <Item>Pumpkin</Item> or <Item>Diamond</Item> as a loved gift.
+      Also worth visiting their shop once.
+      <Spoiler>
+        <Item>Stardrop</Item> for 20,000g.
+      </Spoiler>
     </>
   },
   {
@@ -173,13 +178,52 @@ export default () => {
         <p>Last of the bundles to finish off, which should be these.</p>
         <CommunityBundle bundle="winter_foraging_bundle" />
         <CommunityBundle bundle="specialty_fish_bundle" />
-        <CommunityBundle bundle="dye_bundle" />
         <CommunityBundle bundle="chefs_bundle" />
         <CommunityBundle bundle="dye_bundle" />
         <CommunityBundle bundle="field_research_bundle" />
         <CommunityBundle bundle="enchanters_bundle" />
       </GuideSection>
       <GuideBirthdays season="Winter" birthdays={birthdays} />
+      <GuideSection title="Desert">
+        <p>Note that the <Wiki>Mr. Qi</Wiki> quest is not required for the community center.</p>
+        <ChecklistItem id="winter_desert">
+          <p>
+            You should have access to the desert already, and have put the Beets in Lewis's
+            house for <Wiki>Mr. Qi</Wiki>.
+            You don't need to spend a huge amount of time in the desert, the main thing there is
+            probably the <Wiki>Skull Cavern</Wiki> and you don't need that for the community center.
+          </p>
+          <p>
+            It does cost 500g and will take some time to visit, so ideally do multiple things at
+            once and always take the opportunity to do bits like collecting forage.
+          </p>
+        </ChecklistItem>
+        <ChecklistItem id="winter_desert_speedgro">
+          You might want to buy some <Item>Deluxe Speed-Gro</Item> from the desert store as it is
+          much cheaper than in the town, even cheaper than the basic <Item>Speed-Gro</Item>.
+        </ChecklistItem>
+        <ChecklistItem id="specialty_fish_bundle-sandfish">
+          Catch a <Item>Sandfish</Item> from the Desert pond for the Specialty Fish Bundle.
+        </ChecklistItem>
+        <ChecklistItem id="mrqi_challenge">
+          After entering the Skull Cavern you will get a quest to reach at least level 25.
+          Completing it awards 10,000g so if you are able to this is some quick money.
+        </ChecklistItem>
+        <ChecklistItem id="the_mysterious_qi_3">
+          <p>The 3rd part of this quest is what needed access to the desert.</p>
+          <Spoiler>
+            Investigate the bones out in the desert.
+          </Spoiler>
+          <Spoiler>
+            The dragon skeleton wants a <Item>Solar Essence</Item>.
+          </Spoiler>
+        </ChecklistItem>
+        <ChecklistItem id="the_mysterious_qi_4">
+          Straight forward except means leaving the desert again.
+          Completing will give access to the <Wiki>Casino</Wiki> which means coming back again.
+
+        </ChecklistItem>
+      </GuideSection>
       <section className="space-y-8">
         <h3 className="text-xl font-bold">Day Guide</h3>
         <Day day={1}>
@@ -219,11 +263,50 @@ export default () => {
             Notably want to complete the Winter Foraging Bundle and get a{' '}
             <Item>Nautilus Shell</Item> on the beach to complete the Field Research Bundle.
           </ChecklistItem>
-          <ChecklistItem id="winter1_rabitsfoot">
+          <ChecklistItem id="winter1_rabbitsfoot">
             Keep looking after your animals to get a <Item>Rabbit's Foot</Item> for the
             Enchanter's Bundle, which you should then be able to complete.
           </ChecklistItem>
+          <ChecklistItem id="winter1_greenhouse_crops">
+            If you have any seeds and sprinklers, you might as well set them up in the greenhouse.
+          </ChecklistItem>
+          <ChecklistItem id="winter1_powdermelon">
+            <Item>Powdermelon</Item> is the only crop you can grow outside in the winter.
+            It is not needed for any bundle, and isn't great for gold.
+            But they are useful to get farming XP or as a cheap energy/HP item.
+            You also can't buy the seeds, but you likely found some free ones.
+          </ChecklistItem>
+          <ChecklistItem id="winter1_garden_pots">
+            Once the greenhouse is built a few days later should receive a <Item>Garden Pot</Item> and
+            a recipe to make more.
+            There is nothing essential to use these for.
+            Personally I grew a few <Item>Coffee</Item> plants in the house.
+            Note that you do need to water as with normal crop planting.
+          </ChecklistItem>
+          <ChecklistItem id="winter_a_winter_mystery">
+            <p>
+              At some point in winter you will get a quest then a cutscene around the bus stop.
+            </p>
+            <Spoiler>
+              Go to the Bus Stop before 4pm.
+            </Spoiler>
+            <Spoiler>
+              Check the bush to the right of the playground in town.
+            </Spoiler>
+          </ChecklistItem>
         </Day>
+        <Day day={2}>
+          <ChecklistItem id="winter2_squid">
+            Willy will give you a quest to catch a <Item>Squid</Item>.
+          </ChecklistItem>
+        </Day>
+        <Day day={3}></Day>
+        <Day day={4}></Day>
+        <Day day={5}></Day>
+        <Day day={6}></Day>
+        <Day day={7}></Day>
+        <Day day={8}></Day>
+
       </section>
     </div>
   );

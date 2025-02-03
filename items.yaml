@@ -89,6 +89,7 @@
 - label: Potato
   source_hint: "Spring crops"
 - label: Speed-Gro
+- label: Deluxe Speed-Gro
 
 - label: Tomato
   source_hint: "Summer crops"
@@ -400,3 +401,7 @@
 - label: Cookout Kit
 - label: Rice
 - label: Unmilled Rice
+- label: Powdermelon
+- label: Garden Pot
+- label: Deluxe Retaining Soil
+- label: Squid

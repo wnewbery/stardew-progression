@@ -555,7 +555,7 @@ export default () => {
         <Day day={24}></Day>
         <Day day={25}>
           <ChecklistItem id="fall25_sweetgem_berry">
-            If you planted <Item>Rare Seeds</Item> on the first day then the{' '}
+            If you planted <Items>Rare Seed</Items> on the first day then the{' '}
             <Item>Sweet Gem Berry</Item> harvest should be ready today!
             Keep at least one for the Secret Woods quest.
           </ChecklistItem>
@@ -575,6 +575,19 @@ export default () => {
           <ChecklistItem id="fall28_cranberries">
             Today should also be the last harvest of <Item>Cranberries</Item> bringing in some more
             money to start Winter with.
+          </ChecklistItem>
+          <ChecklistItem id="fall28_greenhouse_seeds">
+            <p>
+              You might consider buying seeds for the greenhouse, as they will not be sold in Winter.
+              There is a total of 120 tiles for crops, although some would likely be used for sprinklers.
+              There is also space for 18 fruit trees around the edges.
+            </p>
+            <p>
+              An interesting choice is <Item>Cranberries</Item> as they have the highest
+              gold per day return and can keep the same plant into future seasons.
+              Another option is <Items>Pumpkin</Items> which are nearly as good but with a 13
+              day base growing time and sprinklers, will need checking on less often.
+            </p>
           </ChecklistItem>
         </Day>
       </section>
