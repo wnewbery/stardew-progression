@@ -9,7 +9,9 @@ import Building from "./Building";
 import normaliseId from "../NormaliseId";
 import Villager from "./Villager";
 
-const villagersData = require.context('../../data/villagers', false, /\.yaml$/);
+const villagersData = import.meta.glob('../../data/villagers/*.yaml', { eager: true });
+
+console.log(villagersData);
 
 let items: GameItem[] = [];
 let itemsMap: Map<string, GameItem>;
@@ -29,8 +31,8 @@ function load() {
 
   buildings = (buildingsData as any[]).map(x => new Building(x));
 
-  villagers = villagersData.keys().map(filename => {
-    let data = villagersData(filename).default as any;
+  villagers = Object.keys(villagersData).map(filename => {
+    let data = villagersData[filename].default as any;
     return new Villager(data);
   });
   villagersMap = new Map(villagers.map(x => [x.id, x]));

@@ -25,6 +25,7 @@ export default ({ id, number }: BuildingProps) => {
   const onCompleted = (evt: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(setCompleted({ id: completionId, completed: evt.currentTarget.checked }));
   }
+  const hasMaterials = building.materials.length > 0;
 
   return (
     <details className="border rounded-xl bg-primary border-secondary max-w-xl" open={expanded} onToggle={setBuildingOpen}>
@@ -37,12 +38,16 @@ export default ({ id, number }: BuildingProps) => {
       <div className="flex flex-row items-start space-x-8 p-4">
         <img src={building.icon} alt={building.label} width={96} height={96} />
         <div className="grid grid-cols-2 items-start">
-          <div className="font-bold">Cost:</div>
+          <div className="font-bold w-32">Cost:</div>
           <div>{building.cost.toLocaleString('en-US')}g</div>
-          <div className="font-bold">Materials:</div>
-          <div>{building.materials.map((material: { item: GameItem, count: number }) => (
-            <ItemStackText className="block" key={material.item.id} item={material.item} count={material.count} />
-          ))}</div>
+          {hasMaterials && (
+            <>
+              <div className="font-bold w-32">Materials:</div>
+              <div>{building.materials.map((material: { item: GameItem, count: number }) => (
+                <ItemStackText className="block" key={material.item.id} item={material.item} count={material.count} />
+              ))}</div>
+            </>
+          )}
         </div>
       </div>
     </details>

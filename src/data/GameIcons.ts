@@ -1,4 +1,4 @@
-const images = require.context('../assets/game_icons', false, /\.png$/);
+const images = import.meta.glob('../assets/game_icons/**/*.png', { eager: true, query: '?url', import: 'default' });
 
 function normalizeName(name: string) {
   return name
@@ -7,11 +7,11 @@ function normalizeName(name: string) {
     .replaceAll('-', '_');
 }
 
-let iconMap = new Map(images.keys().map(filename => {
+let iconMap = new Map(Object.keys(images).map(filename => {
   let match = filename.match(/\/([^\/]+)\.png/);
   if (!match || !match[1]) throw new Error(`Unrecognised filename ${filename}.`);
   let name = normalizeName(match[1]);
-  let path = images(filename).default as string;
+  let path = images[filename] as string;
 
   return [name, path];
 }));
