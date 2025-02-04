@@ -5,9 +5,9 @@ interface GuideBirthdaysProps {
   season: string;
   birthdays: GuideBirthdayInfo[];
 }
-export default ({ season, birthdays }: GuideBirthdaysProps) => {
-  let seasonId = season.toLowerCase();
-  let id = `/year1-${seasonId}/birthdays`;
+export default function GuideBirthdays({ season, birthdays }: GuideBirthdaysProps) {
+  const seasonId = season.toLowerCase();
+  const id = `/year1-${seasonId}/birthdays`;
 
   return (
     <GuideSectionContainer title="Birthdays" href={id}>

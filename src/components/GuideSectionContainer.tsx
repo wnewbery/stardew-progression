@@ -9,7 +9,7 @@ interface GuideSectionProps {
   children: ReactNode;
 }
 
-export default ({ title, href, storeId, children }: GuideSectionProps) => {
+export default function GuideSectionContainer({ title, href, storeId, children }: GuideSectionProps) {
   storeId ??= href;
   const hidden = useAppSelector(
     (state) => state.checklist.uiElementsHidden[storeId] ?? false

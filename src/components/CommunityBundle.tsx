@@ -1,4 +1,4 @@
-import CommunityBundle from "../data/CommunityBundle";
+import CommunityBundleData from "../data/CommunityBundle";
 import Markdown from "./Markdown";
 import ItemStackText from "./ItemStackText";
 import { useAppDispatch, useAppSelector } from "../redux/Store";
@@ -6,9 +6,9 @@ import { setCompleted, setUiElementHidden } from "../redux/ChecklistSlice";
 import GameData from "../data/GameData";
 
 type CommunityBundleProps = {
-  bundle: CommunityBundle | string
+  bundle: CommunityBundleData | string
 };
-export default ({ bundle }: CommunityBundleProps) => {
+export default function CommunityBundle({ bundle }: CommunityBundleProps) {
   if (typeof bundle === "string") {
     bundle = GameData.bundle(bundle);
   }
@@ -16,7 +16,6 @@ export default ({ bundle }: CommunityBundleProps) => {
   const bundleExpanded = useAppSelector(state => !state.checklist.uiElementsHidden[bundle.id]);
   const dispatch = useAppDispatch();
   const setBundleOpen = (evt: React.ToggleEvent<HTMLDetailsElement>) => {
-    const open = evt.currentTarget.open;
     dispatch(setUiElementHidden({ id: bundle.id, hidden: !evt.currentTarget.open }));
   }
 
@@ -49,7 +48,6 @@ export default ({ bundle }: CommunityBundleProps) => {
       <table className="border-t border-secondary w-full">
         <tbody>
           {bundle.items.map(item => {
-            const countStr = item.count > 1 ? `(${item.count})` : '';
             const isItemCompleted = useAppSelector(state => state.checklist.items[item.checklistId] ?? false);
             const itemDispatch = useAppDispatch();
             const onItemCompleted = (evt: React.ChangeEvent<HTMLInputElement>) => {

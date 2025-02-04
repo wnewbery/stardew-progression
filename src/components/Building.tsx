@@ -10,7 +10,7 @@ interface BuildingProps {
   number?: number;
 }
 
-export default ({ id, number }: BuildingProps) => {
+export default function Building({ id, number }: BuildingProps) {
   const building = GameData.building(id);
   const completionId = number ? `${id}_${number}` : id;
   const label = number ? `${building.label} ${number}` : building.label;
@@ -19,7 +19,6 @@ export default ({ id, number }: BuildingProps) => {
   const expanded = useAppSelector(state => !state.checklist.uiElementsHidden[building.id]);
   const dispatch = useAppDispatch();
   const setBuildingOpen = (evt: React.ToggleEvent<HTMLDetailsElement>) => {
-    const open = evt.currentTarget.open;
     dispatch(setUiElementHidden({ id: completionId, hidden: !evt.currentTarget.open }));
   }
   const onCompleted = (evt: React.ChangeEvent<HTMLInputElement>) => {

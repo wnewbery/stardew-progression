@@ -14,7 +14,7 @@ interface GuideBirthdayProps {
   season: string;
   birthday: GuideBirthdayInfo;
 }
-export default ({ season, birthday }: GuideBirthdayProps) => {
+export default function GuideBirthday({ season, birthday }: GuideBirthdayProps) {
   return (
     <ChecklistItem id={`birthday_${normaliseId(birthday.name)}`}>
       {season} {birthday.day} is {' '}

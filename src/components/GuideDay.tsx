@@ -22,8 +22,8 @@ interface GuideDayProps {
   title?: string;
   children?: ReactNode;
 }
-export default ({ season, birthdays, day, title, children }: GuideDayProps) => {
-  let seasonId = `year1-${season.toLowerCase()}`;
+export default function GuideDay({ season, birthdays, day, title, children }: GuideDayProps) {
+  const seasonId = `year1-${season.toLowerCase()}`;
 
   let birthday = birthdays.find(b => b.day === day);
 

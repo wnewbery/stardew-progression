@@ -1,4 +1,4 @@
-import { PropsWithChildren, useState } from "react";
+import { PropsWithChildren } from "react";
 import { useAppDispatch, useAppSelector } from "../redux/Store";
 import { setCompleted } from "../redux/ChecklistSlice";
 
@@ -7,7 +7,7 @@ type ChecklistItemProps = {
   id: string;
 }
 
-export default ({ id, className, children }: PropsWithChildren<ChecklistItemProps>) => {
+export default function ChecklistItem({ id, className, children }: PropsWithChildren<ChecklistItemProps>) {
   const isCompleted = useAppSelector(state => state.checklist.items[id]) ?? false;
   const dispatch = useAppDispatch();
 

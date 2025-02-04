@@ -24,7 +24,7 @@ const Schedule = ({ name, season, desertVendor, greenRain, schedule }: ScheduleP
   )
 }
 
-export default () => {
+export default function Villager() {
   const params = useParams<{ villager: string }>();
   if (!params.villager) throw new Error("No villager specified");
   let villager = GameData.villager(params.villager);

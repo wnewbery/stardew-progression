@@ -127,7 +127,7 @@ function GuideSection({ title, children }: PropsWithChildren<GuideSectionProps>)
 }
 
 
-export default () => {
+export default function Year1Summer() {
   return (
     <div className="space-y-section max-w-4xl">
       <h1>First Year Summer</h1>

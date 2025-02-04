@@ -20,7 +20,7 @@ function SelectButton({ className, children, selected, value, onClick }: SelectB
         hover:border-accent hover:bg-primary
         ${isSelected ? "border-blue-500 hover:border-blue-500" : "border-transparent"}
         `}
-      >
+    >
       {children}
     </button>
   );
@@ -89,7 +89,7 @@ function CalendarPicker({ season, day, setSeason, setDay }: CalendarPickerProps)
                         ${isCurrentDay ? "border-blue-500 hover:border-blue-500" : "border-transparent"}
                         `}
                       onClick={() => setDay(dayOfMonth)}
-                      >
+                    >
                       {dayOfMonth}
                     </button>
                   </td>
@@ -117,7 +117,7 @@ function Checkbox({ children, checked, onChange }: CheckboxProps) {
     </label>
   );
 }
-export default () => {
+export default function VillagerFinder() {
   let [raining, setRaining] = useState(false);
   let [greenRain, setGreenRain] = useState(false);
   let [communityCenterRestored, setCommunityCenterRestored] = useState(false);
@@ -203,7 +203,7 @@ export default () => {
       {selectionReady && (
         <>
           <h2>Schedule</h2>
-          {possibleSchedules.map(({id, title, schedule}) => (
+          {possibleSchedules.map(({ id, title, schedule }) => (
             <ScheduleDay key={id} title={title} schedule={schedule} />
           ))}
         </>

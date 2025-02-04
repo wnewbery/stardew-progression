@@ -6,12 +6,12 @@ type Props = {
 }
 
 
-export default (props: Props) => {
+export default function Markdown(props: Props) {
   if (props.html) {
-    return <div className="markdown" dangerouslySetInnerHTML={{__html: props.html}}></div>
+    return <div className="markdown" dangerouslySetInnerHTML={{ __html: props.html }}></div>
   }
   else if (props.md) {
-    return <div className="markdown" dangerouslySetInnerHTML={{__html: mdToHtml(props.md)}}></div>
+    return <div className="markdown" dangerouslySetInnerHTML={{ __html: mdToHtml(props.md) }}></div>
   }
   else return <div>Missing markdown</div>;
 };

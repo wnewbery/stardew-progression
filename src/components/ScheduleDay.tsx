@@ -4,7 +4,7 @@ interface ScheduleDayProps {
   title: string;
   schedule: ScheduleItem[];
 }
-export default ({ title, schedule }: ScheduleDayProps) => {
+export default function ScheduleDay({ title, schedule }: ScheduleDayProps) {
   return (
     <div className="w-full">
       <h4>{title}</h4>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import GameData from "../data/GameData";
 
-export default () => {
+export default function Villagers() {
   let villagers = GameData.villagers;
 
   return (
