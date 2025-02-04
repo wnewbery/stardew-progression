@@ -384,6 +384,8 @@
     --color-primary: #2d3748;
     --color-secondary: #4a5568;
     --color-accent: #718096;
+    --spacing-p: 1rem;
+    --spacing-section: var(--spacing-p) * 2;
   }
 }
 @layer base {
@@ -740,6 +742,13 @@
       margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
+  .space-y-section {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(var(--spacing-section) * var(--tw-space-y-reverse));
+      margin-block-end: calc(var(--spacing-section) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
   .space-x-4 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;
@@ -848,6 +857,15 @@
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
+  .open\:space-y-p {
+    &:is([open], :popover-open, :open) {
+      :where(& > :not(:last-child)) {
+        --tw-space-y-reverse: 0;
+        margin-block-start: calc(var(--spacing-p) * var(--tw-space-y-reverse));
+        margin-block-end: calc(var(--spacing-p) * calc(1 - var(--tw-space-y-reverse)));
+      }
+    }
+  }
   .hover\:border-accent {
     &:hover {
       @media (hover: hover) {
@@ -923,7 +941,7 @@
     }
   }
   h1 {
-    margin-bottom: calc(var(--spacing) * 4);
+    margin-bottom: var(--spacing-section);
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
     --tw-font-weight: var(--font-weight-extrabold);
@@ -931,39 +949,39 @@
     color: var(--color-emphasize);
   }
   h2 {
-    margin-bottom: calc(var(--spacing) * 3);
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
+    margin-bottom: var(--spacing-section);
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     color: var(--color-emphasize);
   }
   h3 {
-    margin-bottom: calc(var(--spacing) * 2);
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    margin-bottom: var(--spacing-section);
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
     color: var(--color-emphasize);
   }
   h4 {
-    margin-bottom: calc(var(--spacing) * 2);
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-p);
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
     color: var(--color-text);
   }
   h5 {
-    margin-bottom: calc(var(--spacing) * 1);
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-p);
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
     color: var(--color-text);
   }
   h6 {
-    margin-bottom: calc(var(--spacing) * 1);
+    margin-bottom: var(--spacing-p);
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
     --tw-font-weight: var(--font-weight-medium);
@@ -981,7 +999,8 @@
       font-weight: var(--font-weight-bold);
       color: var(--color-emphasize);
     }
-    th, td {
+    th,
+    td {
       background-color: var(--color-primary);
       padding-inline: calc(var(--spacing) * 2);
       padding-block: calc(var(--spacing) * 1);
@@ -992,7 +1011,8 @@
         border-color: var(--color-page-bg);
       }
     }
-    tr:not(:first-child), tbody > tr {
+    tr:not(:first-child),
+    tbody > tr {
       border-top-style: var(--tw-border-style);
       border-top-width: 2px;
       border-color: var(--color-page-bg);
@@ -1120,5 +1140,4 @@
   syntax: "*";
   inherits: false;
 }
-
 
