@@ -8,6 +8,7 @@ export default defineConfig(() => {
     plugins: [react(), tailwindcss(), ViteYaml()],
     build: {
       assetsInlineLimit: 0,
+      base: "",
     },
   };
 });
