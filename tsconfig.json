@@ -12,7 +12,8 @@
       "moduleResolution": "node",
       "resolveJsonModule": true,
       "jsx": "react-jsx",
-      "outDir": "./dist"
+      "outDir": "./dist",
+      "types": ["vite/client"]
     },
     "include": ["src", "types.d.ts"]
   }

@@ -1,7 +1,7 @@
 import normaliseId from "../NormaliseId";
 import GameIcons from "./GameIcons";
 import VillagerSchedule from "./VillagerSchedule";
-
+import { VillagerData } from "./YamlTypes";
 export default class Villager {
   public id: string;
   public name: string;
@@ -15,8 +15,8 @@ export default class Villager {
     return `https://stardewvalleywiki.com/${this.name}`;
   }
 
-  public constructor(yaml: any) {
-    this.id = yaml.id ?? normaliseId(yaml.name);
+  public constructor(yaml: VillagerData) {
+    this.id = normaliseId(yaml.name);
     this.name = yaml.name;
     this.birthday = yaml.birthday;
     this.schedule = new VillagerSchedule(this.name, yaml.schedule);

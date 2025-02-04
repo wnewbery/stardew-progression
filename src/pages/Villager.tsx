@@ -5,13 +5,12 @@ import GameData from "../data/GameData";
 import ScheduleDay from '../components/ScheduleDay';
 
 interface ScheduleProps {
-  name: string;
   season?: string;
   desertVendor?: ScheduleItem[];
   greenRain?: ScheduleItem[];
   schedule: VillagerDaySchedule[];
 }
-const Schedule = ({ name, season, desertVendor, greenRain, schedule }: ScheduleProps) => {
+const Schedule = ({ season, desertVendor, greenRain, schedule }: ScheduleProps) => {
   return (
     <details className="space-y-4" open>
       <summary><h3 className="inline">{season}</h3></summary>
@@ -27,8 +26,8 @@ const Schedule = ({ name, season, desertVendor, greenRain, schedule }: ScheduleP
 export default function Villager() {
   const params = useParams<{ villager: string }>();
   if (!params.villager) throw new Error("No villager specified");
-  let villager = GameData.villager(params.villager);
-  let schedule = villager.schedule;
+  const villager = GameData.villager(params.villager);
+  const schedule = villager.schedule;
 
   return (
     <div className="space-y-8 min-h-full">
@@ -51,10 +50,10 @@ export default function Villager() {
             ))}
           </>
         )}
-        {schedule.spring && <Schedule name={villager.name} season="Spring" desertVendor={schedule.desertVendor} schedule={schedule.spring} />}
-        {schedule.summer && <Schedule name={villager.name} season="Summer" greenRain={schedule.greenRain} schedule={schedule.summer} />}
-        {schedule.fall && <Schedule name={villager.name} season="Fall" schedule={schedule.fall} />}
-        {schedule.winter && <Schedule name={villager.name} season="Winter" schedule={schedule.winter} />}
+        {schedule.spring && <Schedule season="Spring" desertVendor={schedule.desertVendor} schedule={schedule.spring} />}
+        {schedule.summer && <Schedule season="Summer" greenRain={schedule.greenRain} schedule={schedule.summer} />}
+        {schedule.fall && <Schedule season="Fall" schedule={schedule.fall} />}
+        {schedule.winter && <Schedule season="Winter" schedule={schedule.winter} />}
       </details>
     </div>
   );

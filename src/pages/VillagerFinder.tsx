@@ -10,7 +10,7 @@ interface SelectButtonProps {
   onClick: (value: string) => void;
 }
 function SelectButton({ className, children, selected, value, onClick }: SelectButtonProps) {
-  let isSelected = selected === value;
+  const isSelected = selected === value;
   return (
     <button
       onClick={() => onClick(value)}
@@ -31,12 +31,11 @@ interface VillagerPickerProps {
   setSelected: (villager: string) => void;
 }
 function VillagerPicker({ selected, setSelected }: VillagerPickerProps) {
-  var villagers = GameData.villagers;
+  const villagers = GameData.villagers;
   return (
     <div className="flex flex-row flex-wrap gap-4">
       {villagers.map((villager) => {
-        let isSelected = selected === villager.id;
-        let select = () => {
+        const select = () => {
           setSelected(villager.id);
         }
         return (
@@ -78,8 +77,8 @@ function CalendarPicker({ season, day, setSeason, setDay }: CalendarPickerProps)
           {[1, 8, 15, 22].map((weekStart) => (
             <tr key={weekStart}>
               {[0, 1, 2, 3, 4, 5, 6].map((dayOfWeek) => {
-                let dayOfMonth = weekStart + dayOfWeek;
-                let isCurrentDay = dayOfMonth === day;
+                const dayOfMonth = weekStart + dayOfWeek;
+                const isCurrentDay = dayOfMonth === day;
                 return (
                   <td key={dayOfMonth} className={isCurrentDay ? "bg-primary" : ""}>
                     <button
@@ -118,24 +117,24 @@ function Checkbox({ children, checked, onChange }: CheckboxProps) {
   );
 }
 export default function VillagerFinder() {
-  let [raining, setRaining] = useState(false);
-  let [greenRain, setGreenRain] = useState(false);
-  let [communityCenterRestored, setCommunityCenterRestored] = useState(false);
-  let [busRestored, setBusRestored] = useState(false);
-  let [railAccessible, setRailAccessible] = useState(false);
+  const [raining, setRaining] = useState(false);
+  const [greenRain, setGreenRain] = useState(false);
+  const [communityCenterRestored, setCommunityCenterRestored] = useState(false);
+  const [busRestored, setBusRestored] = useState(false);
+  const [railAccessible, setRailAccessible] = useState(false);
 
-  let [villager, setVillager] = useState("");
+  const [villager, setVillager] = useState("");
 
-  let [season, setSeason] = useState("spring");
-  let [day, setDay] = useState(1);
+  const [season, setSeason] = useState("spring");
+  const [day, setDay] = useState(1);
 
-  let selectionReady = villager && season && day;
-  let possibleSchedules = [];
+  const selectionReady = villager && season && day;
+  const possibleSchedules = [];
   if (selectionReady) {
-    let schedule = GameData.villager(villager).schedule;
-    let weekday = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"][(day - 1) % 7];
-    let monToFri = weekday !== "saturday" && weekday !== "sunday";
-    let desertFestival = season === 'spring' && busRestored && day >= 15 && day <= 17;
+    const schedule = GameData.villager(villager).schedule;
+    const weekday = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"][(day - 1) % 7];
+    const monToFri = weekday !== "saturday" && weekday !== "sunday";
+    const desertFestival = season === 'spring' && busRestored && day >= 15 && day <= 17;
     if (greenRain && schedule.greenRain) {
       possibleSchedules.push({
         id: `{villager}-greenRain`,
@@ -158,7 +157,7 @@ export default function VillagerFinder() {
       seasonSchedule ??= schedule.common;
       if (seasonSchedule) {
         for (let i = 0; i < seasonSchedule.length; i++) {
-          let daySchedule = seasonSchedule[i];
+          const daySchedule = seasonSchedule[i];
           let final = true;
           if (daySchedule.season && daySchedule.season !== season) continue;
           if (daySchedule.days && !daySchedule.days.includes(day)) continue;

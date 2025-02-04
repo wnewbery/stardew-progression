@@ -22,19 +22,11 @@ export default function CommunityBundle({ bundle }: CommunityBundleProps) {
   const onBundleCompleted = (evt: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(setCompleted({ id: bundle.id, completed: evt.currentTarget.checked }));
   }
-  const toggleBundle = (evt: React.MouseEvent<HTMLElement>) => {
-    const e = evt.target as HTMLElement;
-    if (!e.closest('a')) {
-      // If click hit some link, don't toggle
-      dispatch(setCompleted({ id: bundle.id, completed: !isBundleCompleted }));
-    }
-  }
-
   return (
     <details className="max-w-[750px] break-inside-avoid-column bg-primary border border-secondary rounded-xl" open={bundleExpanded} onToggle={setBundleOpen}>
       <summary className="text-xl font-bold space-x-4 ml-4">
         <img src={bundle.icon} className="inline-block align-middle" />
-        <input type="checkbox" checked={isBundleCompleted} onChange={onBundleCompleted} className="w-6 h-6 align-middle" />
+        <input name={bundle.id} type="checkbox" checked={isBundleCompleted} onChange={onBundleCompleted} className="w-6 h-6 align-middle" />
         <span className="align-middle nowrap">
           {bundle.label}
           <span className="hidden xs:inline"> Bundle</span>
@@ -62,7 +54,7 @@ export default function CommunityBundle({ bundle }: CommunityBundleProps) {
             }
             return (
               <tr key={item.id} onClick={toggleItem}>
-                <td className="p-4"><input type="checkbox" checked={isItemCompleted} onChange={onItemCompleted} /></td>
+                <td className="p-4"><input name={item.checklistId} type="checkbox" checked={isItemCompleted} onChange={onItemCompleted} /></td>
                 <td className="p-4"><ItemStackText stack={item} /></td>
                 <td className="p-4"><Markdown md={item.item.sourceHint} /></td>
               </tr>

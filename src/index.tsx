@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useState } from "react";
+import React from "react";
 import { HashRouter, Route, Routes, Link, Navigate } from "react-router";
 import { Provider } from "react-redux";
 import { createRoot } from "react-dom/client";
@@ -21,7 +21,7 @@ const container = document.getElementById("app")!;
 const root = createRoot(container);
 
 GameData.load();
-let bundles = GameData.bundles;
+const bundles = GameData.bundles;
 
 function PageCommunityBundles() {
   return (
@@ -40,7 +40,6 @@ const footer = (
   </>
 );
 const App = () => {
-  const [activeTab, setActiveTab] = useState("bundles");
   return (
     <div className="h-screen v-screen xl:flex flex-row ">
       <div className="p-8 xl:max-w-md flex-initial flex flex-col gap-4 overflow-y-auto xl:border-r-2 border-r-solid border-accent">

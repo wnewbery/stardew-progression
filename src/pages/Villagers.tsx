@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import GameData from "../data/GameData";
 
 export default function Villagers() {
-  let villagers = GameData.villagers;
+  const villagers = GameData.villagers;
 
   return (
     <div className="space-y-8 min-h-full">
