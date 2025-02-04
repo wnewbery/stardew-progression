@@ -23,14 +23,13 @@ const root = createRoot(container);
 GameData.load();
 let bundles = GameData.bundles;
 
-function TabCommunityBundles() {
+function PageCommunityBundles() {
   return (
-    <>
-      <h2 className="text-2xl font-bold">Community Bundles</h2>
-      <div className="space-y-4">
-        {bundles.map(bundle => <CommunityBundle key={bundle.id} bundle={bundle} />)}
-      </div>
-    </>);
+    <div className="space-y-section">
+      <h1>Community Bundles</h1>
+      {bundles.map(bundle => <CommunityBundle key={bundle.id} bundle={bundle} />)}
+    </div>
+  );
 }
 const footer = (
   <>
@@ -49,7 +48,6 @@ const App = () => {
         <nav>
           <section>
             <ol>
-              <li className="text-lg"><Link to="/achievements">Achievements</Link></li>
               <li className="text-lg"><Link to="/bundles">Community Bundles</Link></li>
               <li className="text-lg"><Link to="/buildings">Buildings</Link></li>
               <li className="text-lg"><Link to="/villagers">Villagers</Link></li>
@@ -80,7 +78,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Navigate to="/bundles" />} />
           <Route path="/buildings" element={<Buildings />} />
-          <Route path="/bundles" element={<TabCommunityBundles />} />
+          <Route path="/bundles" element={<PageCommunityBundles />} />
           <Route path="/villagers" element={<Villagers />} />
           <Route path="/villagers/:villager" element={<Villager />} />
           <Route path="/villager-finder" element={<VillagerFinder />} />

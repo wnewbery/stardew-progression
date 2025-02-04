@@ -39,8 +39,7 @@ export default ({ season, birthdays, day, title, children }: GuideDayProps) => {
 
   title ??= `Day ${day} (${weekDays[(day - 1) % 7]})`;
   return (
-    <GuideSectionContainer className="space-y-4" href={`${seasonId}/${day}`}>
-      <summary className="text-lg font-bold">{title}</summary>
+    <GuideSectionContainer title={title} href={`${seasonId}/${day}`}>
       {birthday && <GuideBirthday season={season} birthday={birthday} />}
       {redCabbageDay && (
         <ChecklistItem id={`${season.toLowerCase()}${day}_cart_red_cabbage_seeds`}>

@@ -4,77 +4,106 @@ import ItemStackText from "../components/ItemStackText";
 import ArtifactImage from "../assets/Artifact_tile.gif";
 import Wiki from "../components/Wiki";
 import Spoiler from "../components/Spoiler";
-import { ReactNode } from "react";
+import { PropsWithChildren, ReactNode } from "react";
 import GuideSectionContainer from "../components/GuideSectionContainer";
+import GuideDay from "../components/GuideDay";
+import { GuideBirthdayInfo } from "../components/GuideBirthday";
+import GuideBirthdays from "../components/GuideBirthdays";
 
-export interface DayProps {
+const birthdays: GuideBirthdayInfo[] = [
+  // Kent didn't move in yet
+  // {
+  //   day: 4,
+  //   name: "Kent",
+  //   content: <>
+  //     A <ItemStackText item="daffodil" /> is a loved gift.
+  //   </>
+  // }
+  {
+    day: 7,
+    name: "Lewis",
+    content: <>
+      The best gift you are likely to have is a <ItemStackText item="parsnip" /> planted at the start.{' '}
+      He is likely to be by around his house or the town square.
+    </>
+  },
+  {
+    day: 10,
+    name: "Vincent",
+    content: <>
+      The best gift you are likely to have is a <ItemStackText item="daffodil" />.{' '}
+      He is likely to go to the Museum then around town.
+    </>
+  },
+  {
+    day: 14,
+    name: "Haley",
+    content: <>
+      The best gift you are likely to have is a <ItemStackText item="daffodil" />.{' '}
+      She is likely to go to the fountain around 12pm then heading home 4:30pm.
+    </>
+  },
+  {
+    day: 18,
+    name: "Pam",
+    content: <>
+      The best gift you are likely to have is a <ItemStackText item="salmonberry" />.{' '}
+      She is likely to go to JojaMart at 12pm then the saloon at 4pm.
+    </>
+  },
+  {
+    day: 20,
+    name: "Shane",
+    content: <>
+      The best gift you are likely to have is a <ItemStackText item="salmonberry" />.{' '}
+      He is likely to be at Marnie's, then go to the General Store at 12pm then the saloon at 5pm.
+    </>
+  },
+  {
+    day: 26,
+    name: "Pierre",
+    content: <>
+      The best gift you are likely to have is a <ItemStackText item="parsnip" />, <ItemStackText item="daffodil" /> or <ItemStackText item="dandelion" />.{' '}
+      He is likely to be at the General Store until 5pm then the saloon.
+    </>
+  },
+  {
+    day: 27,
+    name: "Emily",
+    content: <>
+      If you are lucky you may have a loved gift; any gem except Diamond, or Cloth.{' '}
+      Otherwise a <ItemStackText item="daffodil" /> or <ItemStackText item="quartz" />.{' '}
+      She is likely to be in her room until 12p, then around the house until 3:30pm when she goes to work at the saloon.
+    </>
+  }
+]
+
+interface DayProps {
   day: number;
-  children: ReactNode;
+  title?: string;
+  children?: ReactNode;
 }
-function Day({ day, children }: DayProps) {
+function Day({ day, title, children }: DayProps) {
+  return <GuideDay season="Spring" birthdays={birthdays} day={day} title={title} children={children} />;
+}
+
+interface GuideSectionProps {
+  title: string;
+}
+function GuideSection({ title, children }: PropsWithChildren<GuideSectionProps>) {
+  let id = '/year1-winter/' + title.toLowerCase().replace(/ /g, '_');
   return (
-    <GuideSectionContainer className="space-y-4" href={`/year1-spring/${day}`}>
-      <summary className="text-lg font-bold">Day {day}</summary>
+    <GuideSectionContainer title={title} href={id}>
       {children}
     </GuideSectionContainer>
   );
 }
 
 export default () => {
-  const birthdayKent = (
-    <ChecklistItem id="birthday_kent">
-      Spring 4 is <a target="_blank" href="https://stardewvalleywiki.com/Kent">Kent's</a> birthday.{' '}
-      The best gift is likely to be a <ItemStackText item="daffodil" />.{' '}
-      He will be at or around his house until 10pm.
-    </ChecklistItem>);
-  const birthdayLewis = (
-    <ChecklistItem id="birthday_lewis">
-      Spring 7 is <a target="_blank" href="https://stardewvalleywiki.com/Lewis">Lewis'</a> birthday.{' '}
-      The best gift you are likely to have is a <ItemStackText item="parsnip" /> planted at the start.{' '}
-      He is likely to be by around his house or the town square.
-    </ChecklistItem>);
-  const birthdayVincent = (
-    <ChecklistItem id="birthday_vincent">
-      Spring 10 is <a target="_blank" href="https://stardewvalleywiki.com/Vincent">Vincent's</a> birthday.{' '}
-      The best gift you are likely to have is a <ItemStackText item="daffodil" />.{' '}
-      He is likely to go to the Museum then around town.
-    </ChecklistItem>);
-  const birthdayHaley = (
-    <ChecklistItem id="birthday_haley">
-      Spring 14 is <a target="_blank" href="https://stardewvalleywiki.com/Haley">Haley's</a> birthday.{' '}
-      The best gift you are likely to have is a <ItemStackText item="daffodil" />.{' '}
-      She is likely to go to the fountain around 12pm then heading home 4:30pm.
-    </ChecklistItem>);
-  const birthdayPam = (
-    <ChecklistItem id="birthday_pam">
-      Spring 18 is <a target="_blank" href="https://stardewvalleywiki.com/Pam">Pam's</a> birthday.{' '}
-      The best gift you are likely to have is a <ItemStackText item="salmonberry" />.{' '}
-      She is likely to go to JojaMart at 12pm then the saloon at 4pm.
-    </ChecklistItem>);
-  const birthdayShane = (
-    <ChecklistItem id="birthday_shane">
-      Spring 20 is <a target="_blank" href="https://stardewvalleywiki.com/Shane">Shane's</a> birthday.{' '}
-      The best gift you are likely to have is a <ItemStackText item="salmonberry" />.{' '}
-      He is likely to be at Marnie's, then go to the General Store at 12pm then the saloon at 5pm.
-    </ChecklistItem>);
-  const birthdayPierre = (
-    <ChecklistItem id="birthday_pierre">
-      Spring 26 is <a target="_blank" href="https://stardewvalleywiki.com/Pierre">Pierre's</a> birthday.{' '}
-      The best gift you are likely to have is a <ItemStackText item="parsnip" />, <ItemStackText item="daffodil" /> or <ItemStackText item="dandelion" />.{' '}
-      He is likely to be at the General Store until 5pm then the saloon.
-    </ChecklistItem>);
-  const birthdayEmily = (
-    <ChecklistItem id="birthday_emily">
-      Spring 27 is <a target="_blank" href="https://stardewvalleywiki.com/Emily">Emily's</a> birthday.{' '}
-      If you are lucky you may have a loved gift; any gem except Diamond, or Cloth.{' '}
-      Otherwise a <ItemStackText item="daffodil" /> or <ItemStackText item="quartz" />.{' '}
-      She is likely to be in her room until 12p, then around the house until 3:30pm when she goes to work at the saloon.
-    </ChecklistItem>);
   return (
-    <div className="space-y-8 max-w-4xl">
-      <h2 className="text-2xl font-bold">First Year Spring</h2>
-      <GuideSectionContainer className="space-y-4" href="/spring1/contents">
-        <summary className="text-xl font-bold">Contents</summary>
+    <div className="space-y-section max-w-4xl">
+      <h1 className="text-2xl font-bold">First Year Spring</h1>
+      <GuideSection title="Contents">
         <ul>
           <li>
             <ul>
@@ -84,9 +113,8 @@ export default () => {
             </ul>
           </li>
         </ul>
-      </GuideSectionContainer>
-      <GuideSectionContainer className="space-y-4" href="/spring1/advice">
-        <summary className="text-xl font-bold">Advice</summary>
+      </GuideSection>
+      <GuideSection title="Advice">
         <ChecklistItem id="first_year_completable">
           If you want to guarantee completing the first year is possible, you must select this when <i>starting the game</i>.{' '}
           You need to by <ItemStackText item="red_cabbage_seeds" /> from the Travelling Cart, and this setting guarantees it will be stocked at least once between Spring 7 and Winter 16.
@@ -112,9 +140,8 @@ export default () => {
         <p><ItemStackText item="spring_onion" /> have a chance to spawn in the south by the sewer <i>every day</i> and while not worth much to sell, they are a cheap source of energy.</p>
         <p>You can give each character 2 gifts a week.</p>
         <p>When deciding when to upgrade the watering can, check the weather forecast as if it is raining the next day, and you can collect it the day after, then no crops will be missed.</p>
-      </GuideSectionContainer>
-      <GuideSectionContainer className="space-y-4" href="/spring1/community_centre">
-        <summary className="text-xl font-bold">Community Centre Objectives</summary>
+      </GuideSection>
+      <GuideSection title="Community Centre Objectives">
         <ChecklistItem id="red_cabbage_seed">
           Check the Travelling Cart in the forest every Friday and Sunday after Spring 7 until Winter 16 for a <ItemStackText item="red_cabbage_seeds" />.
           You can't buy this seed from town until year 2, and you need it for the Dye Bundle in the community centre.
@@ -173,9 +200,8 @@ export default () => {
         <CommunityBundle bundle="blacksmiths_bundle" />
         <CommunityBundle bundle="geologists_bundle" />
         <CommunityBundle bundle="adventurers_bundle" />
-      </GuideSectionContainer>
-      <GuideSectionContainer className="space-y-4" href="/spring1/other_objectives">
-        <summary className="text-xl font-bold">Other Objectives</summary>
+      </GuideSection>
+      <GuideSection title="Other Objectives">
         <ChecklistItem id="spring_fix_beach_bridge">
           Gather 300 <ItemStackText item="wood" /> to fix the bridge in the south east beach to access
           {' '}<ItemStackText item="coral" /> and <ItemStackText item="sea_urchin" />.
@@ -199,9 +225,8 @@ export default () => {
           </p>
           <p>Getting 2 hearts will allow access to her bedroom which is needed for a quest in the summer.</p>
         </ChecklistItem>
-      </GuideSectionContainer>
-      <GuideSectionContainer className="space-y-4" href="/spring1/optional_community_centre_objectives">
-        <summary className="text-xl font-bold">Optional Community Centre Objectives</summary>
+      </GuideSection>
+      <GuideSection title="Optional Community Centre Objectives">
         <p>There are several bundles you can start but not complete, and you can still get the fish later. </p>
         <ChecklistItem id="river_fish_bundle-sunfish">
           Catch 1 <ItemStackText item="sunfish" /> from the river before 7pm, possible in the summer as well.
@@ -224,19 +249,10 @@ export default () => {
         <ChecklistItem id="night_fishing_bundle-bream">
           Catch 1 <ItemStackText item="bream" /> from the river after 6pm, all seasons.
         </ChecklistItem>
-      </GuideSectionContainer>
-      <GuideSectionContainer className="space-y-4" href="/spring1/birthdays">
-        <summary className="text-xl font-bold">Birthdays</summary>
-        {birthdayKent}
-        {birthdayLewis}
-        {birthdayVincent}
-        {birthdayHaley}
-        {birthdayPam}
-        {birthdayShane}
-        {birthdayPierre}
-        {birthdayEmily}
-      </GuideSectionContainer>
-      <section className="space-y-8">
+      </GuideSection>
+      <GuideBirthdays season="Spring" birthdays={birthdays} />
+
+      <section className="space-y-section">
         <h3 className="text-xl font-bold">Day Guide</h3>
         <Day day={1}>
           <p>
@@ -295,7 +311,6 @@ export default () => {
           <p>Nothing special about today, keep working on objectives especially trees and friendships.</p>
         </Day>
         <Day day={4}>
-          {birthdayKent}
         </Day>
         <Day day={5}>
           <p>A very busy day, just try to get the main things done first.</p>
@@ -370,7 +385,6 @@ export default () => {
           <ChecklistItem id="spring7_cart_red_cabbage_seeds">
             The Travelling Cart may have red cabbage seeds so be sure to visit it. None of the other items it may sell are important right now.
           </ChecklistItem>
-          {birthdayLewis}
           <ChecklistItem id="spring7_gift_reset">
             The limit of 2 gifts per villager each week resets on Sunday, so you can give {' '}
             another <ItemStackText item="daffodil" /> to <Wiki>Caroline</Wiki> and {' '}
@@ -412,7 +426,6 @@ export default () => {
           </ChecklistItem>
         </Day>
         <Day day={10}>
-          {birthdayVincent}
           <ChecklistItem id="spring_tree_tappers">
             <p>
               You should get Foraging Level 4 sometime soon. Once you do make at least 3 <ItemStackText item="tapper" />{' '}
@@ -476,7 +489,6 @@ export default () => {
           <ChecklistItem id="spring14_cart_red_cabbage_seeds">
             If you don't have the red cabbage seeds yet, be sure to visit the Travelling Cart.
           </ChecklistItem>
-          {birthdayHaley}
           <p>Some things to be making sure have been working on so far as well as catching up on anything missed previously.</p>
           <p>The two spring bundles. Keeping the spring seeds to make tea saplings.</p>
           <CommunityBundle bundle="spring_crops_bundle" />
@@ -576,7 +588,6 @@ export default () => {
           <p>Keep working on objectives.</p>
         </Day>
         <Day day={18}>
-          {birthdayPam}
           <ChecklistItem id="spring18_salmonberries">
             Spring 18 is the last day you can collect <ItemStackText item="salmonberry" />.
           </ChecklistItem>
@@ -595,7 +606,6 @@ export default () => {
           </ChecklistItem>
         </Day>
         <Day day={20}>
-          {birthdayShane}
         </Day>
         <Day day={21}>
           <ChecklistItem id="spring21_cart_red_cabbage_seeds">
@@ -652,7 +662,6 @@ export default () => {
           <ChecklistItem id="spring26_cart_red_cabbage_seeds">
             If you don't have the red cabbage seeds yet, be sure to visit the Travelling Cart.
           </ChecklistItem>
-          {birthdayPierre}
           <ChecklistItem id="spring26_tea">
             Harvest <ItemStackText item="tea_leaves" /> from the sunroom if you are able.
           </ChecklistItem>
@@ -672,7 +681,6 @@ export default () => {
           </ChecklistItem>
         </Day>
         <Day day={27}>
-          {birthdayEmily}
           <ChecklistItem id="spring27_tea">
             Harvest <ItemStackText item="tea_leaves" /> from the sunroom if you are able.
           </ChecklistItem>

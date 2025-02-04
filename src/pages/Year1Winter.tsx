@@ -118,8 +118,7 @@ interface GuideSectionProps {
 function GuideSection({ title, children }: PropsWithChildren<GuideSectionProps>) {
   let id = '/year1-winter/' + title.toLowerCase().replace(/ /g, '_');
   return (
-    <GuideSectionContainer className="space-y-4" href={id}>
-      <summary className="text-lg font-bold">{title}</summary>
+    <GuideSectionContainer title={title} href={id}>
       {children}
     </GuideSectionContainer>
   );
@@ -127,8 +126,8 @@ function GuideSection({ title, children }: PropsWithChildren<GuideSectionProps>)
 
 export default () => {
   return (
-    <div className="space-y-8 max-w-4xl">
-      <h2 className="text-2xl font-bold">First Year Winter</h2>
+    <div className="space-y-section max-w-4xl">
+      <h1>First Year Winter</h1>
 
       <GuideSection title="Previous Progress">
         <p>
@@ -221,10 +220,9 @@ export default () => {
         <ChecklistItem id="the_mysterious_qi_4">
           Straight forward except means leaving the desert again.
           Completing will give access to the <Wiki>Casino</Wiki> which means coming back again.
-
         </ChecklistItem>
       </GuideSection>
-      <section className="space-y-8">
+      <section className="space-y-section">
         <h3 className="text-xl font-bold">Day Guide</h3>
         <Day day={1}>
           <ChecklistItem id="winter1_heaters">
@@ -305,7 +303,17 @@ export default () => {
         <Day day={5}></Day>
         <Day day={6}></Day>
         <Day day={7}></Day>
-        <Day day={8}></Day>
+        <Day day={8}>
+          <ChecklistItem id="winter8_festival_of_ice">
+            <p>
+              Today is the <Wiki>Festival of Ice</Wiki> which will close all shops and the southern
+              forest. If you want to attend visit the forest between 9am and 2pm.
+            </p>
+            <p>
+              The main activity of interest is a fishing contest with some prizes.
+            </p>
+          </ChecklistItem>
+        </Day>
 
       </section>
     </div>

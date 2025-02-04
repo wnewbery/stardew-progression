@@ -108,8 +108,7 @@ interface GuideSectionProps {
 function GuideSection({ title, children }: PropsWithChildren<GuideSectionProps>) {
   let id = '/year1-fall/' + title.toLowerCase().replace(/ /g, '_');
   return (
-    <GuideSectionContainer className="space-y-4" href={id}>
-      <summary className="text-lg font-bold">{title}</summary>
+    <GuideSectionContainer title={title} href={id}>
       {children}
     </GuideSectionContainer>
   );

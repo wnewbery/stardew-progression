@@ -10,8 +10,7 @@ export default ({ season, birthdays }: GuideBirthdaysProps) => {
   let id = `/year1-${seasonId}/birthdays`;
 
   return (
-    <GuideSectionContainer className="space-y-4" href={id}>
-      <summary className="text-lg font-bold">Birthdays</summary>
+    <GuideSectionContainer title="Birthdays" href={id}>
       {birthdays.map(b => <GuideBirthday key={b.day} season={season} birthday={b} />)}
     </GuideSectionContainer>
   )

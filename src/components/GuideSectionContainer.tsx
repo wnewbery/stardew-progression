@@ -3,23 +3,31 @@ import { useAppSelector, useAppDispatch } from "../redux/Store";
 import { setUiElementHidden } from "../redux/ChecklistSlice";
 
 interface GuideSectionProps {
+  title: string;
   href: string;
   storeId?: string;
   children: ReactNode;
-  className?: string;
 }
 
-export default ({ href, storeId, children, className }: GuideSectionProps) => {
+export default ({ title, href, storeId, children }: GuideSectionProps) => {
   storeId ??= href;
-  const hidden = useAppSelector(state => state.checklist.uiElementsHidden[storeId] ?? false);
+  const hidden = useAppSelector(
+    (state) => state.checklist.uiElementsHidden[storeId] ?? false
+  );
   const dispatch = useAppDispatch();
   const setDetailsOpen = (evt: React.ToggleEvent<HTMLDetailsElement>) => {
     const open = evt.currentTarget.open;
     dispatch(setUiElementHidden({ id: storeId, hidden: !open }));
-  }
+  };
   return (
-    <details id={href} open={!hidden} onToggle={setDetailsOpen} className={`break-inside-avoid-column ${className}`}>
+    <details
+      id={href}
+      open={!hidden}
+      onToggle={setDetailsOpen}
+      className="break-inside-avoid-column open:space-y-p"
+    >
+      <summary><h2 className="inline">{title}</h2></summary>
       {children}
     </details>
   );
-}
+};
