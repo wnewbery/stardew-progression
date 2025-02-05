@@ -33,15 +33,15 @@ export default function ItemStackText({ className, stack, item, quality, label, 
     }
   }
 
-  let overlayIcon = quality?.overlayIcon ?
+  const overlayIcon = quality?.overlayIcon ?
     <img src={quality.overlayIcon} className="absolute left-0 top-0" />
     : '';
-  let countStr = count && count > 1 ? ` (${count})` : '';
+  const countStr = count && count > 1 ? ` (${count})` : '';
 
   return (
     <span className={`whitespace-nowrap ${className}`}>
       <span className="inline-block relative align-middle">
-        <img src={item.icon} width="24" height="24" />
+        <img className="max-w-none" src={item.icon} width="24" height="24" />
         {overlayIcon}
       </span>
       {' '}

@@ -54,9 +54,11 @@ export default function CommunityBundle({ bundle }: CommunityBundleProps) {
             }
             return (
               <tr key={item.id} onClick={toggleItem}>
-                <td className="p-4"><input name={item.checklistId} type="checkbox" checked={isItemCompleted} onChange={onItemCompleted} /></td>
-                <td className="p-4"><ItemStackText stack={item} /></td>
-                <td className="p-4"><Markdown md={item.item.sourceHint} /></td>
+                <td className="min-w-10 h-4 xs:h-6 text-center"><input name={item.checklistId} type="checkbox" checked={isItemCompleted} onChange={onItemCompleted} /></td>
+                <td className="w-1 px-2 xs:px-4 h-6">
+                  <ItemStackText stack={item} />
+                </td>
+                <td className="w-full px-2 xs:px-4 h-6"><Markdown md={item.item.sourceHint} /></td>
               </tr>
             );
           })}
