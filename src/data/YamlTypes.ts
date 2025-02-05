@@ -6,6 +6,7 @@ export interface YamlImportType {
 export interface ItemData {
   label: string;
   source_hint?: string;
+  wiki?: string;
 }
 export interface ItemStackData {
   id: string;

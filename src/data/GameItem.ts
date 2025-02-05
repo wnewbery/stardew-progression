@@ -1,4 +1,5 @@
 import GameIcons from "./GameIcons";
+import { ItemData } from "./YamlTypes";
 
 export default class GameItem {
   public id: string;
@@ -7,18 +8,12 @@ export default class GameItem {
   public wiki: string;
   public sourceHint?: string;
 
-  public constructor(yaml: any) {
-    this.id = yaml.id;
+  public constructor(yaml: ItemData) {
     this.label = yaml.label;
-    this.wiki = yaml.wiki;
+    this.wiki = yaml.wiki ?? `https://stardewvalleywiki.com/${this.label.replaceAll(' ', '_')}`;
     this.sourceHint = yaml.source_hint;
 
-    if (!this.id) {
-      this.id = this.label.toLocaleLowerCase().replaceAll(' ', '_').replaceAll(/[\':()]/g, '');
-    }
+    this.id = this.label.toLocaleLowerCase().replaceAll(' ', '_').replaceAll(/[':()]/g, '');
     this.icon = GameIcons(this.id);
-    if (!this.wiki) {
-      this.wiki = `https://stardewvalleywiki.com/${this.label.replaceAll(' ', '_')}`;
-    }
   }
 }
