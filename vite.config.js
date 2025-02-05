@@ -8,6 +8,16 @@ export default defineConfig(() => {
     plugins: [react(), tailwindcss(), ViteYaml()],
     build: {
       assetsInlineLimit: 0,
+      rollupOptions: {
+        output: {
+          manualChunks: (id) => {
+            if (id.includes("node_modules")) {
+              return "vendor";
+            }
+            return null;
+          },
+        },
+      },
     },
     base: "",
   };
