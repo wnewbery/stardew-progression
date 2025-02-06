@@ -29,15 +29,17 @@ export default function CommunityBundle({ bundle }: CommunityBundleProps) {
         <input name={bundle.id} type="checkbox" checked={isBundleCompleted} onChange={onBundleCompleted} className="w-6 h-6 align-middle" />
         <span className="align-middle nowrap">
           {bundle.label}
-          <span className="hidden xs:inline"> Bundle</span>
+          {!bundle.label.endsWith('Bundle') && <span className="hidden xs:inline"> Bundle</span>}
         </span>
       </summary>
-      <div className="m-4">
-        <span className="font-bold mr-2">Reward:</span>
-        <ItemStackText stack={bundle.reward} />
+      <div className="ml-p">
+        <span className="font-bold mr-p">Reward:</span>
+        {bundle.reward && <ItemStackText stack={bundle.reward} />}
+        {bundle.rewardText && <span>{bundle.rewardText}</span>}
       </div>
-      {!bundle.allNeeded && <div className="ml-4">{bundle.needed} items needed</div>}
-      <table className="border-t border-secondary w-full">
+      {!bundle.allNeeded && <div className="ml-p">{bundle.needed} items needed</div>}
+      <div className="w-full border-t border-secondary"></div>
+      <table className="w-full my-p">
         <tbody>
           {bundle.items.map(item => {
             const isItemCompleted = useAppSelector(state => state.checklist.items[item.checklistId] ?? false);

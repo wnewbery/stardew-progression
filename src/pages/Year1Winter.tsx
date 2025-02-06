@@ -116,7 +116,7 @@ interface GuideSectionProps {
   title: string;
 }
 function GuideSection({ title, children }: PropsWithChildren<GuideSectionProps>) {
-  let id = '/year1-winter/' + title.toLowerCase().replace(/ /g, '_');
+  const id = '/year1-winter/' + title.toLowerCase().replace(/ /g, '_');
   return (
     <GuideSectionContainer title={title} href={id}>
       {children}
@@ -303,6 +303,7 @@ export default function Year1Winter() {
         <Day day={5}></Day>
         <Day day={6}></Day>
         <Day day={7}></Day>
+
         <Day day={8}>
           <ChecklistItem id="winter8_festival_of_ice">
             <p>
@@ -314,6 +315,13 @@ export default function Year1Winter() {
             </p>
           </ChecklistItem>
         </Day>
+        <Day day={9}></Day>
+        <Day day={10}></Day>
+        <Day day={11}></Day>
+        <Day day={12}></Day>
+        <Day day={13}></Day>
+        <Day day={14}></Day>
+
 
       </section>
     </div>

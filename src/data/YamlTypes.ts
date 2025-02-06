@@ -32,7 +32,8 @@ export interface BundleData {
   label: string;
   icon: string;
   description?: string;
-  reward: ItemStackData;
+  reward?: ItemStackData;
+  reward_text?: string;
   needed?: number;
   items: BundleItemData[];
 }

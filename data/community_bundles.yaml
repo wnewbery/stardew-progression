@@ -332,3 +332,24 @@
         - id: wine
         - id: rabbits_foot
         - id: pomegranate
+
+- label: Abandoned JojaMart
+  reward:
+    item_id: Movie Theater
+    label: Movie Theater
+  bundles:
+    - label: "The Missing Bundle"
+      icon: 32px-Bundle_Purple
+      needed: 5
+      reward_text: Movie Theater
+      items:
+        - id: wine
+          quality: silver
+        - id: dinosaur_mayonnaise
+        - id: prismatic_shard
+        - id: ancient_fruit
+          quality: gold
+          count: 5
+        - id: void_salmon
+          quality: gold
+        - id: caviar

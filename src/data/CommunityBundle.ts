@@ -9,7 +9,8 @@ export default class CommunityBundle {
   public id: string;
   public label: string;
   public description?: string;
-  public reward: Reward;
+  public reward?: Reward;
+  public rewardText?: string;
   public items: CommunityItem[];
   public needed: number;
   public icon: string;
@@ -21,7 +22,8 @@ export default class CommunityBundle {
     this.label = yaml.label;
     this.description = yaml.description;
 
-    this.reward = new Reward(yaml.reward);
+    if (yaml.reward) this.reward = new Reward(yaml.reward);
+    if (yaml.reward_text) this.rewardText = yaml.reward_text;
     this.items = yaml.items.map(item => new CommunityItem(this, item));
     this.needed = yaml.needed ?? this.items.length;
 
