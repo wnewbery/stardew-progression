@@ -91,9 +91,10 @@ interface GuideSectionProps {
   title: string;
 }
 function GuideSection({ title, children }: PropsWithChildren<GuideSectionProps>) {
-  const id = '/year1-winter/' + title.toLowerCase().replace(/ /g, '_');
+  const id = '/year1-spring/' + title.toLowerCase().replace(/ /g, '_');
+  const topHref = title === 'Contents' ? undefined : "#/year1-spring/contents";
   return (
-    <GuideSectionContainer title={title} href={id}>
+    <GuideSectionContainer title={title} href={id} topHref={topHref}>
       {children}
     </GuideSectionContainer>
   );
@@ -105,13 +106,15 @@ export default function Year1Spring() {
       <h1 className="text-2xl font-bold">First Year Spring</h1>
       <GuideSection title="Contents">
         <ul>
-          <li>
-            <ul>
-              {Array.from({ length: 27 }, (_, i) => (
-                <li key={i}><a href={`#/year1-spring/${i + 1}`}>Day {i + 1}</a></li>
-              ))}
-            </ul>
-          </li>
+          <li><a href="#/year1-spring/advice">Advice</a></li>
+          <li><a href="#/year1-spring/community_centre_objectives">Community Centre Objectives</a></li>
+          <li><a href="#/year1-spring/other_objectives">Other Objectives</a></li>
+          <li><a href="#/year1-spring/optional_community_centre_objectives">Optional Community Centre Objectives</a></li>
+          <li><a href="#/year1-spring/birthdays">Birthdays</a></li>
+          <li><a href="#/year1-spring/day-1">Day 1</a></li>
+          <li><a href="#/year1-spring/day-7">Day 7</a></li>
+          <li><a href="#/year1-spring/day-14">Day 14</a></li>
+          <li><a href="#/year1-spring/day-21">Day 21</a></li>
         </ul>
       </GuideSection>
       <GuideSection title="Advice">

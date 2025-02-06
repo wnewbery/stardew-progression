@@ -14,7 +14,7 @@
   /**Paragraph/text spacing.*/
   --spacing-p: 1rem;
   /**Spacing between sections such as chapters, categories, etc.*/
-  --spacing-section: var(--spacing-p) * 2;
+  --spacing-section: 2rem;
 }
 
 @layer base {

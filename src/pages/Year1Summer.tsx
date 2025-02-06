@@ -119,8 +119,9 @@ interface GuideSectionProps {
 }
 function GuideSection({ title, children }: PropsWithChildren<GuideSectionProps>) {
   const id = '/year1-summer/' + title.toLowerCase().replace(/ /g, '_');
+  const topHref = title === 'Contents' ? undefined : "#/year1-summer/contents";
   return (
-    <GuideSectionContainer title={title} href={id}>
+    <GuideSectionContainer title={title} href={id} topHref={topHref}>
       {children}
     </GuideSectionContainer>
   );
@@ -131,6 +132,22 @@ export default function Year1Summer() {
   return (
     <div className="space-y-section max-w-4xl">
       <h1>First Year Summer</h1>
+      <GuideSection title="Contents">
+        <ul>
+          <li><a href="#/year1-summer/spring_catchup">Spring Catchup</a></li>
+          <li><a href="#/year1-summer/community_centre_objectives">Community Centre Objectives</a></li>
+          <li><a href="#/year1-summer/summer_advice">Summer Advice</a></li>
+          <li><a href="#/year1-summer/raising_animals_by_mid_summer">Raising Animals by Mid Summer</a></li>
+          <li><a href="#/year1-summer/fishing">Fishing</a></li>
+          <li><a href="#/year1-summer/mining">Mining</a></li>
+          <li><a href="#/year1-summer/other_objectives">Other Objectives</a></li>
+          <li><a href="#/year1-summer/birthdays">Birthdays</a></li>
+          <li><a href="#/year1-summer/day-1">Day 1</a></li>
+          <li><a href="#/year1-summer/day-7">Day 7</a></li>
+          <li><a href="#/year1-summer/day-14">Day 14</a></li>
+          <li><a href="#/year1-summer/day-21">Day 21</a></li>
+        </ul>
+      </GuideSection>
       <GuideSection title="Spring Catchup">
         <p>
           You should continue to work on the following if you missed any.

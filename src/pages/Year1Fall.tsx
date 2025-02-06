@@ -107,8 +107,9 @@ interface GuideSectionProps {
 }
 function GuideSection({ title, children }: PropsWithChildren<GuideSectionProps>) {
   const id = '/year1-fall/' + title.toLowerCase().replace(/ /g, '_');
+  const topHref = title === 'Contents' ? undefined : "#/year1-fall/contents";
   return (
-    <GuideSectionContainer title={title} href={id}>
+    <GuideSectionContainer title={title} href={id} topHref={topHref}>
       {children}
     </GuideSectionContainer>
   );
@@ -117,8 +118,20 @@ function GuideSection({ title, children }: PropsWithChildren<GuideSectionProps>)
 export default function Year1Fall() {
   return (
     <div className="space-y-8 max-w-4xl">
-      <h2 className="text-2xl font-bold">First Year Fall</h2>
-
+      <h1 className="text-2xl font-bold">First Year Fall</h1>
+      <GuideSection title="Contents">
+        <ul>
+          <li><a href="#/year1-fall/previous_progress">Previous Progress</a></li>
+          <li><a href="#/year1-fall/community_centre_objectives">Community Centre Objectives</a></li>
+          <li><a href="#/year1-fall/livestock">Livestock</a></li>
+          <li><a href="#/year1-fall/fishing">Fishing</a></li>
+          <li><a href="#/year1-fall/birthdays">Birthdays</a></li>
+          <li><a href="#/year1-fall/day-1">Day 1</a></li>
+          <li><a href="#/year1-fall/day-7">Day 7</a></li>
+          <li><a href="#/year1-fall/day-14">Day 14</a></li>
+          <li><a href="#/year1-fall/day-21">Day 21</a></li>
+        </ul>
+      </GuideSection>
       <GuideSection title="Previous Progress">
         <p>
           You really want to have the following completed already, if not you will need to look

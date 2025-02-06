@@ -117,8 +117,9 @@ interface GuideSectionProps {
 }
 function GuideSection({ title, children }: PropsWithChildren<GuideSectionProps>) {
   const id = '/year1-winter/' + title.toLowerCase().replace(/ /g, '_');
+  const topHref = title === 'Contents' ? undefined : "#/year1-winter/contents";
   return (
-    <GuideSectionContainer title={title} href={id}>
+    <GuideSectionContainer title={title} href={id} topHref={topHref}>
       {children}
     </GuideSectionContainer>
   );
@@ -128,7 +129,18 @@ export default function Year1Winter() {
   return (
     <div className="space-y-section max-w-4xl">
       <h1>First Year Winter</h1>
-
+      <GuideSection title="Contents">
+        <ul>
+          <li><a href="#/year1-winter/previous_progress">Previous Progress</a></li>
+          <li><a href="#/year1-winter/winter_objectives">Winter Objectives</a></li>
+          <li><a href="#/year1-winter/birthdays">Birthdays</a></li>
+          <li><a href="#/year1-winter/desert">Desert</a></li>
+          <li><a href="#/year1-winter/day-1">Day 1</a></li>
+          <li><a href="#/year1-winter/day-7">Day 7</a></li>
+          <li><a href="#/year1-winter/day-14">Day 14</a></li>
+          <li><a href="#/year1-winter/day-21">Day 21</a></li>
+        </ul>
+      </GuideSection>
       <GuideSection title="Previous Progress">
         <p>
           You really should have the following completed already,

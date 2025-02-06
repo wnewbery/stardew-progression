@@ -24,6 +24,7 @@ interface GuideDayProps {
 }
 export default function GuideDay({ season, birthdays, day, title, children }: GuideDayProps) {
   const seasonId = `year1-${season.toLowerCase()}`;
+  const topHref = `#/${seasonId}/contents`;
 
   const birthday = birthdays.find(b => b.day === day);
 
@@ -39,7 +40,7 @@ export default function GuideDay({ season, birthdays, day, title, children }: Gu
 
   title ??= `Day ${day} (${weekDays[(day - 1) % 7]})`;
   return (
-    <GuideSectionContainer title={title} href={`${seasonId}/${day}`}>
+    <GuideSectionContainer title={title} href={`/${seasonId}/day-${day}`} topHref={topHref}>
       {birthday && <GuideBirthday season={season} birthday={birthday} />}
       {redCabbageDay && (
         <ChecklistItem id={`${season.toLowerCase()}${day}_cart_red_cabbage_seeds`}>

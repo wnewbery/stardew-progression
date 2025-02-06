@@ -5,11 +5,12 @@ import { setUiElementHidden } from "../redux/ChecklistSlice";
 interface GuideSectionProps {
   title: string;
   href: string;
+  topHref?: string;
   storeId?: string;
   children: ReactNode;
 }
 
-export default function GuideSectionContainer({ title, href, storeId, children }: GuideSectionProps) {
+export default function GuideSectionContainer({ title, href, topHref, storeId, children }: GuideSectionProps) {
   storeId ??= href;
   const hidden = useAppSelector(
     (state) => state.checklist.uiElementsHidden[storeId] ?? false
@@ -26,7 +27,10 @@ export default function GuideSectionContainer({ title, href, storeId, children }
       onToggle={setDetailsOpen}
       className="break-inside-avoid-column open:space-y-p"
     >
-      <summary><h2 className="inline">{title}</h2></summary>
+      <summary>
+        <h2 className="inline">{title}</h2>
+        {topHref && <a className="ml-section" href={topHref}>Top</a>}
+      </summary>
       {children}
     </details>
   );
