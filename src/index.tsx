@@ -42,7 +42,7 @@ const footer = (
 const App = () => {
   return (
     <div className="h-screen v-screen xl:flex flex-row ">
-      <div className="p-8 xl:max-w-md flex-initial flex flex-col gap-4 overflow-y-auto xl:border-r-2 border-r-solid border-accent">
+      <div className="p-8 xl:max-w-md flex-initial shrink-0 flex flex-col gap-4 overflow-y-auto xl:border-r-2 border-r-solid border-accent">
         <h1>Stardew Valley Progression Guide &amp; Tracker</h1>
         <nav>
           <section>
@@ -73,7 +73,7 @@ const App = () => {
 
         <div className="hidden xl:block">{footer}</div>
       </div>
-      <div className="pt-8 px-8 flex-auto overflow-y-auto">
+      <div className="pt-8 px-8 grow overflow-y-auto">
         <Routes>
           <Route path="/" element={<Navigate to="/bundles" />} />
           <Route path="/buildings" element={<Buildings />} />
