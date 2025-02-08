@@ -1,7 +1,8 @@
 import ChecklistItem from "../components/ChecklistItem";
 import CommunityBundle from "../components/CommunityBundle";
-import ItemStackText from "../components/ItemStackText";
+import ItemStackText, { GoldItems } from "../components/ItemStackText";
 import ArtifactImage from "../assets/Artifact_tile.gif";
+import FirstYearCheckImage from "../assets/first-year-check.png";
 import Wiki from "../components/Wiki";
 import Spoiler from "../components/Spoiler";
 import { PropsWithChildren, ReactNode } from "react";
@@ -122,27 +123,52 @@ export default function Year1Spring() {
           If you want to guarantee completing the first year is possible, you must select this when <i>starting the game</i>.{' '}
           You need to by <ItemStackText item="red_cabbage_seeds" /> from the Travelling Cart, and this setting guarantees it will be stocked at least once between Spring 7 and Winter 16.
         </ChecklistItem>
-        <p>
-          You should generally go to bed by 12pm to restore full energy.{' '}
-          The exception is if you have a level up, which always restores full energy.{' '}
-          Look for &quot;You've got some new ideas to sleep on.&quot; on the
-        </p>
-        <p>
-          Getting the farming level up early will help get the needed quality crops for the community centre,{' '}
-          but also getting better quality crops to gift or sell which will give more friendship or gold.{' '}
-          While parsnips don't give the most gold, they are cheap and grow fast.
-        </p>
-        <p>You can check the weather forecast on the TV to see if it will rain the next day, which means crops will not need watering, and may help with time planning.</p>
-        <p>There is no advantage to giving the community centre higher quality items than required, so if you only have a gold or an iridium item it might be worth waiting to get a regular item and sell or gift the better one.</p>
-        <p>Try and do quests as they give extra money and friendship.</p>
-        <p>Try and keep at least one of each item in case the shops Help Wanted asks for one.{' '}
-          You need to find the villager and complete the quest before the end of the next day, which may not be enough time to get some items fresh.
-        </p>
-        <p>Be sure to plant your crops with enough time, they will die if they are not completed before the end of the season. </p>
-        <p><ItemStackText item="field_snack" /> is a good item to gain extra energy, you can get the seeds while cutting down trees, or by <i>shaking</i> a tree which <i>does not use energy</i>.</p>
-        <p><ItemStackText item="spring_onion" /> have a chance to spawn in the south by the sewer <i>every day</i> and while not worth much to sell, they are a cheap source of energy.</p>
-        <p>You can give each character 2 gifts a week.</p>
-        <p>When deciding when to upgrade the watering can, check the weather forecast as if it is raining the next day, and you can collect it the day after, then no crops will be missed.</p>
+        <ChecklistItem id="first_year_completable_check">
+          <p>
+            It is possible to check the save file to see when the garunteed seeds will be or if
+            you already missed.
+          </p>
+          <Spoiler hideSize={true}>
+            <ol className="list-decimal list-outside pl-4">
+              <li>Locate your save files, on Windows this should be <code>%APPDATA%\StardewValley\Saves</code>.</li>
+              <li>Open the saves <code>SaveGameInfo</code> file in a text editor.</li>
+              <li>Search for <code>&lt;visitsUntilY1Guarantee&gt;</code>.</li>
+              <li>
+                If it has the value{' '}
+                <code>&lt;visitsUntilY1Guarantee&gt;-1&lt;/visitsUntilY1Guarantee&gt;</code>{' '}
+                then either you missed it or it was not enabled at the start of the game.
+              </li>
+            </ol>
+            <img src={FirstYearCheckImage} className="max-w-full" />
+          </Spoiler>
+        </ChecklistItem>
+        <ul className="list-disc list-outside pl-4 space-y-2">
+          <li>
+            You should generally go to bed by 12pm to restore full energy.{' '}
+            The exception is if you have a level up, which always restores full energy.{' '}
+            Look for &quot;You've got some new ideas to sleep on.&quot; on the
+          </li>
+          <li>
+            Getting the farming level up early will help get the needed quality crops for the community centre,{' '}
+            but also getting better quality crops to gift or sell which will give more friendship or gold.{' '}
+            While parsnips don't give the most gold, they are cheap and grow fast.
+          </li>
+          <li>
+            You can check the weather forecast on the TV to see if it will rain the next day, which means crops will not need watering, and may help with time planning.
+          </li>
+          <li>
+            There is no advantage to giving the community centre higher quality items than required, so if you only have a gold or an iridium item it might be worth waiting to get a regular item and sell or gift the better one.
+          </li>
+          <li>Try and do quests as they give extra money and friendship.</li>
+          <li>Try and keep at least one of each item in case the shops Help Wanted asks for one.{' '}
+            You need to find the villager and complete the quest before the end of the next day, which may not be enough time to get some items fresh.
+          </li>
+          <li>Be sure to plant your crops with enough time, they will die if they are not completed before the end of the season. </li>
+          <li><ItemStackText item="field_snack" /> is a good item to gain extra energy, you can get the seeds while cutting down trees, or by <i>shaking</i> a tree which <i>does not use energy</i>.</li>
+          <li><ItemStackText item="spring_onion" /> have a chance to spawn in the south by the sewer <i>every day</i> and while not worth much to sell, they are a cheap source of energy.</li>
+          <li>You can give each character 2 gifts a week.</li>
+          <li>When deciding when to upgrade the watering can, check the weather forecast as if it is raining the next day, and you can collect it the day after, then no crops will be missed.</li>
+        </ul>
       </GuideSection>
       <GuideSection title="Community Centre Objectives">
         <ChecklistItem id="red_cabbage_seed">
@@ -150,8 +176,20 @@ export default function Year1Spring() {
           You can't buy this seed from town until year 2, and you need it for the Dye Bundle in the community centre.
         </ChecklistItem>
         <ChecklistItem id="quality_crops_bundle-parsnip">
-          Grow and harvest 5 <ItemStackText item="parsnip" quality="gold" label="Parsnips" />.{' '}
-          Planting lots of parsnips is also a good way to level the farming skill.
+          <p>
+            Grow and harvest 5 <GoldItems>parsnip</GoldItems> for the Quality Crops Bundle.
+            Planting lots of parsnips is also a good way to level the farming skill.
+          </p>
+          <p>
+            You should consider this a major priority, getting the farming level up early will
+            help the rest of the game, but also while it is possible to do the Quality Crops Bundle
+            without the parsnips, it is one of the harder bundles so best to get an early start.
+          </p>
+          <p>
+            Also as a note on crop bundles, you can not use the <Wiki>Greenhouse</Wiki> to catch up
+            on crops if you miss them in a season. You need the crop bundles to unlock the
+            greenhouse, so no crop bundle, no greenhouse.
+          </p>
         </ChecklistItem>
         <ChecklistItem id="exotic_foraging_bundle-cave_carrot">
           You may find a <ItemStackText item="cave_carrot" /> in the mines for the community centre.

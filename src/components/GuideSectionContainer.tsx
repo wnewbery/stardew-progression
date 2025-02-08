@@ -10,10 +10,12 @@ interface GuideSectionProps {
   children: ReactNode;
 }
 
+const defaultExpand = window.matchMedia('screen and (min-width: 500px)').matches;
+
 export default function GuideSectionContainer({ title, href, topHref, storeId, children }: GuideSectionProps) {
   storeId ??= href;
   const hidden = useAppSelector(
-    (state) => state.checklist.uiElementsHidden[storeId] ?? false
+    (state) => state.checklist.uiElementsHidden[storeId] ?? !defaultExpand
   );
   const dispatch = useAppDispatch();
   const setDetailsOpen = (evt: React.ToggleEvent<HTMLDetailsElement>) => {

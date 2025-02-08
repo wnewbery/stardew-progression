@@ -1,6 +1,10 @@
-import { PropsWithChildren, useState } from "react";
+import { useState } from "react";
 
-export default function Spoiler({ children }: PropsWithChildren) {
+interface SpoilerProps {
+  children: React.ReactNode;
+  hideSize?: boolean;
+}
+export default function Spoiler({ children, hideSize }: SpoilerProps) {
   const [revealed, setRevealed] = useState(false);
   let button, cls = '';
   if (!revealed) {
@@ -17,7 +21,7 @@ export default function Spoiler({ children }: PropsWithChildren) {
 
   return (
     <div className={`block relative bg-secondary p-4 rounded-md ${cls}`} onClick={onClick}>
-      <div className={revealed ? "block" : "invisible"}>{children}</div>
+      <div className={revealed ? "block" : (hideSize ? "hidden" : "invisible")}>{children}</div>
       {button}
     </div>
   )

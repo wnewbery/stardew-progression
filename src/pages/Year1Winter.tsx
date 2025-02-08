@@ -141,6 +141,25 @@ export default function Year1Winter() {
           <li><a href="#/year1-winter/day-21">Day 21</a></li>
         </ul>
       </GuideSection>
+      <GuideSection title="Overview">
+        <p>
+          If kept up with the suggested progress, there isn't actually much to do in Winter.
+          The only thing that is winter-only is the Winter Foraging Bundle.
+          If you are behind on anything, this also gives you time to complete them now.
+        </p>
+        <p>
+          It is possible you still didn't find the essential Red Cabbage even with the guaranteed
+          first year completable.
+          The last time the cart can have those garunteed seeds is Winter 16 at the Nigh Market.
+          Since a Red Cabbage takes 9 days to grow without fertilizer, that still gives plenty of
+          time with the greenhouse.
+          Just hopefully you were checking everytime the cart came and didn't miss it.
+        </p>
+        <p>
+          As such there isn't much to do day by day guide, some events and quests you might want to
+          do, and getting ready for the next year.
+        </p>
+      </GuideSection>
       <GuideSection title="Previous Progress">
         <p>
           You really should have the following completed already,
@@ -333,8 +352,20 @@ export default function Year1Winter() {
         <Day day={12}></Day>
         <Day day={13}></Day>
         <Day day={14}></Day>
-
-
+        <Day day={15}></Day>
+        <Day day={16}></Day>
+        <Day day={17}></Day>
+        <Day day={18}></Day>
+        <Day day={19}></Day>
+        <Day day={20}></Day>
+        <Day day={21}></Day>
+        <Day day={22}></Day>
+        <Day day={23}></Day>
+        <Day day={24}></Day>
+        <Day day={25}></Day>
+        <Day day={26}></Day>
+        <Day day={27}></Day>
+        <Day day={28}></Day>
       </section>
     </div>
   );
