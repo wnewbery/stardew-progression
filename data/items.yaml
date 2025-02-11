@@ -1,50 +1,8 @@
-- label: Wild Horseradish
-  source_hint: "[Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)"
-- label: Daffodil
-  source_hint: "[Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)"
-- label: Leek
-  source_hint: "[Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)"
-- label: Dandelion
-  source_hint: "[Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)"
 - label: Spring Seeds
 
-- label: Grape
-  source_hint: "[Summer Foraging](https://stardewvalleywiki.com/Summer#Forage), [Fall Farming](https://stardewvalleywiki.com/Fall#Crops)"
-- label: Spice Berry
-  source_hint: "[Summer Foraging](https://stardewvalleywiki.com/Summer#Forage), fruit bat cave"
-- label: Sweet Pea
-  source_hint: "[Summer Foraging](https://stardewvalleywiki.com/Summer#Forage)"
 - label: Summer Seeds
 
-- label: Common Mushroom
-  source_hint: |
-    [Fall Foraging](https://stardewvalleywiki.com/Fall#Forage), [Winter Foraging](https://stardewvalleywiki.com/Winter#Forage),
-    Spring & Fall in the Secret Woods,
-    Mushroom cave,
-    Tapping a mushroom tree
-- label: Wild Plum
-  source_hint: |
-    [Fall Foraging](https://stardewvalleywiki.com/Fall#Forage),
-    Fruit bat cave
-- label: Hazelnut
-  source_hint: "[Fall Foraging](https://stardewvalleywiki.com/Fall#Forage)"
-- label: Blackberry
-  source_hint: |
-    [Fall Foraging](https://stardewvalleywiki.com/Fall#Forage),
-    Fruit bat cave
 - label: Fall Seeds
-- label: Winter Root
-  source_hint: |
-    Tilling or artifacts in winter,
-    Blue slimes on mine levels 41-79
-- label: Crystal Fruit
-  source_hint: |
-    [Winter Foraging](https://stardewvalleywiki.com/Winter#Forage),
-    Dust sprites on mine levels 41-79
-- label: Snow Yam
-  source_hint: Tilling or artifacts in winter
-- label: Crocus
-  source_hint: "[Winter Foraging](https://stardewvalleywiki.com/Winter#Forage)"
 - label: Winter Seeds
 
 - label: Wood
@@ -55,29 +13,14 @@
   source_hint: Large stumps with an upgraded axe
 - label: Charcoal Kiln
 
-- label: Coconut
-  source_hint: |
-    Desert foraging,
-    Oasis,
-    Palm trees in the desert and Ginger Island
-- label: Cactus Fruit
-  source_hint: "Desert foraging, Oasis"
 - label: Cave Carrot
   source_hint: "Boxes in the mines"
-- label: Red Mushroom
-  source_hint: |
-    Summer or Fall in the Secret Woods,
-    The Mushroom Cave
-- label: Purple Mushroom
-  source_hint: The Mushroom Cave
 - label: Maple Syrup
   source_hint: "Tree taps"
 - label: Oak Resin
   source_hint: "Tree taps"
 - label: Pine Tar
   source_hint: "Tree taps"
-- label: Morel
-  source_hint: "The Mushroom Cave, Secret Woods in Spring"
 - label: Autumn's Bounty
 
 - label: Parsnip
@@ -92,12 +35,6 @@
 - label: Deluxe Speed-Gro
 
 - label: Tomato
-  source_hint: "Summer crops"
-- label: Hot Pepper
-  source_hint: "Summer crops"
-- label: Blueberry
-  source_hint: "Summer crops"
-- label: Melon
   source_hint: "Summer crops"
 - label: Quality Sprinkler
 
@@ -141,56 +78,14 @@
   source_hint: Bee House, Oasis
 - label: Jelly
   source_hint: Preserves Jar
-- label: Apple
-  source_hint: "Apple tree in fall, Fruit bat cave"
-- label: Apricot
-  source_hint: "Apricot tree in spring, Fruit bat cave"
-- label: Orange
-  source_hint: "Orange tree in summer, Fruit bat cave"
-- label: Peach
-  source_hint: "Peach tree in summer, Fruit bat cave"
-- label: Pomegranate
-  source_hint: "Pomegranate tree in fall, Fruit bat cave"
-- label: Cherry
-  source_hint: "Cherry tree in spring, Fruit bat cave"
 - label: Keg
 
-- label: Sunfish
-  source_hint: "Found in Rivers, 6am – 7pm, Spring and Summer during sunny weather."
-- label: Catfish
-  source_hint: "Found in Rivers and Secret Woods, 6am – midnight, Spring and Fall. Only when raining.\n\nCan be found in Summer during rain in the Secret Woods and Witch's Swamp, Winter with a Rain Totem."
-- label: Shad
-  source_hint: "Found in Rivers, 9am – 2am, Spring, Summer, and Fall. Only when raining."
-- label: Tiger Trout
-  source_hint: "Found in Rivers, 6am – 7pm, Fall and Winter. Can be found in any weather."
 - label: Deluxe Bait
 
-- label: Largemouth Bass
-  source_hint: "Found in the Mountain Lake, 6am – 7pm, All Seasons."
-- label: Carp
-  source_hint: "Found in the Mountain Lake, Anytime, during Spring, Summer, or Fall.\n\nFound in Secret Woods or Sewer, Anytime, All Seasons."
-- label: Bullhead
-  source_hint: "Found in the Mountain Lake, Anytime, All Seasons."
-- label: Sturgeon
-  source_hint: "Found in the Mountain Lake, 6am – 7pm, Summer and Winter."
 - label: Dressed Spinner
 
-- label: Sardine
-  source_hint: "Found in the Ocean, 6am – 7pm, Spring, Fall, and Winter."
-- label: Tuna
-  source_hint: "Found in the Ocean, 6am – 7pm, Summer and Winter."
-- label: Red Snapper
-  source_hint: "Found in the Ocean, 6am – 7pm, Summer and Fall. Only when raining."
-- label: Tilapia
-  source_hint: "Found in the Ocean, 6am – 2pm, Summer and Fall."
 - label: "Warp Totem: Beach"
 
-- label: Walleye
-  source_hint: "Found in Rivers, the Mountain Lake, and Cindersap Forest Pond, 12pm – 2am, Fall (Winter with Rain Totem.) Only when raining."
-- label: Bream
-  source_hint: "Found in Rivers, 6pm – 2am, All Seasons."
-- label: Eel
-  source_hint: "Found in the Ocean, 4pm – 2am, Spring or Fall. Only when raining."
 - label: Glow Ring
 
 - label: Lobster
@@ -215,14 +110,6 @@
   source_hint: "Caught in Crab Pots (ocean), Beach Foraging"
 - label: Crab Pot
 
-- label: Pufferfish
-  source_hint: "Found in the Ocean, 12pm – 4pm, Summer during sunny weather."
-- label: Ghostfish
-  source_hint: "Found in ponds in The Mines floors 20 and 60, Anytime, All Seasons. May also be dropped by Ghosts."
-- label: Sandfish
-  source_hint: "Found in the pond in The Desert, 6am – 8pm, All Seasons."
-- label: Woodskip
-  source_hint: "Found in the Secret Woods and the Forest Farm, Anytime, All Seasons."
 - label: "Dish O' The Sea"
 
 - label: Copper Bar
@@ -262,8 +149,6 @@
   source_hint: Shadow Brutes in the mines
 - label: Small Magnet Ring
 
-- label: Fiddlehead Fern
-  source_hint: "Summer in secret woods, Cutting down Green Rain trees"
 - label: Truffle
   source_hint: Pigs
 - label: Poppy
@@ -289,8 +174,6 @@
 - label: Seed Maker
 - label: Nautilus Shell
   source_hint: Winter Beach foraging
-- label: Chub
-  source_hint: Mountain lake and river
 - label: Frozen Geode
   source_hint: The mines levels 41-79
 - label: Recycling Machine
@@ -310,10 +193,6 @@
   source_hint: Mayonnaise Machine
 - label: Prismatic Shard
   source_hint: Mining
-- label: Ancient Fruit
-  source_hint: Crops
-- label: Void Salmon
-  source_hint: Fishing in the Witch's Swamp
 - label: Caviar
   source_hint: Sturgeon roe in Preserves Jar
 
@@ -323,9 +202,7 @@
 - label: Crystalarium
 
 - label: Coral
-- label: Salmonberry
 - label: Field Snack
-- label: Spring Onion
 - label: Red Cabbage Seeds
 - label: Chest
 - label: Scarecrow
@@ -345,29 +222,20 @@
 - label: Hops
 - label: Radish
 - label: Summer Squash
-- label: Starfruit
 - label: Seaweed
 - label: Green Algae
 - label: Bean Hotpot
 - label: Mead
-- label: Octopus
-- label: Sea Cucumber
 - label: Ancient Doll
 - label: Diamond
-- label: Strawberry
 - label: Battery Pack
 - label: Carrot
-- label: Flounder
-- label: Halibut
-- label: Pike
-- label: Red Mullet
 - label: Summer Spangle
 - label: Wheat Flour
 - label: Moss
 - label: Rainbow Shell
 - label: Iridium Rod
 - label: Trap Bobber
-- label: Dressed Spinner
 - label: Sap
 - label: Soggy Newspaper
 - label: Trash
@@ -381,12 +249,9 @@
 - label: Emerald
 - label: Amethyst
 - label: Beet
-- label: Cranberries
 - label: Amaranth
-- label: Yam
 - label: Bok Choy
 - label: Broccoli
-- label: Eggplant
 - label: Fairy Rose
 - label: Beer
 - label: Stardrop
@@ -394,14 +259,11 @@
 - label: Green Tea
 - label: Coffee
 - label: Pickles
-- label: Super Cucumber
 - label: Tulip
 - label: Ruby
 - label: Topaz
 - label: Cookout Kit
 - label: Rice
 - label: Unmilled Rice
-- label: Powdermelon
 - label: Garden Pot
 - label: Deluxe Retaining Soil
-- label: Squid

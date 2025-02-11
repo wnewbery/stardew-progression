@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { createRoot } from "react-dom/client";
 // Our stuff
 import GameData from "./data/GameData";
-import './app.css';
+import "./app.css";
 import { store } from "./redux/Store";
 // Pages
 import CommunityBundle from "./components/CommunityBundle";
@@ -16,7 +16,7 @@ import Villagers from "./pages/Villagers";
 import Villager from "./pages/Villager";
 import VillagerFinder from "./pages/VillagerFinder";
 import Year1Winter from "./pages/Year1Winter";
-
+import PreservesJar from "./pages/PreservesJar";
 const container = document.getElementById("app")!;
 const root = createRoot(container);
 
@@ -27,16 +27,29 @@ function PageCommunityBundles() {
   return (
     <div className="space-y-section">
       <h1>Community Bundles</h1>
-      {bundles.map(bundle => <CommunityBundle key={bundle.id} bundle={bundle} />)}
+      {bundles.map((bundle) => (
+        <CommunityBundle key={bundle.id} bundle={bundle} />
+      ))}
     </div>
   );
 }
 const footer = (
   <>
     <p>Website by William Newbery &copy; 2025</p>
-    <p>Get the code and file issues on <a href="https://github.com/wnewbery/stardew-progression">GitHub</a></p>
-    <p>Content available under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative&nbsp;Commons Attribution-NonCommercial-ShareAlike</a></p>
-    <p>Icons and general game information from <a href="https://stardewvalleywiki.com/">Stardew Valley Wiki</a></p>
+    <p>
+      Get the code and file issues on{" "}
+      <a href="https://github.com/wnewbery/stardew-progression">GitHub</a>
+    </p>
+    <p>
+      Content available under{" "}
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+        Creative&nbsp;Commons Attribution-NonCommercial-ShareAlike
+      </a>
+    </p>
+    <p>
+      Icons and general game information from{" "}
+      <a href="https://stardewvalleywiki.com/">Stardew Valley Wiki</a>
+    </p>
   </>
 );
 const App = () => {
@@ -47,30 +60,44 @@ const App = () => {
         <nav>
           <section>
             <ol>
-              <li className="text-lg"><Link to="/bundles">Community Bundles</Link></li>
-              <li className="text-lg"><Link to="/buildings">Buildings</Link></li>
-              <li className="text-lg"><Link to="/villagers">Villagers</Link></li>
-              <li className="text-lg"><Link to="/villager-finder">Villager Finder</Link></li>
+              <li className="text-lg">
+                <Link to="/bundles">Community Bundles</Link>
+              </li>
+              <li className="text-lg">
+                <Link to="/buildings">Buildings</Link>
+              </li>
+              <li className="text-lg">
+                <Link to="/preserves-jar">Preserves Jar</Link>
+              </li>
+              <li className="text-lg">
+                <Link to="/villagers">Villagers</Link>
+              </li>
+              <li className="text-lg">
+                <Link to="/villager-finder">Villager Finder</Link>
+              </li>
             </ol>
           </section>
           <section className="mt-4">
             <h2>1 Year Completion Guide</h2>
             <ol>
-              <li className="text-lg"><Link to="/year1-spring">Spring</Link></li>
-              <li className="text-lg"><Link to="/year1-summer">Summer</Link></li>
-              <li className="text-lg"><Link to="/year1-fall">Fall</Link></li>
-              <li className="text-lg"><Link to="/year1-winter">Winter</Link></li>
+              <li className="text-lg">
+                <Link to="/year1-spring">Spring</Link>
+              </li>
+              <li className="text-lg">
+                <Link to="/year1-summer">Summer</Link>
+              </li>
+              <li className="text-lg">
+                <Link to="/year1-fall">Fall</Link>
+              </li>
+              <li className="text-lg">
+                <Link to="/year1-winter">Winter</Link>
+              </li>
             </ol>
           </section>
         </nav>
-
         {/*TOC on sidebar only*/}
-        <div className="hidden xl:block">
-
-        </div>
-
+        <div className="hidden xl:block"></div>
         <div className="flex-1"></div> {/*Use up space*/}
-
         <div className="hidden xl:block">{footer}</div>
       </div>
       <div className="pt-8 px-8 grow overflow-y-auto">
@@ -78,6 +105,7 @@ const App = () => {
           <Route path="/" element={<Navigate to="/bundles" />} />
           <Route path="/buildings" element={<Buildings />} />
           <Route path="/bundles" element={<PageCommunityBundles />} />
+          <Route path="/preserves-jar" element={<PreservesJar />} />
           <Route path="/villagers" element={<Villagers />} />
           <Route path="/villagers/:villager" element={<Villager />} />
           <Route path="/villager-finder" element={<VillagerFinder />} />
@@ -98,7 +126,9 @@ const App = () => {
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <HashRouter><App /></HashRouter>
+      <HashRouter>
+        <App />
+      </HashRouter>
     </Provider>
   </React.StrictMode>
 );

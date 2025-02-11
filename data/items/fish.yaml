@@ -1,0 +1,240 @@
+- label: Pufferfish
+  source_hint: "Found in the Ocean, 12pm – 4pm, Summer during sunny weather."
+  is_fish: true
+  sell: 200
+  seasons: [summer]
+  roe_colour: yellow
+- label: Anchovy
+  is_fish: true
+  sell: 30
+  seasons: [spring, fall]
+  roe_colour: blue
+- label: Tuna
+  source_hint: "Found in the Ocean, 6am – 7pm, Summer and Winter."
+  is_fish: true
+  sell: 100
+  seasons: [summer, winter]
+  roe_colour: blue
+- label: Sardine
+  source_hint: "Found in the Ocean, 6am – 7pm, Spring, Fall, and Winter."
+  is_fish: true
+  sell: 40
+  seasons: [spring, fall, winter]
+  roe_colour: blue
+- label: Bream
+  source_hint: "Found in Rivers, 6pm – 2am, All Seasons."
+  is_fish: true
+  sell: 45
+  roe_colour: blue
+- label: Largemouth Bass
+  source_hint: "Found in the Mountain Lake, 6am – 7pm, All Seasons."
+  is_fish: true
+  sell: 100
+  roe_colour: green
+- label: Smallmouth Bass
+  is_fish: true
+  sell: 50
+  seasons: [spring, fall]
+  roe_colour: dark_brown
+- label: Rainbow Trout
+  is_fish: true
+  sell: 65
+  seasons: [summer]
+  roe_colour: orange
+- label: Salmon
+  is_fish: true
+  sell: 75
+  seasons: [fall]
+  roe_colour: light_red
+- label: Walleye
+  source_hint: "Found in Rivers, the Mountain Lake, and Cindersap Forest Pond, 12pm – 2am, Fall (Winter with Rain Totem.) Only when raining."
+  is_fish: true
+  sell: 105
+  seasons: [fall, winter]
+  roe_colour: yellow
+- label: Perch
+  is_fish: true
+  sell: 55
+  seasons: [winter]
+  roe_colour: yellow
+- label: Carp
+  source_hint: "Found in the Mountain Lake, Anytime, during Spring, Summer, or Fall.\n\nFound in Secret Woods or Sewer, Anytime, All Seasons."
+  is_fish: true
+  sell: 30
+  roe_colour: yellow
+- label: Catfish
+  source_hint: "Found in Rivers and Secret Woods, 6am – midnight, Spring and Fall. Only when raining.\n\nCan be found in Summer during rain in the Secret Woods and Witch's Swamp, Winter with a Rain Totem."
+  is_fish: true
+  sell: 200
+  seasons: [spring, fall]
+  roe_colour: dark_gray
+- label: Pike
+  is_fish: true
+  sell: 100
+  seasons: [summer, winter]
+  roe_colour: yellow
+- label: Sunfish
+  source_hint: "Found in Rivers, 6am – 7pm, Spring and Summer during sunny weather."
+  is_fish: true
+  sell: 30
+  seasons: [spring, summer]
+  roe_colour: orange
+- label: Red Mullet
+  is_fish: true
+  sell: 75
+  seasons: [summer, winter]
+  roe_colour: red
+- label: Herring
+  is_fish: true
+  sell: 30
+  seasons: [spring, winter]
+  roe_colour: blue
+- label: Eel
+  source_hint: "Found in the Ocean, 4pm – 2am, Spring or Fall. Only when raining."
+  is_fish: true
+  sell: 85
+  seasons: [spring, fall]
+  roe_colour: brown
+- label: Octopus
+  is_fish: true
+  sell: 150
+  seasons: [summer]
+  roe_colour: orange
+- label: Red Snapper
+  source_hint: "Found in the Ocean, 6am – 7pm, Summer and Fall. Only when raining."
+  is_fish: true
+  sell: 50
+  seasons: [summer, fall, winter]
+  roe_colour: red
+- label: Squid
+  is_fish: true
+  sell: 80
+  seasons: [winter]
+- label: Sea Cucumber
+  is_fish: true
+  sell: 75
+  seasons: [fall, winter]
+  roe_colour: yellow
+- label: Super Cucumber
+  is_fish: true
+  sell: 250
+  seasons: [summer, fall]
+  roe_colour: dark_purple
+- label: Ghostfish
+  source_hint: "Found in ponds in The Mines floors 20 and 60, Anytime, All Seasons. May also be dropped by Ghosts."
+  is_fish: true
+  sell: 45
+  roe_colour: white
+- label: Stonefish
+  is_fish: true
+  sell: 300
+  roe_colour: dark_brown
+- label: Ice Pip
+  is_fish: true
+  sell: 500
+  roe_colour: blue
+- label: Lava Eel
+  is_fish: true
+  sell: 700
+  roe_colour: red
+- label: Sandfish
+  source_hint: "Found in the pond in The Desert, 6am – 8pm, All Seasons."
+  is_fish: true
+  sell: 75
+  roe_colour: yellow
+- label: Scorpion Carp
+  is_fish: true
+  sell: 150
+  roe_colour: dark_brown
+- label: Flounder
+  is_fish: true
+  sell: 100
+  seasons: [spring, summer]
+  roe_colour: dark_brown
+- label: Midnight Carp
+  is_fish: true
+  sell: 150
+  seasons: [fall, winter]
+  roe_colour: violet
+- label: Sturgeon
+  source_hint: "Found in the Mountain Lake, 6am – 7pm, Summer and Winter."
+  is_fish: true
+  sell: 200
+  seasons: [summer, winter]
+- label: Tiger Trout
+  source_hint: "Found in Rivers, 6am – 7pm, Fall and Winter. Can be found in any weather."
+  is_fish: true
+  sell: 150
+  seasons: [fall, winter]
+  roe_colour: dark_brown
+- label: Bullhead
+  source_hint: "Found in the Mountain Lake, Anytime, during Spring, Summer, or Fall.\n\nFound in Secret Woods or Sewer, Anytime, All Seasons."
+  is_fish: true
+  sell: 75
+  roe_colour: dark_brown
+- label: Tilapia
+  source_hint: "Found in the Ocean, 6am – 2pm, Summer and Fall."
+  is_fish: true
+  sell: 75
+  seasons: [summer, fall]
+  roe_colour: dark_gray
+- label: Chub
+  source_hint: Mountain lake and river
+  is_fish: true
+  sell: 50
+  roe_colour: dark_gray
+- label: Dorado
+  is_fish: true
+  sell: 100
+  seasons: [summer]
+  roe_colour: orange
+- label: Albacore
+  is_fish: true
+  sell: 75
+  seasons: [fall, winter]
+  roe_colour: blue
+- label: Shad
+  source_hint: "Found in Rivers, 9am – 2am, Spring, Summer, and Fall. Only when raining."
+  is_fish: true
+  sell: 60
+  seasons: [spring, summer, fall]
+  roe_colour: green
+- label: Lingcod
+  is_fish: true
+  sell: 120
+  seasons: [winter]
+  roe_colour: dark_brown
+- label: Halibut
+  is_fish: true
+  sell: 80
+  seasons: [spring, summer, winter]
+  roe_colour: light_gray
+- label: Woodskip
+  source_hint: "Found in the Secret Woods and the Forest Farm, Anytime, All Seasons."
+  is_fish: true
+  sell: 75
+  roe_colour: orange
+- label: Void Salmon
+  source_hint: Fishing in the Witch's Swamp
+  is_fish: true
+  sell: 150
+  roe_colour: purple
+- label: Slimejack
+  is_fish: true
+  sell: 100
+  roe_colour: green
+- label: Stingray
+  is_fish: true
+  sell: 180
+  roe_colour: dark_brown
+- label: Lionfish
+  is_fish: true
+  sell: 100
+  roe_colour: orange
+- label: Blue Discus
+  is_fish: true
+  sell: 120
+  roe_colour: light_blue
+- label: Goby
+  is_fish: true
+  sell: 150

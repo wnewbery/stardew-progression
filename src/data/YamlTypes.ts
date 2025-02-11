@@ -1,12 +1,30 @@
+import type GameItem from "./GameItem";
+
 export interface YamlImportType {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   default: any;
 }
 
 export interface ItemData {
+  id?: string;
   label: string;
+  plural?: string;
+  icon?: string;
+  type?: string;
+  subtype?: string;
   source_hint?: string;
   wiki?: string;
+  seasons?: ("spring" | "summer" | "fall" | "winter")[];
+  sell?: number;
+  edibility?: number;
+  energy?: number;
+  health?: number;
+  ingredient_item?: GameItem | string;
+
+  isForage?: boolean;
+  isVegtable?: boolean;
+  is_fish?: boolean;
+  roe_colour?: string;
 }
 export interface ItemStackData {
   id: string;
@@ -42,7 +60,6 @@ export interface CommunityRoomData {
   label: string;
   bundles: BundleData[];
 }
-
 
 export interface ScheduleItemData {
   time: string;
@@ -81,7 +98,3 @@ export interface VillagerData {
   birthday: string;
   schedule: ScheduleData;
 }
-
-
-
-

@@ -1,6 +1,7 @@
 import { ReactNode, useState } from "react";
 import GameData from "../data/GameData";
 import ScheduleDay from "../components/ScheduleDay";
+import Checkbox from "../components/Checkbox";
 
 interface SelectButtonProps {
   className?: string;
@@ -103,19 +104,6 @@ function CalendarPicker({ season, day, setSeason, setDay }: CalendarPickerProps)
 
 }
 
-interface CheckboxProps {
-  children: ReactNode;
-  checked: boolean;
-  onChange: (checked: boolean) => void;
-}
-function Checkbox({ children, checked, onChange }: CheckboxProps) {
-  return (
-    <label className="block">
-      <input type="checkbox" className="mr-4" checked={checked} onChange={(e) => onChange(e.target.checked)} />
-      {children}
-    </label>
-  );
-}
 export default function VillagerFinder() {
   const [raining, setRaining] = useState(false);
   const [greenRain, setGreenRain] = useState(false);

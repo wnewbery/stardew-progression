@@ -1,0 +1,134 @@
+# Mushrooms
+- label: Common Mushroom
+  isForage: true
+  type: forage
+  source_hint: |
+    [Fall Foraging](https://stardewvalleywiki.com/Fall#Forage), [Winter Foraging](https://stardewvalleywiki.com/Winter#Forage),
+    Spring & Fall in the Secret Woods,
+    Mushroom cave,
+    Tapping a mushroom tree
+  sell: 40
+  energy: 38
+  health: 44
+  edibility: 15
+- label: Red Mushroom
+  isForage: true
+  source_hint: |
+    Summer or Fall in the Secret Woods,
+    The Mushroom Cave
+  type: forage
+  sell: 75
+  edibility: -20
+- label: Purple Mushroom
+  isForage: true
+  source_hint: The Mushroom Cave
+  type: forage
+  sell: 250
+  edibility: 50
+- label: Chanterelle
+  isForage: true
+  type: forage
+  sell: 160
+  edibility: 30
+- label: Morel
+  isForage: true
+  type: forage
+  source_hint: "The Mushroom Cave, Secret Woods in Spring"
+  sell: 150
+  energy: 20
+  health: 9
+  edibility: 8
+# Spring
+- label: Wild Horseradish
+  plural: Wild Horseradishes
+  isForage: true
+  type: forage
+  seasons: [spring]
+  source_hint: "[Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)"
+  sell: 50
+  energy: 13
+  health: 5
+  edibility: 5
+- label: Daffodil
+  isForage: true
+  type: forage
+  seasons: [spring]
+  source_hint: "[Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)"
+  sell: 30
+- label: Leek
+  isForage: true
+  type: forage
+  seasons: [spring]
+  source_hint: "[Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)"
+  sell: 60
+  energy: 40
+  health: 18
+  edibility: 16
+- label: Dandelion
+  isForage: true
+  type: forage
+  seasons: [spring]
+  source_hint: "[Spring Foraging](https://stardewvalleywiki.com/Spring#Forage)"
+  sell: 40
+  energy: 25
+  health: 11
+  edibility: 10
+- label: Spring Onion
+  isForage: true
+  type: forage
+  seasons: [spring]
+  sell: 8
+  energy: 13
+  health: 5
+  edibility: 5
+# Summer
+- label: Fiddlehead Fern
+  isForage: true
+  source_hint: "Summer in secret woods, Cutting down Green Rain trees"
+  type: forage
+  seasons: [summer]
+  sell: 90
+  edibility: 10
+- label: Sweet Pea
+  isForage: true
+  source_hint: "[Summer Foraging](https://stardewvalleywiki.com/Summer#Forage)"
+  type: forage
+  seasons: [summer]
+  sell: 50
+# Fall
+- label: Hazelnut
+  isForage: true
+  source_hint: "[Fall Foraging](https://stardewvalleywiki.com/Fall#Forage)"
+  type: forage
+  seasons: [fall]
+  sell: 90
+  edibility: 12
+# Winter
+- label: Crocus
+  isForage: true
+  source_hint: "[Winter Foraging](https://stardewvalleywiki.com/Winter#Forage)"
+  type: forage
+  seasons: [winter]
+  sell: 60
+- label: Holly
+  isForage: true
+  type: forage
+  seasons: [winter]
+  sell: 80
+  edibility: -15
+- label: Snow Yam
+  isForage: true
+  source_hint: Tilling or artifacts in winter
+  type: forage
+  seasons: [winter]
+  sell: 100
+  edibility: 12
+- label: Winter Root
+  isForage: true
+  source_hint: |
+    Tilling or artifacts in winter,
+    Blue slimes on mine levels 41-79
+  type: forage
+  seasons: [winter]
+  sell: 70
+  edibility: 10

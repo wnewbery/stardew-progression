@@ -1,0 +1,160 @@
+- label: Ancient Fruit
+  type: fruit
+  source_hint: Crops
+  seasons: [spring, summer, fall]
+  sell: 550
+  edibility: -300
+- label: Apple
+  type: fruit
+  source_hint: "Apple tree in fall, Fruit bat cave"
+  seasons: [fall]
+  sell: 100
+  edibility: 15
+- label: Apricot
+  type: fruit
+  source_hint: "Apricot tree in spring, Fruit bat cave"
+  seasons: [spring]
+  sell: 50
+  edibility: 15
+- label: Banana
+  type: fruit
+  seasons: [summer]
+  sell: 150
+  edibility: 30
+- label: Blackberry
+  type: fruit
+  source_hint: |
+    [Fall Foraging](https://stardewvalleywiki.com/Fall#Forage),
+    Fruit bat cave
+  seasons: [fall]
+  sell: 20
+  edibility: 10
+- label: Blueberry
+  type: fruit
+  seasons: [summer]
+  sell: 50
+  edibility: 10
+- label: Cactus Fruit
+  type: fruit
+  source_hint: "Desert foraging, Oasis"
+  seasons: [all]
+  sell: 75
+  edibility: 30
+- label: Cherry
+  type: fruit
+  seasons: [spring]
+  sell: 80
+  edibility: 15
+  source_hint: "Cherry tree in spring, Fruit bat cave"
+- label: Coconut
+  type: fruit
+  source_hint: |
+    Desert foraging,
+    Oasis,
+    Palm trees in the desert and Ginger Island
+  seasons: [all]
+  sell: 100
+- label: Cranberries
+  type: fruit
+  seasons: [fall]
+  sell: 75
+  edibility: 15
+- label: Crystal Fruit
+  type: fruit
+  source_hint: |
+    [Winter Foraging](https://stardewvalleywiki.com/Winter#Forage),
+    Dust sprites on mine levels 41-79
+  seasons: [winter]
+  sell: 150
+  edibility: 25
+- label: Grape
+  type: fruit
+  source_hint: "[Summer Foraging](https://stardewvalleywiki.com/Summer#Forage), [Fall Farming](https://stardewvalleywiki.com/Fall#Crops)"
+  seasons: [summer, fall]
+  sell: 80
+  edibility: 15
+- label: Hot Pepper
+  type: fruit
+  source_hint: "Summer crops"
+  seasons: [summer]
+  sell: 40
+  edibility: 5
+- label: Mango
+  type: fruit
+  seasons: [summer]
+  sell: 130
+  edibility: 40
+- label: Melon
+  type: fruit
+  source_hint: "Summer crops"
+  seasons: [summer]
+  sell: 250
+  edibility: 45
+- label: Orange
+  type: fruit
+  source_hint: "Orange tree in summer, Fruit bat cave"
+  seasons: [summer]
+  sell: 100
+  edibility: 15
+- label: Peach
+  type: fruit
+  source_hint: "Peach tree in summer, Fruit bat cave"
+  seasons: [summer]
+  sell: 140
+  edibility: 15
+- label: Pineapple
+  type: fruit
+  seasons: [summer, all]
+  sell: 300
+  edibility: 55
+- label: Pomegranate
+  type: fruit
+  source_hint: "Pomegranate tree in fall, Fruit bat cave"
+  seasons: [fall]
+  sell: 140
+  edibility: 15
+- label: Powdermelon
+  type: fruit
+  seasons: [winter]
+  sell: 60
+  edibility: 25
+- label: Qi Fruit
+  type: fruit
+  seasons: [all]
+  sell: 1
+  edibility: 1
+- label: Rhubarb
+  type: fruit
+  seasons: [spring]
+  sell: 220
+- label: Salmonberry
+  plural: Salmonberries
+  type: fruit
+  seasons: [spring]
+  sell: 5
+  edibility: 10
+- label: Spice Berry
+  plural: Spice Berries
+  source_hint: "[Summer Foraging](https://stardewvalleywiki.com/Summer#Forage), fruit bat cave"
+  type: fruit
+  seasons: [summer]
+  sell: 80
+  edibility: 10
+- label: Starfruit
+  type: fruit
+  seasons: [summer]
+  sell: 750
+  edibility: 50
+- label: Strawberry
+  type: fruit
+  seasons: [spring]
+  sell: 120
+  edibility: 20
+- label: Wild Plum
+  type: fruit
+  source_hint: |
+    [Fall Foraging](https://stardewvalleywiki.com/Fall#Forage),
+    Fruit bat cave
+  seasons: [fall]
+  sell: 80
+  edibility: 10
