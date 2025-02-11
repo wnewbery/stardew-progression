@@ -46,7 +46,7 @@ function addItem(item: GameItem) {
   if (item.sell) sellableItems.push(item);
 }
 function generateJellies(items: GameItem[]) {
-  const fruits = items.filter((x) => x.type === "fruit" && x.edibility);
+  const fruits = items.filter((x) => x.type === "fruit");
   fruits.forEach((x) => {
     const item = new GameItem({
       id: `jelly_${x.id}`,
@@ -57,8 +57,8 @@ function generateJellies(items: GameItem[]) {
       subtype: "jelly",
       wiki: "https://stardewvalleywiki.com/Preserves_Jar",
       sell: 50 + 2 * x.calcSell(ItemQuality.Regular),
-      energy: 2 * x.calcEnergy(ItemQuality.Regular),
-      health: 2 * x.calcHealth(ItemQuality.Regular),
+      energy: x.edibility && 2 * x.calcEnergy(ItemQuality.Regular),
+      health: x.edibility && 2 * x.calcHealth(ItemQuality.Regular),
       ingredient_item: x,
     });
     addItem(item);

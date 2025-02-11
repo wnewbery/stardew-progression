@@ -3,7 +3,6 @@
   source_hint: Crops
   seasons: [spring, summer, fall]
   sell: 550
-  edibility: -300
 - label: Apple
   type: fruit
   source_hint: "Apple tree in fall, Fruit bat cave"
