@@ -17,6 +17,7 @@ import Villager from "./pages/Villager";
 import VillagerFinder from "./pages/VillagerFinder";
 import Year1Winter from "./pages/Year1Winter";
 import PreservesJar from "./pages/PreservesJar";
+import Keg from "./pages/Keg";
 const container = document.getElementById("app")!;
 const root = createRoot(container);
 
@@ -57,7 +58,7 @@ const App = () => {
     <div className="h-screen v-screen xl:flex flex-row ">
       <div className="p-8 xl:max-w-md flex-initial shrink-0 flex flex-col gap-4 overflow-y-auto xl:border-r-2 border-r-solid border-accent">
         <h1>Stardew Valley Progression Guide &amp; Tracker</h1>
-        <nav>
+        <nav className="space-y-section">
           <section>
             <ol>
               <li className="text-lg">
@@ -67,9 +68,6 @@ const App = () => {
                 <Link to="/buildings">Buildings</Link>
               </li>
               <li className="text-lg">
-                <Link to="/preserves-jar">Preserves Jar</Link>
-              </li>
-              <li className="text-lg">
                 <Link to="/villagers">Villagers</Link>
               </li>
               <li className="text-lg">
@@ -77,7 +75,18 @@ const App = () => {
               </li>
             </ol>
           </section>
-          <section className="mt-4">
+          <section>
+            <h2>Artisan Goods</h2>
+            <ol>
+              <li className="text-lg">
+                <Link to="/keg">Keg</Link>
+              </li>
+              <li className="text-lg">
+                <Link to="/preserves-jar">Preserves Jar</Link>
+              </li>
+            </ol>
+          </section>
+          <section>
             <h2>1 Year Completion Guide</h2>
             <ol>
               <li className="text-lg">
@@ -105,10 +114,12 @@ const App = () => {
           <Route path="/" element={<Navigate to="/bundles" />} />
           <Route path="/buildings" element={<Buildings />} />
           <Route path="/bundles" element={<PageCommunityBundles />} />
-          <Route path="/preserves-jar" element={<PreservesJar />} />
           <Route path="/villagers" element={<Villagers />} />
           <Route path="/villagers/:villager" element={<Villager />} />
           <Route path="/villager-finder" element={<VillagerFinder />} />
+
+          <Route path="/keg" element={<Keg />} />
+          <Route path="/preserves-jar" element={<PreservesJar />} />
 
           <Route path="/year1-spring/*" element={<Year1Spring />} />
           <Route path="/year1-summer/*" element={<Year1Summer />} />

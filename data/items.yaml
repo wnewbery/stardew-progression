@@ -74,8 +74,6 @@
   source_hint: Cheese Press
 - label: Cheese
   source_hint: "Cheese Press, Desert Trader"
-- label: Honey
-  source_hint: Bee House, Oasis
 - label: Jelly
   source_hint: Preserves Jar
 - label: Keg
@@ -178,14 +176,10 @@
   source_hint: The mines levels 41-79
 - label: Recycling Machine
 
-- label: Wheat
-  source_hint: "Summer and fall crops"
 - label: Hay
   source_hint: "Harvest from Wheat and Grass after building a Silo"
 - label: Heater
 
-- label: Wine
-  source_hint: "Keg"
 - label: "Rabbit's Foot"
   source_hint: Rabbits
 
@@ -217,15 +211,12 @@
 - label: Speed Gro
 - label: Rare Seed
 - label: Clay
-- label: Tea Leaves
 - label: Refined Quartz
-- label: Hops
 - label: Radish
 - label: Summer Squash
 - label: Seaweed
 - label: Green Algae
 - label: Bean Hotpot
-- label: Mead
 - label: Ancient Doll
 - label: Diamond
 - label: Battery Pack
@@ -243,7 +234,6 @@
 - label: Broken CD
 - label: Broken Glasses
 - label: Egg
-- label: Pale Ale
 - label: Sweet Gem Berry
 - label: Duck Mayonnaise
 - label: Emerald
@@ -253,17 +243,15 @@
 - label: Bok Choy
 - label: Broccoli
 - label: Fairy Rose
-- label: Beer
 - label: Stardrop
 - label: Mayonnaise
-- label: Green Tea
-- label: Coffee
 - label: Pickles
 - label: Tulip
 - label: Ruby
 - label: Topaz
 - label: Cookout Kit
 - label: Rice
+  sell: 100
 - label: Unmilled Rice
 - label: Garden Pot
 - label: Deluxe Retaining Soil

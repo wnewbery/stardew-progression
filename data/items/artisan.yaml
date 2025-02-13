@@ -1,0 +1,54 @@
+- label: Honey
+  source_hint: Bee House, Oasis
+  sell: 100
+  is_artisan: true
+- label: Wine
+  source_hint: "Keg"
+  is_artisan: true
+  sell: 400
+  energy: 50
+  health: 22
+
+- label: Beer
+  is_artisan: true
+  ingredient_item: wheat
+  processing_time: 1750
+  sell: 200
+  energy: 50
+  health: 22
+- label: Coffee
+  is_artisan: true
+  ingredient_item: coffee_bean
+  ingredient_amount: 5
+  processing_time: 120
+  sell: 150
+  energy: 3
+  health: 1
+- label: Green Tea
+  is_artisan: true
+  ingredient_item: tea_leaves
+  processing_time: 180
+  sell: 100
+  energy: 13
+  health: 5
+- label: Mead
+  is_artisan: true
+  ingredient_item: honey
+  processing_time: 600
+  sell: 300
+  energy: 75
+  health: 33
+- label: Pale Ale
+  is_artisan: true
+  ingredient_item: hops
+  processing_time: 2250
+  sell: 300
+  energy: 50
+  health: 22
+- label: Vinegar
+  is_artisan: true
+  ingredient_item: rice
+  processing_time: 600
+  sell: 100
+  energy: 13
+  health: 5

@@ -14,13 +14,15 @@ export default class GameItem {
 
   public seasons?: string[];
   public hasQualities: boolean;
-  public sell?: number;
-  public energy?: number;
-  public health?: number;
-  public edibility?: number;
+  public sell: number;
+  public energy: number;
+  public health: number;
+  public edibility: number;
 
   private _ingredientItemId?: string;
   public ingredientItem?: GameItem;
+  public ingredientAmount: number;
+  public processingTime?: number;
   public roeColour?: string;
 
   public isForage: boolean;
@@ -53,15 +55,16 @@ export default class GameItem {
     this.seasons = yaml.seasons;
 
     this.hasQualities =
-      this.type && ["forage"].includes(this.type) ? true : false;
-    this.sell = yaml.sell;
-    this.energy = yaml.energy;
-    this.health = yaml.health;
-    this.edibility = yaml.edibility;
+      this.type && ["forage", "wine"].includes(this.type) ? true : false;
+    this.sell = yaml.sell ?? 0;
+    this.energy = yaml.energy ?? 0;
+    this.health = yaml.health ?? 0;
+    this.edibility = yaml.edibility ?? 0;
     if (yaml.ingredient_item instanceof GameItem)
       this.ingredientItem = yaml.ingredient_item;
     else this._ingredientItemId = yaml.ingredient_item;
-
+    this.ingredientAmount = yaml.ingredient_amount ?? 1;
+    this.processingTime = yaml.processing_time;
     this.isForage = yaml.isForage ?? false;
     this.isVegtable = yaml.isVegtable ?? false;
     this.isFish = yaml.is_fish ?? false;

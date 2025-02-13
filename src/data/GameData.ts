@@ -32,6 +32,8 @@ const jellies: GameItem[] = [];
 const pickles: GameItem[] = [];
 const roe: GameItem[] = [];
 const agedRoe: GameItem[] = [];
+const wine: GameItem[] = [];
+const juices: GameItem[] = [];
 
 let rooms: CommunityRoom[];
 let buildings: Building[];
@@ -121,6 +123,51 @@ function generateAgedRoe(items: GameItem[]) {
   });
 }
 
+function generateJuice(items: GameItem[]) {
+  const inputs = items.filter(
+    (x) => x.isVegtable || (x.isForage && x.edibility > 0)
+  );
+  inputs.forEach((x) => {
+    const item = new GameItem({
+      id: `juice_${x.id}`,
+      icon: "juice",
+      type: "juice",
+      label: `${x.label} Juice`,
+      plural: `${x.label} Juice`,
+      sell: (x.sell ?? 1) * 3,
+      energy:
+        x.edibility && Math.floor(x.calcEnergy(ItemQuality.Regular) * 1.75),
+      health:
+        x.edibility && Math.floor(x.calcHealth(ItemQuality.Regular) * 1.75),
+      ingredient_item: x,
+      processing_time: 6000,
+    });
+    addItem(item);
+    juices.push(item);
+  });
+}
+function generateWine(items: GameItem[]) {
+  const fruits = items.filter((x) => x.type === "fruit");
+  fruits.forEach((x) => {
+    const item = new GameItem({
+      id: `wine_${x.id}`,
+      icon: "wine",
+      type: "wine",
+      label: `${x.label} Wine`,
+      plural: `${x.label} Wine`,
+      sell: (x.sell ?? 1) * 3,
+      energy:
+        x.edibility && Math.floor(x.calcEnergy(ItemQuality.Regular) * 1.75),
+      health:
+        x.edibility && Math.floor(x.calcHealth(ItemQuality.Regular) * 1.75),
+      ingredient_item: x,
+      processing_time: 10000,
+    });
+    addItem(item);
+    wine.push(item);
+  });
+}
+
 function getItem(id: string) {
   const x = itemsMap.get(normaliseId(id));
   if (x) return x;
@@ -133,7 +180,8 @@ function load() {
   pickles.length = 0;
   roe.length = 0;
   agedRoe.length = 0;
-
+  wine.length = 0;
+  juices.length = 0;
   for (const itemData of itemsData as ItemData[]) {
     addItem(new GameItem(itemData));
   }
@@ -147,6 +195,8 @@ function load() {
   generatePickles(baseItems);
   generateRoe(baseItems);
   generateAgedRoe(roe);
+  generateJuice(baseItems);
+  generateWine(baseItems);
   itemsMap.forEach((item) => {
     item.resolveReferences(getItem);
   });
@@ -174,6 +224,8 @@ export default {
   pickles,
   roe,
   agedRoe,
+  juices,
+  wine,
   bundle(id: string) {
     for (const room of rooms) {
       for (const bundle of room.bundles) {

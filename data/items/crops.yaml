@@ -1,0 +1,17 @@
+- label: Coffee Bean
+  is_crop: true
+  sell: 15
+- label: Hops
+  is_crop: true
+  is_vegetable: true
+  sell: 25
+  edibility: 18
+- label: Tea Leaves
+  is_crop: true
+  is_vegetable: true
+  sell: 50
+- label: Wheat
+  source_hint: "Summer and fall crops"
+  is_crop: true
+  is_vegetable: true
+  sell: 25

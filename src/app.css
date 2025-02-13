@@ -37,11 +37,11 @@
   }
 
   h2 {
-    @apply text-2xl font-bold text-emphasize mb-section;
+    @apply text-2xl font-bold text-emphasize mb-p;
   }
 
   h3 {
-    @apply text-xl font-semibold text-emphasize mb-section;
+    @apply text-xl font-semibold text-emphasize mb-p;
   }
 
   h4 {

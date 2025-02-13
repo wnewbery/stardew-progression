@@ -20,6 +20,8 @@ export interface ItemData {
   energy?: number;
   health?: number;
   ingredient_item?: GameItem | string;
+  ingredient_amount?: number;
+  processing_time?: number;
 
   isForage?: boolean;
   isVegtable?: boolean;
